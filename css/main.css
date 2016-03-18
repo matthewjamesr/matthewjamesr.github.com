@@ -57,3 +57,18 @@ footer {
   top: 2px;
   left: 24px;
 }
+#social {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  margin: 1.5em auto;
+}
+#social li {
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+#social li.last {
+  margin-left: -2px;
+}
