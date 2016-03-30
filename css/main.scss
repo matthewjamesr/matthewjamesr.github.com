@@ -1,42 +1,44 @@
 html, body {
-  margin: 0px; }
+  margin: 0px;
+}
 
 a {
-  text-decoration: none;
-  color: #999; }
+    text-decoration: none;
+    color: #999;
+}
 
-.text-center {
-  text-align: center; }
+.text-center { text-align: center; }
 
-.center {
-  margin: 0 auto; }
+.center { margin: 0 auto; }
 
 .jumbo {
   padding: 100px 20px 100px 20px;
-  background-color: #f2f2f2; }
+  background-color: darken(#FFFFFF, 5%);
+}
 
 .content {
-  padding: 50px 50px 50px 50px; }
+  padding: 50px 50px 50px 50px;
+}
 
 .blurb {
-  text-align: center; }
-
+    text-align: center;
+}
 h1 {
-  font-size: 3em;
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
 p {
-  font-size: 1.5em;
-  line-height: 1.4em;
-  color: #333; }
-
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
 footer {
-  border-top: 1px solid #d5d5d5;
-  font-size: .8em; }
-
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
 #donate {
-  height: 24px; }
-
+  height: 24px;
+}
 #donate .wrapper {
   vertical-align: top;
   height: 20px;
@@ -48,40 +50,39 @@ footer {
   cursor: pointer;
   background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
   position: relative;
-  width: 72px; }
-
+  width: 72px;
+}
 #donate .wrapper:hover {
   border-color: #ccc;
-  background-image: linear-gradient(to bottom, #eee 0, #ddd 100%); }
-
+  background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
+}
 #donate .wrapper img {
   width: 14px;
   height: 14px;
   position: absolute;
   top: 2px;
-  left: 5px; }
-
+  left: 5px;
+}
 #donate .wrapper a {
   font: 700 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
   text-shadow: 0 1px 0 #fff;
   position: absolute;
   top: 2px;
-  left: 24px; }
-
+  left: 24px;
+}
 #social {
   text-align: center;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  margin: 1.5em auto; }
-
+  margin: 1.5em auto;
+}
 #social li {
   display: inline-block;
   margin: 0 5px;
-  vertical-align: middle; }
-
+  vertical-align: middle;
+}
 #social li.last {
-  margin-left: -2px; }
-
-/*# sourceMappingURL=main.css.map */
+  margin-left: -2px;
+}
