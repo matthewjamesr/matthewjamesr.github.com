@@ -17,22 +17,9 @@ a {
 
 .content {
   padding: 50px 50px 50px 50px; }
-
-.blurb {
-  text-align: center; }
-
-h1 {
-  font-size: 3em;
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-
-p {
-  font-size: 1.5em;
-  line-height: 1.4em;
-  color: #333; }
-
-footer {
-  border-top: 1px solid #d5d5d5;
-  font-size: .8em; }
+  .content .badge {
+    max-width: 100%;
+    min-width: 300px; }
 
 #donate {
   height: 24px; }
@@ -68,20 +55,5 @@ footer {
   position: absolute;
   top: 2px;
   left: 24px; }
-
-#social {
-  text-align: center;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  margin: 1.5em auto; }
-
-#social li {
-  display: inline-block;
-  margin: 0 5px;
-  vertical-align: middle; }
-
-#social li.last {
-  margin-left: -2px; }
 
 /*# sourceMappingURL=main.css.map */
