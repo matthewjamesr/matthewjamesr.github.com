@@ -1,28 +1,126 @@
----
-layout: default
-title: Matthew Reichardt - Rails Hacker
----
-<div class="jumbo text-center">
-	<h1>Matthew Reichardt</h1>
-	<h5>Aspire to Inspire</h5>
-</div><!-- /.blurb -->
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+                background: #1a1a1a;
+                color: #fff;
+            }
 
-<div class="content text-center">
-	<div class="row">
-		<div class="column">
-			<h3>Get at me</h3>
-		</div>
-	</div>
-	<div class="row">
-		<div class="column text-center">
-			<a href="https://twitter.com/matthewjamesr" class="twitter-follow-button badge" data-show-count="false">Follow @matthewjamesr</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		</div>
-		<div class="column text-center">
-			<a class="github-button badge" href="https://github.com/matthewjamesr" aria-label="Follow @matthewjamesr on GitHub">Follow @matthewjamesr</a>
-		</div>
-		<div class="column text-center">
-			<a class="button button-outline" href="https://paypal.me/Reichardt/5">Buy me coffee</a>
-		</div>
-	</div>
-</div>
+            a:link, a:visited, a:active {
+            color: rgb(229, 255, 0);
+            }
+
+            .left {
+                float: left;
+            }
+
+            .hero {
+                padding: 30px 0px 20px 0px;
+                text-align: center;
+            }
+
+            .hero img {
+                max-height: 150px;
+                border-radius: 50%;
+            }   
+
+            .content {
+                float: left;
+                width: 100%;
+                margin-bottom: 40px;
+                border-radius: 7px;
+                background: #3f3f3f;
+                color: #fff;
+            }
+
+            .wrapper {
+                max-width: 80%;
+                margin: 0px auto;
+            }
+
+            .part {
+                float: left;
+                padding: 0px 15px 10px 15px;
+            }
+
+            p b {
+                font-size: 115%;
+                letter-spacing: 1px;
+            }
+
+            small {
+                font-size: 90%;
+            }
+
+            small i {
+                color: rgb(229, 255, 0);
+            }
+
+            code {
+                padding: 2px 5px 2px 5px;
+                background: rgb(229, 255, 0);
+                color: #000;
+                border-radius: 5px;
+                letter-spacing: 1px;
+            }
+
+            ul {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            li {
+                margin: 2px 0px 2px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <h1>Aspire to Inspire</h1>
+            <img src="profile.jpg"></img>
+            <p>1's and 0's, digital thoughts by <b>Matthew Reichardt</b>.</p>
+            <p><small>Site designed to load <i>fast.</i></small></p>
+        </div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="part left">
+                    <h2>Socials</h2>
+                        <p>My work and thoughts across the web can usually be found here:</p>
+                        <ul>
+                            <li><b>Twitter</b>: <a href="https://twitter.com/matthewjamesr">@matthewjamesr</a></li>
+                            <li><b>Github</b>: <a href="https://github.com/matthewjamesr">@matthewjamesr</a></li>
+                            <li><b>LinkedIn</b>: <a href="https://www.linkedin.com/in/matthewreichardt/">It's my name</a>?</li>
+                        </ul>
+                </div>
+                <div class="part left">
+                    <h2 style="margin-top: 0px;">Projects</h2>
+                    <p>Some projects I have been working on:</p>
+                    <ul>
+                        <li>
+                            <b>Authparty</b>: Utilize your Bitcoin or Counterparty-enabled wallet to enable seamless, secure, and cross-service authentication.
+                            <ul style="list-style-type:square">
+                                <li>Web: <a href="https://authparty.io">Authparty.io</a></li>
+                                <li>Github: <a href="https://github.com/Authpartyio">/Authpartyio</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Hush Config Generator</b>: Easily generate <code>.conf</code> files for the hush daemon. Hush is a privacy-focused crypto-currency forked from zCash. Built using Vue.js.
+                            <ul style="list-style-type:square">
+                                <li>Web: <a href="http://myhush.org/config-generator/">View online</a></li>
+                                <li>Github: <a href="https://github.com/MyHush/config-generator">/MyHush</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content" style="margin-top: -15px;">
+                <div class="part">
+                    <h2>Recent thoughts</h2>
+                    <h3>None yet</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
