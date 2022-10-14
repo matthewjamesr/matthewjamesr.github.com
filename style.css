@@ -1,7 +1,6 @@
 body {
     margin: 0px;
-    padding: 0px;
-    background: #FFCCB3;
+    background: #554994;
     color: #fff;
     font-weight: 600;
 }
@@ -13,6 +12,7 @@ color: rgb(229, 255, 0);
 .about {
     height: 100vh;
     background: #554994;
+    padding: 0px 10px 0px 10px;
 }
 
 .about .row {
@@ -42,4 +42,9 @@ color: rgb(229, 255, 0);
     font-size: 26pt;
     color: #F675A8;
     margin: 0px 10px 0px 10px;
+}
+
+.aside {
+    height: 100vh;
+    background: #FFCCB3;
 }
