@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #FFCCB3;
+    color: #fff;
+    font-weight: 600;
+}
+
+a:link, a:visited, a:active {
+color: rgb(229, 255, 0);
+}
+
+.about {
+    height: 100vh;
+    background: #554994;
+}
+
+.about .row {
+    margin-right: 0px;
+}
+
+.about .avatar {
+    margin: 7% 0% 4% 0%;
+    max-height: 30vh;
+    min-height: 175px;
+    border-radius: 50%;
+}
+
+.about hr {
+    max-width: 75%;
+    border-color: #F675A8 !important;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.social {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.sites i {
+    font-size: 26pt;
+    color: #F675A8;
+    margin: 0px 10px 0px 10px;
+}

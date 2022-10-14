@@ -1,136 +1,55 @@
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <style>
-            body {
-                margin: 0px;
-                padding: 0px;
-                background: #1a1a1a;
-                color: #fff;
-            }
-
-            a:link, a:visited, a:active {
-            color: rgb(229, 255, 0);
-            }
-
-            .left {
-                float: left;
-            }
-
-            .hero {
-                padding: 30px 0px 20px 0px;
-                text-align: center;
-            }
-
-            .hero img {
-                max-height: 150px;
-                border-radius: 50%;
-            }
-
-            .content {
-                float: left;
-                width: 100%;
-                margin-bottom: 40px;
-                border-radius: 7px;
-                background: #3f3f3f;
-                color: #fff;
-            }
-
-            .wrapper {
-                max-width: 80%;
-                margin: 0px auto;
-            }
-
-            .part {
-                float: left;
-                padding: 0px 15px 10px 15px;
-            }
-
-            .thoughts p {
-              margin-left: 25px;
-              margin-right: 25px;
-            }
-
-            p b {
-                font-size: 115%;
-                letter-spacing: 1px;
-            }
-
-            small {
-                font-size: 90%;
-            }
-
-            small i {
-                color: rgb(229, 255, 0);
-            }
-
-            code {
-                padding: 2px 5px 2px 5px;
-                background: rgb(229, 255, 0);
-                color: #000;
-                border-radius: 5px;
-                letter-spacing: 1px;
-            }
-
-            ul {
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-
-            li {
-                margin: 2px 0px 2px 0px;
-            }
-        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="hero">
-            <h1>Aspire to Inspire</h1>
-            <img src="profile.jpg"></img>
-            <p>1's and 0's, digital thoughts by <b>Matthew Reichardt</b>.</p>
-            <p><small>Site designed to load <i>fast.</i></small></p>
-        </div>
-        <div class="wrapper">
-            <div class="content">
-                <div class="part left">
-                    <h2>Socials</h2>
-                        <p>My work and thoughts across the web can usually be found here:</p>
-                        <ul>
-                            <li><b>Twitter</b>: <a href="https://twitter.com/matthewjamesr">@matthewjamesr</a></li>
-                            <li><b>Github</b>: <a href="https://github.com/matthewjamesr">@matthewjamesr</a></li>
-                            <li><b>LinkedIn</b>: <a href="https://www.linkedin.com/in/matthewreichardt/">It's my name</a>?</li>
-                        </ul>
-                </div>
-                <div class="part left">
-                    <h2 style="margin-top: 0px;">Projects</h2>
-                    <p>Some projects I have been working on:</p>
-                    <ul>
-                        <li>
-                            <b>Authparty</b>: Utilize your Bitcoin or Counterparty-enabled wallet to enable seamless, secure, and cross-service authentication.
-                            <ul style="list-style-type:square">
-                                <li>Web: <a href="https://authparty.io">Authparty.io</a></li>
-                                <li>Github: <a href="https://github.com/Authpartyio">/Authpartyio</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <b>Hush Config Generator</b>: Easily generate <code>.conf</code> files for the hush daemon. Hush is a privacy-focused crypto-currency forked from zCash. Built using Vue.js.
-                            <ul style="list-style-type:square">
-                                <li>Web: <a href="http://myhush.org/config-generator/">View online</a></li>
-                                <li>Github: <a href="https://github.com/MyHush/config-generator">/MyHush</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+        <div class="col-sm-12 col-md-6 col-lg-4 border-end border-dark about" style="--bs-border-opacity: .5;">
+            <div class="row">
+                <div class="col-12">
+                    <img class="mx-auto d-block shadow avatar" src="profile.jpg" />
                 </div>
             </div>
-            <div class="content" style="margin-top: -15px;">
-                <div class="part thoughts">
-                    <h2>Recent thoughts</h2>
-                    <h3>Building a Decentralized, Private Web-based Marketplace on Zano</h3>
-                    <p>I would like to take this opportunity to introduce Zano
-                      Life (ZL), a working product name. ZL is an effort to promote
-                      and gain appeal for utilizing Zano in the private marketplace
-                       sector. It will allow users to... <a href="https://www.publish0x.com/blockchain-research-and-development/building-a-decentralized-private-web-based-marketplace-on-za-xgpdkyr">Read more</a>
+            <div class="row">
+                <div class="col-12">
+                    <hr class="border border- opacity-50 mx-auto avatar-hr">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="fw-bold text-center">M. Reichardt</h1>
+                    <h3 class="fw-light text-center">Aspire to Inspire</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <hr class="border border- opacity-50 mx-auto avatar-hr" style="margin-top: 25px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <p class="lead">Full-stack developer. Interests in Bitcoin/Lightning, real-time data,
+                        authentication, and geospatial applications. Husband and father.
                     </p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12 social">
+                    <h4 class="fw-semibold text-center">Get in touch</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 mx-auto text-center sites">
+                    <a href="https://twitter.com/matthewjamesr"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/matthewjamesr"><i class="fab fa-github"></i></a>
+                    <a href="https://discord.com/users/132505636016619520"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/e2eb6553b9.js" crossorigin="anonymous"></script>
     </body>
 </html>
