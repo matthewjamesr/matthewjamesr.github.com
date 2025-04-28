@@ -3,3 +3,21 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
+
+.entry-cover img {
+    height: auto;
+    width: auto;
+    max-height: 500px;
+    margin: 0px auto 10px auto;
+}
+
+blockquote {
+    font-size: 14pt;
+    font-weight: 800;
+    font-style: italic;
+}
+
+figure img, figure figcaption {
+    margin: 10px auto 10px auto !important;
+    text-align: center;
+}
