@@ -1,7 +1,7 @@
 baseURL: https://example.org/
 languageCode: en-us
 theme: ["PaperMod"]
-title: M. Reichardt's Life
+title: M. Reichardt's Life.
 
 pagination.paperSize: 5
 
