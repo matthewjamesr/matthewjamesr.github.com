@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blogs on M. Reichardt&#39;s Life.</title>
-    <link>https://example.org/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blogs on M. Reichardt&#39;s Life.</description>
     <image>
       <title>M. Reichardt&#39;s Life.</title>
@@ -12,12 +12,12 @@
     <generator>Hugo -- 0.147.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Apr 2025 00:30:03 +0000</lastBuildDate>
-    <atom:link href="https://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Committing to my first full-marathon</title>
-      <link>https://example.org/blog/committing-to-my-first-full-marathon/</link>
+      <link>http://localhost:1313/blog/committing-to-my-first-full-marathon/</link>
       <pubDate>Sun, 27 Apr 2025 00:30:03 +0000</pubDate>
-      <guid>https://example.org/blog/committing-to-my-first-full-marathon/</guid>
+      <guid>http://localhost:1313/blog/committing-to-my-first-full-marathon/</guid>
       <description>An initial foray into my running experience and move towards endurance running.</description>
     </item>
   </channel>

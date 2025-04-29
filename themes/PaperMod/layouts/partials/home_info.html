@@ -1,7 +1,14 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
+        {{ with site.Params.profileImage }}
+        <div style="float: left;">
+            <img class="profileImage" src="{{ site.Params.profileImage }}">
+        </div>
+        {{ end }}
+        <div style="float: left;">
+            <h1 style="line-height: 150px; margin-left: 25px;">{{ .Title | markdownify }}</h1>
+        </div>
     </header>
     <div class="entry-content">
         {{ .Content | markdownify }}

@@ -2,36 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-04-27T18:06:34+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
     <lastmod>2025-04-27T18:06:34+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/blog/committing-to-my-first-full-marathon/</loc>
+    <loc>http://localhost:1313/blog/committing-to-my-first-full-marathon/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/endurance/</loc>
+    <loc>http://localhost:1313/tags/endurance/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/runna/</loc>
+    <loc>http://localhost:1313/tags/runna/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/running/</loc>
+    <loc>http://localhost:1313/tags/running/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/training-peaks/</loc>
+    <loc>http://localhost:1313/tags/training-peaks/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/training-program/</loc>
+    <loc>http://localhost:1313/tags/training-program/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

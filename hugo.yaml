@@ -29,7 +29,7 @@ params:
   keywords: [Matthew Reichardt, Developer, Blog, Korea]
   author: Me
   # author: ["Me", "You"] # multiple authors
-  profileImage: "https://www.matthewreichardt.com/profile.jpg"
+  profileImage: "images/profile.jpg"
   images: ["https://www.matthewreichardt.com/profile.jpg"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
@@ -105,9 +105,7 @@ params:
     hiddenInSingle: false # hide on single page
 
   editPost:
-    URL: "https://github.com/matthewjamesr/matthewjames.github.com"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+    disabled: true
 
   # for search
   # https://fusejs.io/api/options.html
