@@ -1,0 +1,10 @@
+<div class="fitness-posts">
+    <h2>Fitness Articles</h2>
+    <ul>
+      {{ range where .Site.RegularPages "Section" "blog" }}
+        {{ if in .Params.tags "fitness" }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>  
