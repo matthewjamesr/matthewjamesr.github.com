@@ -1,9 +1,28 @@
 <div class="fitness-posts">
     <h2>Fitness Articles</h2>
-    <ul>
+    <ul class="post-list">
       {{ range where .Site.RegularPages "Section" "blog" }}
         {{ if in .Params.tags "fitness" }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ $post := . }}
+            <li>
+                <a href="{{ .RelPermalink }}">
+                    {{ with .Params.cover }}
+                        {{ with .image }}
+                            <div class="page-post-cover">
+                                <div class="image-container">
+                                    <img src="{{ . }}" />
+                                </div>
+                                <div class="meta">
+                                    <h3>{{ $post.Title }}</h3>
+                                    <div class="stats">
+                                        {{- partial "post_meta.html" $post -}}
+                                    </div>
+                                </div>
+                            </div>
+                        {{ end }}
+                    {{ end }}
+                </a>
+            </li>
         {{ end }}
       {{ end }}
     </ul>

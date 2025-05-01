@@ -3,9 +3,8 @@ title: "Committing to my first full-marathon"
 date: 2025-04-27T00:30:03+00:00
 # weight: 1
 # aliases: ["/first"]
-tags: ["running", "endurance", "training program", "runna", "training peaks"]
+tags: ["running", "endurance", "training program", "runna", "training peaks", "fitness"]
 author: "Me"
-# author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
 draft: false
@@ -29,10 +28,6 @@ cover:
     alt: "Me before the start of my second half-marathon, Seoul Race" # alt text
     caption: "Seoul Race 2024: Pre-start"
     relative: false
-editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
 ---
 
 > It's a marathon, not a sprint.
