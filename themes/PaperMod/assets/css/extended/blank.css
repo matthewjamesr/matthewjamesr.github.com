@@ -34,3 +34,7 @@ figure img, figure figcaption {
     border-radius: 50%;
     margin-top: 30px;
 }
+
+#menu .active {
+    padding-bottom: 5px !important;
+}
