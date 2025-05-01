@@ -120,9 +120,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: fitness
+      name: fitness 🏃
+      url: /fitness/
       weight: 10
     - identifier: tags
       name: tags
