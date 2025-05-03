@@ -209,7 +209,7 @@ figure img, figure figcaption {
 @media (max-width: 700px) {
 
     .footer {
-        margin-top: 10px !important;
+        margin-top: 25px !important;
     }
 
     .page-post-cover {
