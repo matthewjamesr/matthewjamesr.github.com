@@ -4,6 +4,10 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
 
+.hidden {
+    display: none;
+}
+
 .entry-cover img {
     height: auto;
     width: auto;
@@ -39,24 +43,30 @@ figure img, figure figcaption {
     padding-bottom: 5px !important;
 }
 
-.fitness-posts {
-
-    position: relative;
-
-    margin-top: 45px;
+.fitness-posts{
 
     h2 {
+        margin-top: 35px;
         margin-bottom: 25px;
     }
     
     .post-list {
         list-style-type: none;
+        margin-left: -1%;
+        margin-right: -1%;
     }
+}
+
+.fitness-wrapper {
+    margin-top: 35px;
+    padding-left: 0px;
 }
 
 .page-post-cover {
 
-    width: calc(100% / 2);
+    width: calc(96% / 2);
+    margin-left: 1%;
+    margin-right: 1%;
     transition: box-shadow 0.3s ease;
 
     &:hover {
@@ -113,11 +123,109 @@ figure img, figure figcaption {
     }
 }
 
+.row {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+.fitness-calculators {
+
+    margin-left: -1%;
+    margin-right: -1%;
+
+    h2 {
+        margin-left: 1%;
+        margin-bottom: 25px;
+    }
+
+    .calculator {
+        float: left;
+        color: #000000;
+        width: calc(96% / 2);
+        margin-left: 1%;
+        margin-right: 1%;
+
+        h3 {
+            color: #000000;
+            cursor: pointer !important;
+            user-select: none;
+        }
+
+        input, select {
+            border: 2px solid #000000;
+            border-radius: 10px;
+            color: #000000;
+        }
+
+        input {
+            font-size: 12pt;
+        }
+
+        select {
+            padding: 15px 10px 15px 10px;
+        }
+
+        .calculator-result {
+            margin-top: 10px;
+        }
+    }
+
+    .bmi-calculator, .bmr-calculator {
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        margin-bottom: 1rem;
+    
+        button {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            color: #000000;
+            background: #e4e3e3;
+            border-radius: 10px;
+        }
+
+        
+    }
+
+}
+
+.bmi-calculator label {
+    display: block;
+    margin: 0.5rem 0;
+}
+.bmi-calculator input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    box-sizing: border-box;
+    border: 10px solid #000000 !important;
+    border-radius: 10px;
+}
+
 /* Mobile css */
 
 @media (max-width: 700px) {
 
     .page-post-cover {
         width: 100%;
+        margin-left: 0;
+    }
+
+    .fitness-calculators {
+
+        h2 {
+            margin-left: 0;
+        }
+
+        .calculator, .bmi-calculator {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .calculator h3 {
+            font-size: 95%;
+        }
     }
 }

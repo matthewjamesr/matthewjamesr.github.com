@@ -1,11 +1,15 @@
 {{ define "main" }}
   <div class="fitness-wrapper">
 
-    <!-- Fitness Calculators Partial -->
-    {{ partial "fitness/calculators.html" . }}
+    <div class="row">
+      <!-- Fitness Calculators Partial -->
+      {{ partial "fitness/calculators.html" . }}
+    </div>
 
-    <!-- Fitness Blog Entries Partial -->
-    {{ partial "fitness/posts.html" . }}
+    <div class="row">
+      <!-- Fitness Blog Entries Partial -->
+      {{ partial "fitness/posts.html" . }}
+    </div>
 
   </div>
 {{ end }}

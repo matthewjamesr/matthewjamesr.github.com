@@ -1,0 +1,84 @@
+<div class="calculator bmr-calculator">
+    <h3 onclick="toggleBMRCalculator()">Basal Metabolic Rate (BMR) Calculator</h3>
+    <form class="hidden" onsubmit="return calculateBMR()">
+      <label>
+        Age (years):
+        <input type="number" id="bmr-age" required />
+      </label>
+      <label>
+        Sex:
+        <select id="bmr-sex" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </label>
+      <label>
+        Height (inches):
+        <input type="number" id="bmr-height" required />
+      </label>
+      <label>
+        Weight (lbs):
+        <input type="number" id="bmr-weight" required />
+      </label>
+      <button type="submit">Calculate BMR</button>
+    </form>
+    <p class="calculator-result" id="bmr-result"></p>
+  </div>
+  
+  <script>
+    function calculateBMR() {
+      const age = parseFloat(document.getElementById("bmr-age").value);
+      const sex = document.getElementById("bmr-sex").value;
+      const height = parseFloat(document.getElementById("bmr-height").value);
+      const weight = parseFloat(document.getElementById("bmr-weight").value);
+  
+      let bmr;
+  
+      if (sex === "male") {
+        // Mifflin-St Jeor Equation (male)
+        bmr = 66 + (6.23 * weight) + (12.7 * height) - (6.8 * age);
+      } else {
+        // Mifflin-St Jeor Equation (female)
+        bmr = 655 + (4.35 * weight) + (4.7 * height) - (4.7 * age);
+      }
+  
+      document.getElementById("bmr-result").innerText = `Your BMR is ${bmr.toFixed(0)} calories/day.`;
+  
+      return false; // prevent form submission
+    }
+
+    function toggleBMRCalculator() {
+        const formContainer = document.querySelector('.bmr-calculator form');
+        formContainer.classList.toggle('hidden')
+        document.getElementById("bmr-result").innerText = ""
+    }
+  </script>
+  
+  <style>
+    .bmr-calculator {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background-color: #f8f8f8;
+      margin-bottom: 2rem;
+    }
+  
+    .bmr-calculator label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  
+    .bmr-calculator input,
+    .bmr-calculator select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      box-sizing: border-box;
+    }
+  
+    .bmr-calculator button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  </style>
+  

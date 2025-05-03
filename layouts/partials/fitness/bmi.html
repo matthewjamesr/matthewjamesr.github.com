@@ -1,0 +1,70 @@
+<div class="calculator bmi-calculator">
+    <h3 onclick="toggleBMICalculator()">Body Mass Index (BMI) Calculator</h3>
+    <form class="hidden" onsubmit="return calculateBMI()">
+      <label>
+        Height (inches):
+        <input type="number" id="height" required />
+      </label>
+      <label>
+        Weight (lbs):
+        <input type="number" id="weight" required />
+      </label>
+      <button type="submit">Calculate BMI</button>
+    </form>
+    <p class="calculator-result" id="bmi-result"></p>
+  </div>
+  
+  <script>
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById("height").value);
+      const weight = parseFloat(document.getElementById("weight").value);
+  
+      if (height > 0 && weight > 0) {
+        const bmi = ((weight / (height * height)) * 703).toFixed(2);
+        let category = "";
+  
+        if (bmi < 18.5) category = "Underweight";
+        else if (bmi < 24.9) category = "Normal weight";
+        else if (bmi < 29.9) category = "Overweight";
+        else category = "Obese";
+  
+        document.getElementById("bmi-result").innerText = `Your BMI is ${bmi} (${category})`;
+      } else {
+        document.getElementById("bmi-result").innerText = "Please enter valid numbers";
+      }
+  
+      return false; // Prevent form from reloading
+    }
+
+    function toggleBMICalculator() {
+        const formContainer = document.querySelector('.bmi-calculator form');
+        formContainer.classList.toggle('hidden')
+        document.getElementById("bmi-result").innerText = ""
+    }
+  </script>
+  
+  <style>
+    .bmi-calculator {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background-color: #f8f8f8;
+      margin-bottom: 2rem;
+    }
+    .bmi-calculator label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+    .bmi-calculator input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.25rem;
+        box-sizing: border-box;
+        border: 2px solid #000000 !important;
+        border-radius: 10px;
+    }
+    .bmi-calculator button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  </style>
+  

@@ -1,9 +1,11 @@
 <div class="fitness-calculators">
-    <h2>Fitness Calculators</h2>
+    <div class="row" style="padding: 0px !important;">
+      <h2>Fitness Calculators</h2>
+    </div>
     <!-- Add links or embed calculator components here -->
-    <ul>
-      <li><a href="/fitness/calculator/bmi">BMI Calculator</a></li>
-      <li><a href="/fitness/calculator/bmr">BMR Calculator</a></li>
-    </ul>
+     <div class="row" style="padding: 0px !important;">
+      {{ partial "fitness/bmi.html" . }}
+      {{ partial "fitness/bmr.html" . }}
+     </div>
   </div>
   
