@@ -2,34 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/fitness/</loc>
-    <lastmod>2025-05-01T18:37:09+09:00</lastmod>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/differing-opinions-race-prediction-across-platforms/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fitness/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/garmin/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/runna/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/running/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/strava/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/training/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fitness/</loc>
     <lastmod>2025-05-01T18:37:09+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
     <lastmod>2025-04-27T18:06:34+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-04-27T00:30:03+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/committing-to-my-first-full-marathon/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/endurance/</loc>
-    <lastmod>2025-04-27T00:30:03+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/fitness/</loc>
-    <lastmod>2025-04-27T00:30:03+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/runna/</loc>
-    <lastmod>2025-04-27T00:30:03+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/running/</loc>
-    <lastmod>2025-04-27T00:30:03+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-04-27T00:30:03+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/training-peaks/</loc>
