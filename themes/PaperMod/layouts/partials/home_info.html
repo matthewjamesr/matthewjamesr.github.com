@@ -15,6 +15,14 @@
     </div>
     <footer class="entry-footer">
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+        <div style="margin-top: 15px; border: 2px solid rgb(222,93,53); width: fit-content; padding: 10px; border-radius: 8px;">
+            <a style="display: inline; vertical-align: middle;" href="https://www.matthewreichardt.com/strava-stats">
+                <img style="display: inline; height: 30px; vertical-align: middle;" src="/images/strava-icon.svg" />
+                <div style="display: inline-block; margin-left: 5px; vertical-align: middle; font-size: 12pt; font-weight: 700;">
+                    View strava stats &#10230;
+                </div>
+            </a>
+        </div>
     </footer>
 </article>
 {{- end -}}
