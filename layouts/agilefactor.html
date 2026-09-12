@@ -1,0 +1,58 @@
+{{ define "main" }}
+<style>
+.af-wrap { max-width: 780px; margin: 0 auto; }
+.af-about { margin: 0 0 2.5rem; font-size: 1.05rem; line-height: 1.7; color: var(--secondary); }
+.af-about p { margin: 0 0 1rem; }
+.af-shows h2 { font-size: 1.4rem; margin: 0 0 1.25rem; }
+.af-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 0 0 1.25rem;
+}
+.af-card h3 { margin: 0 0 0.25rem; font-size: 1.25rem; }
+.af-tagline { margin: 0 0 0.75rem; font-weight: 600; color: var(--primary); }
+.af-card p.af-desc { margin: 0 0 1.25rem; color: var(--secondary); line-height: 1.65; }
+.af-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.af-btn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  border: 1px solid var(--border);
+  color: var(--primary);
+  background: var(--theme);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.af-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+.af-btn.af-spotify { background: #1DB954; border-color: #1DB954; color: #fff; }
+.af-more { margin-top: 2rem; color: var(--secondary); font-size: 0.95rem; }
+</style>
+
+<article class="post-single af-wrap">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+  <div class="af-about">
+    {{ .Content }}
+  </div>
+  <section class="af-shows">
+    <h2>Podcasts</h2>
+    {{ range .Params.shows }}
+    <div class="af-card">
+      <h3>{{ .title }}</h3>
+      {{ with .tagline }}<p class="af-tagline">{{ . }}</p>{{ end }}
+      {{ with .description }}<p class="af-desc">{{ . }}</p>{{ end }}
+      <div class="af-links">
+        <a class="af-btn af-spotify" href="{{ .spotify }}" target="_blank" rel="noopener">Open in Spotify</a>
+        {{ with .briefing }}<a class="af-btn" href="{{ . | relURL }}">Interactive briefing map</a>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </section>
+  <p class="af-more">More Agile Factor series are on the way.</p>
+</article>
+{{ end }}
