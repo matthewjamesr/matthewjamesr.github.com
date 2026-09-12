@@ -25,7 +25,7 @@
 .af-card h3 { margin: 0 0 0.25rem; font-size: 1.25rem; }
 .af-tagline { margin: 0 0 0.75rem; font-weight: 600; color: var(--primary); }
 .af-card p.af-desc { margin: 0 0 1.25rem; color: var(--secondary); line-height: 1.65; }
-.af-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.af-links { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: flex-end; }
 .af-btn {
   display: inline-block;
   padding: 0.6rem 1.25rem;
@@ -40,6 +40,7 @@
 }
 .af-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
 .af-btn.af-spotify { background: #1DB954; border-color: #1DB954; color: #fff; }
+.af-btn.af-apple { background: #872ec4; border-color: #872ec4; color: #fff; }
 .af-more { margin-top: 2rem; color: var(--secondary); font-size: 0.95rem; }
 @media (max-width: 540px) {
   .af-card { flex-direction: column; }
@@ -65,6 +66,7 @@
         {{ with .description }}<p class="af-desc">{{ . }}</p>{{ end }}
         <div class="af-links">
           <a class="af-btn af-spotify" href="{{ .spotify }}" target="_blank" rel="noopener">Open in Spotify</a>
+          {{ with .apple }}<a class="af-btn af-apple" href="{{ . }}" target="_blank" rel="noopener">Apple Podcasts</a>{{ end }}
           {{ with .briefing }}<a class="af-btn" href="{{ . | relURL }}">Interactive briefing map</a>{{ end }}
           {{ with .rss }}<a class="af-btn" href="{{ . | relURL }}" target="_blank" rel="noopener">RSS feed</a>{{ end }}
         </div>
