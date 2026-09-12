@@ -120,6 +120,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - identifier: agilefactor
+      name: Agile Factor
+      url: /agilefactor/
+      weight: 5
     - identifier: fitness
       name: fitness 🏃
       url: /fitness/
