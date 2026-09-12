@@ -27,7 +27,7 @@
       --bg: #0e1310;
     }
     * { box-sizing: border-box; }
-    html { background: var(--bg); }
+    html { height: 100%; background: var(--bg); overflow: hidden; }
     body {
       margin: 0;
       color: var(--ink);
@@ -37,13 +37,44 @@
         var(--bg);
       background-size: 28px 28px;
       font-family: "Source Sans 3", sans-serif;
-      min-height: 100vh;
-      overflow-x: hidden;
+      position: fixed;
+      inset: 0;
+      min-height: 0;
+      height: auto;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
     button, select { font: inherit; }
     button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
     a { color: inherit; }
-    .shell { width: min(1560px, 100%); margin: 0 auto; }
+    .site-nav {
+      flex: 0 0 auto;
+      width: 100%;
+      border-bottom: 1px solid var(--line);
+      background: #0a0f0c;
+    }
+    .site-nav-inner {
+      width: min(1560px, 100%);
+      margin: 0 auto;
+      padding: 8px clamp(18px, 3vw, 48px);
+      overflow: hidden;
+    }
+    .back-link {
+      float: left;
+      color: #d7ddd7;
+      font: 500 12px/1.4 "IBM Plex Mono", monospace;
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--blue); }
+    .shell {
+      flex: 1 1 auto;
+      min-height: 0;
+      width: min(1560px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
     .masthead {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(270px, 380px);
@@ -96,12 +127,12 @@
       padding: 13px 42px 13px 14px;
     }
     .map-layout {
+      flex: 1 1 auto;
+      min-height: 0;
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(360px, .72fr);
-      min-height: 650px;
-      height: calc(100vh - 197px);
     }
-    .map-stage { position: relative; min-height: 520px; border-right: 1px solid var(--line); background: #202b25; }
+    .map-stage { position: relative; min-height: 0; border-right: 1px solid var(--line); background: #202b25; }
     #map { position: absolute; inset: 0; z-index: 1; }
     .map-tools {
       position: absolute;
@@ -145,7 +176,7 @@
     }
     .map-credit { display: block; margin-top: 5px; color: var(--faint); font-size: 10px; }
     .map-credit a { color: #aeb9b0; }
-    .brief-panel { overflow-y: auto; background: rgba(17,23,19,.97); scrollbar-color: var(--line) transparent; }
+    .brief-panel { min-height: 0; overflow-y: auto; background: rgba(17,23,19,.97); scrollbar-color: var(--line) transparent; }
     .panel-block { padding: 24px 26px; border-bottom: 1px solid var(--line-soft); }
     .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
     .stat { padding: 15px 13px; background: var(--panel); }
@@ -217,17 +248,23 @@
     .fallback.visible { display: block; }
     .fallback a { color: var(--blue); }
     @media (max-width: 880px) {
-      .masthead { grid-template-columns: 1fr; gap: 20px; padding-top: 24px; }
-      .map-layout { display: block; height: auto; min-height: 0; }
-      .map-stage { min-height: 430px; height: 55vh; max-height: 590px; border-right: 0; border-bottom: 1px solid var(--line); }
-      .brief-panel { overflow: visible; }
+      .masthead { grid-template-columns: 1fr; gap: 14px; padding-top: 18px; padding-bottom: 16px; }
+      .map-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 1.08fr) minmax(0, .92fr);
+      }
+      .map-stage { min-height: 0; height: auto; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); }
+      .brief-panel { min-height: 0; overflow-y: auto; }
       .selector-wrap { max-width: none; }
     }
     @media (max-width: 540px) {
-      .masthead { padding: 21px 16px 18px; }
-      h1 { font-size: 38px; }
-      .dek { font-size: 16px; }
-      .map-stage { min-height: 430px; height: 54vh; }
+      .site-nav-inner { padding: 7px 16px; }
+      .masthead { padding: 14px 16px 13px; gap: 11px; }
+      .edition-line { margin-bottom: 6px; }
+      h1 { font-size: 32px; }
+      .dek { margin-top: 9px; font-size: 14px; line-height: 1.35; }
+      .selector-wrap label { margin-bottom: 5px; }
+      select { padding-top: 9px; padding-bottom: 9px; }
       .map-tools { top: 10px; left: 10px; right: 58px; max-width: none; }
       .tool-btn, .filter-btn { padding: 8px 9px; font-size: 12px; }
       .precision-note { left: 10px; right: 10px; bottom: 10px; max-width: none; font-size: 11px; }
@@ -239,6 +276,11 @@
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Agile Factor navigation">
+    <div class="site-nav-inner">
+      <a class="back-link" href="https://matthewreichardt.com/agilefactor/">← Back to Agile Factor</a>
+    </div>
+  </nav>
   <main class="shell">
     <section class="masthead" aria-labelledby="edition-title">
       <div>
@@ -508,7 +550,7 @@
       markerLayer.clearLayers();
       currentMarkers.clear();
       locations.forEach(item => {
-        const marker = L.marker([item.lat, item.lng], { icon: markerIcon(item.type), title: item.title });
+        const marker = L.marker([item.lat, item.lng], { icon: markerIcon(item.type), title: item.title, keyboard: false });
         marker.bindPopup(`<strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.detail)}</p><a href="${item.mapUrl}" target="_blank" rel="noopener noreferrer">Open in maps ↗</a>`);
         if (activeTypes.has(item.type)) marker.addTo(markerLayer);
         currentMarkers.set(item.id, { marker, item });
