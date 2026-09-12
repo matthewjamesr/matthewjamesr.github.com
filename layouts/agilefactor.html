@@ -66,6 +66,7 @@
         <div class="af-links">
           <a class="af-btn af-spotify" href="{{ .spotify }}" target="_blank" rel="noopener">Open in Spotify</a>
           {{ with .briefing }}<a class="af-btn" href="{{ . | relURL }}">Interactive briefing map</a>{{ end }}
+          {{ with .rss }}<a class="af-btn" href="{{ . | relURL }}" target="_blank" rel="noopener">RSS feed</a>{{ end }}
         </div>
       </div>
     </div>
