@@ -282,13 +282,37 @@
     .fallback.visible { display: block; }
     .fallback a { color: var(--blue); }
     @media (max-width: 880px) {
+      html { height: auto; min-height: 100%; overflow-y: auto; }
+      body {
+        position: static;
+        min-height: 100vh;
+        min-height: 100svh;
+        height: auto;
+        overflow: visible;
+      }
+      .shell { flex: none; min-height: auto; }
       .masthead { padding-top: 18px; padding-bottom: 16px; }
       .map-layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: minmax(0, 1.08fr) minmax(0, .92fr);
+        flex: none;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
       }
-      .map-stage { min-height: 0; height: auto; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); }
-      .brief-panel { min-height: 0; overflow-y: auto; }
+      .brief-panel {
+        order: 1;
+        min-height: 0;
+        overflow: visible;
+      }
+      .map-stage {
+        order: 2;
+        flex: none;
+        min-height: clamp(360px, 62svh, 560px);
+        height: clamp(360px, 62svh, 560px);
+        max-height: none;
+        border-top: 1px solid var(--line);
+        border-right: 0;
+        border-bottom: 0;
+      }
       .selector-wrap { max-width: none; }
     }
     @media (max-width: 540px) {
