@@ -58,15 +58,29 @@
       width: min(1560px, 100%);
       margin: 0 auto;
       padding: 8px clamp(18px, 3vw, 48px);
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
     }
     .back-link {
-      float: left;
+      flex: 0 1 auto;
       color: #d7ddd7;
       font: 500 12px/1.4 "IBM Plex Mono", monospace;
       text-decoration: none;
+      white-space: nowrap;
     }
     .back-link:hover { color: var(--blue); }
+    .site-nav .selector-wrap {
+      width: min(360px, 48vw);
+      margin-left: auto;
+    }
+    .site-nav select {
+      padding: 7px 36px 7px 11px;
+      border-color: #3b4941;
+      background-color: #151c18;
+      font: 500 12px/1.35 "IBM Plex Mono", monospace;
+    }
     .shell {
       flex: 1 1 auto;
       min-height: 0;
@@ -76,10 +90,6 @@
       flex-direction: column;
     }
     .masthead {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(270px, 380px);
-      gap: 32px;
-      align-items: end;
       padding: 30px clamp(18px, 3vw, 48px) 24px;
       border-bottom: 1px solid var(--line);
     }
@@ -261,7 +271,7 @@
     .fallback.visible { display: block; }
     .fallback a { color: var(--blue); }
     @media (max-width: 880px) {
-      .masthead { grid-template-columns: 1fr; gap: 14px; padding-top: 18px; padding-bottom: 16px; }
+      .masthead { padding-top: 18px; padding-bottom: 16px; }
       .map-layout {
         grid-template-columns: 1fr;
         grid-template-rows: minmax(0, 1.08fr) minmax(0, .92fr);
@@ -271,8 +281,11 @@
       .selector-wrap { max-width: none; }
     }
     @media (max-width: 540px) {
-      .site-nav-inner { padding: 7px 16px; }
-      .masthead { padding: 14px 16px 13px; gap: 11px; }
+      .site-nav-inner { padding: 7px 16px; gap: 10px; }
+      .back-link { font-size: 11px; }
+      .site-nav .selector-wrap { width: min(190px, 52vw); }
+      .site-nav select { padding: 6px 31px 6px 9px; font-size: 11px; background-position: right 10px center; }
+      .masthead { padding: 14px 16px 13px; }
       .edition-line { margin-bottom: 6px; }
       h1 { font-size: 32px; }
       .dek { margin-top: 9px; font-size: 14px; line-height: 1.35; }
@@ -292,6 +305,11 @@
   <nav class="site-nav" aria-label="Agile Factor navigation">
     <div class="site-nav-inner">
       <a class="back-link" href="https://matthewreichardt.com/agilefactor/">← Back to Agile Factor</a>
+      <div class="selector-wrap">
+        <div class="selector-row">
+          <select id="episode-select" aria-label="Choose a podcast episode"></select>
+        </div>
+      </div>
     </div>
   </nav>
   <main class="shell">
@@ -300,12 +318,6 @@
         <div class="edition-line" id="edition-kicker">Saturday, September 12 · Evening Edition</div>
         <h1 id="edition-title">Pressure spreads across two sea lanes</h1>
         <p class="dek" id="edition-dek">The episode tracks reported maritime attacks, retaliation, strategic threats, and the widening Red Sea theater.</p>
-      </div>
-      <div class="selector-wrap">
-        <label for="episode-select">Podcast episode</label>
-        <div class="selector-row">
-          <select id="episode-select" aria-label="Choose a podcast episode"></select>
-        </div>
       </div>
     </section>
 
@@ -483,91 +495,6 @@
             precision: "Facility-area anchor",
             detail: "Yanbu is the Red Sea terminal of Saudi Arabia’s East-West pipeline; this marker does not identify the reported drone impact point.",
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Yanbu%2C%20Saudi%20Arabia"
-          }
-        ]
-      },
-      "2026-09-12-evening": {
-        label: "Sep 12, 2026 · Evening Edition",
-        kicker: "Saturday, September 12 · Evening Edition",
-        title: "Pressure spreads across two sea lanes",
-        dek: "The episode tracks reported maritime attacks, retaliation, strategic threats, and the widening Red Sea theater.",
-        summary: "This briefing centers on a sharp rise in reported maritime attacks around the Gulf of Oman and Strait of Hormuz, followed by Iranian retaliation and threats against regional assets. It also follows a second theater around the Bab el-Mandeb. Oil and shipping costs form the economic through-line.",
-        seaLanes: 2,
-        precisionNote: "Markers use verified named-place coordinates as regional anchors. They do not imply a precise incident site; no closure boundary was mapped without confirmed coordinates.",
-        sources: [
-          {
-            title: "Trump advisers warn conflict may last through term",
-            publisher: "Reuters",
-            url: "https://www.reuters.com/world/us/trump-advisers-warn-iran-conflict-may-last-through-end-his-term-wsj-reports-2026-09-09/"
-          }
-        ],
-        sourceNote: "This map is an episode snapshot, not a live operational picture. The source material did not include direct URLs for the cited X posts, so none are invented here.",
-        locations: [
-          {
-            id: "hormuz",
-            title: "Strait of Hormuz approach",
-            place: "Bandar Abbas, Iran",
-            lat: 27.18901,
-            lng: 56.28351,
-            type: "reported",
-            precision: "Regional anchor",
-            detail: "The episode places a cluster of reported ship attacks around the strait and nearby waters.",
-            mapUrl: "https://www.google.com/maps/search/?api=1&query=Bandar%20Abbas%2C%20Iran"
-          },
-          {
-            id: "oman",
-            title: "Gulf of Oman shipping lane",
-            place: "Muscat, Oman",
-            lat: 23.61524,
-            lng: 58.59122,
-            type: "reported",
-            precision: "Regional anchor",
-            detail: "Maritime incidents and tanker losses were reported across the wider Gulf of Oman theater.",
-            mapUrl: "https://www.google.com/maps/search/?api=1&query=Muscat%2C%20Oman"
-          },
-          {
-            id: "azraq",
-            title: "Jordan air-base region",
-            place: "Al Azraq, Jordan",
-            lat: 31.88098,
-            lng: 36.83069,
-            type: "strategic",
-            precision: "District anchor",
-            detail: "The briefing reports ballistic-missile activity aimed at a U.S.-used facility in the Al Azraq region.",
-            mapUrl: "https://www.google.com/maps/search/?api=1&query=Al%20Azraq%2C%20Jordan"
-          },
-          {
-            id: "natanz",
-            title: "Natanz nuclear region",
-            place: "Natanz, Iran",
-            lat: 33.62164,
-            lng: 51.77015,
-            type: "strategic",
-            precision: "District anchor",
-            detail: "The episode notes a public threat against a deeply buried nuclear site in the Natanz area.",
-            mapUrl: "https://www.google.com/maps/search/?api=1&query=Natanz%2C%20Iran"
-          },
-          {
-            id: "dubai",
-            title: "Dubai anchorage area",
-            place: "Dubai, United Arab Emirates",
-            lat: 25.26951,
-            lng: 55.30884,
-            type: "context",
-            precision: "City anchor",
-            detail: "The briefing describes casualties aboard a tanker anchored off Dubai; the city marker is contextual, not the vessel position.",
-            mapUrl: "https://www.google.com/maps/search/?api=1&query=Dubai%2C%20United%20Arab%20Emirates"
-          },
-          {
-            id: "bab-el-mandeb",
-            title: "Bab el-Mandeb / Perim theater",
-            place: "Bab el-Mandeb",
-            lat: 12.65,
-            lng: 43.42,
-            type: "context",
-            precision: "Approximate sea-lane anchor",
-            detail: "The briefing follows reported Houthi activity around Perim Island and the Bab el-Mandeb; this marker indicates the strait, not a confirmed unit position.",
-            mapUrl: "https://www.google.com/maps/search/?api=1&query=Bab%20el-Mandeb"
           }
         ]
       }
