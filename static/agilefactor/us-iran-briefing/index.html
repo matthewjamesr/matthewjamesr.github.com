@@ -253,7 +253,29 @@
     .audio-resource-head strong { font-size: 15px; }
     .audio-resource-head small { color: var(--faint); white-space: nowrap; }
     .audio-resource audio { display: block; width: 100%; max-width: 100%; height: 42px; accent-color: var(--orange); }
-    .resource-empty { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .platform-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 15px;
+      border-top: 1px solid var(--line-soft);
+    }
+    .platform-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 9px 12px;
+      border: 1px solid #4a5a50;
+      border-radius: 4px;
+      background: var(--panel-2);
+      color: var(--ink);
+      font: 600 12px/1.25 "Source Sans 3", sans-serif;
+      text-decoration: none;
+    }
+    .platform-link:hover { border-color: var(--blue); color: var(--blue); background: #202a24; }
+    .platform-link:first-child { border-color: var(--orange-soft); }
+    .resource-empty { margin: 0 0 15px; color: var(--muted); font-size: 13px; line-height: 1.45; }
     .source-note { margin: 10px 0 0; color: var(--faint); font-size: 12px; line-height: 1.45; }
     .leaflet-container { background: #202b25; font-family: "Source Sans 3", sans-serif; }
     .leaflet-tile-pane { filter: saturate(.42) brightness(.68) sepia(.11) hue-rotate(86deg); }
@@ -779,11 +801,13 @@
       const block = document.getElementById("resources-block");
       block.hidden = false;
       const resourceList = document.getElementById("resource-list");
-      if (!resources.length) {
-        resourceList.innerHTML = '<p class="resource-empty">Files and audio were not included with this archived episode.</p>';
-        return;
-      }
-      resourceList.innerHTML = resources.map(resource => resource.kind === "audio" ? `
+      const platformUrls = new Set([
+        "https://www.youtube.com/@theagilefactor",
+        "https://open.spotify.com/show/1yMXcwNryjSGseTvmmMcSV",
+        "https://podcasts.apple.com/us/podcast/agile-factor-u-s-iran/id6811434506"
+      ]);
+      const episodeResources = resources.filter(resource => !platformUrls.has(resource.url));
+      const resourceMarkup = episodeResources.length ? episodeResources.map(resource => resource.kind === "audio" ? `
         <div class="audio-resource">
           <div class="audio-resource-head"><strong>${escapeHtml(resource.title)}</strong><small>${escapeHtml(resource.publisher)}</small></div>
           <audio controls preload="none">
@@ -795,7 +819,15 @@
         <a class="source-link" href="${escapeHtml(resource.url)}"${resource.download ? ` download="${escapeHtml(resource.download)}"` : ' target="_blank" rel="noopener noreferrer"'}>
           <span>${escapeHtml(resource.title)}</span><small>${escapeHtml(resource.publisher)} ${resource.download ? "↓" : "↗"}</small>
         </a>
-      `).join("");
+      `).join("") : '<p class="resource-empty">Files and audio were not included with this archived episode.</p>';
+      const platformMarkup = `
+        <div class="platform-links" aria-label="Watch and listen on podcast platforms">
+          <a class="platform-link" href="https://www.youtube.com/@theagilefactor" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+          <a class="platform-link" href="https://open.spotify.com/show/1yMXcwNryjSGseTvmmMcSV" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+          <a class="platform-link" href="https://podcasts.apple.com/us/podcast/agile-factor-u-s-iran/id6811434506" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+        </div>
+      `;
+      resourceList.innerHTML = resourceMarkup + platformMarkup;
     }
 
     function renderSources(sources) {
