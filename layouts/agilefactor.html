@@ -1,12 +1,4 @@
 {{ define "main" }}
-<!-- Google tag (gtag.js) — Agile Factor pages only -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4W4QYJRR7Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4W4QYJRR7Y');
-</script>
 <style>
 .af-wrap { max-width: 780px; margin: 0 auto; }
 .af-about { margin: 0 0 2.5rem; font-size: 1.05rem; line-height: 1.7; color: var(--secondary); }
@@ -48,6 +40,7 @@
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 .af-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+.af-btn.af-youtube { background: #FF0000; border-color: #FF0000; color: #fff; }
 .af-btn.af-spotify { background: #1DB954; border-color: #1DB954; color: #fff; }
 .af-btn.af-apple { background: #872ec4; border-color: #872ec4; color: #fff; }
 .af-more { margin-top: 2rem; color: var(--secondary); font-size: 0.95rem; }
@@ -74,6 +67,7 @@
         {{ with .tagline }}<p class="af-tagline">{{ . }}</p>{{ end }}
         {{ with .description }}<p class="af-desc">{{ . }}</p>{{ end }}
         <div class="af-links">
+          {{ with .youtube }}<a class="af-btn af-youtube" href="{{ . }}" target="_blank" rel="noopener">Watch on YouTube</a>{{ end }}
           <a class="af-btn af-spotify" href="{{ .spotify }}" target="_blank" rel="noopener">Open in Spotify</a>
           {{ with .apple }}<a class="af-btn af-apple" href="{{ . }}" target="_blank" rel="noopener">Apple Podcasts</a>{{ end }}
           {{ with .briefing }}<a class="af-btn" href="{{ . | relURL }}">Interactive briefing map</a>{{ end }}
