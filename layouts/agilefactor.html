@@ -1,6 +1,23 @@
 {{ define "main" }}
 <style>
 .af-wrap { max-width: 780px; margin: 0 auto; }
+.af-brand {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0 0 2.5rem;
+}
+.af-brand-img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.af-brand-text { min-width: 0; }
+.af-brand-title { margin: 0 0 0.5rem !important; }
+.af-brand-desc { color: var(--secondary); font-size: 1.05rem; line-height: 1.7; }
+.af-brand-desc p { margin: 0; }
 .af-about { margin: 0 0 2.5rem; font-size: 1.05rem; line-height: 1.7; color: var(--secondary); }
 .af-about p { margin: 0 0 1rem; }
 .af-shows h2 { font-size: 1.4rem; margin: 0 0 1.25rem; }
@@ -47,16 +64,19 @@
 @media (max-width: 540px) {
   .af-card { flex-direction: column; }
   .af-art { width: 112px; height: 112px; }
+  .af-brand { gap: 1rem; }
+  .af-brand-img { width: 88px; height: 88px; }
 }
 </style>
 
 <article class="post-single af-wrap">
-  <header class="post-header">
-    <h1 class="post-title">{{ .Title }}</h1>
+  <header class="af-brand">
+    <img class="af-brand-img" src="{{ "agilefactor/brand-icon.jpg" | relURL }}" alt="Agile Factor brand image">
+    <div class="af-brand-text">
+      <h1 class="post-title af-brand-title">{{ .Title }}</h1>
+      <div class="af-brand-desc">{{ .Content }}</div>
+    </div>
   </header>
-  <div class="af-about">
-    {{ .Content }}
-  </div>
   <section class="af-shows">
     <h2>Podcasts</h2>
     {{ range .Params.shows }}
