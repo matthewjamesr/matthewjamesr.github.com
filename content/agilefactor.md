@@ -12,6 +12,14 @@ shows:
     apple: "https://podcasts.apple.com/us/podcast/agile-factor-u-s-iran/id6811434506"
     youtube: "https://www.youtube.com/@theagilefactor"
     briefing: "/agilefactor/us-iran-briefing/"
+  - title: "Gradient Pulse"
+    image: "/agilefactor/cover-gradient-pulse.png"
+    tagline: "AI News, Explained"
+    description: "A weekly briefing on artificial intelligence — new models, new tools, and what the benchmarks actually mean — with a release radar, perf-per-dollar breakdowns, and a two-host audio edition. New episodes every Wednesday at 8:00 AM CT."
+    youtube: "https://www.youtube.com/@theagilefactor"
+    briefing: "/agilefactor/gradient-pulse/"
+    briefing_label: "Release radar"
+    rss: "/agilefactor/gradient-pulse/feed.xml"
 ---
 
 Agile Factor is a short-form podcast series that breaks complex, fast-moving stories into briefings you can actually keep up with. Each series pairs a two-host audio edition with maps, primary sources, and the receipts — the signal without the noise.
