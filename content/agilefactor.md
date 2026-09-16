@@ -19,7 +19,6 @@ shows:
     youtube: "https://www.youtube.com/@theagilefactor"
     briefing: "/agilefactor/gradient-pulse/"
     briefing_label: "Release radar"
-    rss: "/agilefactor/gradient-pulse/feed.xml"
 ---
 
 Agile Factor is a short-form podcast series that breaks complex, fast-moving stories into briefings you can actually keep up with. Each series pairs a two-host audio edition with maps, primary sources, and the receipts — the signal without the noise.
