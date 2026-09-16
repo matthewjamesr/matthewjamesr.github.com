@@ -89,7 +89,7 @@
   </header>
   <section class="af-shows">
     <h2>Podcasts</h2>
-    {{ range .Params.shows }}
+    {{ range $s := .Params.shows }}
     <div class="af-card">
       {{ with .image }}<img class="af-art" src="{{ . | relURL }}" alt="{{ $.Title }} cover art" loading="lazy">{{ end }}
       <div class="af-card-body">
@@ -98,9 +98,9 @@
         {{ with .description }}<p class="af-desc">{{ . }}</p>{{ end }}
         <div class="af-links">
           {{ with .youtube }}<a class="af-btn af-youtube" href="{{ . }}" target="_blank" rel="noopener">Watch on YouTube</a>{{ end }}
-          <a class="af-btn af-spotify" href="{{ .spotify }}" target="_blank" rel="noopener">Open in Spotify</a>
+          {{ with .spotify }}<a class="af-btn af-spotify" href="{{ . }}" target="_blank" rel="noopener">Open in Spotify</a>{{ end }}
           {{ with .apple }}<a class="af-btn af-apple" href="{{ . }}" target="_blank" rel="noopener">Apple Podcasts</a>{{ end }}
-          {{ with .briefing }}<a class="af-btn" href="{{ . | relURL }}">Interactive briefing map</a>{{ end }}
+          {{ with .briefing }}<a class="af-btn" href="{{ . | relURL }}">{{ with $s.briefing_label }}{{ . }}{{ else }}Interactive briefing map{{ end }}</a>{{ end }}
           {{ with .rss }}<a class="af-btn" href="{{ . | relURL }}" target="_blank" rel="noopener">RSS feed</a>{{ end }}
         </div>
       </div>
