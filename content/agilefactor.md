@@ -20,6 +20,7 @@ shows:
     apple: "https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782"
     briefing: "/agilefactor/gradient-pulse/"
     briefing_label: "Release radar"
+# Apple Podcasts show + Agile Factor channel live 2026-09-16; Spotify pending
 ---
 
 Agile Factor is a short-form podcast series that breaks complex, fast-moving stories into briefings you can actually keep up with. Each series pairs a two-host audio edition with maps, primary sources, and the receipts — the signal without the noise.
