@@ -19,7 +19,7 @@ shows:
     youtube: "https://www.youtube.com/@theagilefactor"
     apple: "https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782"
     briefing: "/agilefactor/gradient-pulse/"
-    briefing_label: "Release radar"
+    briefing_label: "Weekly Radar"
 # Apple Podcasts show + Agile Factor channel live 2026-09-16; Spotify pending
 ---
 
