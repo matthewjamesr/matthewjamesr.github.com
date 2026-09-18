@@ -10,7 +10,7 @@ shows:
     description: "A concise morning and evening briefing on the U.S.–Iran conflict — strikes, shipping and the Strait of Hormuz, oil markets, and diplomacy — with an interactive map, linked sources, and a two-host audio edition. New episodes every day at 7:00 AM and 8:00 PM CT."
     spotify: "https://open.spotify.com/show/1yMXcwNryjSGseTvmmMcSV"
     apple: "https://podcasts.apple.com/us/podcast/agile-factor-u-s-iran/id6811434506"
-    youtube: "https://www.youtube.com/@theagilefactor"
+    youtube: "https://www.youtube.com/playlist?list=PLGs_LAc4cDsY"
     briefing: "/agilefactor/us-iran-briefing/"
   - title: "Gradient Pulse"
     image: "/agilefactor/cover-gradient-pulse.png"
