@@ -2948,6 +2948,8 @@
       }
     };
 
+    const latestEpisodeId = "evening-2026-09-19";
+
     const colorByType = { reported: "#ff7043", strategic: "#d6bd85", context: "#70bfd2" };
     let map;
     let markerLayer;
@@ -2959,7 +2961,7 @@
     }
 
     function defaultEpisodeId() {
-      return Object.keys(episodes)[0];
+      return latestEpisodeId;
     }
 
     function episodeFromUrl() {
@@ -2971,7 +2973,11 @@
 
     function populateEpisodeSelect() {
       const select = document.getElementById("episode-select");
-      select.innerHTML = Object.entries(episodes).map(([id, episode]) =>
+      const orderedEntries = [
+        [latestEpisodeId, episodes[latestEpisodeId]],
+        ...Object.entries(episodes).filter(([id]) => id !== latestEpisodeId)
+      ];
+      select.innerHTML = orderedEntries.map(([id, episode]) =>
         `<option value="${escapeHtml(id)}">${escapeHtml(episode.label)}</option>`
       ).join("");
     }
