@@ -66,6 +66,7 @@
 <header class="bar">
   <a class="back" href="/agilefactor/">← Agile Factor</a>
   <select id="epSel" aria-label="Episode">
+    <option value="special-2026-09-20">Special Edition, September 20</option>
     <option value="weekly-2026-09-16">Weekly Edition, September 16</option>
   </select>
 </header>
@@ -81,19 +82,7 @@
     <p class="tag">AI News, Explained</p>
   </div>
 
-  <section id="episode">
-    <h2>Weekly Edition, September 16</h2>
-    <p class="ep-meta">Pilot episode · Published September 16, 2026</p>
-    <p>Meta's Muse agent wants to run your digital life — if you trust it. OpenAI tests advertiser-sponsored agents while Anthropic unifies Claude into one interface. The labs all call for slowing down AI while building faster than ever. Plus: Salesforce and NVIDIA's Koa, GPT Image 2.5 pricing, and Muse Voice Transcribe on the release radar.</p>
-    <h3>Episode files &amp; listening</h3>
-    <div class="files">
-      <a class="btn violet" href="https://matthewreichardt.com/agilefactor/gradient-pulse/pdfs/gradient-pulse-weekly-2026-09-16.pdf" download>Download briefing PDF</a>
-      <a class="btn yt" href="https://youtu.be/xJQoaMZ-kCI" target="_blank" rel="noopener">Watch on YouTube</a>
-      <a class="btn" href="https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782" target="_blank" rel="noopener">Apple Podcasts</a>
-    </div>
-    <audio controls preload="none" src="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-edition-2026-09-16.mp3"></audio>
-    <p class="note">Spotify listing coming soon.</p>
-  </section>
+  <section id="episode"></section>
 
   <section id="radar">
     <h2>Release radar</h2>
@@ -168,9 +157,47 @@
     rows.forEach(r => tb.appendChild(r));
     ths.forEach(h => delete h.dataset.asc); th.dataset.asc = asc?'1':'0';
   }));
-  document.getElementById('epSel').addEventListener('change', e => {
-    document.getElementById('episode').scrollIntoView({behavior:'smooth'});
-  });
+  const BASE = 'https://matthewreichardt.com/agilefactor/gradient-pulse';
+  const APPLE = 'https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782';
+  const EPISODES = {
+    'special-2026-09-20': {
+      h: 'Special Edition, September 20',
+      meta: 'Special edition · Published September 20, 2026',
+      summary: 'The president announced a federal "AI Force" modeled on the Space Force and a new AI czar, calling AI safety fears a hoax and pledging never to "hinder or stifle" the industry — days after the AI labs themselves asked to slow down. The announcement, the federal-acceleration vs lab-restraint split, the SOCOM AI near-miss, and the White House questions nobody has answered. Hype Check: is the AI Force real?',
+      pdf: 'gradient-pulse-special-2026-09-20.pdf',
+      yt: 'https://youtu.be/_3jzHtu_fOY',
+      audio: 'gradient-pulse-special-edition-2026-09-20.mp3'
+    },
+    'weekly-2026-09-16': {
+      h: 'Weekly Edition, September 16',
+      meta: 'Pilot episode · Published September 16, 2026',
+      summary: 'Meta\'s Muse agent wants to run your digital life — if you trust it. OpenAI tests advertiser-sponsored agents while Anthropic unifies Claude into one interface. The labs all call for slowing down AI while building faster than ever. Plus: Salesforce and NVIDIA\'s Koa, GPT Image 2.5 pricing, and Muse Voice Transcribe on the release radar.',
+      pdf: 'gradient-pulse-weekly-2026-09-16.pdf',
+      yt: 'https://youtu.be/xJQoaMZ-kCI',
+      audio: 'gradient-pulse-weekly-edition-2026-09-16.mp3'
+    }
+  };
+  const epSec = document.getElementById('episode');
+  const sel = document.getElementById('epSel');
+  function renderEpisode(key){
+    const ep = EPISODES[key] || EPISODES['special-2026-09-20'];
+    sel.value = key;
+    epSec.innerHTML =
+      '<h2>' + ep.h + '</h2>' +
+      '<p class="ep-meta">' + ep.meta + '</p>' +
+      '<p>' + ep.summary + '</p>' +
+      '<h3>Episode files &amp; listening</h3>' +
+      '<div class="files">' +
+        '<a class="btn violet" href="' + BASE + '/pdfs/' + ep.pdf + '" download>Download briefing PDF</a>' +
+        '<a class="btn yt" href="' + ep.yt + '" target="_blank" rel="noopener">Watch on YouTube</a>' +
+        '<a class="btn" href="' + APPLE + '" target="_blank" rel="noopener">Apple Podcasts</a>' +
+      '</div>' +
+      '<audio controls preload="none" src="' + BASE + '/episodes/' + ep.audio + '"></audio>' +
+      '<p class="note">Spotify listing coming soon.</p>';
+  }
+  sel.addEventListener('change', e => renderEpisode(e.target.value));
+  const q = new URLSearchParams(location.search).get('episode');
+  renderEpisode(q && EPISODES[q] ? q : 'special-2026-09-20');
 })();
 </script>
 </body>
