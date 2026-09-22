@@ -66,6 +66,7 @@
 <header class="bar">
   <a class="back" href="/agilefactor/">← Agile Factor</a>
   <select id="epSel" aria-label="Episode">
+    <option value="special-opus-55-2026-09-22">Special Edition: Claude Opus 5.5, September 22</option>
     <option value="special-2026-09-21">Special Edition, September 21</option>
     <option value="special-2026-09-20">Special Edition, September 20</option>
     <option value="weekly-2026-09-16">Weekly Edition, September 16</option>
@@ -88,6 +89,12 @@
   <section id="radar">
     <h2>Release radar</h2>
     <div class="cards">
+      <div class="card">
+        <span class="lab">Anthropic · Frontier model</span>
+        <h3>Claude Opus 5.5</h3>
+        <p>Launched Sept 22 — first model in the Claude 5.5 family. Anthropic claims new state-of-the-art in coding and knowledge work, outscoring the larger Fable 5.1 on many tests (Terminal-Bench 4.0 66.4%, FrontierCode 54.4%, CursorBench 57.8%, GDPval-AA 1846, HLE 67.7% with tools) — all self-reported, no independent rerun yet. Priced at $4/$20 per million tokens (20% below Opus 5), cache reads cut 60% to $0.20, ~40% lower operating cost on typical workloads, 30%+ faster generation. Fable-level safeguards; 85% less likely to bypass boundaries in an internal eval. Sonnet 5.5 + Haiku 5.5 in the coming weeks. Hype Check verdict: unproven — the price list is confirmed, the benchmarks await independent testing.</p>
+        <p class="src">Sources: <a href="https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/">TechCrunch</a>, <a href="https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/">Reuters</a>, <a href="https://the-decoder.com/claude-opus-5-5-matches-fable-5-1-at-40-percent-lower-cost-as-anthropic-promises-to-fix-claudish-writing/">The Decoder</a></p>
+      </div>
       <div class="card">
         <span class="lab">xAI · Frontier model</span>
         <h3>Grok 4.7</h3>
@@ -141,6 +148,7 @@
         <th data-k="0">Model ⇅</th><th data-k="1">Task ⇅</th><th data-k="2">Cost signal ⇅</th><th data-k="3">Caveat ⇅</th>
       </tr></thead>
       <tbody>
+        <tr><td>Claude Opus 5.5 (Anthropic)</td><td>Frontier coding + knowledge work</td><td>$4/$20 per 1M tokens; ~40% lower operating cost vs Opus 5; cache reads $0.20 (60% cheaper)</td><td>Price list confirmed; benchmark scores vendor-reported, no independent rerun yet</td></tr>
         <tr><td>Grok 4.7 (xAI)</td><td>Coding agent tasks</td><td>~$4.69 / task on Cursor — roughly half the ~$9 rivals</td><td>Cursor's own Sept evaluation; xAI launch scores self-reported</td></tr>
         <tr><td>Koa (Salesforce/NVIDIA)</td><td>CRM reasoning</td><td>3× fewer errors than leading models; fewer tokens per task</td><td>Salesforce's own benchmark</td></tr>
         <tr><td>GPT Image 2.5 Flare</td><td>Fast image generation</td><td>≈ $0.006 / image (low quality, 1024²)</td><td>Token-math estimate</td></tr>
@@ -168,6 +176,14 @@
   const BASE = 'https://matthewreichardt.com/agilefactor/gradient-pulse';
   const APPLE = 'https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782';
   const EPISODES = {
+    'special-opus-55-2026-09-22': {
+      h: 'Special Edition: Claude Opus 5.5, September 22',
+      meta: 'Special edition · Published September 22, 2026',
+      summary: 'Anthropic shipped Claude Opus 5.5 today — the first frontier model since Dario Amodei\u2019s pace-the-frontier essay, and the headline isn\u2019t bigger, it\u2019s cheaper: $4/$20 per million tokens, ~40% lower operating cost, 30%+ faster, with vendor-claimed state-of-the-art coding scores. Nadia and Marcus ask whether cheaper-faster-safer is what \u201Cpacing the frontier\u201D means, then Hype Check the benchmark claims: verdict unproven — the price list is confirmed, the scores await independent testing. Plus the release radar and a performance-per-dollar spotlight.',
+      pdf: 'gradient-pulse-special-opus-55-2026-09-22.pdf',
+      yt: 'https://youtu.be/F9FSnqpIkew',
+      audio: 'gradient-pulse-special-opus-55-2026-09-22.mp3'
+    },
     'special-2026-09-21': {
       h: 'Special Edition, September 21',
       meta: 'Special edition · Published September 21, 2026',
@@ -196,7 +212,7 @@
   const epSec = document.getElementById('episode');
   const sel = document.getElementById('epSel');
   function renderEpisode(key){
-    const ep = EPISODES[key] || EPISODES['special-2026-09-21'];
+    const ep = EPISODES[key] || EPISODES['special-opus-55-2026-09-22'];
     sel.value = key;
     epSec.innerHTML =
       '<h2>' + ep.h + '</h2>' +
@@ -213,7 +229,7 @@
   }
   sel.addEventListener('change', e => renderEpisode(e.target.value));
   const q = new URLSearchParams(location.search).get('episode');
-  renderEpisode(q && EPISODES[q] ? q : 'special-2026-09-21');
+  renderEpisode(q && EPISODES[q] ? q : 'special-opus-55-2026-09-22');
 })();
 </script>
 </body>
