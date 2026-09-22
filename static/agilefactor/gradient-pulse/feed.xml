@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition: Claude Opus 5.5, September 22</title>
+<description>Special Edition: Claude Opus 5.5, September 22. Anthropic shipped Claude Opus 5.5 — cheaper, faster, vendor-claimed SOTA coding scores. Hype Check verdict: unproven. Release radar, full briefing, and PDF: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=special-opus-55-2026-09-22</description>
+<pubDate>Tue, 22 Sep 2026 13:35:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-opus-55-2026-09-22.mp3" length="4927733" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-opus-55-2026-09-22</guid>
+<itunes:duration>9:06</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, September 21</title>
 <description>Grok 4.7 Hype Check: xAI launched its flagship model today — but the independent numbers tell a cooler story than the launch table. Plus the weekly release radar and the full briefing PDF. Weekly Radar: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=special-2026-09-21</description>
 <pubDate>Mon, 21 Sep 2026 19:30:00 +0000</pubDate>
