@@ -16,7 +16,7 @@ shows:
     image: "/agilefactor/cover-gradient-pulse.png"
     tagline: "AI News, Explained"
     description: "A weekly briefing on artificial intelligence — new models, new tools, and what the benchmarks actually mean — with a release radar, perf-per-dollar breakdowns, and a two-host audio edition. New episodes every Wednesday at 8:00 AM CT."
-    youtube: "https://www.youtube.com/@theagilefactor"
+    youtube: "https://www.youtube.com/playlist?list=PLT8zFsISVDwk"
     apple: "https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782"
     briefing: "/agilefactor/gradient-pulse/"
     briefing_label: "Weekly Radar"
