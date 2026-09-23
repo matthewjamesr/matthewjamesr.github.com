@@ -754,6 +754,212 @@
     .receipt-archive-list { flex: 1 1 auto; overflow-y: auto; padding: 4px 22px calc(22px + env(safe-area-inset-bottom)); scrollbar-color: rgba(255,210,62,.35) transparent; }
     .receipt-archive-list .receipt-entry:first-child { border-top: 0; }
     body.receipt-archive-open { overflow: hidden; }
+    .verification-tabs {
+      display: flex;
+      gap: 4px;
+      margin: 0 0 18px;
+      padding: 3px;
+      background: #0b151f;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 5px;
+    }
+    .verification-tab {
+      flex: 1;
+      min-height: 40px;
+      padding: 8px 12px;
+      color: #9eacb8;
+      background: transparent;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      font: 700 11px/1 "IBM Plex Mono", monospace;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .verification-tab[aria-selected="true"] { color: #111713; background: #ffd23e; }
+    .verification-tab:hover:not([aria-selected="true"]) { color: #f5f7fa; background: rgba(255,255,255,.05); }
+    .verification-panel[hidden] { display: none; }
+    .receipt-entry-button {
+      width: 100%;
+      display: block;
+      color: inherit;
+      background: transparent;
+      border-right: 0;
+      border-bottom: 0;
+      border-left: 0;
+      cursor: pointer;
+      text-align: left;
+    }
+    .receipt-entry-button:hover { background: rgba(255,255,255,.035); }
+    .receipt-entry-button:focus-visible { position: relative; z-index: 1; outline-offset: -2px; }
+    .verification-state {
+      min-height: 96px;
+      display: grid;
+      place-items: center;
+      padding: 22px 14px;
+      color: #9eacb8;
+      border: 1px dashed rgba(255,255,255,.16);
+      border-radius: 4px;
+      font-size: 13px;
+      line-height: 1.45;
+      text-align: center;
+    }
+    .verification-skeleton { display: grid; gap: 9px; width: 100%; }
+    .verification-skeleton span {
+      display: block;
+      height: 14px;
+      background: linear-gradient(90deg, rgba(255,255,255,.05), rgba(255,210,62,.13), rgba(255,255,255,.05));
+      background-size: 200% 100%;
+      border-radius: 2px;
+      animation: verification-shimmer 1.25s linear infinite;
+    }
+    .verification-skeleton span:nth-child(2) { width: 72%; }
+    .verification-skeleton span:nth-child(3) { width: 88%; }
+    @keyframes verification-shimmer { to { background-position: -200% 0; } }
+    .claims-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: end; margin-bottom: 16px; }
+    .claims-sort-label { color: #9eacb8; font: 500 10px/1.25 "IBM Plex Mono", monospace; letter-spacing: .045em; text-transform: uppercase; }
+    .claims-sort-label select {
+      width: 100%;
+      min-height: 39px;
+      display: block;
+      margin-top: 6px;
+      padding: 8px 30px 8px 10px;
+      color: #f5f7fa;
+      background: #101e2c;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 4px;
+      font: 600 12px/1.2 "Source Sans 3", sans-serif;
+    }
+    .claims-status-filter { display: flex; gap: 3px; padding: 3px; background: #0b151f; border: 1px solid rgba(255,255,255,.1); border-radius: 4px; }
+    .claims-filter-button {
+      min-height: 31px;
+      padding: 6px 9px;
+      color: #8fa0b0;
+      background: transparent;
+      border: 0;
+      border-radius: 2px;
+      cursor: pointer;
+      font: 700 9px/1 "IBM Plex Mono", monospace;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .claims-filter-button[aria-pressed="true"] { color: #111713; background: #ffd23e; }
+    .claims-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 10px; }
+    .story-card {
+      width: 100%;
+      min-width: 0;
+      padding: 15px;
+      color: #f5f7fa;
+      background: #0d1823;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .story-card:hover, .story-card:focus-visible { border-color: rgba(255,210,62,.55); background: #11202e; }
+    .story-card h3 { margin: 10px 0 6px; font: 600 17px/1.25 "Source Serif 4", serif; }
+    .story-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #8fa0b0; font: 500 10px/1.3 "IBM Plex Mono", monospace; text-transform: uppercase; }
+    .story-chips, .story-detail-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .story-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 21px;
+      padding: 3px 7px;
+      color: #aebbc7;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px;
+      font: 700 9px/1 "IBM Plex Mono", monospace;
+      letter-spacing: .035em;
+      text-transform: uppercase;
+    }
+    .story-chip.status-active { color: #111713; background: #ffd23e; border-color: #ffd23e; }
+    .story-chip.status-resolved { color: #092016; background: #5ee29a; border-color: #5ee29a; }
+    .pulse-wrap { position: relative; margin-top: 13px; padding-top: 4px; }
+    .pulse-svg { display: block; width: 100%; height: 40px; overflow: visible; }
+    .pulse-bar { outline: none; cursor: help; }
+    .pulse-bar rect { fill: #bd8f18; transition: fill .14s ease; }
+    .pulse-bar.has-change rect { fill: #ffd23e; }
+    .pulse-bar.zero rect { fill: #42505b; }
+    .pulse-bar:hover rect, .pulse-bar:focus rect { fill: #fff0a6; }
+    .pulse-tooltip {
+      position: absolute;
+      z-index: 4;
+      left: var(--pulse-x, 50%);
+      bottom: calc(100% - 3px);
+      width: max-content;
+      max-width: 210px;
+      padding: 7px 8px;
+      color: #f5f7fa;
+      background: #050c13;
+      border: 1px solid rgba(255,210,62,.48);
+      border-radius: 3px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.4);
+      font: 500 10px/1.35 "IBM Plex Mono", monospace;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translate(-50%, 3px);
+    }
+    .pulse-tooltip.is-visible { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+    .claims-back, .receipt-detail-back {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      margin: 0 0 15px;
+      padding: 7px 9px;
+      color: #ffd23e;
+      background: transparent;
+      border: 1px solid rgba(255,210,62,.34);
+      border-radius: 4px;
+      cursor: pointer;
+      font: 700 10px/1 "IBM Plex Mono", monospace;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .claims-back:hover, .receipt-detail-back:hover { background: rgba(255,210,62,.08); }
+    .story-detail-header { padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,.11); }
+    .story-detail-header h3 { margin: 10px 0 7px; color: #f5f7fa; font: 700 23px/1.15 "Source Serif 4", serif; }
+    .story-detail-stats { margin: 0; color: #9eacb8; font: 500 10px/1.4 "IBM Plex Mono", monospace; text-transform: uppercase; }
+    .claim-list { display: grid; gap: 0; }
+    .claim-entry { padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .claim-entry:last-child { border-bottom: 0; }
+    .claim-entry p { margin: 8px 0 0; color: #d7dfe6; font-size: 13px; line-height: 1.5; }
+    .claim-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+    .claim-tag, .confidence-badge {
+      display: inline-flex;
+      min-height: 21px;
+      align-items: center;
+      padding: 3px 7px;
+      border-radius: 999px;
+      font: 700 9px/1 "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+    }
+    .claim-tag { color: #b8c2cb; border: 1px solid rgba(255,255,255,.15); }
+    .confidence-badge { color: #111713; background: #d6bd85; }
+    .claim-created { margin-left: auto; color: #7f91a2; font: 500 9px/1.2 "IBM Plex Mono", monospace; text-transform: uppercase; }
+    .receipt-detail { padding: 4px 0 30px; }
+    .receipt-detail-section { padding: 17px 0; border-top: 1px solid rgba(255,255,255,.1); }
+    .receipt-detail-section:first-of-type { border-top: 0; }
+    .receipt-detail h3 { margin: 9px 0 6px; color: #f5f7fa; font: 700 22px/1.2 "Source Serif 4", serif; }
+    .receipt-detail h4 { margin: 0 0 9px; color: #ffd23e; font: 700 13px/1.2 "Source Serif 4", serif; }
+    .receipt-detail p { margin: 7px 0 0; color: #c4ced6; font-size: 13px; line-height: 1.52; }
+    .receipt-detail-label { margin-top: 12px !important; color: #8fa0b0 !important; font: 500 9px/1.3 "IBM Plex Mono", monospace !important; letter-spacing: .04em; text-transform: uppercase; }
+    .receipt-transition { display: flex; align-items: center; gap: 8px; margin-top: 10px; color: #ffd23e; font: 700 12px/1.2 "IBM Plex Mono", monospace; text-transform: uppercase; }
+    .receipt-file-links { display: flex; flex-wrap: wrap; gap: 7px; }
+    .receipt-file-link { flex: 1 1 130px; }
+    .receipt-archive-list .source-link { padding-inline: 0; }
+    .receipt-detail-back[hidden] { display: none; }
+    @media (max-width: 540px) {
+      .receipts-heading { align-items: stretch; }
+      .receipts-heading, .claims-controls { grid-template-columns: 1fr; flex-direction: column; }
+      .receipts-top-link-wrap { align-self: flex-start; }
+      .claims-status-filter { width: 100%; }
+      .claims-filter-button { flex: 1; }
+      .receipt-archive-panel { width: 100vw; }
+      .receipt-archive-header { padding-inline: 16px; }
+      .receipt-archive-list { padding-inline: 16px; }
+      .claim-created { width: 100%; margin: 2px 0 0; }
+    }
     .back-to-top {
       position: absolute;
       right: calc(18px + env(safe-area-inset-right));
@@ -897,7 +1103,8 @@
     }
     @media (prefers-reduced-motion: reduce) {
       * { scroll-behavior: auto !important; }
-      .board-detail, .board-chevron, .board-tooltip, .episode-picker-chevron, .episode-picker-popover, .receipt-archive, .receipt-archive-backdrop, .receipt-archive-panel, .back-to-top { transition: none !important; }
+      .board-detail, .board-chevron, .board-tooltip, .episode-picker-chevron, .episode-picker-popover, .receipt-archive, .receipt-archive-backdrop, .receipt-archive-panel, .back-to-top, .pulse-bar rect, .pulse-tooltip { transition: none !important; }
+      .verification-skeleton span { animation: none !important; }
     }
   </style>
 </head>
@@ -1012,23 +1219,55 @@
           <h2>Mapped reporting</h2>
           <div class="incident-list" id="incident-list"></div>
         </div>
-        <section class="panel-block receipts-section" id="receipts-section" aria-labelledby="receipts-title" hidden>
+        <section class="panel-block receipts-section" id="receipts-section" aria-labelledby="verification-title">
           <div class="receipts-heading">
             <div class="receipts-heading-copy">
-              <h2 id="receipts-title">Receipts</h2>
-              <p>All resolutions publish, including misses and downgrades.</p>
-            </div>
-            <div class="receipts-top-link-wrap" id="receipts-top-link-wrap">
-              <div class="receipts-top-link-clip">
-                <a class="receipts-action receipts-top-link" id="receipts-view-all-top" href="#receipts-archive">View all receipts</a>
-              </div>
+              <h2 id="verification-title">Verification</h2>
+              <p>Track how reporting changes, what has resolved, and the claims behind each story.</p>
             </div>
           </div>
-          <div class="receipts-feed" id="receipts-feed"></div>
-          <div class="receipts-actions">
-            <button class="receipts-action receipts-action-secondary" id="receipts-show-less" type="button" aria-controls="receipts-feed" hidden>Show less</button>
-            <button class="receipts-action receipts-action-primary" id="receipts-show-more" type="button" aria-controls="receipts-feed" hidden>Show more</button>
-            <a class="receipts-action receipts-action-primary" id="receipts-view-all-bottom" href="#receipts-archive" hidden>View all receipts</a>
+          <div class="verification-tabs" role="tablist" aria-label="Verification views">
+            <button class="verification-tab" id="verification-tab-receipts" type="button" role="tab" aria-selected="true" aria-controls="verification-receipts">Receipts</button>
+            <button class="verification-tab" id="verification-tab-claims" type="button" role="tab" aria-selected="false" aria-controls="verification-claims" tabindex="-1">Claims</button>
+          </div>
+          <div class="verification-panel" id="verification-receipts" role="tabpanel" aria-labelledby="verification-tab-receipts">
+            <div class="receipts-heading">
+              <div class="receipts-heading-copy">
+                <p>All resolutions publish, including misses and downgrades.</p>
+              </div>
+              <div class="receipts-top-link-wrap" id="receipts-top-link-wrap">
+                <div class="receipts-top-link-clip">
+                  <a class="receipts-action receipts-top-link" id="receipts-view-all-top" href="#receipts-archive">View all receipts</a>
+                </div>
+              </div>
+            </div>
+            <div class="receipts-feed" id="receipts-feed"><div class="verification-state">Loading receipts…</div></div>
+            <div class="receipts-actions">
+              <button class="receipts-action receipts-action-secondary" id="receipts-show-less" type="button" aria-controls="receipts-feed" hidden>Show less</button>
+              <button class="receipts-action receipts-action-primary" id="receipts-show-more" type="button" aria-controls="receipts-feed" hidden>Show more</button>
+              <a class="receipts-action receipts-action-primary" id="receipts-view-all-bottom" href="#receipts-archive" hidden>View all receipts</a>
+            </div>
+          </div>
+          <div class="verification-panel" id="verification-claims" role="tabpanel" aria-labelledby="verification-tab-claims" hidden>
+            <div class="claims-controls">
+              <label class="claims-sort-label" for="claims-sort">Sort stories
+                <select id="claims-sort">
+                  <option value="active">Most active</option>
+                  <option value="claims">Most claims</option>
+                  <option value="changes">Most confidence changes</option>
+                  <option value="newest">Newest story</option>
+                  <option value="az">A–Z</option>
+                </select>
+              </label>
+              <div class="claims-status-filter" role="group" aria-label="Filter stories by status">
+                <button class="claims-filter-button" type="button" data-status="all" aria-pressed="true">All</button>
+                <button class="claims-filter-button" type="button" data-status="active" aria-pressed="false">Active</button>
+                <button class="claims-filter-button" type="button" data-status="resolved" aria-pressed="false">Resolved</button>
+              </div>
+            </div>
+            <div id="claims-view" aria-live="polite">
+              <div class="verification-state" aria-label="Loading claims"><div class="verification-skeleton" aria-hidden="true"><span></span><span></span><span></span></div></div>
+            </div>
           </div>
         </section>
         <div class="panel-block" id="media-block">
@@ -1054,6 +1293,7 @@
     <aside class="receipt-archive-panel" id="receipt-archive-panel" role="dialog" aria-modal="true" aria-labelledby="receipt-archive-title" tabindex="-1">
       <header class="receipt-archive-header">
         <div>
+          <button class="receipt-detail-back" id="receipt-detail-back" type="button" hidden>← Back to all receipts</button>
           <h2 class="receipt-archive-heading" id="receipt-archive-title">All receipts</h2>
           <span class="receipt-archive-count" id="receipt-archive-count"></span>
         </div>
@@ -4964,8 +5204,150 @@
       }
     }
 
+    let receiptEntries = [];
+    let storyActivityData = null;
+    let storyChapterData = null;
+    let claimsStatus = "all";
+    let selectedStoryId = null;
+
+    function setupVerificationTabs() {
+      const tabs = [...document.querySelectorAll(".verification-tab")];
+      const selectTab = tab => {
+        tabs.forEach(candidate => {
+          const selected = candidate === tab;
+          candidate.setAttribute("aria-selected", String(selected));
+          candidate.tabIndex = selected ? 0 : -1;
+          document.getElementById(candidate.getAttribute("aria-controls")).hidden = !selected;
+        });
+      };
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => selectTab(tab));
+        tab.addEventListener("keydown", event => {
+          if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const nextIndex = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+          tabs[nextIndex].focus();
+          selectTab(tabs[nextIndex]);
+        });
+      });
+    }
+
+    function receiptEpisodeId(entry) {
+      return entry.episode_id || entry.resolved_in_episode || "";
+    }
+
+    function receiptSummary(entry) {
+      return entry.type === "confidence_change" ? entry.reason : entry.resolution_text;
+    }
+
+    function receiptMarkup(entry, index) {
+      const isConfidence = entry.type === "confidence_change";
+      const badge = isConfidence
+        ? `Confidence change · ${escapeHtml(entry.old_confidence || "—")} → ${escapeHtml(entry.new_confidence || "—")}`
+        : "Watch resolved";
+      return `
+        <article class="receipt-entry receipt-entry-button ${isConfidence ? "confidence-change" : "watch-resolved"}" role="button" tabindex="0" data-receipt-index="${index}" aria-label="Open receipt: ${escapeHtml(entry.story_title || "Untitled story")}">
+          <div class="receipt-meta"><span class="receipt-badge">${badge}</span><time class="receipt-date" datetime="${escapeHtml(entry.date || "")}">${escapeHtml(formatReceiptDate(entry.date))}</time></div>
+          <h3>${escapeHtml(entry.story_title || "Untitled story")}</h3>
+          <p>${escapeHtml(receiptSummary(entry) || "No resolution note was included.")}</p>
+        </article>
+      `;
+    }
+
+    function chapterCandidates(data) {
+      if (!data) return [];
+      if (Array.isArray(data)) return data;
+      if (Array.isArray(data.entries)) return data.entries;
+      if (Array.isArray(data.chapters)) return data.chapters;
+      const nested = [];
+      Object.entries(data.stories || {}).forEach(([storyId, value]) => {
+        const entries = Array.isArray(value) ? value : Array.isArray(value && value.chapters) ? value.chapters : [];
+        entries.forEach(entry => nested.push({ story_id: storyId, ...entry }));
+      });
+      return nested;
+    }
+
+    function timestampSeconds(value) {
+      if (Number.isFinite(Number(value))) return Number(value);
+      const parts = String(value || "").split(":").map(Number);
+      if (!parts.length || parts.some(part => !Number.isFinite(part))) return null;
+      return parts.reduce((total, part) => total * 60 + part, 0);
+    }
+
+    function findStoryChapter(storyId, episodeId, youtubeUrl) {
+      const match = chapterCandidates(storyChapterData).find(chapter =>
+        String(chapter.story_id || chapter.storyId || "") === String(storyId) &&
+        String(chapter.episode_id || chapter.episodeId || "") === String(episodeId)
+      );
+      if (!match) return null;
+      const timestamp = match.timestamp ?? match.timecode ?? match.start_time ?? match.start_seconds ?? match.timestamp_seconds;
+      const seconds = timestampSeconds(timestamp);
+      const directUrl = match.youtube_url || match.youtubeUrl || match.url;
+      const href = directUrl || (youtubeUrl && seconds !== null ? `${youtubeUrl}${youtubeUrl.includes("?") ? "&" : "?"}t=${Math.max(0, Math.floor(seconds))}s` : "");
+      if (!href || timestamp === undefined || timestamp === null || timestamp === "") return null;
+      const label = typeof timestamp === "number"
+        ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, "0")}`
+        : String(timestamp);
+      return { href, label };
+    }
+
+    function episodeSourcesForReceipt(entry, episode) {
+      const sources = Array.isArray(episode && episode.sources) ? episode.sources : [];
+      const explicitlyMatched = sources.filter(source => String(source.story_id || source.storyId || "") === String(entry.story_id || ""));
+      return explicitlyMatched.length ? explicitlyMatched : sources;
+    }
+
+    function receiptDetailMarkup(entry) {
+      const isConfidence = entry.type === "confidence_change";
+      const episodeId = receiptEpisodeId(entry);
+      const episode = episodes[episodeId];
+      const episodeDate = episode ? episode.date : formatReceiptDate(entry.date);
+      const resources = Array.isArray(episode && episode.resources) ? episode.resources : [];
+      const pdf = (episode && episode.pdfUrl) || (resources.find(resource => resource.download || /pdf/i.test(`${resource.publisher || ""} ${resource.title || ""}`)) || {}).url;
+      const audio = (resources.find(resource => resource.kind === "audio") || {}).url;
+      const youtube = episode && episode.youtubeUrl;
+      const sources = episodeSourcesForReceipt(entry, episode);
+      const chapter = findStoryChapter(entry.story_id, episodeId, youtube);
+      const sourceMarkup = sources.length ? sources.map(source => source.url ? `
+        <a class="source-link" href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">
+          <span>${escapeHtml(source.title)}</span><small>${escapeHtml(source.publisher)} ↗</small>
+        </a>` : `
+        <div class="source-link"><span>${escapeHtml(source.title)}</span><small>${escapeHtml(source.publisher)}</small></div>`).join("") : '<p>No linked sources were included with this episode.</p>';
+      const fileLinks = [
+        episodeId ? `<a class="platform-link receipt-file-link" href="?episode=${encodeURIComponent(episodeId)}">View episode</a>` : "",
+        pdf ? `<a class="platform-link receipt-file-link" href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer">Download PDF</a>` : "",
+        audio ? `<a class="platform-link receipt-file-link" href="${escapeHtml(audio)}" target="_blank" rel="noopener noreferrer">Open audio</a>` : "",
+        youtube ? `<a class="platform-link receipt-file-link" href="${escapeHtml(youtube)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>` : ""
+      ].filter(Boolean).join("");
+      return `
+        <article class="receipt-detail">
+          <section class="receipt-detail-section">
+            <div class="receipt-meta">
+              <span class="receipt-badge">${isConfidence ? "Confidence change" : "Watch resolved"}</span>
+              <time class="receipt-date" datetime="${escapeHtml(entry.date || "")}">${escapeHtml(episodeDate || "Date unavailable")}</time>
+            </div>
+            <h3>${escapeHtml(entry.story_title || "Untitled story")}</h3>
+            ${isConfidence ? `
+              <p class="receipt-detail-label">Claim</p>
+              <p>${escapeHtml(entry.claim_text || "Claim text unavailable.")}</p>
+              <div class="receipt-transition"><span>${escapeHtml(entry.old_confidence || "—")}</span><span aria-hidden="true">→</span><span>${escapeHtml(entry.new_confidence || "—")}</span></div>
+              <p class="receipt-detail-label">Why it changed</p>
+              <p>${escapeHtml(entry.reason || "No reason was included.")}</p>
+            ` : `
+              <p class="receipt-detail-label">Watch question</p>
+              <p>${escapeHtml(entry.question || "Watch text unavailable.")}</p>
+              <p class="receipt-detail-label">Resolution</p>
+              <p>${escapeHtml(entry.resolution_text || "Resolution text unavailable.")}</p>
+            `}
+          </section>
+          ${fileLinks ? `<section class="receipt-detail-section"><h4>Episode files & listening</h4><div class="receipt-file-links">${fileLinks}</div></section>` : ""}
+          ${chapter ? `<section class="receipt-detail-section"><h4>Video chapter</h4><a class="source-link" href="${escapeHtml(chapter.href)}" target="_blank" rel="noopener noreferrer"><span>Jump to video chapter</span><small>${escapeHtml(chapter.label)} ↗</small></a></section>` : ""}
+          <section class="receipt-detail-section"><h4>Story sources</h4>${sourceMarkup}</section>
+        </article>
+      `;
+    }
+
     async function loadReceipts() {
-      const section = document.getElementById("receipts-section");
       const feed = document.getElementById("receipts-feed");
       const showMore = document.getElementById("receipts-show-more");
       const showLess = document.getElementById("receipts-show-less");
@@ -4976,32 +5358,83 @@
       const archive = document.getElementById("receipt-archive");
       const archivePanel = document.getElementById("receipt-archive-panel");
       const archiveList = document.getElementById("receipt-archive-list");
-      const pageSize = 5;
+      const archiveTitle = document.getElementById("receipt-archive-title");
+      const archiveCount = document.getElementById("receipt-archive-count");
+      const detailBack = document.getElementById("receipt-detail-back");
+      const pageSize = 10;
       const inlineLimit = 30;
+      let visibleCount = pageSize;
       let returnFocusTo = null;
+      let drawerCameFromArchive = false;
+
+      const openDrawer = trigger => {
+        returnFocusTo = trigger;
+        archive.classList.add("is-open");
+        archive.setAttribute("aria-hidden", "false");
+        document.body.classList.add("receipt-archive-open");
+        archivePanel.focus();
+      };
+      const closeDrawer = () => {
+        if (!archive.classList.contains("is-open")) return;
+        archive.classList.remove("is-open");
+        archive.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("receipt-archive-open");
+        if (returnFocusTo) returnFocusTo.focus();
+      };
+      const renderArchive = () => {
+        drawerCameFromArchive = false;
+        detailBack.hidden = true;
+        archiveTitle.textContent = "All receipts";
+        archiveCount.textContent = `${receiptEntries.length} total receipt${receiptEntries.length === 1 ? "" : "s"}`;
+        archiveList.innerHTML = receiptEntries.map(receiptMarkup).join("");
+        archiveList.scrollTop = 0;
+      };
+      const showReceiptDetail = (index, trigger, fromArchive) => {
+        const entry = receiptEntries[index];
+        if (!entry) return;
+        drawerCameFromArchive = fromArchive;
+        detailBack.hidden = !fromArchive;
+        archiveTitle.textContent = "Receipt detail";
+        archiveCount.textContent = `${entry.type === "confidence_change" ? "Confidence change" : "Resolved watch"} · ${formatReceiptDate(entry.date)}`;
+        archiveList.innerHTML = receiptDetailMarkup(entry);
+        archiveList.scrollTop = 0;
+        if (!archive.classList.contains("is-open")) openDrawer(trigger);
+        else archivePanel.focus();
+      };
+      const activateReceipt = (event, container) => {
+        const entry = event.target.closest("[data-receipt-index]");
+        if (!entry) return;
+        if (event.type === "keydown" && !["Enter", " "].includes(event.key)) return;
+        if (event.type === "keydown") event.preventDefault();
+        showReceiptDetail(Number(entry.dataset.receiptIndex), entry, container === archiveList);
+      };
+
+      feed.addEventListener("click", event => activateReceipt(event, feed));
+      feed.addEventListener("keydown", event => activateReceipt(event, feed));
+      archiveList.addEventListener("click", event => activateReceipt(event, archiveList));
+      archiveList.addEventListener("keydown", event => activateReceipt(event, archiveList));
+      detailBack.addEventListener("click", () => { if (drawerCameFromArchive) renderArchive(); });
+      document.getElementById("receipt-archive-close").onclick = closeDrawer;
+      document.getElementById("receipt-archive-backdrop").onclick = closeDrawer;
+      document.addEventListener("keydown", event => { if (event.key === "Escape") closeDrawer(); });
+
       try {
+        const chapterPromise = location.pathname.startsWith("/spaces/v2/")
+          ? Promise.resolve(null)
+          : fetchDashboardJson("story_chapters.json").catch(() => null);
         const data = await fetchDashboardJson("receipts.json");
-        const entries = Array.isArray(data.entries) ? [...data.entries] : [];
-        entries.sort((a, b) => new Date(String(b.date).replace(" ", "T")).getTime() - new Date(String(a.date).replace(" ", "T")).getTime());
-        if (!entries.length) return;
-        const inlineEntries = entries.slice(0, inlineLimit);
-        let visibleCount = Math.min(pageSize, inlineEntries.length);
-        const entryMarkup = entry => {
-          const isConfidence = entry.type === "confidence_change";
-          const badge = isConfidence
-            ? `Confidence change · ${escapeHtml(entry.old_confidence || "—")} → ${escapeHtml(entry.new_confidence || "—")}`
-            : "Watch resolved";
-          const detail = isConfidence ? entry.reason : entry.resolution_text;
-          return `
-            <article class="receipt-entry ${isConfidence ? "confidence-change" : "watch-resolved"}">
-              <div class="receipt-meta"><span class="receipt-badge">${badge}</span><time class="receipt-date" datetime="${escapeHtml(entry.date || "")}">${escapeHtml(formatReceiptDate(entry.date))}</time></div>
-              <h3>${escapeHtml(entry.story_title || "Untitled story")}</h3>
-              <p>${escapeHtml(detail || "No resolution note was included.")}</p>
-            </article>
-          `;
-        };
+        storyChapterData = await chapterPromise;
+        receiptEntries = Array.isArray(data.entries) ? [...data.entries] : [];
+        receiptEntries.sort((a, b) => new Date(String(b.date).replace(" ", "T")).getTime() - new Date(String(a.date).replace(" ", "T")).getTime());
+        if (!receiptEntries.length) {
+          feed.innerHTML = '<div class="verification-state">No verification receipts have been published yet.</div>';
+          viewAllLinks.forEach(link => link.hidden = true);
+          return;
+        }
+        const inlineEntries = receiptEntries.slice(0, inlineLimit);
+        visibleCount = Math.min(pageSize, inlineEntries.length);
         const renderInlineEntries = () => {
-          feed.innerHTML = inlineEntries.slice(0, visibleCount).map(entryMarkup).join("");
+          feed.innerHTML = inlineEntries.slice(0, visibleCount).map(receiptMarkup).join("");
           const expanded = visibleCount > pageSize;
           const inlineComplete = visibleCount >= inlineEntries.length;
           showLess.hidden = !expanded;
@@ -5009,24 +5442,8 @@
           showMore.setAttribute("aria-expanded", String(expanded));
           document.getElementById("receipts-view-all-bottom").hidden = !inlineComplete;
         };
-        const openArchive = trigger => {
-          returnFocusTo = trigger;
-          archive.classList.add("is-open");
-          archive.setAttribute("aria-hidden", "false");
-          document.body.classList.add("receipt-archive-open");
-          archivePanel.focus();
-        };
-        const closeArchive = () => {
-          if (!archive.classList.contains("is-open")) return;
-          archive.classList.remove("is-open");
-          archive.setAttribute("aria-hidden", "true");
-          document.body.classList.remove("receipt-archive-open");
-          if (returnFocusTo) returnFocusTo.focus();
-        };
-        archiveList.innerHTML = entries.map(entryMarkup).join("");
-        document.getElementById("receipt-archive-count").textContent = `${entries.length} total receipt${entries.length === 1 ? "" : "s"}`;
         showMore.onclick = () => {
-          visibleCount = Math.min(visibleCount + pageSize, inlineEntries.length);
+          visibleCount = Math.min(visibleCount + 10, inlineEntries.length);
           renderInlineEntries();
         };
         showLess.onclick = () => {
@@ -5035,17 +5452,184 @@
         };
         viewAllLinks.forEach(link => link.onclick = event => {
           event.preventDefault();
-          openArchive(link);
-        });
-        document.getElementById("receipt-archive-close").onclick = closeArchive;
-        document.getElementById("receipt-archive-backdrop").onclick = closeArchive;
-        document.addEventListener("keydown", event => {
-          if (event.key === "Escape") closeArchive();
+          renderArchive();
+          openDrawer(link);
         });
         renderInlineEntries();
-        section.hidden = false;
       } catch (error) {
-        section.hidden = true;
+        storyChapterData = null;
+        feed.innerHTML = '<div class="verification-state">Receipts could not be loaded right now. The claims browser remains available.</div>';
+        viewAllLinks.forEach(link => link.hidden = true);
+      }
+    }
+
+    function episodeOrderIndex(id) {
+      return storyActivityData.episode_order.findIndex(episode => episode.episode_id === id);
+    }
+
+    function storyActivityTotals(story) {
+      const lastIds = new Set(storyActivityData.episode_order.slice(-14).map(episode => episode.episode_id));
+      return (story.activity || []).reduce((totals, item) => {
+        const newClaims = Number(item.new_claims) || 0;
+        const confChanges = Number(item.conf_changes) || 0;
+        const watchEvents = Number(item.watch_events) || 0;
+        totals.confChanges += confChanges;
+        if (lastIds.has(item.episode_id)) totals.recent += newClaims + confChanges + watchEvents;
+        return totals;
+      }, { recent: 0, confChanges: 0 });
+    }
+
+    function shortEpisodeDate(episodeId) {
+      const entry = storyActivityData.episode_order.find(episode => episode.episode_id === episodeId);
+      const label = entry && entry.date;
+      if (label) return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(dateAtNoon(label));
+      const meta = episodeMeta(episodeId);
+      if (!meta.date) return episodeId;
+      return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(dateAtNoon(meta.date));
+    }
+
+    function storyChips(story) {
+      const categories = Array.isArray(story.categories) ? story.categories : story.category ? [story.category] : [];
+      return `<span class="story-chip status-${story.status === "resolved" ? "resolved" : "active"}">${escapeHtml(story.status || "active")}</span>${categories.map(category => `<span class="story-chip">${escapeHtml(category)}</span>`).join("")}`;
+    }
+
+    function pulseMarkup(story) {
+      const order = storyActivityData.episode_order;
+      const activity = new Map((story.activity || []).map(item => [item.episode_id, item]));
+      const width = 210;
+      const gap = 2;
+      const barWidth = Math.max(2, (width - gap * Math.max(0, order.length - 1)) / Math.max(1, order.length));
+      const bars = order.map((episode, index) => {
+        const item = activity.get(episode.episode_id) || {};
+        const newClaims = Number(item.new_claims) || 0;
+        const confChanges = Number(item.conf_changes) || 0;
+        const watchEvents = Number(item.watch_events) || 0;
+        const total = newClaims + confChanges + watchEvents;
+        const height = total ? Math.min(31, 4 + total * 4) : 1;
+        const x = index * (barWidth + gap);
+        const meta = episodeMeta(episode.episode_id);
+        const edition = meta.slot ? `${meta.slot.charAt(0).toUpperCase()}${meta.slot.slice(1)} Edition` : "Briefing";
+        const date = episode.date ? new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(dateAtNoon(episode.date)) : episode.episode_id;
+        const tooltip = `${edition} · ${date}: ${newClaims} new claim${newClaims === 1 ? "" : "s"} · ${confChanges} confidence change${confChanges === 1 ? "" : "s"} · ${watchEvents} watch event${watchEvents === 1 ? "" : "s"}`;
+        return `<g class="pulse-bar${confChanges ? " has-change" : ""}${total ? "" : " zero"}" tabindex="0" role="img" aria-label="${escapeHtml(tooltip)}" data-pulse-index="${index}" data-tooltip="${escapeHtml(tooltip)}"><rect x="${x.toFixed(2)}" y="${(35 - height).toFixed(2)}" width="${barWidth.toFixed(2)}" height="${height.toFixed(2)}" rx="1"></rect></g>`;
+      }).join("");
+      return `<div class="pulse-wrap"><svg class="pulse-svg" viewBox="0 0 210 40" preserveAspectRatio="none" aria-label="Story activity by briefing edition">${bars}</svg><span class="pulse-tooltip" role="tooltip"></span></div>`;
+    }
+
+    function storyCardMarkup(story) {
+      const first = shortEpisodeDate(story.first_episode_id);
+      const last = shortEpisodeDate(story.last_episode_id);
+      return `
+        <article class="story-card" role="button" tabindex="0" data-story-id="${escapeHtml(story.story_id)}" aria-label="Open claims for ${escapeHtml(story.title)}">
+          <div class="story-chips">${storyChips(story)}</div>
+          <h3>${escapeHtml(story.title)}</h3>
+          <div class="story-card-meta"><span>${escapeHtml(story.claim_count || 0)} claims</span><span>${escapeHtml(first)}${first === last ? "" : ` – ${escapeHtml(last)}`}</span></div>
+          ${pulseMarkup(story)}
+        </article>`;
+    }
+
+    function setupPulseTooltips() {
+      document.querySelectorAll(".pulse-wrap").forEach(wrap => {
+        const tooltip = wrap.querySelector(".pulse-tooltip");
+        const show = bar => {
+          const count = storyActivityData.episode_order.length;
+          const index = Number(bar.dataset.pulseIndex);
+          tooltip.textContent = bar.dataset.tooltip;
+          tooltip.style.setProperty("--pulse-x", `${((index + .5) / count) * 100}%`);
+          tooltip.classList.add("is-visible");
+        };
+        const hide = () => tooltip.classList.remove("is-visible");
+        wrap.querySelectorAll(".pulse-bar").forEach(bar => {
+          bar.addEventListener("mouseenter", () => show(bar));
+          bar.addEventListener("mouseleave", hide);
+          bar.addEventListener("focus", () => show(bar));
+          bar.addEventListener("blur", hide);
+        });
+      });
+    }
+
+    function formatClaimDate(value) {
+      if (storyActivityData.episode_order.some(episode => episode.episode_id === value)) return shortEpisodeDate(value);
+      return formatReceiptDate(value);
+    }
+
+    function renderStoryDetail(story) {
+      selectedStoryId = story.story_id;
+      document.querySelector(".claims-controls").hidden = true;
+      const first = shortEpisodeDate(story.first_episode_id);
+      const last = shortEpisodeDate(story.last_episode_id);
+      const claims = Array.isArray(story.claims) ? story.claims : [];
+      document.getElementById("claims-view").innerHTML = `
+        <button class="claims-back" type="button">← Back to stories</button>
+        <div class="story-detail-header">
+          <div class="story-detail-chips">${storyChips(story)}</div>
+          <h3>${escapeHtml(story.title)}</h3>
+          <p class="story-detail-stats">${escapeHtml(story.claim_count || claims.length)} total claims · ${escapeHtml(first)}${first === last ? "" : ` – ${escapeHtml(last)}`}</p>
+        </div>
+        <div class="claim-list">
+          ${claims.length ? claims.map(claim => `
+            <article class="claim-entry">
+              <div class="claim-meta"><span class="claim-tag">${escapeHtml(claim.type || "claim")}</span><span class="confidence-badge">${escapeHtml(claim.confidence || "unrated")}</span><time class="claim-created">${escapeHtml(formatClaimDate(claim.created_at))}</time></div>
+              <p>${escapeHtml(claim.text || "Claim text unavailable.")}</p>
+            </article>`).join("") : '<div class="verification-state">No claims are indexed for this story yet.</div>'}
+        </div>`;
+      document.querySelector(".claims-back").addEventListener("click", () => {
+        selectedStoryId = null;
+        document.querySelector(".claims-controls").hidden = false;
+        renderClaimsGrid();
+        document.getElementById("claims-sort").focus();
+      });
+    }
+
+    function renderClaimsGrid() {
+      if (!storyActivityData) return;
+      selectedStoryId = null;
+      document.querySelector(".claims-controls").hidden = false;
+      const sort = document.getElementById("claims-sort").value;
+      const stories = (storyActivityData.stories || []).filter(story => claimsStatus === "all" || story.status === claimsStatus);
+      stories.sort((a, b) => {
+        if (sort === "claims") return (Number(b.claim_count) || 0) - (Number(a.claim_count) || 0) || a.title.localeCompare(b.title);
+        if (sort === "changes") return storyActivityTotals(b).confChanges - storyActivityTotals(a).confChanges || a.title.localeCompare(b.title);
+        if (sort === "newest") return episodeOrderIndex(b.first_episode_id) - episodeOrderIndex(a.first_episode_id) || a.title.localeCompare(b.title);
+        if (sort === "az") return a.title.localeCompare(b.title);
+        return storyActivityTotals(b).recent - storyActivityTotals(a).recent || (Number(b.claim_count) || 0) - (Number(a.claim_count) || 0) || a.title.localeCompare(b.title);
+      });
+      const view = document.getElementById("claims-view");
+      if (!stories.length) {
+        view.innerHTML = '<div class="verification-state">No stories match this status filter.</div>';
+        return;
+      }
+      view.innerHTML = `<div class="claims-grid">${stories.map(storyCardMarkup).join("")}</div>`;
+      setupPulseTooltips();
+    }
+
+    async function loadStoryActivity() {
+      const view = document.getElementById("claims-view");
+      try {
+        const data = await fetchDashboardJson("story_activity.json");
+        if (!Array.isArray(data.episode_order) || !Array.isArray(data.stories)) throw new Error("Invalid story activity data");
+        storyActivityData = data;
+        renderClaimsGrid();
+        document.getElementById("claims-sort").addEventListener("change", renderClaimsGrid);
+        document.querySelectorAll(".claims-filter-button").forEach(button => {
+          button.addEventListener("click", () => {
+            claimsStatus = button.dataset.status;
+            document.querySelectorAll(".claims-filter-button").forEach(candidate => candidate.setAttribute("aria-pressed", String(candidate === button)));
+            renderClaimsGrid();
+          });
+        });
+        view.addEventListener("click", event => {
+          const card = event.target.closest(".story-card");
+          if (card) renderStoryDetail(storyActivityData.stories.find(story => story.story_id === card.dataset.storyId));
+        });
+        view.addEventListener("keydown", event => {
+          const card = event.target.closest(".story-card");
+          if (!card || !["Enter", " "].includes(event.key)) return;
+          event.preventDefault();
+          renderStoryDetail(storyActivityData.stories.find(story => story.story_id === card.dataset.storyId));
+        });
+      } catch (error) {
+        view.innerHTML = '<div class="verification-state">Claims could not be loaded right now. Receipts are still available.</div>';
       }
     }
 
@@ -5377,7 +5961,9 @@
 
     initMap();
     loadSituationBoard();
+    setupVerificationTabs();
     loadReceipts();
+    loadStoryActivity();
     setupBackToTop();
   </script>
 </body>
