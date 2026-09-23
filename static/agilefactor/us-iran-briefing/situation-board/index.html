@@ -946,11 +946,20 @@
 
       function severityLabel(value) { return value === "monitor" ? "Monitor" : value.charAt(0).toUpperCase() + value.slice(1); }
 
-      function latestStoryState(story) {
+      function currentStoryState(storyId, story) {
+        var latestTransition = receiptsForStory(storyId).filter(function (entry) {
+          return entry.type === "confidence_change";
+        }).slice().sort(function (a, b) {
+          return new Date(b.date || 0) - new Date(a.date || 0);
+        })[0];
+        if (latestTransition) return normalizedState(latestTransition.new_confidence);
+
         var claims = (story && story.claims) || [];
         if (!claims.length) return "unconfirmed";
-        var latest = claims.slice().sort(function (a, b) { return new Date(b.created_at || 0) - new Date(a.created_at || 0); })[0];
-        return normalizedState(latest.confidence);
+        var latestClaim = claims.slice().sort(function (a, b) {
+          return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+        })[0];
+        return normalizedState(latestClaim.confidence);
       }
 
       function storyTrend(story) {
@@ -1105,12 +1114,12 @@
           if (!firstReached[oldState]) firstReached[oldState] = (matchingClaim && matchingClaim.created_at) || entry.date;
           if (!firstReached[newState]) firstReached[newState] = entry.date;
         });
-        var highest = -1;
+        var currentState = currentStoryState(storyId, story);
+        var currentIndex = order.indexOf(currentState);
         var colorTokens = { unconfirmed: "gray", reported: "amber", corroborated: "teal", confirmed: "green", disputed: "red" };
-        order.forEach(function (state, index) { if (firstReached[state]) highest = Math.max(highest, index); });
-        var progress = (highest > 0 ? highest / (order.length - 1) * 80 : 0) + "%";
-        var progressColor = highest >= 0 ? "var(--" + colorTokens[order[highest]] + ")" : "var(--line-strong)";
-        return '<div class="confidence-journey" aria-label="Confidence journey through ' + esc(highest >= 0 ? order[highest] : "no recorded transitions") + '">' +
+        var progress = (currentIndex > 0 ? currentIndex / (order.length - 1) * 80 : 0) + "%";
+        var progressColor = "var(--" + colorTokens[currentState] + ")";
+        return '<div class="confidence-journey" aria-label="Confidence journey; current confidence ' + esc(currentState) + '">' +
           '<p class="confidence-journey-title">Confidence journey</p>' +
           '<div class="journey-track" style="--journey-progress:' + progress + ';--journey-color:' + progressColor + '">' +
             '<span class="journey-line" aria-hidden="true"></span><span class="journey-line-fill" aria-hidden="true"></span>' +
@@ -1331,10 +1340,10 @@
         document.getElementById("stories-count").textContent = stories.length + " tracked";
         document.getElementById("story-list").innerHTML = stories.length ? stories.map(function (story) {
           var detail = activityMap[story.story_id] || null;
-          var state = latestStoryState(detail);
+          var state = currentStoryState(story.story_id, detail);
           var trend = storyTrend(detail);
           return '<li class="story-row" tabindex="0" role="button" data-story-id="' + esc(story.story_id) + '" aria-label="Open details for ' + esc(story.title) + '">' +
-            '<span class="confidence-dot ' + state + '" title="Latest claim state: ' + esc(state) + '" aria-label="Latest claim state: ' + esc(state) + '"></span>' +
+            '<span class="confidence-dot ' + state + '" title="Current confidence: ' + esc(state) + '" aria-label="Current confidence: ' + esc(state) + '"></span>' +
             '<div class="story-copy"><span class="story-title">' + esc(story.title) + '</span><span class="story-meta">Day ' + esc(story.day_n) + ' · ' + esc(story.claim_count) + ' claims · ' + esc(state) + '</span></div>' +
             '<span class="story-day">Day ' + esc(story.day_n) + '</span>' +
             '<span class="story-claims">' + esc(story.claim_count) + ' claims</span>' +
@@ -1512,8 +1521,8 @@
         fetch("../story_activity.json").then(function (r) { if (!r.ok) throw new Error("claims"); return r.json(); }),
         fetch("../receipts.json").then(function (r) { if (!r.ok) throw new Error("receipts"); return r.json(); }).catch(function () { return { entries: [] }; })
       ]).then(function (results) {
-        renderBoard(results[0], results[1]);
         renderReceipts(results[2]);
+        renderBoard(results[0], results[1]);
         prepareClaims(results[1]);
       }).catch(function () {
         document.getElementById("snapshot-time").textContent = "Live data unavailable";
