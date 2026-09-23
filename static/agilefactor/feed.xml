@@ -12,11 +12,19 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>US–Iran Briefing — Evening Edition, September 22</title>
+<description>Evening Edition, September 22. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-22</description>
+<pubDate>Tue, 22 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-22.mp3" length="3944789" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-22</guid>
+<itunes:duration>7:17</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>US–Iran Briefing — Morning Edition, September 22</title>
 <description>Morning Edition, September 22. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-22</description>
 <pubDate>Tue, 22 Sep 2026 07:00:00 -0500</pubDate>
 <enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-22.mp3" length="1465517" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-22-boosted</guid>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-22</guid>
 <itunes:duration>6:06</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
