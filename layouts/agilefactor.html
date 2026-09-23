@@ -63,7 +63,9 @@
   padding: 0.55rem 1.1rem;
   font-size: 0.95rem;
 }
-.af-card h3 { margin: 0 0 0.25rem; font-size: 1.25rem; padding-right: 20rem; }
+.af-card h3 { margin: 0 0 0.25rem; font-size: 1.25rem; padding-right: 15rem; }
+.af-wide-corner .af-card-body { padding-top: 2.25rem; }
+.af-wide-corner h3 { padding-right: 0; }
 .af-tagline { margin: 0 0 0.75rem; font-weight: 600; color: var(--primary); }
 .af-card p.af-desc { margin: 0 0 1.25rem; color: var(--secondary); line-height: 1.65; }
 .af-links { text-align: right; }
@@ -93,6 +95,7 @@
   .af-corner-links { position: static; align-self: flex-end; margin-bottom: 0.75rem; }
   .af-corner-links .af-btn { font-size: 0.88rem; padding: 0.45rem 0.85rem; }
   .af-card h3 { padding-right: 0; }
+  .af-wide-corner .af-card-body { padding-top: 0; }
 }
 </style>
 
@@ -107,7 +110,7 @@
   <section class="af-shows">
     <h2>Podcasts</h2>
     {{ range $s := .Params.shows }}
-    <div class="af-card">
+    <div class="af-card{{ with .operating_picture }} af-wide-corner{{ end }}">
       <div class="af-corner-links">
         {{ with .briefing }}<a class="af-btn" href="{{ . | relURL }}">{{ if eq $s.dashboard "radar" }}📡 Radar{{ else }}🗺️ Interactive Episode Map{{ end }}</a>{{ end }}
         {{ with .operating_picture }}<a class="af-btn" href="{{ . | relURL }}">🧭 Operating Picture</a>{{ end }}
