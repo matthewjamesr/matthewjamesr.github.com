@@ -529,14 +529,16 @@
     }
     .more-btn:hover { border-color: var(--amber); }
     .drawer-shell[hidden] { display: none; }
-    .drawer-shell { position: fixed; inset: 0; z-index: 50; }
-    .drawer-backdrop { position: absolute; inset: 0; background: rgba(3, 12, 20, .62); border: 0; cursor: pointer; }
+    .drawer-shell { position: fixed; inset: 0; z-index: 50; overscroll-behavior: contain; }
+    .drawer-backdrop { position: absolute; inset: 0; background: rgba(3, 12, 20, .62); border: 0; cursor: pointer; touch-action: none; }
     .detail-drawer {
       position: absolute;
       inset: 0 0 0 auto;
       width: min(680px, calc(100vw - 28px));
       max-height: 100dvh;
       overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
       color: var(--ink);
       background: var(--surface);
       border-left: 1px solid var(--line-strong);
@@ -894,7 +896,14 @@
       var claimQuery = "";
       var visibleClaims = 12;
       var drawerReturnFocus = null;
-      var lockedScrollY = 0;
+      var backgroundScrollLock = {
+        active: false,
+        x: 0,
+        y: 0,
+        bodyStyles: null,
+        htmlOverflow: "",
+        htmlScrollBehavior: ""
+      };
 
       function esc(value) {
         return String(value == null ? "" : value)
@@ -1196,27 +1205,84 @@
         showDrawer();
       }
 
+      function lockBackgroundScroll() {
+        if (backgroundScrollLock.active) return;
+        var body = document.body;
+        var html = document.documentElement;
+        var computedBody = window.getComputedStyle(body);
+        var scrollbarWidth = Math.max(0, window.innerWidth - html.clientWidth);
+
+        backgroundScrollLock.active = true;
+        backgroundScrollLock.x = window.scrollX || window.pageXOffset || 0;
+        backgroundScrollLock.y = window.scrollY || window.pageYOffset || 0;
+        backgroundScrollLock.bodyStyles = {
+          position: body.style.position,
+          top: body.style.top,
+          left: body.style.left,
+          right: body.style.right,
+          width: body.style.width,
+          overflow: body.style.overflow,
+          paddingRight: body.style.paddingRight
+        };
+        backgroundScrollLock.htmlOverflow = html.style.overflow;
+        backgroundScrollLock.htmlScrollBehavior = html.style.scrollBehavior;
+
+        if (scrollbarWidth) {
+          body.style.paddingRight = (parseFloat(computedBody.paddingRight) + scrollbarWidth) + "px";
+        }
+        body.style.position = "fixed";
+        body.style.top = "-" + backgroundScrollLock.y + "px";
+        body.style.left = "-" + backgroundScrollLock.x + "px";
+        body.style.right = "0";
+        body.style.width = "auto";
+        body.style.overflow = "hidden";
+        html.style.overflow = "hidden";
+      }
+
+      function unlockBackgroundScroll() {
+        if (!backgroundScrollLock.active) return;
+        var body = document.body;
+        var html = document.documentElement;
+        var x = backgroundScrollLock.x;
+        var y = backgroundScrollLock.y;
+        var saved = backgroundScrollLock.bodyStyles;
+
+        body.style.position = saved.position;
+        body.style.top = saved.top;
+        body.style.left = saved.left;
+        body.style.right = saved.right;
+        body.style.width = saved.width;
+        body.style.overflow = saved.overflow;
+        body.style.paddingRight = saved.paddingRight;
+        html.style.overflow = backgroundScrollLock.htmlOverflow;
+        html.style.scrollBehavior = "auto";
+        backgroundScrollLock.active = false;
+
+        if (drawerReturnFocus && typeof drawerReturnFocus.focus === "function") {
+          try { drawerReturnFocus.focus({ preventScroll: true }); }
+          catch (error) { drawerReturnFocus.focus(); }
+        }
+        window.scrollTo(x, y);
+        window.requestAnimationFrame(function () {
+          window.scrollTo(x, y);
+          html.style.scrollBehavior = backgroundScrollLock.htmlScrollBehavior;
+        });
+      }
+
       function showDrawer() {
         var shell = document.getElementById("drawer-shell");
         if (shell.hidden) {
-          lockedScrollY = window.scrollY || window.pageYOffset || 0;
-          document.body.style.position = "fixed";
-          document.body.style.top = "-" + lockedScrollY + "px";
-          document.body.style.width = "100%";
+          lockBackgroundScroll();
           shell.hidden = false;
         }
-        document.getElementById("drawer-close").focus();
+        document.getElementById("drawer-close").focus({ preventScroll: true });
       }
 
       function closeDrawer() {
         var shell = document.getElementById("drawer-shell");
         if (shell.hidden) return;
         shell.hidden = true;
-        document.body.style.position = "";
-        document.body.style.top = "";
-        document.body.style.width = "";
-        window.scrollTo(0, lockedScrollY);
-        if (drawerReturnFocus && typeof drawerReturnFocus.focus === "function") drawerReturnFocus.focus();
+        unlockBackgroundScroll();
       }
 
       function renderBoard(board, activity) {
