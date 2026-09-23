@@ -1,9 +1,58 @@
 {
   "format_version": "receipts-v1",
-  "generated_at": "2026-09-23T02:24:26.047811+00:00",
-  "episode_id": "evening-2026-09-22",
+  "generated_at": "2026-09-23T11:55:24.470914+00:00",
+  "episode_id": "morning-2026-09-23",
   "policy": "all resolutions publish, including misses and downgrades",
   "entries": [
+    {
+      "type": "watch_resolved",
+      "date": "2026-09-23T11:19:52.145477+00:00",
+      "story_id": "east-west-pipeline-drone-attack",
+      "story_title": "Drone attack shuts Saudi East-West pipeline",
+      "question": "When does the East-West pipeline return to service, and is responsibility for the drone attack ever established?",
+      "resolution_text": "The East-West pipeline returned to service on Tuesday (Sept 22) at a low pumping rate per Reuters; responsibility for the Sept 11 drone attack is still unattributed (Riyadh blames an Iraqi militia).",
+      "resolved_in_episode": "morning-2026-09-23"
+    },
+    {
+      "type": "watch_resolved",
+      "date": "2026-09-23T11:19:52.145477+00:00",
+      "story_id": "strait-hormuz-shipping-attacks",
+      "story_title": "Ship attacks in the Strait of Hormuz",
+      "question": "Do an approved outlet confirm the reported daytime US/Gulf tanker escorts through Hormuz, and what are the real transit volumes?",
+      "resolution_text": "Transit volumes are now confirmed by Reuters citing Kpler AIS data: 3 vessels transited Tuesday vs a 10-day average of ~15. Daytime US/Gulf tanker escorts remain unconfirmed.",
+      "resolved_in_episode": "morning-2026-09-23"
+    },
+    {
+      "type": "watch_resolved",
+      "date": "2026-09-23T11:19:52.145477+00:00",
+      "story_id": "east-west-pipeline-drone-attack",
+      "story_title": "Drone attack shuts Saudi East-West pipeline",
+      "question": "Do Yanbu crude exports actually resume Tuesday, and at what pumping rate does the East-West Pipeline run?",
+      "resolution_text": "The pipeline restarted operations on Tuesday (Sept 22) per Reuters' Wednesday report, rerouting ~4 million bpd to Yanbu at a low pumping rate; exact Yanbu crude-export volumes are not yet confirmed.",
+      "resolved_in_episode": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T11:19:09+00:00",
+      "story_id": "east-west-pipeline-drone-attack",
+      "story_title": "Drone attack shuts Saudi East-West pipeline",
+      "claim_text": "Saudi Arabia restarted operations at its East-West Pipeline at a low pumping rate and could resume crude exports from the Red Sea port of Yanbu later on Tuesday, per three sources briefed on the matter; drone attacks forced the shutdown on September 13.",
+      "old_confidence": "reported",
+      "new_confidence": "corroborated",
+      "reason": "Reuters' Wednesday market report confirms the East-West pipeline restarted operations on Tuesday and is rerouting roughly 4 million barrels a day to Yanbu — the restart this claim reported.",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T11:19:09+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Iranian media said the Tuesday meeting came at Washington's request and centered on Tehran's conditions for reopening the Strait of Hormuz; the U.S. side has not verified this account.",
+      "old_confidence": "unconfirmed",
+      "new_confidence": "reported",
+      "reason": "Al Jazeera's Tehran correspondent now independently reports Iranian state media confirmed the Monday meeting came at Washington's request and centered on Tehran's Hormuz conditions; the U.S. side still has not verified this account.",
+      "episode_id": "morning-2026-09-23"
+    },
     {
       "type": "confidence_change",
       "date": "2026-09-23T02:03:39+00:00",
