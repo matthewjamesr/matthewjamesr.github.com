@@ -1271,11 +1271,20 @@
 
       function showDrawer() {
         var shell = document.getElementById("drawer-shell");
+        var drawer = document.getElementById("detail-drawer");
+        drawer.scrollTop = 0;
+        drawer.scrollLeft = 0;
         if (shell.hidden) {
           lockBackgroundScroll();
           shell.hidden = false;
         }
+        drawer.scrollTop = 0;
+        drawer.scrollLeft = 0;
         document.getElementById("drawer-close").focus({ preventScroll: true });
+        window.requestAnimationFrame(function () {
+          drawer.scrollTop = 0;
+          drawer.scrollLeft = 0;
+        });
       }
 
       function closeDrawer() {
