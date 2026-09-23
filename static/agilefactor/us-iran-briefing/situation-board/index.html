@@ -148,6 +148,7 @@
     .lede {
       max-width: 780px;
       margin-bottom: 0;
+      padding-top: 4px;
       color: var(--muted);
       font-size: clamp(17px, 1.7vw, 21px);
       line-height: 1.48;
@@ -229,7 +230,7 @@
     .status-pill.monitor { color: #071b1b; background: #44d4c7; }
     .board-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(360px, .8fr);
+      grid-template-columns: 1fr;
       gap: 18px;
       margin-top: 18px;
     }
@@ -264,14 +265,21 @@
     .story-row {
       counter-increment: stories;
       display: grid;
-      grid-template-columns: 34px 12px minmax(0, 1fr) auto auto 27px;
+      grid-template-columns: 34px 12px minmax(0, 1fr) auto auto 27px 18px;
       align-items: center;
       gap: 10px;
       min-height: 61px;
       padding: 11px 18px;
       border-bottom: 1px solid var(--line);
+      cursor: pointer;
+      transition: background-color 150ms ease;
     }
     .story-row:last-child { border-bottom: 0; }
+    .story-row:hover, .story-row:focus-visible { background: var(--surface-2); }
+    .story-row:focus-visible, .alert-row:focus-visible, .claim-story-card:focus-visible { outline: 3px solid var(--amber); outline-offset: -3px; }
+    .row-arrow { color: var(--faint); font-size: 17px; text-align: right; transition: transform 150ms ease, color 150ms ease; }
+    .story-row:hover .row-arrow, .story-row:focus-visible .row-arrow,
+    .alert-row:hover .row-arrow, .alert-row:focus-visible .row-arrow { color: var(--amber-ink); transform: translateX(2px); }
     .story-row::before {
       content: counter(stories, decimal-leading-zero);
       color: var(--faint);
@@ -315,12 +323,15 @@
     .alert-row {
       position: relative;
       display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
+      grid-template-columns: auto minmax(0, 1fr) 18px;
       align-items: start;
       gap: 12px;
       padding: 16px 18px 16px 21px;
       border-bottom: 1px solid var(--line);
+      cursor: pointer;
+      transition: background-color 150ms ease;
     }
+    .alert-row:hover, .alert-row:focus-visible { background: var(--surface-2); }
     .alert-row:last-child { border-bottom: 0; }
     .alert-row::before {
       content: "";
@@ -360,8 +371,11 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px 18px;
-      margin: 12px 2px 0;
+      margin: 0;
+      padding: 13px 18px 7px;
       color: var(--faint);
+      background: var(--surface-2);
+      border-top: 1px solid var(--line);
       font-size: 11px;
     }
     .legend span { display: inline-flex; align-items: center; gap: 7px; }
@@ -369,7 +383,7 @@
     .legend .critical-key { color: var(--red); }
     .legend .elevated-key { color: var(--amber-ink); }
     .legend .monitor-key { color: var(--teal); }
-    .board-note { margin: 8px 2px 0; color: var(--faint); font-size: 11px; }
+    .board-note { margin: 0; padding: 2px 18px 14px; color: var(--faint); background: var(--surface-2); font-size: 11px; }
     .verification {
       margin-top: 44px;
       padding-top: 30px;
@@ -446,40 +460,57 @@
     .state-pill.disputed { color: var(--red-ink); background: var(--red-soft); }
     .change-arrow { color: var(--faint); margin: 0 4px; }
     .claims-toolbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(230px, 1fr) auto auto;
+      align-items: end;
       gap: 14px;
-      padding: 14px 18px;
+      padding: 16px 18px;
       background: var(--surface-2);
       border-bottom: 1px solid var(--line);
     }
-    .claims-toolbar p { margin: 0; color: var(--muted); font-size: 12px; }
+    .claims-toolbar p { grid-column: 1 / -1; margin: -2px 0 0; color: var(--muted); font-size: 12px; }
+    .control-label { display: grid; gap: 6px; color: var(--faint); font: 600 10px/1.2 "IBM Plex Mono", monospace; letter-spacing: .045em; text-transform: uppercase; }
+    .search-input, .sort-select {
+      min-height: 40px;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+    }
+    .search-input { width: 100%; padding: 8px 12px; }
+    .search-input::placeholder { color: var(--faint); }
+    .sort-select { min-width: 190px; padding: 8px 32px 8px 10px; font-weight: 650; }
     .filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
     .filter-btn {
-      min-height: 32px;
-      padding: 6px 10px;
+      min-height: 40px;
+      padding: 7px 12px;
       color: var(--muted);
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 4px;
       cursor: pointer;
       font: 600 10px/1 "IBM Plex Mono", monospace;
       text-transform: capitalize;
     }
     .filter-btn[aria-pressed="true"] { color: #101920; background: var(--amber); border-color: var(--amber); }
     .claim-list { list-style: none; margin: 0; padding: 0; }
-    .claim-row {
+    .claim-story-card {
       display: grid;
-      grid-template-columns: 130px minmax(0, 1fr) auto;
-      gap: 16px;
-      align-items: start;
-      padding: 16px 20px;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px 20px;
+      align-items: center;
+      padding: 18px 20px;
       border-bottom: 1px solid var(--line);
+      cursor: pointer;
+      transition: background-color 150ms ease;
     }
-    .claim-row:last-child { border-bottom: 0; }
-    .claim-story { color: var(--faint); font: 500 10px/1.35 "IBM Plex Mono", monospace; }
-    .claim-text { margin: 0; color: var(--ink); font-size: 14px; line-height: 1.42; }
+    .claim-story-card:last-child { border-bottom: 0; }
+    .claim-story-card:hover { background: var(--surface-2); }
+    .claim-card-copy { min-width: 0; }
+    .claim-card-copy h3 { margin: 0 0 5px; font-size: 17px; line-height: 1.22; }
+    .claim-card-copy p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
+    .claim-card-stats { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+    .stat-chip { padding: 5px 8px; color: var(--muted); background: var(--surface-3); border-radius: 3px; font: 600 10px/1 "IBM Plex Mono", monospace; white-space: nowrap; }
     .empty, .loading {
       padding: 42px 22px;
       color: var(--muted);
@@ -497,6 +528,66 @@
       font-weight: 650;
     }
     .more-btn:hover { border-color: var(--amber); }
+    .drawer-shell[hidden] { display: none; }
+    .drawer-shell { position: fixed; inset: 0; z-index: 50; }
+    .drawer-backdrop { position: absolute; inset: 0; background: rgba(3, 12, 20, .62); border: 0; cursor: pointer; }
+    .detail-drawer {
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: min(680px, calc(100vw - 28px));
+      max-height: 100dvh;
+      overflow-y: auto;
+      color: var(--ink);
+      background: var(--surface);
+      border-left: 1px solid var(--line-strong);
+      box-shadow: -24px 0 70px rgba(0,0,0,.28);
+    }
+    .drawer-head {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: start;
+      padding: max(22px, env(safe-area-inset-top)) 24px 18px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .drawer-kicker { display: block; margin-bottom: 7px; color: var(--faint); font: 600 10px/1.2 "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
+    .drawer-title { margin: 0; font: 700 clamp(25px, 4vw, 36px)/1.08 "Source Serif 4", serif; letter-spacing: -.02em; }
+    .drawer-close { width: 40px; height: 40px; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 50%; cursor: pointer; font-size: 24px; line-height: 1; }
+    .drawer-body { padding: 22px 24px max(42px, env(safe-area-inset-bottom)); }
+    .drawer-summary { margin-bottom: 22px; color: var(--muted); font-size: 16px; line-height: 1.5; }
+    .drawer-section { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+    .drawer-section h3 { margin: 0 0 13px; font: 700 20px/1.15 "Source Serif 4", serif; }
+    .drawer-claims, .transition-list, .episode-list { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+    .drawer-claim, .transition-item { padding: 13px 14px; background: var(--surface-2); border-radius: 4px; }
+    .drawer-claim p, .transition-item p { margin: 8px 0 0; font-size: 14px; line-height: 1.45; }
+    .claim-topline { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--faint); font: 500 10px/1.3 "IBM Plex Mono", monospace; }
+    .episode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .episode-list a, .drawer-story-link { display: block; padding: 11px 12px; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px; font: 700 14px/1.35 "Source Sans 3", sans-serif; text-align: left; text-decoration: none; }
+    .drawer-story-link { width: 100%; cursor: pointer; }
+    .episode-list a:hover, .drawer-story-link:hover { border-color: var(--amber); }
+    .episode-list small { display: block; margin-top: 3px; color: var(--faint); font-weight: 500; }
+    .source-note { margin: 10px 0 0; color: var(--faint); font-size: 12px; }
+    .source-links { display: flex; flex-wrap: wrap; gap: 7px 9px; margin-top: 10px; }
+    .source-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 9px;
+      color: var(--amber-ink);
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 3px;
+      font: 650 12px/1.25 "Source Sans 3", sans-serif;
+      text-decoration: none;
+    }
+    .source-links a:hover { border-color: var(--amber); text-decoration: underline; text-underline-offset: 2px; }
+    .source-block-list { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+    .source-block-item { padding: 13px 14px; background: var(--surface-2); border-radius: 4px; }
+    .source-context { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.42; }
     .footer {
       display: flex;
       justify-content: space-between;
@@ -527,31 +618,45 @@
       .snapshot-item:nth-child(3) { border-right: 1px solid var(--line); }
       .snapshot-item:nth-child(odd):not(.status-panel) { border-right: 0; }
       .snapshot-item:nth-child(n+2) { border-top: 1px solid var(--line); }
-      .story-row { grid-template-columns: 28px 10px minmax(0, 1fr) auto; padding-inline: 14px; }
+      .story-row { grid-template-columns: 28px 10px minmax(0, 1fr) auto auto; padding-inline: 14px; }
       .story-title { overflow: visible; white-space: normal; }
       .story-meta { display: block; }
       .story-day, .story-claims { display: none; }
-      .alert-row { grid-template-columns: 1fr; gap: 8px; padding: 15px 15px 15px 18px; }
+      .alert-row { grid-template-columns: minmax(0, 1fr) 18px; gap: 8px 12px; padding: 15px 15px 15px 18px; }
+      .alert-row .severity-chip { grid-column: 1; width: fit-content; }
+      .alert-row .alert-copy { grid-column: 1; }
+      .alert-row .row-arrow { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
       .alert-copy { overflow: visible; white-space: normal; }
       .severity-chip { min-width: 0; }
       .verification-head { align-items: stretch; flex-direction: column; }
       .tabs { width: 100%; }
       .tab { flex: 1; }
-      .receipt-row, .claim-row { grid-template-columns: 1fr; gap: 9px; padding: 16px; }
+      .receipt-row { grid-template-columns: 1fr; gap: 9px; padding: 16px; }
       .receipt-kind { flex-direction: row; align-items: center; justify-content: space-between; }
-      .claims-toolbar { align-items: stretch; flex-direction: column; }
+      .claims-toolbar { grid-template-columns: 1fr; align-items: stretch; }
+      .claims-toolbar p { grid-column: 1; }
+      .sort-select { width: 100%; }
       .filter-group { display: grid; grid-template-columns: repeat(3, 1fr); }
       .filter-btn { padding-inline: 5px; }
+      .claim-story-card { grid-template-columns: 1fr; padding: 16px; }
+      .claim-card-stats { justify-content: flex-start; }
+      .detail-drawer { width: 100%; border-left: 0; }
+      .drawer-head { padding-inline: 18px; }
+      .drawer-body { padding-inline: 18px; }
+      .episode-list { grid-template-columns: 1fr; }
       .footer { align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 420px) {
       .snapshot-strip { grid-template-columns: 1fr; }
       .snapshot-item, .snapshot-item:nth-child(3), .snapshot-item:nth-child(odd):not(.status-panel) { border-right: 0; }
-      .story-row { grid-template-columns: 24px 10px minmax(0, 1fr) auto; gap: 9px; }
+      .story-row { grid-template-columns: 24px 10px minmax(0, 1fr) auto auto; gap: 9px; }
       .panel-head { align-items: flex-start; flex-direction: column; }
-      .filter-group { grid-template-columns: repeat(2, 1fr); }
+      .filter-group { grid-template-columns: repeat(3, 1fr); }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .story-row, .alert-row, .claim-story-card, .row-arrow { transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -563,7 +668,7 @@
           <span class="snapshot" id="snapshot-time">Dated snapshot</span>
         </div>
         <h1>The operating picture, at a glance.</h1>
-        <p class="lede">The highest-impact signals, open questions, and verification trail from the latest briefing—without opening panels or decoding a map first.</p>
+        <p class="lede">The highest-impact signals, open questions, and verification trail from the latest briefing.</p>
       </div>
       <a class="episode-link" href="https://matthewreichardt.com/agilefactor/us-iran-briefing/" aria-label="Open the latest U.S.–Iran briefing episode">
         <span><strong>Latest episode</strong><br><span id="episode-label">Loading latest briefing…</span></span>
@@ -604,7 +709,7 @@
         <div class="panel-head">
           <div>
             <h2 id="stories-title">Top active stories</h2>
-            <p>Ranked by total claims in the briefing ledger.</p>
+            <p>Ranked by claim volume. Select a story for its claims, changes, episodes, and sources.</p>
           </div>
           <span class="panel-count" id="stories-count">— tracked</span>
         </div>
@@ -623,21 +728,21 @@
         <div class="panel-head">
           <div>
             <h2 id="alerts-title">Active alerts</h2>
-            <p>What the reporting desk is watching next.</p>
+            <p>What the reporting desk is watching next. Select an alert for detail and its related story.</p>
           </div>
           <span class="panel-count" id="alerts-count">— open</span>
         </div>
         <ul class="alerts-list" id="alerts-list">
           <li class="loading">Loading open watch questions…</li>
         </ul>
+        <div class="legend" aria-label="Alert severity legend">
+          <span class="critical-key"><b></b>Critical — immediate operational risk</span>
+          <span class="elevated-key"><b></b>Elevated — market or policy impact</span>
+          <span class="monitor-key"><b></b>Monitor — developing condition</span>
+        </div>
+        <p class="board-note">Alert priority reflects potential near-term impact in this dated snapshot. Story arrows compare the latest three reporting events with the prior three.</p>
       </section>
     </div>
-    <div class="legend" aria-label="Severity legend">
-      <span class="critical-key"><b></b>Critical — immediate operational risk</span>
-      <span class="elevated-key"><b></b>Elevated — market or policy impact</span>
-      <span class="monitor-key"><b></b>Monitor — developing condition</span>
-    </div>
-    <p class="board-note">Alert priority reflects potential near-term impact in this dated snapshot. Story arrows compare the latest three reporting events with the prior three.</p>
 
     <section class="verification" aria-labelledby="verification-title">
       <div class="verification-head">
@@ -656,18 +761,27 @@
         </div>
         <div class="verification-panel" id="panel-claims" role="tabpanel" aria-labelledby="tab-claims" hidden>
           <div class="claims-toolbar">
-            <p id="claims-summary">Loading claims…</p>
-            <div class="filter-group" id="claim-filters" aria-label="Filter claims by confidence">
+            <label class="control-label" for="claim-search">Search claims
+              <input class="search-input" id="claim-search" type="search" placeholder="Search claim text or story" autocomplete="off">
+            </label>
+            <label class="control-label" for="claim-sort">Sort stories
+              <select class="sort-select" id="claim-sort">
+                <option value="active">Most active</option>
+                <option value="claims">Most claims</option>
+                <option value="changes">Most confidence changes</option>
+                <option value="newest">Newest story</option>
+                <option value="az">A–Z</option>
+              </select>
+            </label>
+            <div class="filter-group" id="claim-filters" aria-label="Filter stories by status">
               <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
-              <button class="filter-btn" type="button" data-filter="confirmed" aria-pressed="false">Confirmed</button>
-              <button class="filter-btn" type="button" data-filter="corroborated" aria-pressed="false">Corroborated</button>
-              <button class="filter-btn" type="button" data-filter="reported" aria-pressed="false">Reported</button>
-              <button class="filter-btn" type="button" data-filter="unconfirmed" aria-pressed="false">Unconfirmed</button>
-              <button class="filter-btn" type="button" data-filter="disputed" aria-pressed="false">Disputed</button>
+              <button class="filter-btn" type="button" data-filter="active" aria-pressed="false">Active</button>
+              <button class="filter-btn" type="button" data-filter="resolved" aria-pressed="false">Resolved</button>
             </div>
+            <p id="claims-summary" aria-live="polite">Loading claims…</p>
           </div>
           <ol class="claim-list" id="claims-list"></ol>
-          <div class="more-row" id="claims-more-row" hidden><button class="more-btn" id="claims-more" type="button">Show more claims</button></div>
+          <div class="more-row" id="claims-more-row" hidden><button class="more-btn" id="claims-more" type="button">Show more stories</button></div>
         </div>
       </div>
     </section>
@@ -678,14 +792,30 @@
     </footer>
   </main>
 
+  <div class="drawer-shell" id="drawer-shell" hidden>
+    <button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Close detail panel"></button>
+    <aside class="detail-drawer" id="detail-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
+      <header class="drawer-head">
+        <div><span class="drawer-kicker" id="drawer-kicker">Story detail</span><h2 class="drawer-title" id="drawer-title">Details</h2></div>
+        <button class="drawer-close" id="drawer-close" type="button" aria-label="Close detail panel">×</button>
+      </header>
+      <div class="drawer-body" id="drawer-body"></div>
+    </aside>
+  </div>
+
   <script>
     (function () {
       "use strict";
       var boardData = null;
       var activityData = null;
-      var allClaims = [];
+      var receiptsData = { entries: [] };
+      var allStories = [];
       var currentFilter = "all";
-      var visibleClaims = 20;
+      var currentSort = "active";
+      var claimQuery = "";
+      var visibleClaims = 12;
+      var drawerReturnFocus = null;
+      var lockedScrollY = 0;
 
       function esc(value) {
         return String(value == null ? "" : value)
@@ -747,6 +877,205 @@
         return { symbol: "→", cls: "flat", label: "activity steady" };
       }
 
+      function activityScore(story) {
+        return (story.activity || []).reduce(function (sum, item) {
+          return sum + (+item.new_claims || 0) + (+item.conf_changes || 0) * 2 + (+item.watch_events || 0);
+        }, 0);
+      }
+
+      function changeCount(story) {
+        return (story.activity || []).reduce(function (sum, item) { return sum + (+item.conf_changes || 0); }, 0);
+      }
+
+      function episodeHref(id, sources) {
+        return "../?episode=" + encodeURIComponent(id || "") + (sources ? "#sources" : "");
+      }
+
+      function episodeForClaim(story, claim) {
+        var day = String(claim.created_at || "").slice(0, 10);
+        var matches = (story.activity || []).filter(function (item) { return String(item.episode_id || "").slice(-10) === day; });
+        return (matches.length ? matches[matches.length - 1].episode_id : story.last_episode_id) || story.first_episode_id || "";
+      }
+
+      function receiptStoryId(entry) {
+        var related = entry && entry.related_story;
+        return String((entry && (entry.story_id || entry.related_story_id)) || (related && (related.story_id || related.id)) || "");
+      }
+
+      function receiptsForStory(storyId) {
+        return (receiptsData.entries || []).filter(function (entry) { return receiptStoryId(entry) === String(storyId || ""); });
+      }
+
+      function normalizedText(value) {
+        return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
+      }
+
+      function safeSourceUrl(value) {
+        var raw = String(value || "").trim();
+        if (!raw || /^(javascript|data|vbscript):/i.test(raw)) return "";
+        if (/^https?:\/\//i.test(raw) || /^(\.\.\/|\.\/|\/)/.test(raw)) return raw;
+        return "";
+      }
+
+      function sourceLabel(key, context, url) {
+        var value = String(context || "").trim();
+        if (value && !/^https?:\/\//i.test(value)) return value;
+        var hint = String(key || "").toLowerCase();
+        if (/youtube|video/.test(hint) || /(?:youtube\.com|youtu\.be)/i.test(url)) return "YouTube";
+        if (/pdf|document/.test(hint) || /\.pdf(?:$|[?#])/i.test(url)) return "PDF";
+        if (/audio|mp3|podcast/.test(hint) || /\.(?:mp3|m4a|wav)(?:$|[?#])/i.test(url)) return "Audio";
+        if (/transcript|caption/.test(hint)) return "Transcript";
+        if (/article|report|publication/.test(hint)) return "Article";
+        return "Source";
+      }
+
+      function receiptLinks(entry) {
+        var links = [];
+        var seen = {};
+        function add(value, key, context) {
+          var url = safeSourceUrl(value);
+          if (!url || seen[url]) return;
+          seen[url] = true;
+          links.push({ url: url, label: sourceLabel(key, context, url) });
+        }
+        function walk(value, key, context) {
+          if (Array.isArray(value)) {
+            value.forEach(function (item) { walk(item, key, context); });
+            return;
+          }
+          if (!value || typeof value !== "object") {
+            if (typeof value === "string" && /(url|href|link|source|pdf|audio|youtube|video)/i.test(key || "")) add(value, key, context);
+            return;
+          }
+          var ownLabel = value.label || value.title || value.name || value.source_name || value.provider || value.platform || context;
+          Object.keys(value).forEach(function (childKey) {
+            walk(value[childKey], childKey, ownLabel);
+          });
+        }
+        walk(entry, "", "");
+        return links;
+      }
+
+      function sourceLinksMarkup(entry, ariaLabel) {
+        var links = receiptLinks(entry);
+        if (!links.length) return "";
+        return '<div class="source-links" aria-label="' + esc(ariaLabel || "Direct sources") + '">' + links.map(function (link) {
+          return '<a href="' + esc(link.url) + '" target="_blank" rel="noopener noreferrer nofollow">' + esc(link.label) + ' ↗</a>';
+        }).join("") + '</div>';
+      }
+
+      function claimReceiptLinksMarkup(story, claim) {
+        var claimId = String(claim.claim_id || "");
+        var claimText = normalizedText(claim.text);
+        var matches = receiptsForStory(story.story_id).filter(function (entry) {
+          var linkedIds = entry.claim_ids || entry.related_claim_ids || [];
+          if (!Array.isArray(linkedIds)) linkedIds = [linkedIds];
+          return (claimId && (String(entry.claim_id || entry.related_claim_id || "") === claimId || linkedIds.map(String).indexOf(claimId) >= 0)) ||
+            (claimText && normalizedText(entry.claim_text) === claimText);
+        });
+        var combined = { links: [] };
+        matches.forEach(function (entry) { combined.links = combined.links.concat(receiptLinks(entry)); });
+        return sourceLinksMarkup(combined, "Sources supporting this claim");
+      }
+
+      function storySourcesMarkup(story) {
+        var rows = receiptsForStory(story.story_id).map(function (entry) {
+          var links = receiptLinks(entry);
+          if (!links.length) return "";
+          var context = entry.claim_text || entry.question || entry.resolution_text || entry.reason || entry.story_title || "Receipt source";
+          return '<li class="source-block-item"><p class="source-context">' + esc(context) + '</p>' + sourceLinksMarkup({ links: links }, "Direct source links") + '</li>';
+        }).filter(Boolean);
+        if (!rows.length) return "";
+        return '<section class="drawer-section"><h3>Sources</h3><ul class="source-block-list">' + rows.join("") + '</ul></section>';
+      }
+
+      function findStory(id) {
+        return (activityData && activityData.stories || []).find(function (story) { return story.story_id === id; }) || null;
+      }
+
+      function storySummary(story) {
+        if (story.summary) return story.summary;
+        var claims = story.claims || [];
+        var latest = claims.slice().sort(function (a, b) { return new Date(b.created_at || 0) - new Date(a.created_at || 0); })[0];
+        var range = episodeLabel(story.first_episode_id) + " through " + episodeLabel(story.last_episode_id);
+        return (story.status === "resolved" ? "Resolved" : "Active") + " " + (story.category || "briefing") + " story with " + (story.claim_count || claims.length) + " tracked claims across " + range + "." + (latest ? " Latest entry: " + latest.text : "");
+      }
+
+      function transitionMarkup(storyId) {
+        var transitions = receiptsForStory(storyId).filter(function (entry) { return entry.type === "confidence_change"; });
+        if (!transitions.length) return '<p class="source-note">No confidence changes are recorded for this story.</p>';
+        return '<ul class="transition-list">' + transitions.map(function (entry) {
+          return '<li class="transition-item"><div class="claim-topline"><span>' + esc(displayDate(entry.date, false)) + '</span><span>' + statePill(entry.old_confidence) + '<span class="change-arrow" aria-hidden="true">→</span>' + statePill(entry.new_confidence) + '</span></div><p><strong>' + esc(entry.claim_text) + '</strong></p><p>' + esc(entry.reason) + '</p>' + sourceLinksMarkup(entry, "Sources supporting this confidence change") + '</li>';
+        }).join("") + '</ul>';
+      }
+
+      function episodeLinksMarkup(story) {
+        var ids = (story.activity || []).map(function (item) { return item.episode_id; }).filter(Boolean);
+        if (!ids.length) ids = [story.last_episode_id || story.first_episode_id].filter(Boolean);
+        ids = ids.filter(function (id, index) { return ids.indexOf(id) === index; }).reverse();
+        return '<ul class="episode-list">' + ids.map(function (id) {
+          return '<li><a href="' + esc(episodeHref(id, false)) + '">' + esc(episodeLabel(id)) + ' ↗<small>Open episode</small></a></li>' +
+            '<li><a href="' + esc(episodeHref(id, true)) + '">Source list ↗<small>Matching episode sources</small></a></li>';
+        }).join("") + '</ul>';
+      }
+
+      function openDrawerForStory(storyId, trigger) {
+        var story = findStory(storyId);
+        if (!story) return;
+        drawerReturnFocus = trigger || document.activeElement;
+        document.getElementById("drawer-kicker").textContent = "Story detail · " + (story.status || "active");
+        document.getElementById("drawer-title").textContent = story.title;
+        var claims = (story.claims || []).slice().sort(function (a, b) { return new Date(b.created_at || 0) - new Date(a.created_at || 0); });
+        document.getElementById("drawer-body").innerHTML =
+          '<p class="drawer-summary">' + esc(storySummary(story)) + '</p>' +
+          '<section class="drawer-section"><h3>Claims</h3>' + (claims.length ? '<ol class="drawer-claims">' + claims.map(function (claim) {
+            var sourceEpisode = episodeForClaim(story, claim);
+            return '<li class="drawer-claim"><div class="claim-topline"><span>' + esc(claim.type || "claim") + ' · ' + esc(displayDate(claim.created_at, false)) + '</span>' + statePill(claim.confidence) + '</div><p>' + esc(claim.text) + '</p>' + claimReceiptLinksMarkup(story, claim) + (sourceEpisode ? '<p class="source-note"><a href="' + esc(episodeHref(sourceEpisode, true)) + '">Matching source list ↗</a></p>' : '') + '</li>';
+          }).join("") + '</ol>' : '<p class="source-note">No claims are indexed for this story.</p>') + '</section>' +
+          '<section class="drawer-section"><h3>Confidence transitions</h3>' + transitionMarkup(story.story_id) + '</section>' +
+          storySourcesMarkup(story) +
+          '<section class="drawer-section"><h3>Episodes & sources</h3>' + episodeLinksMarkup(story) + '<p class="source-note">Source links open the cited source list for the matching episode.</p></section>';
+        showDrawer();
+      }
+
+      function openDrawerForAlert(index, trigger) {
+        var alert = boardData && (boardData.alerts || [])[index];
+        if (!alert) return;
+        var severity = severityForAlert(alert);
+        var related = findStory(alert.story_id);
+        drawerReturnFocus = trigger || document.activeElement;
+        document.getElementById("drawer-kicker").textContent = severityLabel(severity) + " alert";
+        document.getElementById("drawer-title").textContent = "Active watch question";
+        document.getElementById("drawer-body").innerHTML =
+          '<p class="drawer-summary">' + esc(alert.question) + '</p>' +
+          '<section class="drawer-section"><h3>Related story</h3>' + (related ? '<button class="drawer-story-link" type="button" data-related-story="' + esc(related.story_id) + '">' + esc(related.title) + ' →</button>' : '<p class="source-note">The related story is not in the current activity index.</p>') + '</section>' +
+          (alert.asked_in_episode ? '<section class="drawer-section"><h3>First asked</h3><ul class="episode-list"><li><a href="' + esc(episodeHref(alert.asked_in_episode, false)) + '">' + esc(episodeLabel(alert.asked_in_episode)) + ' ↗<small>Open episode</small></a></li><li><a href="' + esc(episodeHref(alert.asked_in_episode, true)) + '">Source list ↗<small>Matching episode sources</small></a></li></ul></section>' : '');
+        showDrawer();
+      }
+
+      function showDrawer() {
+        var shell = document.getElementById("drawer-shell");
+        if (shell.hidden) {
+          lockedScrollY = window.scrollY || window.pageYOffset || 0;
+          document.body.style.position = "fixed";
+          document.body.style.top = "-" + lockedScrollY + "px";
+          document.body.style.width = "100%";
+          shell.hidden = false;
+        }
+        document.getElementById("drawer-close").focus();
+      }
+
+      function closeDrawer() {
+        var shell = document.getElementById("drawer-shell");
+        if (shell.hidden) return;
+        shell.hidden = true;
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.width = "";
+        window.scrollTo(0, lockedScrollY);
+        if (drawerReturnFocus && typeof drawerReturnFocus.focus === "function") drawerReturnFocus.focus();
+      }
+
       function renderBoard(board, activity) {
         boardData = board;
         activityData = activity;
@@ -782,32 +1111,35 @@
         (activity.stories || []).forEach(function (story) { activityMap[story.story_id] = story; });
         var stories = board.top_stories || [];
         document.getElementById("stories-count").textContent = stories.length + " tracked";
-        document.getElementById("story-list").innerHTML = stories.map(function (story) {
+        document.getElementById("story-list").innerHTML = stories.length ? stories.map(function (story) {
           var detail = activityMap[story.story_id] || null;
           var state = latestStoryState(detail);
           var trend = storyTrend(detail);
-          return '<li class="story-row">' +
+          return '<li class="story-row" tabindex="0" role="button" data-story-id="' + esc(story.story_id) + '" aria-label="Open details for ' + esc(story.title) + '">' +
             '<span class="confidence-dot ' + state + '" title="Latest claim state: ' + esc(state) + '" aria-label="Latest claim state: ' + esc(state) + '"></span>' +
             '<div class="story-copy"><span class="story-title">' + esc(story.title) + '</span><span class="story-meta">Day ' + esc(story.day_n) + ' · ' + esc(story.claim_count) + ' claims · ' + esc(state) + '</span></div>' +
             '<span class="story-day">Day ' + esc(story.day_n) + '</span>' +
             '<span class="story-claims">' + esc(story.claim_count) + ' claims</span>' +
             '<span class="trend ' + trend.cls + '" title="' + esc(trend.label) + '" aria-label="' + esc(trend.label) + '">' + trend.symbol + '</span>' +
+            '<span class="row-arrow" aria-hidden="true">›</span>' +
           '</li>';
-        }).join("");
+        }).join("") : '<li class="empty">No active stories are listed in this snapshot.</li>';
 
         var alerts = board.alerts || [];
         document.getElementById("alerts-count").textContent = alerts.length + " open";
-        document.getElementById("alerts-list").innerHTML = alerts.map(function (alert) {
+        document.getElementById("alerts-list").innerHTML = alerts.length ? alerts.map(function (alert, index) {
           var severity = severityForAlert(alert);
-          return '<li class="alert-row ' + severity + '">' +
+          return '<li class="alert-row ' + severity + '" tabindex="0" role="button" data-alert-index="' + index + '" aria-label="Open alert details: ' + esc(alert.question) + '">' +
             '<span class="severity-chip ' + severity + '">' + severityLabel(severity) + '</span>' +
             '<p class="alert-copy">' + esc(alert.question) + '</p>' +
+            '<span class="row-arrow" aria-hidden="true">›</span>' +
           '</li>';
-        }).join("");
+        }).join("") : '<li class="empty">No active alerts are listed in this snapshot.</li>';
       }
 
       function renderReceipts(receipts) {
-        var entries = (receipts.entries || []).slice().sort(function (a, b) { return new Date(b.date || 0) - new Date(a.date || 0); });
+        receiptsData = receipts || { entries: [] };
+        var entries = (receiptsData.entries || []).slice().sort(function (a, b) { return new Date(b.date || 0) - new Date(a.date || 0); });
         var list = document.getElementById("receipts-list");
         if (!entries.length) { list.innerHTML = '<div class="empty">No verification changes are recorded for this snapshot.</div>'; return; }
         list.innerHTML = entries.map(function (entry) {
@@ -826,34 +1158,44 @@
       }
 
       function prepareClaims(activity) {
-        allClaims = [];
-        (activity.stories || []).forEach(function (story) {
-          (story.claims || []).forEach(function (claim) {
-            allClaims.push({
-              story: story.title,
-              status: story.status,
-              text: claim.text,
-              type: claim.type,
-              confidence: normalizedState(claim.confidence),
-              created_at: claim.created_at
-            });
-          });
-        });
-        allClaims.sort(function (a, b) { return new Date(b.created_at || 0) - new Date(a.created_at || 0); });
+        allStories = (activity.stories || []).slice();
         renderClaims();
       }
 
       function renderClaims() {
-        var filtered = currentFilter === "all" ? allClaims : allClaims.filter(function (claim) { return claim.confidence === currentFilter; });
+        var query = claimQuery.trim().toLowerCase();
+        var filtered = allStories.map(function (story) {
+          var matching = (story.claims || []).filter(function (claim) {
+            return !query || (story.title + " " + (story.category || "") + " " + claim.text + " " + (claim.type || "") + " " + (claim.confidence || "")).toLowerCase().indexOf(query) >= 0;
+          });
+          return { story: story, matchingClaims: matching };
+        }).filter(function (item) {
+          var statusMatches = currentFilter === "all" || String(item.story.status || "active").toLowerCase() === currentFilter;
+          var queryMatches = !query || item.matchingClaims.length > 0 || item.story.title.toLowerCase().indexOf(query) >= 0;
+          return statusMatches && queryMatches;
+        });
+        filtered.sort(function (a, b) {
+          if (currentSort === "claims") return (+b.story.claim_count || 0) - (+a.story.claim_count || 0);
+          if (currentSort === "changes") return changeCount(b.story) - changeCount(a.story);
+          if (currentSort === "newest") {
+            var order = (activityData && activityData.episode_order) || [];
+            return order.indexOf(b.story.last_episode_id) - order.indexOf(a.story.last_episode_id);
+          }
+          if (currentSort === "az") return a.story.title.localeCompare(b.story.title);
+          return activityScore(b.story) - activityScore(a.story);
+        });
         var shown = filtered.slice(0, visibleClaims);
-        document.getElementById("claims-summary").textContent = "Showing " + Math.min(shown.length, filtered.length) + " of " + filtered.length + (currentFilter === "all" ? " claims" : " " + currentFilter + " claims");
-        document.getElementById("claims-list").innerHTML = shown.length ? shown.map(function (claim) {
-          return '<li class="claim-row">' +
-            '<span class="claim-story">' + esc(claim.story) + '<br>' + esc(claim.type || "claim") + ' · ' + esc(displayDate(claim.created_at, false)) + '</span>' +
-            '<p class="claim-text">' + esc(claim.text) + '</p>' +
-            statePill(claim.confidence) +
+        var matchingClaimCount = filtered.reduce(function (sum, item) { return sum + item.matchingClaims.length; }, 0);
+        document.getElementById("claims-summary").textContent = "Showing " + Math.min(shown.length, filtered.length) + " of " + filtered.length + " stories · " + matchingClaimCount + (query ? " matching" : " indexed") + " claims";
+        document.getElementById("claims-list").innerHTML = shown.length ? shown.map(function (item) {
+          var story = item.story;
+          var previewClaims = query ? item.matchingClaims : (story.claims || []);
+          var preview = previewClaims[0] ? previewClaims[0].text : "No indexed claim text is available.";
+          return '<li class="claim-story-card" tabindex="0" role="button" data-story-id="' + esc(story.story_id) + '" aria-label="Open claims for ' + esc(story.title) + '">' +
+            '<div class="claim-card-copy"><h3>' + esc(story.title) + '</h3><p>' + esc(preview) + '</p></div>' +
+            '<div class="claim-card-stats"><span class="state-pill ' + (story.status === "resolved" ? "confirmed" : "reported") + '">' + esc(story.status || "active") + '</span><span class="stat-chip">' + esc(story.claim_count || (story.claims || []).length) + ' claims</span><span class="stat-chip">' + changeCount(story) + ' changes</span><span class="row-arrow" aria-hidden="true">›</span></div>' +
           '</li>';
-        }).join("") : '<li class="empty">No claims match this confidence state.</li>';
+        }).join("") : '<li class="empty">No stories or claims match these controls.</li>';
         document.getElementById("claims-more-row").hidden = shown.length >= filtered.length;
       }
 
@@ -887,20 +1229,64 @@
         var button = event.target.closest("button[data-filter]");
         if (!button) return;
         currentFilter = button.getAttribute("data-filter");
-        visibleClaims = 20;
+        visibleClaims = 12;
         document.querySelectorAll(".filter-btn").forEach(function (item) { item.setAttribute("aria-pressed", String(item === button)); });
         renderClaims();
       });
-      document.getElementById("claims-more").addEventListener("click", function () { visibleClaims += 20; renderClaims(); });
+      document.getElementById("claim-search").addEventListener("input", function (event) {
+        claimQuery = event.target.value;
+        visibleClaims = 12;
+        renderClaims();
+      });
+      document.getElementById("claim-sort").addEventListener("change", function (event) {
+        currentSort = event.target.value;
+        visibleClaims = 12;
+        renderClaims();
+      });
+      document.getElementById("claims-more").addEventListener("click", function () { visibleClaims += 12; renderClaims(); });
+
+      function activateRows(container, selector, action) {
+        container.addEventListener("click", function (event) {
+          var row = event.target.closest(selector);
+          if (row) action(row);
+        });
+        container.addEventListener("keydown", function (event) {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          var row = event.target.closest(selector);
+          if (!row) return;
+          event.preventDefault();
+          action(row);
+        });
+      }
+      activateRows(document.getElementById("story-list"), "[data-story-id]", function (row) { openDrawerForStory(row.getAttribute("data-story-id"), row); });
+      activateRows(document.getElementById("alerts-list"), "[data-alert-index]", function (row) { openDrawerForAlert(+row.getAttribute("data-alert-index"), row); });
+      activateRows(document.getElementById("claims-list"), "[data-story-id]", function (row) { openDrawerForStory(row.getAttribute("data-story-id"), row); });
+      document.getElementById("drawer-close").addEventListener("click", closeDrawer);
+      document.getElementById("drawer-backdrop").addEventListener("click", closeDrawer);
+      document.getElementById("drawer-body").addEventListener("click", function (event) {
+        var button = event.target.closest("[data-related-story]");
+        if (button) openDrawerForStory(button.getAttribute("data-related-story"), drawerReturnFocus);
+      });
+      document.addEventListener("keydown", function (event) {
+        var shell = document.getElementById("drawer-shell");
+        if (shell.hidden) return;
+        if (event.key === "Escape") { closeDrawer(); return; }
+        if (event.key !== "Tab") return;
+        var focusable = Array.prototype.slice.call(shell.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'));
+        if (!focusable.length) return;
+        var first = focusable[0], last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      });
 
       Promise.all([
         fetch("../situation-board.json").then(function (r) { if (!r.ok) throw new Error("board"); return r.json(); }),
-        fetch("../receipts.json").then(function (r) { if (!r.ok) throw new Error("receipts"); return r.json(); }),
-        fetch("../story_activity.json").then(function (r) { if (!r.ok) throw new Error("claims"); return r.json(); })
+        fetch("../story_activity.json").then(function (r) { if (!r.ok) throw new Error("claims"); return r.json(); }),
+        fetch("../receipts.json").then(function (r) { if (!r.ok) throw new Error("receipts"); return r.json(); }).catch(function () { return { entries: [] }; })
       ]).then(function (results) {
-        renderBoard(results[0], results[2]);
-        renderReceipts(results[1]);
-        prepareClaims(results[2]);
+        renderBoard(results[0], results[1]);
+        renderReceipts(results[2]);
+        prepareClaims(results[1]);
       }).catch(function () {
         document.getElementById("snapshot-time").textContent = "Live data unavailable";
         document.getElementById("episode-label").textContent = "Latest briefing";
