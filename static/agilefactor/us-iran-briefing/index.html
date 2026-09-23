@@ -751,8 +751,19 @@
       text-transform: uppercase;
     }
     .receipt-archive-close:hover { background: rgba(255,210,62,.08); }
-    .receipt-archive-list { flex: 1 1 auto; overflow-y: auto; padding: 4px 22px calc(22px + env(safe-area-inset-bottom)); scrollbar-color: rgba(255,210,62,.35) transparent; }
+    .receipt-archive-panel,
+    .receipt-archive-list { overscroll-behavior: contain; }
+    .receipt-archive-list {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 4px 22px calc(22px + env(safe-area-inset-bottom));
+      scrollbar-color: rgba(255,210,62,.35) transparent;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-y;
+    }
     .receipt-archive-list .receipt-entry:first-child { border-top: 0; }
+    html.receipt-archive-open,
     body.receipt-archive-open { overflow: hidden; }
     .verification-tabs {
       display: flex;
@@ -1033,6 +1044,14 @@
         min-height: 100svh;
         height: auto;
         overflow: visible;
+      }
+      body.receipt-archive-open {
+        position: fixed;
+        top: var(--receipt-drawer-scroll-offset, 0px);
+        right: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
       }
       .shell { flex: none; min-height: auto; }
       .masthead { padding-top: 18px; padding-bottom: 16px; }
@@ -5162,12 +5181,13 @@
         const data = await fetchDashboardJson("situation-board.json");
         const status = String(data.hormuz && data.hormuz.status || "restricted").toLowerCase();
         const safeStatus = ["open", "restricted", "closed"].includes(status) ? status : "restricted";
+        const statusLabel = `Hormuz: ${safeStatus.charAt(0).toUpperCase()}${safeStatus.slice(1)}`;
         const brent = boardValue(data.markets && data.markets["market.brent_usd"], { currency: true });
         const wti = boardValue(data.markets && data.markets["market.wti_usd"], { currency: true });
         const transits = boardValue(data.traffic && data.traffic["traffic.hormuz_transits_daily"]);
         const alertsCount = Array.isArray(data.alerts) ? data.alerts.length : 0;
         document.getElementById("situation-board-asof").textContent = `As of ${formatBoardDate(data.as_of_date)} · ${data.episode_id || "Latest briefing"}`;
-        document.getElementById("hormuz-status").innerHTML = `<span class="status-pill ${safeStatus}">${escapeHtml(safeStatus)}</span>`;
+        document.getElementById("hormuz-status").innerHTML = `<span class="status-pill ${safeStatus}">${escapeHtml(statusLabel)}</span>`;
         document.getElementById("hormuz-basis").textContent = data.hormuz && data.hormuz.basis || "Status basis unavailable";
         document.getElementById("board-facts").innerHTML = [
           `Brent ${brent}`,
@@ -5366,11 +5386,15 @@
       let visibleCount = pageSize;
       let returnFocusTo = null;
       let drawerCameFromArchive = false;
+      let drawerScrollY = 0;
 
       const openDrawer = trigger => {
         returnFocusTo = trigger;
+        drawerScrollY = window.scrollY;
+        document.body.style.setProperty("--receipt-drawer-scroll-offset", `${-drawerScrollY}px`);
         archive.classList.add("is-open");
         archive.setAttribute("aria-hidden", "false");
+        document.documentElement.classList.add("receipt-archive-open");
         document.body.classList.add("receipt-archive-open");
         archivePanel.focus();
       };
@@ -5378,8 +5402,11 @@
         if (!archive.classList.contains("is-open")) return;
         archive.classList.remove("is-open");
         archive.setAttribute("aria-hidden", "true");
+        document.documentElement.classList.remove("receipt-archive-open");
         document.body.classList.remove("receipt-archive-open");
-        if (returnFocusTo) returnFocusTo.focus();
+        document.body.style.removeProperty("--receipt-drawer-scroll-offset");
+        if (returnFocusTo) returnFocusTo.focus({ preventScroll: true });
+        window.scrollTo(0, drawerScrollY);
       };
       const renderArchive = () => {
         drawerCameFromArchive = false;
