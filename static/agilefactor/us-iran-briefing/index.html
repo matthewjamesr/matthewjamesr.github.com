@@ -3591,6 +3591,92 @@
           }
         ]
       },
+      "evening-2026-09-22": {
+        id: "usiran-briefing-evening-edition-2026-09-22",
+        slot: "evening",
+        date: "September 22, 2026",
+        label: "Evening Edition, September 22, 2026",
+        youtubeUrl: "https://www.youtube.com/watch?v=LqQ0sdffR1I",
+        pdfUrl: "https://matthewreichardt.com/agilefactor/pdfs/us-iran-briefing-evening-2026-09-22.pdf",
+        kicker: "Tuesday, September 22 · Evening Edition",
+        title: "US–Iran Briefing — Evening Edition, September 22",
+        dek: "A remarkable day at the UN brought a secret three-hour U.S.–Iran meeting, followed hours later by a threat to “annihilate” Iran from the General Assembly podium.",
+        summary: "A remarkable day at the UN: U.S. envoy Steve Witkoff and Jared Kushner held a secret three-hour meeting with Iranian foreign minister Abbas Araghchi, which Trump called \"very good\" — and hours later Trump threatened to \"annihilate\" Iran from the General Assembly podium as Iran's delegation walked out. Meanwhile Iran's Hormuz reopening terms emerged via Reuters, oil fell for a fifth straight day, and Trump backed a diesel export ban.",
+        seaLanes: 1,
+        precisionNote: "Markers use named-place coordinates as regional anchors. The Strait of Hormuz polygon is approximate and is not a navigational boundary; the Yanbu marker identifies the facility area, not a precise incident site.",
+        sections: [],
+        resources: [
+          {
+            title: "Download the evening briefing PDF",
+            publisher: "PDF briefing",
+            url: "https://matthewreichardt.com/agilefactor/pdfs/us-iran-briefing-evening-2026-09-22.pdf",
+            download: "us-iran-briefing-evening-2026-09-22.pdf"
+          }
+        ],
+        sources: [],
+        sourceNote: "This map is a dated episode snapshot, not a live operational picture. Markers and the Strait of Hormuz polygon are regional anchors.",
+        media: [],
+        markers: [
+          {
+            kind: "city",
+            lat: 40.74967,
+            lon: -73.96917,
+            name: "New York (UN General Assembly)",
+            note: "Secret three-hour U.S.-Iran sideline meeting Tuesday (Witkoff, Kushner, Araghchi — direct vs. mediator format contested); Trump's UNGA speech threatening to 'annihilate' Iran; Iranian delegation walked out. Pezeshkian addresses the Assembly Wednesday."
+          },
+          {
+            kind: "closure",
+            lat: 26.5,
+            lon: 56.25,
+            name: "Strait of Hormuz",
+            note: "Iran's offer: reopen within seven days if U.S. eases military pressure (conveyed via mediators Sept 16, per senior Iranian official to Reuters). Tehran's reported conditions: lift naval blockade, release frozen funds, end war on 'resistance' fronts. Internal dispute in Iran over whether a new position was adopted.",
+            polygon: [[26.0, 56.0], [27.0, 56.0], [27.0, 56.6], [26.0, 56.6]]
+          },
+          {
+            kind: "facility",
+            lat: 24.12605,
+            lon: 38.05685,
+            name: "Yanbu, Saudi Arabia",
+            note: "East-West Pipeline restarted at a low rate after Sept 13 drone-attack shutdown; crude exports from Yanbu could resume later Tuesday at reduced volumes (Reuters)."
+          }
+        ],
+        locations: [
+          {
+            id: "new-york-unga-2026-09-22-evening",
+            title: "New York (UN General Assembly)",
+            place: "New York (UN General Assembly)",
+            lat: 40.74967,
+            lng: -73.96917,
+            type: "context",
+            kind: "city",
+            precision: "UN-area anchor",
+            detail: "Secret three-hour U.S.-Iran sideline meeting Tuesday (Witkoff, Kushner, Araghchi — direct vs. mediator format contested); Trump's UNGA speech threatening to 'annihilate' Iran; Iranian delegation walked out. Pezeshkian addresses the Assembly Wednesday."
+          },
+          {
+            id: "hormuz-reopening-terms-2026-09-22-evening",
+            title: "Strait of Hormuz",
+            place: "Strait of Hormuz",
+            lat: 26.5,
+            lng: 56.25,
+            type: "reported",
+            kind: "closure",
+            precision: "Approximate area",
+            detail: "Iran's offer: reopen within seven days if U.S. eases military pressure (conveyed via mediators Sept 16, per senior Iranian official to Reuters). Tehran's reported conditions: lift naval blockade, release frozen funds, end war on 'resistance' fronts. Internal dispute in Iran over whether a new position was adopted.",
+            polygon: [[26.0, 56.0], [27.0, 56.0], [27.0, 56.6], [26.0, 56.6]]
+          },
+          {
+            id: "yanbu-pipeline-restart-2026-09-22-evening",
+            title: "Yanbu, Saudi Arabia",
+            place: "Yanbu, Saudi Arabia",
+            lat: 24.12605,
+            lng: 38.05685,
+            type: "strategic",
+            kind: "facility",
+            precision: "Facility-area anchor",
+            detail: "East-West Pipeline restarted at a low rate after Sept 13 drone-attack shutdown; crude exports from Yanbu could resume later Tuesday at reduced volumes (Reuters)."
+          }
+        ]
+      },
       "morning-2026-09-22": {
         label: "Morning Edition, September 22, 2026",
         date: "2026-09-22",
@@ -3771,7 +3857,7 @@
       }
     };
 
-    const latestEpisodeId = "morning-2026-09-22";
+    const latestEpisodeId = "evening-2026-09-22";
 
     const colorByType = { reported: "#ff7043", strategic: "#d6bd85", context: "#70bfd2" };
     let map;
