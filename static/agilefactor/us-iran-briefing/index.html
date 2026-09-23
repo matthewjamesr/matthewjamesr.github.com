@@ -285,48 +285,107 @@
       flex: 0 0 auto;
       width: 100%;
       color: #f5f7fa;
-      background: #08131f;
-      border-bottom: 1px solid rgba(255, 210, 62, .32);
+      background: #0b1724;
+      border-top: 1px solid #ffd23e;
+      border-bottom: 1px solid rgba(255, 210, 62, .28);
     }
     .situation-board-inner {
-      width: min(1560px, 100%);
+      width: 100%;
       margin: 0 auto;
-      padding: 18px clamp(18px, 3vw, 48px) 20px;
     }
-    .board-heading {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 14px;
+    .board-summary {
+      min-height: 58px;
+      padding: 11px clamp(18px, 3vw, 48px);
+      display: grid;
+      grid-template-columns: auto auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 14px;
     }
-    .board-heading h2, .receipts-heading h2 {
-      margin: 0;
-      color: #fff;
+    .board-label,
+    .board-column h3 {
+      color: #ffd23e;
       font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-      font-size: 28px;
       font-weight: 700;
-      line-height: 1;
-      letter-spacing: .015em;
       text-transform: uppercase;
     }
+    .board-label {
+      font-size: 15px;
+      line-height: 1;
+      letter-spacing: .11em;
+      white-space: nowrap;
+    }
+    .board-facts {
+      min-width: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: #cad4de;
+      font: 500 11px/1.4 "IBM Plex Mono", monospace;
+    }
+    .board-fact { white-space: nowrap; }
+    .board-fact + .board-fact::before {
+      content: "·";
+      margin: 0 8px;
+      color: #ffd23e;
+    }
+    .board-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 7px 10px;
+      color: #f5f7fa;
+      background: transparent;
+      border: 1px solid rgba(255, 210, 62, .42);
+      border-radius: 4px;
+      cursor: pointer;
+      font: 700 10px/1 "IBM Plex Mono", monospace;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .board-toggle:hover { background: rgba(255, 210, 62, .08); }
+    .board-chevron {
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid #ffd23e;
+      border-bottom: 1.5px solid #ffd23e;
+      transform: rotate(45deg) translateY(-2px);
+      transition: transform .24s ease;
+    }
+    .board-toggle[aria-expanded="true"] .board-chevron { transform: rotate(225deg) translate(-1px, -1px); }
+    .board-detail {
+      display: grid;
+      grid-template-rows: 0fr;
+      visibility: hidden;
+      transition: grid-template-rows .34s ease, visibility 0s linear .34s;
+    }
+    .board-detail.is-open {
+      grid-template-rows: 1fr;
+      visibility: visible;
+      transition: grid-template-rows .34s ease, visibility 0s linear 0s;
+    }
+    .board-detail-clip { min-height: 0; overflow: hidden; }
+    .board-detail-content {
+      padding: 4px clamp(18px, 3vw, 48px) 20px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .board-detail-meta {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 12px 0 14px;
+    }
+    .board-basis { margin: 0; color: #c4ced6; font-size: 13px; line-height: 1.4; }
     .board-asof {
-      margin: 6px 0 0;
-      color: #93a3b4;
+      margin: 0;
+      color: #8fa0b0;
       font: 500 10px/1.35 "IBM Plex Mono", monospace;
       letter-spacing: .045em;
       text-transform: uppercase;
-    }
-    .hormuz-status {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 10px;
-      min-width: 0;
-      color: #d8e0e7;
-      font-size: 13px;
-      line-height: 1.35;
       text-align: right;
+      white-space: nowrap;
     }
     .status-pill, .day-pill, .receipt-badge {
       display: inline-flex;
@@ -351,10 +410,9 @@
     .board-column + .board-column { border-left: 1px solid rgba(255,255,255,.11); padding-left: 22px; }
     .board-column h3 {
       margin: 0 0 9px;
-      color: #ffd23e;
-      font: 700 11px/1.2 "IBM Plex Mono", monospace;
-      letter-spacing: .075em;
-      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 1.1;
+      letter-spacing: .08em;
     }
     .board-stats {
       display: grid;
@@ -363,7 +421,7 @@
       border: 1px solid rgba(255,255,255,.1);
       background: rgba(255,255,255,.1);
     }
-    .board-stat { min-width: 0; padding: 10px 11px; background: #0d1b29; }
+    .board-stat { min-width: 0; padding: 10px 11px; background: #101e2c; }
     .board-stat strong { display: block; color: #fff; font: 700 18px/1.05 "Source Serif 4", serif; }
     .board-stat span { display: block; margin-top: 4px; color: #8fa0b0; font: 500 9px/1.25 "IBM Plex Mono", monospace; letter-spacing: .025em; text-transform: uppercase; }
     .watchlist-summary {
@@ -436,8 +494,8 @@
     .fallback a { color: var(--blue); }
     @media (max-width: 880px) {
       html { height: auto; min-height: 100%; overflow-y: auto; }
-      .situation-board-inner { padding-top: 16px; padding-bottom: 18px; }
-      .board-heading { align-items: flex-start; }
+      .board-summary { grid-template-columns: auto auto minmax(0, 1fr) auto; }
+      .board-detail-content { padding-bottom: 18px; }
       .board-grid { grid-template-columns: 1fr 1fr; }
       .board-metrics { grid-column: 1 / -1; }
       .board-column + .board-column { border-left: 0; padding-left: 0; }
@@ -477,9 +535,19 @@
       .selector-wrap { max-width: none; }
     }
     @media (max-width: 540px) {
-      .situation-board-inner { padding: 15px 16px 18px; }
-      .board-heading { display: grid; gap: 11px; }
-      .hormuz-status { justify-content: flex-start; text-align: left; }
+      .board-summary {
+        min-height: 0;
+        padding: 12px 16px;
+        grid-template-columns: auto auto 1fr;
+        gap: 9px 10px;
+      }
+      .board-label { font-size: 14px; }
+      .board-toggle { grid-column: 3; grid-row: 1; justify-self: end; min-height: 30px; padding: 6px 8px; }
+      .board-facts { grid-column: 1 / -1; grid-row: 2; font-size: 10px; }
+      .board-fact + .board-fact::before { margin: 0 6px; }
+      .board-detail-content { padding: 3px 16px 18px; }
+      .board-detail-meta { display: grid; gap: 5px; }
+      .board-asof { text-align: left; white-space: normal; }
       .board-grid { grid-template-columns: 1fr; gap: 19px; }
       .board-metrics { grid-column: auto; }
       .board-grid > .board-column:nth-child(3) { border-left: 0; padding-left: 0; }
@@ -504,37 +572,14 @@
       .stat { padding: 13px 9px; }
       .stat strong { font-size: 18px; }
     }
-    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+      .board-detail, .board-chevron { transition: none !important; }
+    }
   </style>
 </head>
 <body>
-  <section class="situation-board" id="situation-board" aria-labelledby="situation-board-title" hidden>
-    <div class="situation-board-inner">
-      <div class="board-heading">
-        <div>
-          <h2 id="situation-board-title">Situation Board</h2>
-          <p class="board-asof" id="situation-board-asof"></p>
-        </div>
-        <div class="hormuz-status" id="hormuz-status"></div>
-      </div>
-      <div class="board-grid">
-        <div class="board-column board-metrics">
-          <div class="board-stats" id="board-stats"></div>
-          <p class="watchlist-summary" id="watchlist-summary"></p>
-        </div>
-        <div class="board-column">
-          <h3>Top active stories</h3>
-          <div class="story-tracker" id="top-stories"></div>
-        </div>
-        <div class="board-column">
-          <h3>Active alerts</h3>
-          <div class="alert-list" id="active-alerts"></div>
-        </div>
-      </div>
-      <!-- Phase 4 sponsor slot: intentionally inactive and renders nothing. -->
-      <div class="sponsor-slot" hidden aria-hidden="true"></div>
-    </div>
-  </section>
+
 
   <nav class="site-nav" aria-label="Agile Factor navigation">
     <div class="site-nav-inner">
@@ -552,6 +597,45 @@
         <div class="edition-line" id="edition-kicker">Saturday, September 12 · Evening Edition</div>
         <h1 id="edition-title">Pressure spreads across two sea lanes</h1>
         <p class="dek" id="edition-dek">The episode tracks reported maritime attacks, retaliation, strategic threats, and the widening Red Sea theater.</p>
+      </div>
+    </section>
+
+    <section class="situation-board" id="situation-board" aria-labelledby="situation-board-title" hidden>
+      <div class="situation-board-inner">
+        <div class="board-summary">
+          <span class="board-label" id="situation-board-title">Situation Board</span>
+          <span id="hormuz-status"></span>
+          <div class="board-facts" id="board-facts" aria-label="Key situation facts"></div>
+          <button class="board-toggle" id="board-toggle" type="button" aria-expanded="false" aria-controls="board-detail">
+            <span class="board-toggle-label">Expand</span><span class="board-chevron" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="board-detail" id="board-detail">
+          <div class="board-detail-clip">
+            <div class="board-detail-content">
+              <div class="board-detail-meta">
+                <p class="board-basis" id="hormuz-basis"></p>
+                <p class="board-asof" id="situation-board-asof"></p>
+              </div>
+              <div class="board-grid">
+                <div class="board-column board-metrics">
+                  <div class="board-stats" id="board-stats"></div>
+                  <p class="watchlist-summary" id="watchlist-summary"></p>
+                </div>
+                <div class="board-column">
+                  <h3>Top active stories</h3>
+                  <div class="story-tracker" id="top-stories"></div>
+                </div>
+                <div class="board-column">
+                  <h3>Active alerts</h3>
+                  <div class="alert-list" id="active-alerts"></div>
+                </div>
+              </div>
+              <!-- Phase 4 sponsor slot: intentionally inactive and renders nothing. -->
+              <div class="sponsor-slot" hidden aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -4086,9 +4170,18 @@
     }
 
     async function fetchDashboardJson(filename) {
-      const response = await fetch(`assets/${filename}`, { cache: "no-store" });
+      const artifactPreview = location.pathname.startsWith("/spaces/v2/");
+      const response = await fetch(artifactPreview ? `assets/${filename}` : `./${filename}`, { cache: "no-store" });
       if (!response.ok) throw new Error(`${filename} unavailable`);
       return response.json();
+    }
+
+    function setBoardExpanded(expanded) {
+      const button = document.getElementById("board-toggle");
+      const detail = document.getElementById("board-detail");
+      button.setAttribute("aria-expanded", String(expanded));
+      button.querySelector(".board-toggle-label").textContent = expanded ? "Collapse" : "Expand";
+      detail.classList.toggle("is-open", expanded);
     }
 
     async function loadSituationBoard() {
@@ -4097,15 +4190,23 @@
         const data = await fetchDashboardJson("situation-board.json");
         const status = String(data.hormuz && data.hormuz.status || "restricted").toLowerCase();
         const safeStatus = ["open", "restricted", "closed"].includes(status) ? status : "restricted";
+        const brent = boardValue(data.markets && data.markets["market.brent_usd"], { currency: true });
+        const wti = boardValue(data.markets && data.markets["market.wti_usd"], { currency: true });
+        const transits = boardValue(data.traffic && data.traffic["traffic.hormuz_transits_daily"]);
+        const alertsCount = Array.isArray(data.alerts) ? data.alerts.length : 0;
         document.getElementById("situation-board-asof").textContent = `As of ${formatBoardDate(data.as_of_date)} · ${data.episode_id || "Latest briefing"}`;
-        document.getElementById("hormuz-status").innerHTML = `
-          <span class="status-pill ${safeStatus}">${escapeHtml(safeStatus)}</span>
-          <span>${escapeHtml(data.hormuz && data.hormuz.basis || "Status basis unavailable")}</span>
-        `;
+        document.getElementById("hormuz-status").innerHTML = `<span class="status-pill ${safeStatus}">${escapeHtml(safeStatus)}</span>`;
+        document.getElementById("hormuz-basis").textContent = data.hormuz && data.hormuz.basis || "Status basis unavailable";
+        document.getElementById("board-facts").innerHTML = [
+          `Brent ${brent}`,
+          `WTI ${wti}`,
+          `Hormuz ${transits}/day`,
+          `${alertsCount} active alerts`
+        ].map(fact => `<span class="board-fact">${fact}</span>`).join("");
         const stats = [
-          { value: boardValue(data.markets && data.markets["market.brent_usd"], { currency: true }), label: "Brent · USD/bbl" },
-          { value: boardValue(data.markets && data.markets["market.wti_usd"], { currency: true }), label: "WTI · USD/bbl" },
-          { value: boardValue(data.traffic && data.traffic["traffic.hormuz_transits_daily"]), label: "Hormuz transits/day" },
+          { value: brent, label: "Brent · USD/bbl" },
+          { value: wti, label: "WTI · USD/bbl" },
+          { value: transits, label: "Hormuz transits/day" },
           { value: boardValue(data.military && data.military["military.us_carrier_groups_in_theater"]), label: "U.S. carrier groups" }
         ];
         document.getElementById("board-stats").innerHTML = stats.map(stat => `
@@ -4123,8 +4224,10 @@
         `).join("");
         const watchlist = data.watchlist || {};
         document.getElementById("watchlist-summary").innerHTML = `<strong>${escapeHtml(watchlist.open ?? 0)} open</strong> · ${escapeHtml(watchlist.resolved ?? 0)} resolved`;
+        setBoardExpanded(false);
         section.hidden = false;
       } catch (error) {
+        setBoardExpanded(false);
         section.hidden = true;
       }
     }
@@ -4406,6 +4509,9 @@
     }
 
     populateEpisodeSelect();
+    document.getElementById("board-toggle").addEventListener("click", event => {
+      setBoardExpanded(event.currentTarget.getAttribute("aria-expanded") !== "true");
+    });
     document.getElementById("episode-select").addEventListener("change", event => renderEpisode(event.target.value));
     window.addEventListener("popstate", () => renderEpisode(episodeFromUrl(), false));
     window.addEventListener("hashchange", () => renderEpisode(episodeFromUrl(), false));
