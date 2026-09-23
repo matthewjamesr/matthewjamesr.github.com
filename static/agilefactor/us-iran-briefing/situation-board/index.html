@@ -102,11 +102,34 @@
       outline-offset: 3px;
     }
     a { color: inherit; }
+    .site-nav {
+      padding-top: env(safe-area-inset-top);
+      color: #f4f7f8;
+      background: #07111d;
+      border-bottom: 2px solid var(--amber);
+    }
+    .site-nav-inner {
+      width: min(1440px, 100%);
+      margin: 0 auto;
+      padding-inline: clamp(20px, 3.4vw, 52px);
+    }
+    .site-nav a {
+      width: fit-content;
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      padding-block: 10px;
+      color: #f4f7f8;
+      font: 600 14px/1.25 "Source Sans 3", sans-serif;
+      text-decoration: none;
+    }
+    .site-nav-arrow { margin-right: 8px; color: var(--amber); font-size: 18px; line-height: 1; }
+    .site-nav a:hover { color: var(--amber); }
+    .site-nav a:focus-visible { outline-offset: -3px; }
     .page {
       width: min(1440px, 100%);
       margin: 0 auto;
       padding: clamp(20px, 3.4vw, 52px);
-      padding-top: max(clamp(22px, 3.4vw, 52px), env(safe-area-inset-top));
       padding-bottom: max(54px, env(safe-area-inset-bottom));
     }
     .masthead {
@@ -693,6 +716,8 @@
       .story-detail-column + .story-detail-column { border-left: 0; border-top: 1px solid var(--line); }
     }
     @media (max-width: 760px) {
+      .site-nav-inner { padding-inline: 16px; }
+      .site-nav a { min-height: 44px; }
       .page { padding-inline: 16px; }
       .masthead { grid-template-columns: 1fr; align-items: stretch; gap: 20px; }
       h1 { font-size: clamp(38px, 12vw, 58px); }
@@ -749,6 +774,14 @@
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Agile Factor">
+    <div class="site-nav-inner">
+      <a href="https://matthewreichardt.com/agilefactor/">
+        <span class="site-nav-arrow" aria-hidden="true">←</span>
+        <span>Back to Agile Factor</span>
+      </a>
+    </div>
+  </nav>
   <main class="page">
     <header class="masthead">
       <div>
@@ -759,7 +792,7 @@
         <h1>The operating picture, at a glance.</h1>
         <p class="lede">The highest-impact signals, open questions, and verification trail from the latest briefing.</p>
       </div>
-      <a class="episode-link" href="https://matthewreichardt.com/agilefactor/us-iran-briefing/#source-desk" aria-label="Open the latest U.S.–Iran briefing episode at its Source Desk">
+      <a class="episode-link" href="https://matthewreichardt.com/agilefactor/us-iran-briefing/" aria-label="Open the latest U.S.–Iran briefing episode">
         <span><strong>Latest episode</strong><br><span id="episode-label">Loading latest briefing…</span></span>
         <i aria-hidden="true">↗</i>
       </a>
@@ -877,7 +910,7 @@
 
     <footer class="footer">
       <span>Episode-linked snapshot. Values and confidence states reflect the source ledger at the time shown above.</span>
-      <a href="https://matthewreichardt.com/agilefactor/us-iran-briefing/#source-desk">Return to the latest episode ↗</a>
+      <a href="https://matthewreichardt.com/agilefactor/us-iran-briefing/">Return to the latest episode ↗</a>
     </footer>
   </main>
 
