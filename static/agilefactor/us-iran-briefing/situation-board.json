@@ -1,6 +1,6 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-23T02:24:25.975355+00:00",
+  "generated_at": "2026-09-23T02:34:26.052063+00:00",
   "episode_id": "evening-2026-09-22",
   "as_of_date": "2026-09-22",
   "hormuz": {
@@ -42,42 +42,42 @@
     {
       "story_id": "yemen-houthi-west-coast-offensive",
       "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
-      "day_n": 12,
+      "day_n": 13,
       "category": "military",
       "claim_count": 68
     },
     {
       "story_id": "oil-price-shock-september-2026",
       "title": "Oil price shock (Brent above $100)",
-      "day_n": 11,
+      "day_n": 12,
       "category": "energy",
       "claim_count": 51
     },
     {
       "story_id": "hormuz-reopening-diplomacy",
       "title": "Diplomacy over reopening the Strait of Hormuz",
-      "day_n": 10,
+      "day_n": 11,
       "category": "diplomacy",
       "claim_count": 31
     },
     {
       "story_id": "strait-hormuz-shipping-attacks",
       "title": "Ship attacks in the Strait of Hormuz",
-      "day_n": 9,
+      "day_n": 10,
       "category": "military",
       "claim_count": 30
     },
     {
       "story_id": "east-west-pipeline-drone-attack",
       "title": "Drone attack shuts Saudi East-West pipeline",
-      "day_n": 12,
+      "day_n": 13,
       "category": "energy",
       "claim_count": 21
     },
     {
       "story_id": "un-ihl-warning-iran-airstrikes",
       "title": "UN fact-finding mission warns Iran airstrikes may breach IHL",
-      "day_n": 7,
+      "day_n": 8,
       "category": "military",
       "claim_count": 19
     }
