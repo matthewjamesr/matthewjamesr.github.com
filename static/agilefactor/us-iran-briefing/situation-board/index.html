@@ -542,6 +542,14 @@
       border-left: 1px solid var(--line-strong);
       box-shadow: -24px 0 70px rgba(0,0,0,.28);
     }
+    .detail-drawer.story-detail {
+      inset: 22px 22px 22px auto;
+      width: min(1380px, calc(100vw - 44px));
+      max-height: calc(100dvh - 44px);
+      border: 1px solid var(--line-strong);
+      border-radius: 7px;
+      box-shadow: 0 28px 90px rgba(0,0,0,.34);
+    }
     .drawer-head {
       position: sticky;
       top: 0;
@@ -588,6 +596,72 @@
     .source-block-list { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
     .source-block-item { padding: 13px 14px; background: var(--surface-2); border-radius: 4px; }
     .source-context { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.42; }
+    .story-detail .drawer-body { padding-top: 18px; }
+    .story-detail .drawer-summary { max-width: 1040px; margin-bottom: 18px; }
+    .story-detail-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, .95fr) minmax(0, .9fr);
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .story-detail-column { min-width: 0; padding: 20px; background: var(--surface); }
+    .story-detail-column + .story-detail-column { border-left: 1px solid var(--line); }
+    .story-detail-column > h3 { margin: 0 0 15px; font: 700 22px/1.15 "Source Serif 4", serif; }
+    .story-detail-column .drawer-section { margin-top: 22px; padding-top: 18px; }
+    .story-detail-column .drawer-section:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .confidence-journey {
+      margin-bottom: 20px;
+      padding: 16px 10px 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .confidence-journey-title { margin: 0 6px 18px; font: 650 12px/1.3 "IBM Plex Mono", monospace; color: var(--muted); }
+    .journey-track { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); min-height: 104px; }
+    .journey-line, .journey-line-fill { position: absolute; top: 14px; left: 10%; right: 10%; height: 3px; background: var(--line-strong); }
+    .journey-line-fill { right: auto; width: var(--journey-progress, 0%); background: var(--journey-color, var(--gray)); }
+    .journey-step { position: relative; z-index: 1; min-width: 0; text-align: center; }
+    .journey-dot {
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin: 8px auto 9px;
+      border: 3px solid var(--step-color);
+      border-radius: 50%;
+      background: var(--surface-2);
+    }
+    .journey-step.reached .journey-dot { border-color: var(--step-color); background: var(--step-color); box-shadow: 0 0 0 3px var(--step-soft); }
+    .journey-label { display: block; color: var(--faint); font: 500 9px/1.2 "IBM Plex Mono", monospace; text-transform: uppercase; }
+    .journey-step.reached .journey-label { color: var(--ink); font-weight: 700; }
+    .journey-date { display: block; min-height: 26px; margin-top: 4px; color: var(--faint); font: 500 8px/1.3 "IBM Plex Mono", monospace; }
+    .journey-step.unconfirmed { --step-color: var(--gray); --step-soft: var(--gray-soft); }
+    .journey-step.reported { --step-color: var(--amber); --step-soft: var(--amber-soft); }
+    .journey-step.corroborated { --step-color: var(--teal); --step-soft: var(--teal-soft); }
+    .journey-step.confirmed { --step-color: var(--green); --step-soft: var(--green-soft); }
+    .journey-step.disputed { --step-color: var(--red); --step-soft: var(--red-soft); }
+    .claims-collapsed .drawer-claim:nth-child(n+2) { display: none; }
+    .claims-toggle {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px 12px;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 700;
+      text-align: left;
+    }
+    .claims-toggle:hover { border-color: var(--amber); }
+    .claims-toggle::after { content: "+"; float: right; color: var(--amber-ink); font-size: 18px; line-height: 1; }
+    .claims-toggle[aria-expanded="true"]::after { content: "−"; }
+    .sourcing-list { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+    .sourcing-list a { display: block; padding: 12px; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px; font-weight: 700; text-decoration: none; }
+    .sourcing-list a:hover { border-color: var(--amber); }
+    .sourcing-list small { display: block; margin-top: 4px; color: var(--faint); font-weight: 500; }
     .footer {
       display: flex;
       justify-content: space-between;
@@ -606,6 +680,8 @@
       .snapshot-item:nth-child(n+4) { border-top: 1px solid var(--line); }
       .snapshot-item:nth-child(5) { border-right: 0; }
       .board-grid { grid-template-columns: 1fr; }
+      .story-detail-grid { grid-template-columns: 1fr; }
+      .story-detail-column + .story-detail-column { border-left: 0; border-top: 1px solid var(--line); }
     }
     @media (max-width: 760px) {
       .page { padding-inline: 16px; }
@@ -640,9 +716,12 @@
       .filter-btn { padding-inline: 5px; }
       .claim-story-card { grid-template-columns: 1fr; padding: 16px; }
       .claim-card-stats { justify-content: flex-start; }
-      .detail-drawer { width: 100%; border-left: 0; }
+      .detail-drawer, .detail-drawer.story-detail { inset: 0; width: 100%; max-height: 100dvh; border: 0; border-radius: 0; }
       .drawer-head { padding-inline: 18px; }
       .drawer-body { padding-inline: 18px; }
+      .story-detail-column { padding: 17px; }
+      .journey-label { font-size: 8px; letter-spacing: -.02em; }
+      .journey-date { font-size: 7.5px; }
       .episode-list { grid-template-columns: 1fr; }
       .footer { align-items: flex-start; flex-direction: column; }
     }
@@ -1001,21 +1080,82 @@
         return (story.status === "resolved" ? "Resolved" : "Active") + " " + (story.category || "briefing") + " story with " + (story.claim_count || claims.length) + " tracked claims across " + range + "." + (latest ? " Latest entry: " + latest.text : "");
       }
 
+      function confidenceJourneyMarkup(storyId) {
+        var order = ["unconfirmed", "reported", "corroborated", "confirmed", "disputed"];
+        var transitions = receiptsForStory(storyId).filter(function (entry) { return entry.type === "confidence_change"; }).slice().sort(function (a, b) {
+          return new Date(a.date || 0) - new Date(b.date || 0);
+        });
+        var story = findStory(storyId);
+        var firstReached = {};
+        transitions.forEach(function (entry) {
+          var oldState = normalizedState(entry.old_confidence);
+          var newState = normalizedState(entry.new_confidence);
+          var matchingClaim = story && (story.claims || []).find(function (claim) {
+            return normalizedText(claim.text) === normalizedText(entry.claim_text);
+          });
+          if (!firstReached[oldState]) firstReached[oldState] = (matchingClaim && matchingClaim.created_at) || entry.date;
+          if (!firstReached[newState]) firstReached[newState] = entry.date;
+        });
+        var highest = -1;
+        var colorTokens = { unconfirmed: "gray", reported: "amber", corroborated: "teal", confirmed: "green", disputed: "red" };
+        order.forEach(function (state, index) { if (firstReached[state]) highest = Math.max(highest, index); });
+        var progress = (highest > 0 ? highest / (order.length - 1) * 80 : 0) + "%";
+        var progressColor = highest >= 0 ? "var(--" + colorTokens[order[highest]] + ")" : "var(--line-strong)";
+        return '<div class="confidence-journey" aria-label="Confidence journey through ' + esc(highest >= 0 ? order[highest] : "no recorded transitions") + '">' +
+          '<p class="confidence-journey-title">Confidence journey</p>' +
+          '<div class="journey-track" style="--journey-progress:' + progress + ';--journey-color:' + progressColor + '">' +
+            '<span class="journey-line" aria-hidden="true"></span><span class="journey-line-fill" aria-hidden="true"></span>' +
+            order.map(function (state) {
+              var reached = firstReached[state];
+              return '<div class="journey-step ' + state + (reached ? ' reached' : '') + '"><span class="journey-dot" aria-hidden="true"></span><strong class="journey-label">' + esc(state) + '</strong><span class="journey-date">' + (reached ? esc(displayDate(reached, true)) : 'Not reached') + '</span></div>';
+            }).join("") +
+          '</div>' +
+        '</div>';
+      }
+
       function transitionMarkup(storyId) {
-        var transitions = receiptsForStory(storyId).filter(function (entry) { return entry.type === "confidence_change"; });
+        var transitions = receiptsForStory(storyId).filter(function (entry) { return entry.type === "confidence_change"; }).slice().sort(function (a, b) {
+          return new Date(b.date || 0) - new Date(a.date || 0);
+        });
         if (!transitions.length) return '<p class="source-note">No confidence changes are recorded for this story.</p>';
         return '<ul class="transition-list">' + transitions.map(function (entry) {
-          return '<li class="transition-item"><div class="claim-topline"><span>' + esc(displayDate(entry.date, false)) + '</span><span>' + statePill(entry.old_confidence) + '<span class="change-arrow" aria-hidden="true">→</span>' + statePill(entry.new_confidence) + '</span></div><p><strong>' + esc(entry.claim_text) + '</strong></p><p>' + esc(entry.reason) + '</p>' + sourceLinksMarkup(entry, "Sources supporting this confidence change") + '</li>';
+          return '<li class="transition-item"><div class="claim-topline"><span>' + esc(displayDate(entry.date, true)) + '</span><span>' + statePill(entry.old_confidence) + '<span class="change-arrow" aria-hidden="true">→</span>' + statePill(entry.new_confidence) + '</span></div><p><strong>' + esc(entry.claim_text) + '</strong></p><p>' + esc(entry.reason) + '</p>' + sourceLinksMarkup(entry, "Sources supporting this confidence change") + '</li>';
         }).join("") + '</ul>';
       }
 
-      function episodeLinksMarkup(story) {
+      function claimsColumnMarkup(story, claims) {
+        if (!claims.length) return '<p class="source-note">No claims are indexed for this story.</p>';
+        var list = claims.map(function (claim) {
+          return '<li class="drawer-claim"><div class="claim-topline"><span>' + esc(claim.type || "claim") + ' · ' + esc(displayDate(claim.created_at, false)) + '</span>' + statePill(claim.confidence) + '</div><p>' + esc(claim.text) + '</p></li>';
+        }).join("");
+        return '<ol class="drawer-claims claims-collapsed" id="drawer-claims-list">' + list + '</ol>' +
+          (claims.length > 1 ? '<button class="claims-toggle" type="button" aria-expanded="false" aria-controls="drawer-claims-list" data-claims-toggle>Show all ' + claims.length + ' related claims</button>' : '');
+      }
+
+      function storySourcingMarkup(story) {
+        var destinations = [];
+        var seen = {};
+        function addDestination(url, label, context, external) {
+          var safeUrl = safeSourceUrl(url);
+          if (!safeUrl || seen[safeUrl]) return;
+          seen[safeUrl] = true;
+          destinations.push({ url: safeUrl, label: label, context: context, external: external });
+        }
+        receiptsForStory(story.story_id).forEach(function (entry) {
+          var context = entry.claim_text || entry.question || entry.resolution_text || entry.reason || entry.story_title || "Direct source";
+          receiptLinks(entry).forEach(function (link) {
+            addDestination(link.url, link.label, context, true);
+          });
+        });
         var ids = (story.activity || []).map(function (item) { return item.episode_id; }).filter(Boolean);
         if (!ids.length) ids = [story.last_episode_id || story.first_episode_id].filter(Boolean);
-        ids = ids.filter(function (id, index) { return ids.indexOf(id) === index; }).reverse();
-        return '<ul class="episode-list">' + ids.map(function (id) {
-          return '<li><a href="' + esc(episodeHref(id, false)) + '">' + esc(episodeLabel(id)) + ' ↗<small>Open episode</small></a></li>' +
-            '<li><a href="' + esc(episodeHref(id, true)) + '">Source list ↗<small>Matching episode sources</small></a></li>';
+        ids.filter(function (id, index) { return ids.indexOf(id) === index; }).reverse().forEach(function (id) {
+          addDestination(episodeHref(id, true), episodeLabel(id), "Episode source list", false);
+        });
+        if (!destinations.length) return '<p class="source-note">No sourcing is indexed for this story.</p>';
+        return '<ul class="sourcing-list">' + destinations.map(function (item) {
+          var target = item.external ? ' target="_blank" rel="noopener noreferrer nofollow"' : '';
+          return '<li><a href="' + esc(item.url) + '"' + target + '>' + esc(item.label) + ' ↗<small>' + esc(item.context) + '</small></a></li>';
         }).join("") + '</ul>';
       }
 
@@ -1023,18 +1163,20 @@
         var story = findStory(storyId);
         if (!story) return;
         drawerReturnFocus = trigger || document.activeElement;
+        document.getElementById("detail-drawer").classList.add("story-detail");
         document.getElementById("drawer-kicker").textContent = "Story detail · " + (story.status || "active");
         document.getElementById("drawer-title").textContent = story.title;
         var claims = (story.claims || []).slice().sort(function (a, b) { return new Date(b.created_at || 0) - new Date(a.created_at || 0); });
         document.getElementById("drawer-body").innerHTML =
           '<p class="drawer-summary">' + esc(storySummary(story)) + '</p>' +
-          '<section class="drawer-section"><h3>Claims</h3>' + (claims.length ? '<ol class="drawer-claims">' + claims.map(function (claim) {
-            var sourceEpisode = episodeForClaim(story, claim);
-            return '<li class="drawer-claim"><div class="claim-topline"><span>' + esc(claim.type || "claim") + ' · ' + esc(displayDate(claim.created_at, false)) + '</span>' + statePill(claim.confidence) + '</div><p>' + esc(claim.text) + '</p>' + claimReceiptLinksMarkup(story, claim) + (sourceEpisode ? '<p class="source-note"><a href="' + esc(episodeHref(sourceEpisode, true)) + '">Matching source list ↗</a></p>' : '') + '</li>';
-          }).join("") + '</ol>' : '<p class="source-note">No claims are indexed for this story.</p>') + '</section>' +
-          '<section class="drawer-section"><h3>Confidence transitions</h3>' + transitionMarkup(story.story_id) + '</section>' +
-          storySourcesMarkup(story) +
-          '<section class="drawer-section"><h3>Episodes & sources</h3>' + episodeLinksMarkup(story) + '<p class="source-note">Source links open the cited source list for the matching episode.</p></section>';
+          '<div class="story-detail-grid">' +
+            '<section class="story-detail-column" aria-labelledby="drawer-confidence-title"><h3 id="drawer-confidence-title">Confidence</h3>' +
+              confidenceJourneyMarkup(story.story_id) +
+              '<section class="drawer-section"><h3>Transition history</h3>' + transitionMarkup(story.story_id) + '</section>' +
+            '</section>' +
+            '<section class="story-detail-column" aria-labelledby="drawer-claims-title"><h3 id="drawer-claims-title">Claims</h3>' + claimsColumnMarkup(story, claims) + '</section>' +
+            '<section class="story-detail-column" aria-labelledby="drawer-sourcing-title"><h3 id="drawer-sourcing-title">Sourcing</h3>' + storySourcingMarkup(story) + '</section>' +
+          '</div>';
         showDrawer();
       }
 
@@ -1044,6 +1186,7 @@
         var severity = severityForAlert(alert);
         var related = findStory(alert.story_id);
         drawerReturnFocus = trigger || document.activeElement;
+        document.getElementById("detail-drawer").classList.remove("story-detail");
         document.getElementById("drawer-kicker").textContent = severityLabel(severity) + " alert";
         document.getElementById("drawer-title").textContent = "Active watch question";
         document.getElementById("drawer-body").innerHTML =
@@ -1264,8 +1407,18 @@
       document.getElementById("drawer-close").addEventListener("click", closeDrawer);
       document.getElementById("drawer-backdrop").addEventListener("click", closeDrawer);
       document.getElementById("drawer-body").addEventListener("click", function (event) {
-        var button = event.target.closest("[data-related-story]");
-        if (button) openDrawerForStory(button.getAttribute("data-related-story"), drawerReturnFocus);
+        var relatedButton = event.target.closest("[data-related-story]");
+        if (relatedButton) {
+          openDrawerForStory(relatedButton.getAttribute("data-related-story"), drawerReturnFocus);
+          return;
+        }
+        var claimsButton = event.target.closest("[data-claims-toggle]");
+        if (!claimsButton) return;
+        var list = document.getElementById("drawer-claims-list");
+        var expanded = claimsButton.getAttribute("aria-expanded") === "true";
+        claimsButton.setAttribute("aria-expanded", String(!expanded));
+        claimsButton.textContent = expanded ? "Show all " + list.children.length + " related claims" : "Show fewer claims";
+        list.classList.toggle("claims-collapsed", expanded);
       });
       document.addEventListener("keydown", function (event) {
         var shell = document.getElementById("drawer-shell");
