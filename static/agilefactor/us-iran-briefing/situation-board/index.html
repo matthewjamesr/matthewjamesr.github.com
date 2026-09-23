@@ -14,7 +14,7 @@
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#07111d" />
   <link rel="icon" href="data:," />
-  <title>Situation Board</title>
+  <title>Operating Picture | Agile Factor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -1180,14 +1180,61 @@
         function progressionRank(value) {
           return confidenceProgression.indexOf(normalizedState(value));
         }
-        var transitions = receiptsForStory(storyId).filter(function (entry) { return entry.type === "confidence_change"; }).slice().sort(function (a, b) {
-          var dateDifference = new Date(b.date || 0) - new Date(a.date || 0);
+        function validTime(value) {
+          var time = new Date(value || 0).getTime();
+          return isNaN(time) ? 0 : time;
+        }
+        function compactDate(value) {
+          var date = new Date(value);
+          if (isNaN(date.getTime())) return value || "";
+          return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "America/Chicago" }).format(date);
+        }
+        function birthDateRange(entries) {
+          var times = entries.map(function (entry) { return validTime(entry.date); }).filter(Boolean).sort(function (a, b) { return a - b; });
+          if (!times.length) return "Date unavailable";
+          var first = compactDate(times[0]);
+          var last = compactDate(times[times.length - 1]);
+          return first === last ? first : first + " – " + last;
+        }
+
+        var entries = receiptsForStory(storyId).filter(function (entry) { return entry.type === "confidence_change"; });
+        var changes = entries.filter(function (entry) {
+          return entry.old_confidence !== null && String(entry.old_confidence || "").trim() !== "";
+        }).map(function (entry) {
+          return { kind: "change", entry: entry, sortDate: validTime(entry.date), old_confidence: entry.old_confidence, new_confidence: entry.new_confidence };
+        });
+        var birthGroupsByState = {};
+        entries.filter(function (entry) {
+          return entry.old_confidence === null || String(entry.old_confidence || "").trim() === "";
+        }).forEach(function (entry) {
+          var state = normalizedState(entry.new_confidence);
+          if (!birthGroupsByState[state]) birthGroupsByState[state] = [];
+          birthGroupsByState[state].push(entry);
+        });
+        var births = Object.keys(birthGroupsByState).map(function (state) {
+          var groupedEntries = birthGroupsByState[state];
+          return {
+            kind: "birth",
+            entries: groupedEntries,
+            state: state,
+            sortDate: groupedEntries.reduce(function (latest, entry) { return Math.max(latest, validTime(entry.date)); }, 0),
+            old_confidence: null,
+            new_confidence: state
+          };
+        });
+        var transitions = births.concat(changes).sort(function (a, b) {
+          var dateDifference = b.sortDate - a.sortDate;
           if (dateDifference) return dateDifference;
           return progressionRank(a.old_confidence) - progressionRank(b.old_confidence) ||
             progressionRank(a.new_confidence) - progressionRank(b.new_confidence);
         });
         if (!transitions.length) return '<p class="source-note">No confidence changes are recorded for this story.</p>';
-        return '<ul class="transition-list">' + transitions.map(function (entry) {
+        return '<ul class="transition-list">' + transitions.map(function (item) {
+          if (item.kind === "birth") {
+            var count = item.entries.length;
+            return '<li class="transition-item"><div class="claim-topline"><span>' + esc(birthDateRange(item.entries)) + '</span></div><p><strong>' + count + ' ' + (count === 1 ? 'claim' : 'claims') + '</strong> entered as ' + statePill(item.state) + '</p></li>';
+          }
+          var entry = item.entry;
           return '<li class="transition-item"><div class="claim-topline"><span>' + esc(displayDate(entry.date, true)) + '</span><span>' + statePill(entry.old_confidence) + '<span class="change-arrow" aria-hidden="true">→</span>' + statePill(entry.new_confidence) + '</span></div><p><strong>' + esc(entry.claim_text) + '</strong></p><p>' + esc(entry.reason) + '</p>' + sourceLinksMarkup(entry, "Sources supporting this confidence change") + '</li>';
         }).join("") + '</ul>';
       }
