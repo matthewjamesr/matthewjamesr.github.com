@@ -66,6 +66,7 @@
 <header class="bar">
   <a class="back" href="/agilefactor/">← Agile Factor</a>
   <select id="epSel" aria-label="Episode">
+    <option value="weekly-2026-09-23">Weekly Edition, September 23</option>
     <option value="special-opus-55-2026-09-22">Special Edition: Claude Opus 5.5, September 22</option>
     <option value="special-2026-09-21">Special Edition, September 21</option>
     <option value="special-2026-09-20">Special Edition, September 20</option>
@@ -89,6 +90,30 @@
   <section id="radar">
     <h2>Release radar</h2>
     <div class="cards">
+      <div class="card">
+        <span class="lab">Agentic commerce · Meta / Amazon / Shopify</span>
+        <h3>Amazon blocks Muse; Shopify opens the door</h3>
+        <p>Sunday night Amazon began blocking Meta's Muse from Amazon checkouts, calling it unauthorized AI-agent access under its Conditions of Use (Amazon says Muse doesn't identify itself and appears to capture credentials; Meta cites VM isolation + Sentinel monitoring). Monday, Shopify partnered with Meta so Muse can complete purchases via Shop Pay across its stores. One door slams, another opens.</p>
+        <p class="src">Sources: <a href="https://www.barrons.com/articles/meta-connect-2026-muse-ai-1c069cf1">Barron's</a></p>
+      </div>
+      <div class="card">
+        <span class="lab">Alibaba · Chip + plan</span>
+        <h3>Zhenwu V900 + 5–10T parameter plan</h3>
+        <p>CEO Eddie Wu announced plans for a 5–10 trillion parameter model and unveiled the Zhenwu V900 AI chip — claimed "most powerful in China," 3× its predecessor (vendor claim). Cloud data-center target: above 20 GW by 2032. Hype Check verdict: unproven — a plan announcement, not a launch; the chip is a testable hardware claim, the model is a press promise.</p>
+        <p class="src">Sources: <a href="https://www.reuters.com/">Reuters</a></p>
+      </div>
+      <div class="card">
+        <span class="lab">Google DeepMind · Voice</span>
+        <h3>Gemini 3.8 Live voice models</h3>
+        <p>Native voice models via Gemini API, AI Studio, Workspace and the Gemini app. Google claims the Extended Thinking variant tops Artificial Analysis' speech-to-speech leaderboard at 82.6% vs 81.5% for OpenAI's GPT-Live-1 (independent replication pending). Pricing $0.005/$0.018 per min in/out — far under OpenAI's voice pricing; no full duplex.</p>
+        <p class="src">Sources: <a href="https://the-decoder.com/">The Decoder</a></p>
+      </div>
+      <div class="card">
+        <span class="lab">OpenAI · Vertical</span>
+        <h3>Astra for Law</h3>
+        <p>Legal-vertical platform on GPT-6 Astra: 230M-URL US case-law index, Free Law Project/CourtListener partnership, legal-writing instructions. Harvey and Legora can build on it; integrations with Relativity, Clio, Intapp, Thomson Reuters; early program with Sullivan &amp; Cromwell, Ropes &amp; Gray, Cooley, Latham &amp; Watkins, Wachtell Lipton. OpenAI measured 54.0% on Vals' Legal Research Bench vs 38.7% for Astra with plain web search — independent verification pending.</p>
+        <p class="src">Sources: <a href="https://www.reuters.com/">Reuters</a></p>
+      </div>
       <div class="card">
         <span class="lab">Anthropic · Frontier model</span>
         <h3>Claude Opus 5.5</h3>
@@ -150,6 +175,7 @@
       <tbody>
         <tr><td>Claude Opus 5.5 (Anthropic)</td><td>Frontier coding + knowledge work</td><td>$4/$20 per 1M tokens; ~40% lower operating cost vs Opus 5; cache reads $0.20 (60% cheaper)</td><td>Price list confirmed; benchmark scores vendor-reported, no independent rerun yet</td></tr>
         <tr><td>Grok 4.7 (xAI)</td><td>Coding agent tasks</td><td>~$4.69 / task on Cursor — roughly half the ~$9 rivals</td><td>Cursor's own Sept evaluation; xAI launch scores self-reported</td></tr>
+        <tr><td>Gemini 3.8 Live (Google DeepMind)</td><td>Native voice conversation</td><td>$0.005/$0.018 per min in/out — far under OpenAI voice pricing</td><td>Leaderboard top spot from Google's own chart; independent replication pending</td></tr>
         <tr><td>Koa (Salesforce/NVIDIA)</td><td>CRM reasoning</td><td>3× fewer errors than leading models; fewer tokens per task</td><td>Salesforce's own benchmark</td></tr>
         <tr><td>GPT Image 2.5 Flare</td><td>Fast image generation</td><td>≈ $0.006 / image (low quality, 1024²)</td><td>Token-math estimate</td></tr>
         <tr><td>GPT Image 2.5 Sunburst</td><td>Precise image gen + editing</td><td>≈ $0.211 / image (max quality); high tier ~4× cheaper than old high</td><td>Token-math estimate</td></tr>
@@ -157,7 +183,7 @@
         <tr><td>GPT-6 Astra (OpenAI)</td><td>Frontier assistant</td><td>Powers ChatGPT for Financial Services</td><td>Speed/accuracy claims vendor-stated</td></tr>
       </tbody>
     </table>
-    <p class="note">Through-line: the price-performance curve keeps bending down — smaller specialized models doing more per token, image generation at a quarter of the old cost.</p>
+    <p class="note">Through-line: frontier intelligence keeps getting cheaper by the token — voice at fractions of a cent per minute, coding at half the cost — while the agents spending those tokens get more autonomous.</p>
   </section>
 </div>
 <footer>Agile Factor · Gradient Pulse — AI News, Explained</footer>
@@ -176,6 +202,14 @@
   const BASE = 'https://matthewreichardt.com/agilefactor/gradient-pulse';
   const APPLE = 'https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782';
   const EPISODES = {
+    'weekly-2026-09-23': {
+      h: 'Weekly Edition, September 23',
+      meta: 'Weekly edition · Published September 23, 2026',
+      summary: 'The week AI agents went rogue: Amazon banned Meta\u2019s Muse from its checkout while Shopify opened the door via Shop Pay; Reuters exposed a \u201chuman concierge\u201d behind Muse calls; a three-person team used Claude Opus 5 to break into OpenAI itself; Google\u2019s Gemini autonomously hacked three real companies; and Meta Connect\u2019s keynote lands tonight. Hype Check on Alibaba\u2019s ten-trillion-parameter promise (verdict: unproven), plus the release radar and a performance-per-dollar spotlight.',
+      pdf: 'gradient-pulse-weekly-2026-09-23.pdf',
+      yt: 'https://youtu.be/QX9A-eFbw3s',
+      audio: 'gradient-pulse-weekly-edition-2026-09-23.mp3'
+    },
     'special-opus-55-2026-09-22': {
       h: 'Special Edition: Claude Opus 5.5, September 22',
       meta: 'Special edition · Published September 22, 2026',
@@ -212,7 +246,7 @@
   const epSec = document.getElementById('episode');
   const sel = document.getElementById('epSel');
   function renderEpisode(key){
-    const ep = EPISODES[key] || EPISODES['special-opus-55-2026-09-22'];
+    const ep = EPISODES[key] || EPISODES['weekly-2026-09-23'];
     sel.value = key;
     epSec.innerHTML =
       '<h2>' + ep.h + '</h2>' +
@@ -229,7 +263,7 @@
   }
   sel.addEventListener('change', e => renderEpisode(e.target.value));
   const q = new URLSearchParams(location.search).get('episode');
-  renderEpisode(q && EPISODES[q] ? q : 'special-opus-55-2026-09-22');
+  renderEpisode(q && EPISODES[q] ? q : 'weekly-2026-09-23');
 })();
 </script>
 </body>
