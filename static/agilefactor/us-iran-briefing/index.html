@@ -580,33 +580,26 @@
     .alert-row::before { content: ""; width: 6px; height: 6px; margin-top: 5px; border-radius: 50%; background: #ffd23e; }
     .sponsor-slot[hidden] { display: none !important; }
     .receipts-section { background: #101a25; }
-    .receipts-heading { margin-bottom: 5px; }
+    .receipts-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 13px; }
+    .receipts-heading-copy { min-width: 0; }
     .receipts-heading h2 { color: #ffd23e; font-size: 24px; }
     .receipts-heading p { margin: 7px 0 0; color: #aebbc7; font-size: 12px; line-height: 1.4; }
-    .receipts-top-link-wrap {
-      position: sticky;
-      top: 8px;
-      z-index: 12;
-      display: grid;
-      pointer-events: none;
-      grid-template-rows: 0fr;
-      visibility: hidden;
-      opacity: 0;
-      transform: translateY(-6px);
-      transition: grid-template-rows .24s ease, visibility 0s linear .24s, opacity .2s ease, transform .24s ease;
+    .receipts-top-link-wrap { flex: 0 0 auto; }
+    .receipts-top-link-clip { min-height: 0; overflow: visible; }
+    .receipts-action.receipts-top-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      margin: 0;
+      padding: 10px 14px;
+      color: #111713;
+      background: #ffd23e;
+      border-color: #ffd23e;
+      box-shadow: 0 6px 16px rgba(0,0,0,.26);
+      white-space: nowrap;
     }
-    .receipts-top-link-wrap[hidden] { display: none; }
-    .receipts-top-link-wrap.is-visible {
-      grid-template-rows: 1fr;
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
-      background: #0b1724;
-      box-shadow: 0 8px 14px rgba(0,0,0,.34);
-      transition: grid-template-rows .24s ease, visibility 0s linear 0s, opacity .2s ease, transform .24s ease;
-    }
-    .receipts-top-link-clip { min-height: 0; overflow: hidden; padding: 8px 0 7px; pointer-events: auto; }
-    .receipts-top-link { display: inline-block; margin: 0; background: #0b1724; }
+    .receipts-action.receipts-top-link:hover { color: #111713; background: #ffe06f; border-color: #ffe06f; }
     .receipts-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 4px; }
     .receipts-action {
       min-height: 38px;
@@ -850,7 +843,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       * { scroll-behavior: auto !important; }
-      .board-detail, .board-chevron, .episode-picker-chevron, .episode-picker-popover, .receipts-top-link-wrap, .receipt-archive, .receipt-archive-backdrop, .receipt-archive-panel, .back-to-top { transition: none !important; }
+      .board-detail, .board-chevron, .episode-picker-chevron, .episode-picker-popover, .receipt-archive, .receipt-archive-backdrop, .receipt-archive-panel, .back-to-top { transition: none !important; }
     }
   </style>
 </head>
@@ -967,12 +960,14 @@
         </div>
         <section class="panel-block receipts-section" id="receipts-section" aria-labelledby="receipts-title" hidden>
           <div class="receipts-heading">
-            <h2 id="receipts-title">Receipts</h2>
-            <p>All resolutions publish, including misses and downgrades.</p>
-          </div>
-          <div class="receipts-top-link-wrap" id="receipts-top-link-wrap" hidden>
-            <div class="receipts-top-link-clip">
-              <a class="receipts-action receipts-action-secondary receipts-top-link" id="receipts-view-all-top" href="#receipts-archive">View all receipts</a>
+            <div class="receipts-heading-copy">
+              <h2 id="receipts-title">Receipts</h2>
+              <p>All resolutions publish, including misses and downgrades.</p>
+            </div>
+            <div class="receipts-top-link-wrap" id="receipts-top-link-wrap">
+              <div class="receipts-top-link-clip">
+                <a class="receipts-action receipts-top-link" id="receipts-view-all-top" href="#receipts-archive">View all receipts</a>
+              </div>
             </div>
           </div>
           <div class="receipts-feed" id="receipts-feed"></div>
@@ -4871,7 +4866,6 @@
       const feed = document.getElementById("receipts-feed");
       const showMore = document.getElementById("receipts-show-more");
       const showLess = document.getElementById("receipts-show-less");
-      const topLinkWrap = document.getElementById("receipts-top-link-wrap");
       const viewAllLinks = [
         document.getElementById("receipts-view-all-top"),
         document.getElementById("receipts-view-all-bottom")
@@ -4903,21 +4897,6 @@
             </article>
           `;
         };
-        const setTopLinkVisible = visible => {
-          if (visible) {
-            topLinkWrap.hidden = false;
-            requestAnimationFrame(() => topLinkWrap.classList.add("is-visible"));
-            return;
-          }
-          topLinkWrap.classList.remove("is-visible");
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            topLinkWrap.hidden = true;
-          } else {
-            topLinkWrap.addEventListener("transitionend", () => {
-              if (!topLinkWrap.classList.contains("is-visible")) topLinkWrap.hidden = true;
-            }, { once: true });
-          }
-        };
         const renderInlineEntries = () => {
           feed.innerHTML = inlineEntries.slice(0, visibleCount).map(entryMarkup).join("");
           const expanded = visibleCount > pageSize;
@@ -4926,7 +4905,6 @@
           showMore.hidden = inlineComplete;
           showMore.setAttribute("aria-expanded", String(expanded));
           document.getElementById("receipts-view-all-bottom").hidden = !inlineComplete;
-          setTopLinkVisible(expanded);
         };
         const openArchive = trigger => {
           returnFocusTo = trigger;
