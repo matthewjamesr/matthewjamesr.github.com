@@ -1,32 +1,32 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-23T02:34:26.052063+00:00",
-  "episode_id": "evening-2026-09-22",
-  "as_of_date": "2026-09-22",
+  "generated_at": "2026-09-23T11:55:24.413461+00:00",
+  "episode_id": "morning-2026-09-23",
+  "as_of_date": "2026-09-23",
   "hormuz": {
     "status": "restricted",
     "basis": "Diplomacy over reopening the Strait of Hormuz"
   },
   "markets": {
     "market.brent_usd": {
-      "value": 99.33,
+      "value": 99.18,
       "unit": "USD/bbl",
       "accuracy": "reported",
-      "episode_id": "evening-2026-09-22"
+      "episode_id": "morning-2026-09-23"
     },
     "market.wti_usd": {
-      "value": 94.8,
+      "value": 90.17,
       "unit": "USD/bbl",
       "accuracy": "reported",
-      "episode_id": "evening-2026-09-22"
+      "episode_id": "morning-2026-09-23"
     }
   },
   "traffic": {
     "traffic.hormuz_transits_daily": {
-      "value": 2.0,
-      "unit": "transits/day",
-      "accuracy": "reported",
-      "episode_id": "morning-2026-09-22"
+      "value": 3.0,
+      "unit": "vessels/day",
+      "accuracy": "corroborated",
+      "episode_id": "morning-2026-09-23"
     },
     "traffic.hormuz_crude_flow_bpd_million": {
       "value": 7.85,
@@ -42,47 +42,65 @@
     {
       "story_id": "yemen-houthi-west-coast-offensive",
       "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
-      "day_n": 13,
+      "day_n": 14,
       "category": "military",
       "claim_count": 68
     },
     {
       "story_id": "oil-price-shock-september-2026",
       "title": "Oil price shock (Brent above $100)",
-      "day_n": 12,
+      "day_n": 13,
       "category": "energy",
-      "claim_count": 51
+      "claim_count": 53
     },
     {
       "story_id": "hormuz-reopening-diplomacy",
       "title": "Diplomacy over reopening the Strait of Hormuz",
-      "day_n": 11,
+      "day_n": 12,
       "category": "diplomacy",
-      "claim_count": 31
+      "claim_count": 34
     },
     {
       "story_id": "strait-hormuz-shipping-attacks",
       "title": "Ship attacks in the Strait of Hormuz",
-      "day_n": 10,
+      "day_n": 11,
       "category": "military",
-      "claim_count": 30
+      "claim_count": 31
     },
     {
       "story_id": "east-west-pipeline-drone-attack",
       "title": "Drone attack shuts Saudi East-West pipeline",
-      "day_n": 13,
+      "day_n": 14,
       "category": "energy",
       "claim_count": 21
     },
     {
       "story_id": "un-ihl-warning-iran-airstrikes",
       "title": "UN fact-finding mission warns Iran airstrikes may breach IHL",
-      "day_n": 8,
+      "day_n": 9,
       "category": "military",
       "claim_count": 19
     }
   ],
   "alerts": [
+    {
+      "watch_id": "58988799-07cf-4492-866e-fe548ee3c397",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "question": "Do other Gulf and regional airports follow Baghdad in suspending Iranian flights today, and does Tehran's remaining international network (Istanbul and others) hold?",
+      "asked_in_episode": "morning-2026-09-23"
+    },
+    {
+      "watch_id": "1b7b6bc3-4092-4931-b95c-205f7ad8bff1",
+      "story_id": "oil-price-shock-september-2026",
+      "question": "Does Brent's losing streak reach a seventh day, or does a headline out of the New York talks snap it?",
+      "asked_in_episode": "morning-2026-09-23"
+    },
+    {
+      "watch_id": "a365b697-df4a-409a-8e1a-25f098d061f4",
+      "story_id": "us-iran-threat-exchange-september-2026",
+      "question": "Does the Armed Forces' 'crushing blows' warning materialize as Iranian action, or stay rhetorical while the mediator channel continues?",
+      "asked_in_episode": "morning-2026-09-23"
+    },
     {
       "watch_id": "c8c26e2d-e90a-49a8-9d5e-f173db9013de",
       "story_id": "hormuz-reopening-diplomacy",
@@ -90,32 +108,14 @@
       "asked_in_episode": "morning-2026-09-22"
     },
     {
-      "watch_id": "205f6e7e-deef-401b-b263-daaa6294d9e3",
-      "story_id": "east-west-pipeline-drone-attack",
-      "question": "Do Yanbu crude exports actually resume Tuesday, and at what pumping rate does the East-West Pipeline run?",
-      "asked_in_episode": "morning-2026-09-22"
-    },
-    {
       "watch_id": "495301a7-4088-4cb3-8bdb-cac67bb133bb",
       "story_id": "unga-high-level-week-new-york",
       "question": "Does Araghchi's Doha stop produce anything concrete, and does Pezeshkian's Wednesday UNGA address signal any movement on Iran's three conditions?",
       "asked_in_episode": "morning-2026-09-21"
-    },
-    {
-      "watch_id": "e4321226-fd6a-4a40-9c74-4bf6e54974f1",
-      "story_id": "us-embassy-security-alerts",
-      "question": "Does the U.S. embassy alert wave expand to more missions or harden in language \u2014 from vigilance toward evacuation-order territory?",
-      "asked_in_episode": "morning-2026-09-21"
-    },
-    {
-      "watch_id": "c6ee2deb-10ce-43de-ad31-5b5f6adda5ea",
-      "story_id": "iran-nuclear-program-status",
-      "question": "Do vetted outlets or official sources confirm the analytic-shop claims that Iran is rapidly rebuilding Taleghan 2 at Parchin and hardening Natanz and the 'Pickaxe Mountain' site \u2014 and is there any US/Israeli response signaling?",
-      "asked_in_episode": "morning-2026-09-18"
     }
   ],
   "watchlist": {
     "open": 50,
-    "resolved": 6
+    "resolved": 9
   }
 }
