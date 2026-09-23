@@ -12,6 +12,8 @@ shows:
     apple: "https://podcasts.apple.com/us/podcast/agile-factor-u-s-iran/id6811434506"
     youtube: "https://www.youtube.com/playlist?list=PLGs_LAc4cDsY"
     briefing: "/agilefactor/us-iran-briefing/"
+    dashboard: "map"
+    operating_picture: "/agilefactor/us-iran-briefing/situation-board/"
   - title: "Gradient Pulse"
     image: "/agilefactor/cover-gradient-pulse.png"
     tagline: "AI News, Explained"
@@ -19,7 +21,7 @@ shows:
     youtube: "https://www.youtube.com/playlist?list=PLT8zFsISVDwk"
     apple: "https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782"
     briefing: "/agilefactor/gradient-pulse/"
-    briefing_label: "Weekly Radar"
+    dashboard: "radar"
 # Apple Podcasts show + Agile Factor channel live 2026-09-16; Spotify pending
 ---
 
