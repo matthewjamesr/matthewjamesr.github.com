@@ -1,6 +1,6 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-23T11:55:24.413461+00:00",
+  "generated_at": "2026-09-23T19:23:06.841156+00:00",
   "episode_id": "morning-2026-09-23",
   "as_of_date": "2026-09-23",
   "hormuz": {
@@ -36,50 +36,62 @@
     }
   },
   "military": {
-    "military.us_carrier_groups_in_theater": null
+    "us_carrier_groups_in_theater": null
   },
   "top_stories": [
     {
-      "story_id": "yemen-houthi-west-coast-offensive",
-      "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
-      "day_n": 14,
-      "category": "military",
-      "claim_count": 68
+      "story_id": "hormuz-reopening-diplomacy",
+      "title": "Diplomacy over reopening the Strait of Hormuz",
+      "day_n": 12,
+      "category": "diplomacy",
+      "claim_count": 34,
+      "recent_claim_count": 11,
+      "last_episode_id": "evening-2026-09-16"
     },
     {
       "story_id": "oil-price-shock-september-2026",
       "title": "Oil price shock (Brent above $100)",
       "day_n": 13,
       "category": "energy",
-      "claim_count": 53
+      "claim_count": 53,
+      "recent_claim_count": 7,
+      "last_episode_id": "morning-2026-09-19"
     },
     {
-      "story_id": "hormuz-reopening-diplomacy",
-      "title": "Diplomacy over reopening the Strait of Hormuz",
-      "day_n": 12,
+      "story_id": "trump-iran-war-endgame-remarks",
+      "title": "Trump's Iran war endgame remarks",
+      "day_n": 11,
       "category": "diplomacy",
-      "claim_count": 34
+      "claim_count": 15,
+      "recent_claim_count": 4,
+      "last_episode_id": "morning-2026-09-18"
+    },
+    {
+      "story_id": "unga-high-level-week-new-york",
+      "title": "UNGA High-Level Week: Iran's leaders granted US visas",
+      "day_n": 7,
+      "category": "diplomacy",
+      "claim_count": 11,
+      "recent_claim_count": 4,
+      "last_episode_id": "morning-2026-09-18"
     },
     {
       "story_id": "strait-hormuz-shipping-attacks",
       "title": "Ship attacks in the Strait of Hormuz",
       "day_n": 11,
       "category": "military",
-      "claim_count": 31
+      "claim_count": 31,
+      "recent_claim_count": 3,
+      "last_episode_id": "evening-2026-09-19"
     },
     {
-      "story_id": "east-west-pipeline-drone-attack",
-      "title": "Drone attack shuts Saudi East-West pipeline",
-      "day_n": 14,
-      "category": "energy",
-      "claim_count": 21
-    },
-    {
-      "story_id": "un-ihl-warning-iran-airstrikes",
-      "title": "UN fact-finding mission warns Iran airstrikes may breach IHL",
-      "day_n": 9,
-      "category": "military",
-      "claim_count": 19
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "day_n": 1,
+      "category": "economy",
+      "claim_count": 3,
+      "recent_claim_count": 3,
+      "last_episode_id": "morning-2026-09-23"
     }
   ],
   "alerts": [
@@ -102,20 +114,27 @@
       "asked_in_episode": "morning-2026-09-23"
     },
     {
-      "watch_id": "c8c26e2d-e90a-49a8-9d5e-f173db9013de",
+      "watch_id": "b19029fb-83eb-4bc1-bed1-2536ccb106dd",
       "story_id": "hormuz-reopening-diplomacy",
-      "question": "Does Washington respond to Iran's conditional seven-day Hormuz-reopening offer \u2014 and does the offer survive contact with reality?",
-      "asked_in_episode": "morning-2026-09-22"
+      "question": "When does the follow-up U.S.-Iran meeting happen, and does any substance leak to show whether the Tuesday session was stagecraft or a real opening?",
+      "asked_in_episode": "evening-2026-09-22"
     },
     {
-      "watch_id": "495301a7-4088-4cb3-8bdb-cac67bb133bb",
-      "story_id": "unga-high-level-week-new-york",
-      "question": "Does Araghchi's Doha stop produce anything concrete, and does Pezeshkian's Wednesday UNGA address signal any movement on Iran's three conditions?",
-      "asked_in_episode": "morning-2026-09-21"
+      "watch_id": "c93bf1da-b3fa-4bb5-92d1-79c6fcd344a9",
+      "story_id": "trump-iran-war-endgame-remarks",
+      "question": "How does Iran answer Trump's 'annihilate' ultimatum \u2014 what does Pezeshkian say at the General Assembly Wednesday, and what comes from the delegation tonight?",
+      "asked_in_episode": "evening-2026-09-22"
     }
   ],
   "watchlist": {
     "open": 50,
     "resolved": 9
+  },
+  "stories_stale_excluded": 15,
+  "alerts_stale_excluded": 34,
+  "aging": {
+    "recent_window_editions": 3,
+    "stale_after_editions": 5,
+    "story_ranking": "recent claims (last 3 editions) desc, then total claims desc"
   }
 }
