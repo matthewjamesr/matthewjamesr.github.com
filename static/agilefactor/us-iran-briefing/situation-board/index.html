@@ -1038,6 +1038,7 @@
       }
 
       function episodeForClaim(story, claim) {
+        if (claim.episode_id) return claim.episode_id;
         var day = String(claim.created_at || "").slice(0, 10);
         var matches = (story.activity || []).filter(function (item) { return String(item.episode_id || "").slice(-10) === day; });
         return (matches.length ? matches[matches.length - 1].episode_id : story.last_episode_id) || story.first_episode_id || "";
