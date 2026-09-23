@@ -622,8 +622,8 @@
       overflow: hidden;
     }
     .confidence-journey-title { margin: 0 6px 18px; font: 650 12px/1.3 "IBM Plex Mono", monospace; color: var(--muted); }
-    .journey-track { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); min-height: 104px; }
-    .journey-line, .journey-line-fill { position: absolute; top: 14px; left: 10%; right: 10%; height: 3px; background: var(--line-strong); }
+    .journey-track { position: relative; display: grid; grid-template-columns: repeat(var(--journey-steps, 5), minmax(0, 1fr)); min-height: 104px; }
+    .journey-line, .journey-line-fill { position: absolute; top: 14px; left: calc(50% / var(--journey-steps, 5)); right: calc(50% / var(--journey-steps, 5)); height: 3px; background: var(--line-strong); }
     .journey-line-fill { right: auto; width: var(--journey-progress, 0%); background: var(--journey-color, var(--gray)); }
     .journey-step { position: relative; z-index: 1; min-width: 0; text-align: center; }
     .journey-dot {
@@ -1105,25 +1105,36 @@
         });
         var story = findStory(storyId);
         var firstReached = {};
+        function recordReached(value, date) {
+          if (!date) return;
+          var state = normalizedState(value);
+          var candidateTime = new Date(date).getTime();
+          var existingTime = new Date(firstReached[state] || "").getTime();
+          if (!firstReached[state] || (!isNaN(candidateTime) && (isNaN(existingTime) || candidateTime < existingTime))) firstReached[state] = date;
+        }
+        ((story && story.claims) || []).forEach(function (claim) {
+          recordReached(claim.confidence, claim.created_at);
+        });
         transitions.forEach(function (entry) {
-          var oldState = normalizedState(entry.old_confidence);
-          var newState = normalizedState(entry.new_confidence);
           var matchingClaim = story && (story.claims || []).find(function (claim) {
             return normalizedText(claim.text) === normalizedText(entry.claim_text);
           });
-          if (!firstReached[oldState]) firstReached[oldState] = (matchingClaim && matchingClaim.created_at) || entry.date;
-          if (!firstReached[newState]) firstReached[newState] = entry.date;
+          recordReached(entry.old_confidence, (matchingClaim && matchingClaim.created_at) || entry.date);
+          recordReached(entry.new_confidence, entry.date);
         });
+        var visibleOrder = order.slice();
+        if (firstReached.disputed) visibleOrder = visibleOrder.filter(function (state) { return state !== "confirmed"; });
+        else if (firstReached.confirmed) visibleOrder = visibleOrder.filter(function (state) { return state !== "disputed"; });
         var currentState = currentStoryState(storyId, story);
-        var currentIndex = order.indexOf(currentState);
+        var currentIndex = visibleOrder.indexOf(currentState);
         var colorTokens = { unconfirmed: "gray", reported: "amber", corroborated: "teal", confirmed: "green", disputed: "red" };
-        var progress = (currentIndex > 0 ? currentIndex / (order.length - 1) * 80 : 0) + "%";
+        var progress = (currentIndex > 0 ? currentIndex / visibleOrder.length * 100 : 0) + "%";
         var progressColor = "var(--" + colorTokens[currentState] + ")";
         return '<div class="confidence-journey" aria-label="Confidence journey; current confidence ' + esc(currentState) + '">' +
           '<p class="confidence-journey-title">Confidence journey</p>' +
-          '<div class="journey-track" style="--journey-progress:' + progress + ';--journey-color:' + progressColor + '">' +
+          '<div class="journey-track" style="--journey-steps:' + visibleOrder.length + ';--journey-progress:' + progress + ';--journey-color:' + progressColor + '">' +
             '<span class="journey-line" aria-hidden="true"></span><span class="journey-line-fill" aria-hidden="true"></span>' +
-            order.map(function (state) {
+            visibleOrder.map(function (state) {
               var reached = firstReached[state];
               return '<div class="journey-step ' + state + (reached ? ' reached' : '') + '"><span class="journey-dot" aria-hidden="true"></span><strong class="journey-label">' + esc(state) + '</strong><span class="journey-date">' + (reached ? esc(displayDate(reached, true)) : 'Not reached') + '</span></div>';
             }).join("") +
@@ -1132,8 +1143,15 @@
       }
 
       function transitionMarkup(storyId) {
+        var confidenceProgression = ["unconfirmed", "reported", "corroborated", "confirmed", "disputed"];
+        function progressionRank(value) {
+          return confidenceProgression.indexOf(normalizedState(value));
+        }
         var transitions = receiptsForStory(storyId).filter(function (entry) { return entry.type === "confidence_change"; }).slice().sort(function (a, b) {
-          return new Date(b.date || 0) - new Date(a.date || 0);
+          var dateDifference = new Date(b.date || 0) - new Date(a.date || 0);
+          if (dateDifference) return dateDifference;
+          return progressionRank(a.old_confidence) - progressionRank(b.old_confidence) ||
+            progressionRank(a.new_confidence) - progressionRank(b.new_confidence);
         });
         if (!transitions.length) return '<p class="source-note">No confidence changes are recorded for this story.</p>';
         return '<ul class="transition-list">' + transitions.map(function (entry) {
