@@ -244,6 +244,79 @@
       padding: 30px clamp(18px, 3vw, 48px) 24px;
       border-bottom: 1px solid var(--line);
     }
+    .masthead-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) minmax(280px, 1fr);
+      grid-template-rows: auto auto auto;
+      align-items: center;
+      column-gap: clamp(34px, 6vw, 96px);
+    }
+    .masthead-grid .edition-line { grid-column: 1; grid-row: 1; }
+    .masthead-grid h1 { grid-column: 1; grid-row: 2; }
+    .masthead-grid .dek { grid-column: 1; grid-row: 3; }
+    .situation-board-cta {
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: end;
+      width: min(100%, 380px);
+      min-height: 92px;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 19px;
+      color: #f5f7fa;
+      background: #0b1724;
+      border: 1px solid rgba(255,210,62,.62);
+      border-radius: 5px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.28), inset 0 1px rgba(255,255,255,.05);
+      text-decoration: none;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+    .situation-board-cta:hover {
+      color: #fff;
+      background: #102235;
+      border-color: #ffd23e;
+      transform: translateY(-1px);
+    }
+    .situation-board-cta-copy { min-width: 0; }
+    .situation-board-cta-label {
+      display: block;
+      color: #ffd23e;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+    .situation-board-cta-count {
+      display: block;
+      margin-top: 7px;
+      color: #b8c5d0;
+      font: 500 11px/1.35 "IBM Plex Mono", monospace;
+      letter-spacing: .025em;
+      text-transform: uppercase;
+    }
+    .situation-board-cta-arrow {
+      color: #ffd23e;
+      font: 500 25px/1 "Source Sans 3", sans-serif;
+      transition: transform .18s ease;
+    }
+    .situation-board-cta:hover .situation-board-cta-arrow { transform: translateX(3px); }
+    .situation-board-pulse {
+      position: relative;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #ff7043;
+      box-shadow: 0 0 0 0 rgba(255,112,67,.58);
+      animation: board-cta-pulse 2s ease-out infinite;
+    }
+    @keyframes board-cta-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,112,67,.58); }
+      70%, 100% { box-shadow: 0 0 0 10px rgba(255,112,67,0); }
+    }
     .edition-line {
       display: flex;
       align-items: center;
@@ -1121,6 +1194,19 @@
       }
       .shell { flex: none; min-height: auto; }
       .masthead { padding-top: 18px; padding-bottom: 16px; }
+      .masthead-grid { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto auto; }
+      .masthead-grid .edition-line { grid-column: 1; grid-row: 1; }
+      .masthead-grid h1 { grid-column: 1; grid-row: 2; }
+      .situation-board-cta {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: stretch;
+        width: 100%;
+        min-height: 76px;
+        margin-top: 14px;
+        padding: 14px 16px;
+      }
+      .masthead-grid .dek { grid-column: 1; grid-row: 4; }
       .map-layout {
         flex: none;
         min-height: auto;
@@ -1196,8 +1282,8 @@
     }
     @media (prefers-reduced-motion: reduce) {
       * { scroll-behavior: auto !important; }
-      .board-detail, .board-chevron, .board-tooltip, .episode-picker-chevron, .episode-picker-popover, .receipt-archive, .receipt-archive-backdrop, .receipt-archive-panel, .back-to-top, .pulse-bar rect, .pulse-tooltip { transition: none !important; }
-      .verification-skeleton span { animation: none !important; }
+      .board-detail, .board-chevron, .board-tooltip, .episode-picker-chevron, .episode-picker-popover, .receipt-archive, .receipt-archive-backdrop, .receipt-archive-panel, .back-to-top, .pulse-bar rect, .pulse-tooltip, .situation-board-cta, .situation-board-cta-arrow { transition: none !important; }
+      .verification-skeleton span, .situation-board-pulse { animation: none !important; }
       .verification-chevron { transition: none !important; }
     }
   </style>
@@ -1230,49 +1316,18 @@
   </nav>
   <main class="shell">
     <section class="masthead" aria-labelledby="edition-title">
-      <div>
+      <div class="masthead-grid">
         <div class="edition-line" id="edition-kicker">Saturday, September 12 · Evening Edition</div>
         <h1 id="edition-title">Pressure spreads across two sea lanes</h1>
+        <a class="situation-board-cta" href="situation-board/" aria-label="Open the Live Situation Board">
+          <span class="situation-board-pulse" aria-hidden="true"></span>
+          <span class="situation-board-cta-copy">
+            <span class="situation-board-cta-label">Live Situation Board</span>
+            <span class="situation-board-cta-count" id="situation-board-alert-count" aria-live="polite">Loading active alerts…</span>
+          </span>
+          <span class="situation-board-cta-arrow" aria-hidden="true">→</span>
+        </a>
         <p class="dek" id="edition-dek">The episode tracks reported maritime attacks, retaliation, strategic threats, and the widening Red Sea theater.</p>
-      </div>
-    </section>
-
-    <section class="situation-board" id="situation-board" aria-labelledby="situation-board-title" hidden>
-      <div class="situation-board-inner">
-        <div class="board-summary">
-          <span class="board-label" id="situation-board-title">Situation Board</span>
-          <span id="hormuz-status"></span>
-          <div class="board-facts" id="board-facts" aria-label="Key situation facts"></div>
-          <button class="board-toggle" id="board-toggle" type="button" aria-expanded="true" aria-controls="board-detail">
-            <span class="board-toggle-label">Collapse</span><span class="board-chevron" aria-hidden="true"></span>
-          </button>
-        </div>
-        <div class="board-detail is-open" id="board-detail">
-          <div class="board-detail-clip">
-            <div class="board-detail-content">
-              <div class="board-detail-meta">
-                <p class="board-basis" id="hormuz-basis"></p>
-                <p class="board-asof" id="situation-board-asof"></p>
-              </div>
-              <div class="board-grid">
-                <div class="board-column board-metrics">
-                  <div class="board-stats" id="board-stats"></div>
-                  <p class="watchlist-summary" id="watchlist-summary"></p>
-                </div>
-                <div class="board-column">
-                  <h3 class="board-heading">Top active stories <span class="board-info"><button class="board-info-button" type="button" aria-label="About top active stories" aria-describedby="top-stories-tooltip" disabled>i</button><span class="board-tooltip" id="top-stories-tooltip" role="tooltip">The stories this briefing is actively tracking right now — what's developing, what's new, and what's gone quiet.</span></span></h3>
-                  <div class="story-tracker" id="top-stories"></div>
-                </div>
-                <div class="board-column">
-                  <h3 class="board-heading">Active alerts <span class="board-info"><button class="board-info-button" type="button" aria-label="About active alerts" aria-describedby="active-alerts-tooltip" disabled>i</button><span class="board-tooltip" id="active-alerts-tooltip" role="tooltip">Breaking developments and time-sensitive warnings — new incidents, escalations, or official actions affecting the situation.</span></span></h3>
-                  <div class="alert-list" id="active-alerts"></div>
-                </div>
-              </div>
-              <!-- Phase 4 sponsor slot: intentionally inactive and renders nothing. -->
-              <div class="sponsor-slot" hidden aria-hidden="true"></div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -5248,62 +5303,14 @@
       return response.json();
     }
 
-    function setBoardExpanded(expanded) {
-      const button = document.getElementById("board-toggle");
-      const detail = document.getElementById("board-detail");
-      button.setAttribute("aria-expanded", String(expanded));
-      button.querySelector(".board-toggle-label").textContent = expanded ? "Collapse" : "Expand";
-      detail.classList.toggle("is-open", expanded);
-      detail.inert = !expanded;
-      detail.querySelectorAll(".board-info-button").forEach(infoButton => { infoButton.disabled = !expanded; });
-    }
-
-    async function loadSituationBoard() {
-      const section = document.getElementById("situation-board");
+    async function loadSituationBoardCTA() {
+      const count = document.getElementById("situation-board-alert-count");
       try {
         const data = await fetchDashboardJson("situation-board.json");
-        const status = String(data.hormuz && data.hormuz.status || "restricted").toLowerCase();
-        const safeStatus = ["open", "restricted", "closed"].includes(status) ? status : "restricted";
-        const statusLabel = `Hormuz: ${safeStatus.charAt(0).toUpperCase()}${safeStatus.slice(1)}`;
-        const brent = boardValue(data.markets && data.markets["market.brent_usd"], { currency: true });
-        const wti = boardValue(data.markets && data.markets["market.wti_usd"], { currency: true });
-        const transits = boardValue(data.traffic && data.traffic["traffic.hormuz_transits_daily"]);
         const alertsCount = Array.isArray(data.alerts) ? data.alerts.length : 0;
-        document.getElementById("situation-board-asof").textContent = `As of ${formatBoardDate(data.as_of_date)} · ${data.episode_id || "Latest briefing"}`;
-        document.getElementById("hormuz-status").innerHTML = `<span class="status-pill ${safeStatus}">${escapeHtml(statusLabel)}</span>`;
-        document.getElementById("hormuz-basis").textContent = data.hormuz && data.hormuz.basis || "Status basis unavailable";
-        document.getElementById("board-facts").innerHTML = [
-          `Brent ${brent}`,
-          `WTI ${wti}`,
-          `Hormuz ${transits}/day`,
-          `${alertsCount} active alerts`
-        ].map(fact => `<span class="board-fact">${fact}</span>`).join("");
-        const stats = [
-          { value: brent, label: "Brent · USD/bbl" },
-          { value: wti, label: "WTI · USD/bbl" },
-          { value: transits, label: "Hormuz transits/day" },
-          { value: boardValue(data.military && data.military["military.us_carrier_groups_in_theater"]), label: "U.S. carrier groups" }
-        ];
-        document.getElementById("board-stats").innerHTML = stats.map(stat => `
-          <div class="board-stat"><strong>${stat.value}</strong><span>${escapeHtml(stat.label)}</span></div>
-        `).join("");
-        document.getElementById("top-stories").innerHTML = (data.top_stories || []).map(story => `
-          <div class="story-row">
-            <span class="day-pill">Day ${escapeHtml(story.day_n)}</span>
-            <span class="story-copy"><strong>${escapeHtml(story.title)}</strong><span>${escapeHtml(story.category)}</span></span>
-            <span class="story-claims">${escapeHtml(story.claim_count)} claims</span>
-          </div>
-        `).join("");
-        document.getElementById("active-alerts").innerHTML = (data.alerts || []).map(alert => `
-          <div class="alert-row"><span>${escapeHtml(alert.question)}</span></div>
-        `).join("");
-        const watchlist = data.watchlist || {};
-        document.getElementById("watchlist-summary").innerHTML = `<strong>${escapeHtml(watchlist.open ?? 0)} open</strong> · ${escapeHtml(watchlist.resolved ?? 0)} resolved`;
-        setBoardExpanded(true);
-        section.hidden = false;
+        count.textContent = `${alertsCount} active alert${alertsCount === 1 ? "" : "s"}`;
       } catch (error) {
-        setBoardExpanded(false);
-        section.hidden = true;
+        count.textContent = "Alert count unavailable";
       }
     }
 
@@ -6100,9 +6107,6 @@
     }
 
     setupEpisodePicker();
-    document.getElementById("board-toggle").addEventListener("click", event => {
-      setBoardExpanded(event.currentTarget.getAttribute("aria-expanded") !== "true");
-    });
     window.addEventListener("popstate", () => renderEpisode(episodeFromUrl(), false));
     window.addEventListener("hashchange", () => renderEpisode(episodeFromUrl(), false));
     document.getElementById("fit-map").addEventListener("click", fitVisible);
@@ -6117,7 +6121,7 @@
     });
 
     initMap();
-    loadSituationBoard();
+    loadSituationBoardCTA();
     setupVerificationDisclosure();
     setupVerificationTabs();
     loadReceipts();
