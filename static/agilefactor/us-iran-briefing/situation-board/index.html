@@ -644,7 +644,7 @@
     .journey-step.corroborated { --step-color: var(--teal); --step-soft: var(--teal-soft); }
     .journey-step.confirmed { --step-color: var(--green); --step-soft: var(--green-soft); }
     .journey-step.disputed { --step-color: var(--red); --step-soft: var(--red-soft); }
-    .claims-collapsed .drawer-claim:nth-child(n+2) { display: none; }
+    .claims-collapsed .drawer-claim:nth-child(n+6) { display: none; }
     .claims-toggle {
       width: 100%;
       margin-top: 10px;
@@ -751,7 +751,7 @@
         <h1>The operating picture, at a glance.</h1>
         <p class="lede">The highest-impact signals, open questions, and verification trail from the latest briefing.</p>
       </div>
-      <a class="episode-link" href="https://matthewreichardt.com/agilefactor/us-iran-briefing/" aria-label="Open the latest U.S.–Iran briefing episode">
+      <a class="episode-link" href="https://matthewreichardt.com/agilefactor/us-iran-briefing/#source-desk" aria-label="Open the latest U.S.–Iran briefing episode at its Source Desk">
         <span><strong>Latest episode</strong><br><span id="episode-label">Loading latest briefing…</span></span>
         <i aria-hidden="true">↗</i>
       </a>
@@ -869,7 +869,7 @@
 
     <footer class="footer">
       <span>Episode-linked snapshot. Values and confidence states reflect the source ledger at the time shown above.</span>
-      <a href="https://matthewreichardt.com/agilefactor/us-iran-briefing/">Return to the latest episode ↗</a>
+      <a href="https://matthewreichardt.com/agilefactor/us-iran-briefing/#source-desk">Return to the latest episode ↗</a>
     </footer>
   </main>
 
@@ -975,8 +975,8 @@
         return (story.activity || []).reduce(function (sum, item) { return sum + (+item.conf_changes || 0); }, 0);
       }
 
-      function episodeHref(id, sources) {
-        return "../?episode=" + encodeURIComponent(id || "") + (sources ? "#sources" : "");
+      function episodeHref(id) {
+        return "../?episode=" + encodeURIComponent(id || "") + "#source-desk";
       }
 
       function episodeForClaim(story, claim) {
@@ -1138,7 +1138,7 @@
           return '<li class="drawer-claim"><div class="claim-topline"><span>' + esc(claim.type || "claim") + ' · ' + esc(displayDate(claim.created_at, false)) + '</span>' + statePill(claim.confidence) + '</div><p>' + esc(claim.text) + '</p></li>';
         }).join("");
         return '<ol class="drawer-claims claims-collapsed" id="drawer-claims-list">' + list + '</ol>' +
-          (claims.length > 1 ? '<button class="claims-toggle" type="button" aria-expanded="false" aria-controls="drawer-claims-list" data-claims-toggle>Show all ' + claims.length + ' related claims</button>' : '');
+          (claims.length > 5 ? '<button class="claims-toggle" type="button" aria-expanded="false" aria-controls="drawer-claims-list" data-claims-toggle>Show all ' + claims.length + ' related claims</button>' : '');
       }
 
       function storySourcingMarkup(story) {
