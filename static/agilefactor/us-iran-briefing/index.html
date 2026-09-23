@@ -634,6 +634,67 @@
     .alert-row::before { content: ""; width: 6px; height: 6px; margin-top: 5px; border-radius: 50%; background: #ffd23e; }
     .sponsor-slot[hidden] { display: none !important; }
     .receipts-section { background: #101a25; }
+    .verification-companion {
+      flex: 0 0 auto;
+      width: 100%;
+      color: #f5f7fa;
+      border-bottom: 1px solid rgba(255, 210, 62, .28);
+      box-shadow: inset 0 1px rgba(255,255,255,.04);
+    }
+    .verification-summary-button {
+      width: 100%;
+      min-height: 54px;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 14px;
+      padding: 10px clamp(18px, 3vw, 48px);
+      color: #f5f7fa;
+      background: #0b1724;
+      border: 0;
+      cursor: pointer;
+      text-align: left;
+    }
+    .verification-summary-button:hover { background: #0e1c2a; }
+    .verification-summary-title {
+      color: #ffd23e;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .11em;
+      line-height: 1;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .verification-summary-stats {
+      min-width: 0;
+      color: #aebbc7;
+      font: 500 11px/1.35 "IBM Plex Mono", monospace;
+    }
+    .verification-summary-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      color: #ffd23e;
+      font: 700 10px/1 "IBM Plex Mono", monospace;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .verification-chevron {
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid #ffd23e;
+      border-bottom: 1.5px solid #ffd23e;
+      transform: rotate(45deg) translateY(-2px);
+      transition: transform .24s ease;
+    }
+    .verification-summary-button[aria-expanded="true"] .verification-chevron { transform: rotate(225deg) translate(-1px, -1px); }
+    .verification-content {
+      padding: 24px clamp(18px, 3vw, 48px) 30px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .verification-content[hidden] { display: none; }
     .receipts-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 13px; }
     .receipts-heading-copy { min-width: 0; }
     .receipts-heading h2 { color: #ffd23e; font-size: 24px; }
@@ -946,7 +1007,12 @@
       text-transform: uppercase;
     }
     .claim-tag { color: #b8c2cb; border: 1px solid rgba(255,255,255,.15); }
-    .confidence-badge { color: #111713; background: #d6bd85; }
+    .confidence-badge { color: #111713; background: #9eacb8; }
+    .confidence-badge.confidence-confirmed { color: #092016; background: #5ee29a; }
+    .confidence-badge.confidence-corroborated { color: #061d21; background: #70bfd2; }
+    .confidence-badge.confidence-reported { color: #171000; background: #ffd23e; }
+    .confidence-badge.confidence-unconfirmed { color: #111820; background: #aebbc7; }
+    .confidence-badge.confidence-disputed { color: #fff; background: #d94343; }
     .claim-created { margin-left: auto; color: #7f91a2; font: 500 9px/1.2 "IBM Plex Mono", monospace; text-transform: uppercase; }
     .receipt-detail { padding: 4px 0 30px; }
     .receipt-detail-section { padding: 17px 0; border-top: 1px solid rgba(255,255,255,.1); }
@@ -1086,6 +1152,14 @@
         grid-template-columns: auto auto 1fr;
         gap: 9px 10px;
       }
+      .verification-summary-button {
+        min-height: 58px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 5px 12px;
+        padding: 10px 16px;
+      }
+      .verification-summary-stats { grid-column: 1 / -1; grid-row: 2; font-size: 10px; }
+      .verification-content { padding: 22px 16px 26px; }
       .board-label { font-size: 14px; }
       .board-toggle { grid-column: 3; grid-row: 1; justify-self: end; min-height: 30px; padding: 6px 8px; }
       .board-facts { grid-column: 1 / -1; grid-row: 2; font-size: 11px; }
@@ -1124,6 +1198,7 @@
       * { scroll-behavior: auto !important; }
       .board-detail, .board-chevron, .board-tooltip, .episode-picker-chevron, .episode-picker-popover, .receipt-archive, .receipt-archive-backdrop, .receipt-archive-panel, .back-to-top, .pulse-bar rect, .pulse-tooltip { transition: none !important; }
       .verification-skeleton span { animation: none !important; }
+      .verification-chevron { transition: none !important; }
     }
   </style>
 </head>
@@ -1168,11 +1243,11 @@
           <span class="board-label" id="situation-board-title">Situation Board</span>
           <span id="hormuz-status"></span>
           <div class="board-facts" id="board-facts" aria-label="Key situation facts"></div>
-          <button class="board-toggle" id="board-toggle" type="button" aria-expanded="false" aria-controls="board-detail">
-            <span class="board-toggle-label">Expand</span><span class="board-chevron" aria-hidden="true"></span>
+          <button class="board-toggle" id="board-toggle" type="button" aria-expanded="true" aria-controls="board-detail">
+            <span class="board-toggle-label">Collapse</span><span class="board-chevron" aria-hidden="true"></span>
           </button>
         </div>
-        <div class="board-detail" id="board-detail" inert>
+        <div class="board-detail is-open" id="board-detail">
           <div class="board-detail-clip">
             <div class="board-detail-content">
               <div class="board-detail-meta">
@@ -1198,6 +1273,65 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="receipts-section verification-companion" id="receipts-section" aria-labelledby="verification-summary-title">
+      <button class="verification-summary-button" id="verification-toggle" type="button" aria-expanded="false" aria-controls="verification-content">
+        <span class="verification-summary-title" id="verification-summary-title">Verification</span>
+        <span class="verification-summary-stats" id="verification-summary-stats" aria-live="polite">15 receipts · 9 confidence changes · 32 stories tracked</span>
+        <span class="verification-summary-action"><span class="verification-toggle-label">Expand</span> <span class="verification-chevron" aria-hidden="true"></span></span>
+      </button>
+      <div class="verification-content" id="verification-content" hidden>
+      <div class="receipts-heading">
+        <div class="receipts-heading-copy">
+          <h2 id="verification-title">Verification</h2>
+          <p>Track how reporting changes, what has resolved, and the claims behind each story.</p>
+        </div>
+      </div>
+      <div class="verification-tabs" role="tablist" aria-label="Verification views">
+        <button class="verification-tab" id="verification-tab-receipts" type="button" role="tab" aria-selected="true" aria-controls="verification-receipts">Receipts</button>
+        <button class="verification-tab" id="verification-tab-claims" type="button" role="tab" aria-selected="false" aria-controls="verification-claims" tabindex="-1">Claims</button>
+      </div>
+      <div class="verification-panel" id="verification-receipts" role="tabpanel" aria-labelledby="verification-tab-receipts">
+        <div class="receipts-heading">
+          <div class="receipts-heading-copy">
+            <p>All resolutions publish, including misses and downgrades.</p>
+          </div>
+          <div class="receipts-top-link-wrap" id="receipts-top-link-wrap">
+            <div class="receipts-top-link-clip">
+              <a class="receipts-action receipts-top-link" id="receipts-view-all-top" href="#receipts-archive">View all receipts</a>
+            </div>
+          </div>
+        </div>
+        <div class="receipts-feed" id="receipts-feed"><div class="verification-state">Loading receipts…</div></div>
+        <div class="receipts-actions">
+          <button class="receipts-action receipts-action-secondary" id="receipts-show-less" type="button" aria-controls="receipts-feed" hidden>Show less</button>
+          <button class="receipts-action receipts-action-primary" id="receipts-show-more" type="button" aria-controls="receipts-feed" hidden>Show more</button>
+          <a class="receipts-action receipts-action-primary" id="receipts-view-all-bottom" href="#receipts-archive" hidden>View all receipts</a>
+        </div>
+      </div>
+      <div class="verification-panel" id="verification-claims" role="tabpanel" aria-labelledby="verification-tab-claims" hidden>
+        <div class="claims-controls">
+          <label class="claims-sort-label" for="claims-sort">Sort stories
+            <select id="claims-sort">
+              <option value="active">Most active</option>
+              <option value="claims">Most claims</option>
+              <option value="changes">Most confidence changes</option>
+              <option value="newest">Newest story</option>
+              <option value="az">A–Z</option>
+            </select>
+          </label>
+          <div class="claims-status-filter" role="group" aria-label="Filter stories by status">
+            <button class="claims-filter-button" type="button" data-status="all" aria-pressed="true">All</button>
+            <button class="claims-filter-button" type="button" data-status="active" aria-pressed="false">Active</button>
+            <button class="claims-filter-button" type="button" data-status="resolved" aria-pressed="false">Resolved</button>
+          </div>
+        </div>
+        <div id="claims-view" aria-live="polite">
+          <div class="verification-state" aria-label="Loading claims"><div class="verification-skeleton" aria-hidden="true"><span></span><span></span><span></span></div></div>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -1238,57 +1372,6 @@
           <h2>Mapped reporting</h2>
           <div class="incident-list" id="incident-list"></div>
         </div>
-        <section class="panel-block receipts-section" id="receipts-section" aria-labelledby="verification-title">
-          <div class="receipts-heading">
-            <div class="receipts-heading-copy">
-              <h2 id="verification-title">Verification</h2>
-              <p>Track how reporting changes, what has resolved, and the claims behind each story.</p>
-            </div>
-          </div>
-          <div class="verification-tabs" role="tablist" aria-label="Verification views">
-            <button class="verification-tab" id="verification-tab-receipts" type="button" role="tab" aria-selected="true" aria-controls="verification-receipts">Receipts</button>
-            <button class="verification-tab" id="verification-tab-claims" type="button" role="tab" aria-selected="false" aria-controls="verification-claims" tabindex="-1">Claims</button>
-          </div>
-          <div class="verification-panel" id="verification-receipts" role="tabpanel" aria-labelledby="verification-tab-receipts">
-            <div class="receipts-heading">
-              <div class="receipts-heading-copy">
-                <p>All resolutions publish, including misses and downgrades.</p>
-              </div>
-              <div class="receipts-top-link-wrap" id="receipts-top-link-wrap">
-                <div class="receipts-top-link-clip">
-                  <a class="receipts-action receipts-top-link" id="receipts-view-all-top" href="#receipts-archive">View all receipts</a>
-                </div>
-              </div>
-            </div>
-            <div class="receipts-feed" id="receipts-feed"><div class="verification-state">Loading receipts…</div></div>
-            <div class="receipts-actions">
-              <button class="receipts-action receipts-action-secondary" id="receipts-show-less" type="button" aria-controls="receipts-feed" hidden>Show less</button>
-              <button class="receipts-action receipts-action-primary" id="receipts-show-more" type="button" aria-controls="receipts-feed" hidden>Show more</button>
-              <a class="receipts-action receipts-action-primary" id="receipts-view-all-bottom" href="#receipts-archive" hidden>View all receipts</a>
-            </div>
-          </div>
-          <div class="verification-panel" id="verification-claims" role="tabpanel" aria-labelledby="verification-tab-claims" hidden>
-            <div class="claims-controls">
-              <label class="claims-sort-label" for="claims-sort">Sort stories
-                <select id="claims-sort">
-                  <option value="active">Most active</option>
-                  <option value="claims">Most claims</option>
-                  <option value="changes">Most confidence changes</option>
-                  <option value="newest">Newest story</option>
-                  <option value="az">A–Z</option>
-                </select>
-              </label>
-              <div class="claims-status-filter" role="group" aria-label="Filter stories by status">
-                <button class="claims-filter-button" type="button" data-status="all" aria-pressed="true">All</button>
-                <button class="claims-filter-button" type="button" data-status="active" aria-pressed="false">Active</button>
-                <button class="claims-filter-button" type="button" data-status="resolved" aria-pressed="false">Resolved</button>
-              </div>
-            </div>
-            <div id="claims-view" aria-live="polite">
-              <div class="verification-state" aria-label="Loading claims"><div class="verification-skeleton" aria-hidden="true"><span></span><span></span><span></span></div></div>
-            </div>
-          </div>
-        </section>
         <div class="panel-block" id="media-block">
           <h2>Related media</h2>
           <div class="media-grid" id="media-grid"></div>
@@ -5216,7 +5299,7 @@
         `).join("");
         const watchlist = data.watchlist || {};
         document.getElementById("watchlist-summary").innerHTML = `<strong>${escapeHtml(watchlist.open ?? 0)} open</strong> · ${escapeHtml(watchlist.resolved ?? 0)} resolved`;
-        setBoardExpanded(false);
+        setBoardExpanded(true);
         section.hidden = false;
       } catch (error) {
         setBoardExpanded(false);
@@ -5229,6 +5312,41 @@
     let storyChapterData = null;
     let claimsStatus = "all";
     let selectedStoryId = null;
+    let verificationReceiptTotals = null;
+    let verificationStoryTotal = null;
+
+    function updateVerificationSummary() {
+      const summary = document.getElementById("verification-summary-stats");
+      const parts = [];
+      if (verificationReceiptTotals) {
+        const receipts = verificationReceiptTotals.receipts;
+        const changes = verificationReceiptTotals.changes;
+        parts.push(`${receipts} receipt${receipts === 1 ? "" : "s"}`);
+        parts.push(`${changes} confidence change${changes === 1 ? "" : "s"}`);
+      } else {
+        parts.push("Receipt totals loading");
+      }
+      if (verificationStoryTotal !== null) {
+        parts.push(`${verificationStoryTotal} ${verificationStoryTotal === 1 ? "story" : "stories"} tracked`);
+      } else {
+        parts.push("Story totals loading");
+      }
+      summary.textContent = parts.join(" · ");
+    }
+
+    function setVerificationExpanded(expanded) {
+      const toggle = document.getElementById("verification-toggle");
+      document.getElementById("verification-content").hidden = !expanded;
+      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.querySelector(".verification-toggle-label").textContent = expanded ? "Collapse" : "Expand";
+    }
+
+    function setupVerificationDisclosure() {
+      const toggle = document.getElementById("verification-toggle");
+      toggle.addEventListener("click", () => setVerificationExpanded(toggle.getAttribute("aria-expanded") !== "true"));
+      setVerificationExpanded(false);
+      updateVerificationSummary();
+    }
 
     function setupVerificationTabs() {
       const tabs = [...document.querySelectorAll(".verification-tab")];
@@ -5453,6 +5571,11 @@
         storyChapterData = await chapterPromise;
         receiptEntries = Array.isArray(data.entries) ? [...data.entries] : [];
         receiptEntries.sort((a, b) => new Date(String(b.date).replace(" ", "T")).getTime() - new Date(String(a.date).replace(" ", "T")).getTime());
+        verificationReceiptTotals = {
+          receipts: receiptEntries.length,
+          changes: receiptEntries.filter(entry => entry.type === "confidence_change").length
+        };
+        updateVerificationSummary();
         if (!receiptEntries.length) {
           feed.innerHTML = '<div class="verification-state">No verification receipts have been published yet.</div>';
           viewAllLinks.forEach(link => link.hidden = true);
@@ -5580,6 +5703,11 @@
       return formatReceiptDate(value);
     }
 
+    function confidenceClass(value) {
+      const normalized = String(value || "").trim().toLowerCase();
+      return ["confirmed", "corroborated", "reported", "unconfirmed", "disputed"].includes(normalized) ? ` confidence-${normalized}` : "";
+    }
+
     function renderStoryDetail(story) {
       selectedStoryId = story.story_id;
       document.querySelector(".claims-controls").hidden = true;
@@ -5596,7 +5724,7 @@
         <div class="claim-list">
           ${claims.length ? claims.map(claim => `
             <article class="claim-entry">
-              <div class="claim-meta"><span class="claim-tag">${escapeHtml(claim.type || "claim")}</span><span class="confidence-badge">${escapeHtml(claim.confidence || "unrated")}</span><time class="claim-created">${escapeHtml(formatClaimDate(claim.created_at))}</time></div>
+              <div class="claim-meta"><span class="claim-tag">${escapeHtml(claim.type || "claim")}</span><span class="confidence-badge${confidenceClass(claim.confidence)}">${escapeHtml(claim.confidence || "unrated")}</span><time class="claim-created">${escapeHtml(formatClaimDate(claim.created_at))}</time></div>
               <p>${escapeHtml(claim.text || "Claim text unavailable.")}</p>
             </article>`).join("") : '<div class="verification-state">No claims are indexed for this story yet.</div>'}
         </div>`;
@@ -5636,6 +5764,8 @@
         const data = await fetchDashboardJson("story_activity.json");
         if (!Array.isArray(data.episode_order) || !Array.isArray(data.stories)) throw new Error("Invalid story activity data");
         storyActivityData = data;
+        verificationStoryTotal = data.stories.length;
+        updateVerificationSummary();
         renderClaimsGrid();
         document.getElementById("claims-sort").addEventListener("change", renderClaimsGrid);
         document.querySelectorAll(".claims-filter-button").forEach(button => {
@@ -5988,6 +6118,7 @@
 
     initMap();
     loadSituationBoard();
+    setupVerificationDisclosure();
     setupVerificationTabs();
     loadReceipts();
     loadStoryActivity();
