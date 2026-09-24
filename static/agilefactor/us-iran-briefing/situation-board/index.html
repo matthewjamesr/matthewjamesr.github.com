@@ -1029,17 +1029,21 @@
 
       function formatPeriod(value) {
         if (!value) return "";
-        function fmt(iso) {
-          var d = new Date(String(iso).trim() + "T12:00:00Z");
-          if (isNaN(d.getTime())) return String(iso).trim();
-          return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(d);
+        var MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+        function fmtDTG(s) {
+          s = String(s).trim();
+          var m = s.match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):?(\d{2})?)?/);
+          if (!m) return s;
+          var mon = MONTHS[parseInt(m[2], 10) - 1] || m[2];
+          var out = m[3] + " " + mon + " " + m[1].slice(2);
+          if (m[4] !== undefined) out += " " + m[4] + (m[5] || "00");
+          return out;
         }
-        var parts = String(value).split("/").map(function (s) { return s.trim(); }).filter(Boolean);
+        var parts = String(value).split(/\s+to\s+|\s*\/\s*/).map(function (s) { return s.trim(); }).filter(Boolean);
         if (parts.length > 1) {
-          var first = fmt(parts[0]).replace(/, (\d{4})$/, "");
-          return first + " to " + fmt(parts[parts.length - 1]);
+          return fmtDTG(parts[0]) + " to " + fmtDTG(parts[parts.length - 1]);
         }
-        return fmt(parts[0]);
+        return fmtDTG(parts[0]);
       }
 
       function journeyDateMarkup(value) {
