@@ -1,223 +1,223 @@
 {
-  "format_version": "situation-board-v1",
-  "generated_at": "2026-09-24T13:22:16.665135+00:00",
-  "episode_id": "morning-2026-09-24",
-  "as_of_date": "2026-09-24",
-  "hormuz": {
-    "status": "restricted",
-    "basis": "Diplomacy over reopening the Strait of Hormuz"
+ "format_version": "situation-board-v1",
+ "generated_at": "2026-09-24T13:22:16.665135+00:00",
+ "episode_id": "morning-2026-09-24",
+ "as_of_date": "2026-09-24",
+ "hormuz": {
+  "status": "restricted",
+  "basis": "Diplomacy over reopening the Strait of Hormuz"
+ },
+ "markets": {
+  "market.brent_usd": {
+   "value": 105.44,
+   "unit": "USD/bbl",
+   "accuracy": "corroborated",
+   "episode_id": "morning-2026-09-24",
+   "period": "2026-09-24"
   },
-  "markets": {
-    "market.brent_usd": {
-      "value": 105.44,
-      "unit": "USD/bbl",
-      "accuracy": "corroborated",
-      "episode_id": "morning-2026-09-24",
-      "period": "2026-09-24"
-    },
-    "market.wti_usd": {
-      "value": 93.67,
-      "unit": "USD/bbl",
-      "accuracy": "corroborated",
-      "episode_id": "morning-2026-09-24",
-      "period": "2026-09-24"
-    }
-  },
-  "traffic": {
-    "traffic.hormuz_transits_daily": {
-      "value": 10.0,
-      "unit": "vessels",
-      "accuracy": "reported",
-      "episode_id": "morning-2026-09-24",
-      "period": "2026-09-23"
-    },
-    "traffic.hormuz_crude_flow_bpd_million": {
-      "value": 7.85,
-      "unit": "M bpd",
-      "accuracy": "reported",
-      "episode_id": "morning-2026-09-16",
-      "period": "2026-09-16"
-    }
-  },
-  "military": {
-    "us_carrier_groups_in_theater": null
-  },
-  "top_stories": [
-    {
-      "story_id": "hormuz-reopening-diplomacy",
-      "title": "Diplomacy over reopening the Strait of Hormuz",
-      "day_n": 13,
-      "category": "diplomacy",
-      "claim_count": 38,
-      "recent_claim_count": 7,
-      "last_episode_id": "morning-2026-09-24"
-    },
-    {
-      "story_id": "strait-hormuz-shipping-attacks",
-      "title": "Attacks on commercial shipping in the Strait of Hormuz",
-      "day_n": 12,
-      "category": "military",
-      "claim_count": 37,
-      "recent_claim_count": 7,
-      "last_episode_id": "morning-2026-09-24"
-    },
-    {
-      "story_id": "us-iran-aviation-sanctions-grounding",
-      "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
-      "day_n": 2,
-      "category": "economy",
-      "claim_count": 6,
-      "recent_claim_count": 6,
-      "last_episode_id": "morning-2026-09-23"
-    },
-    {
-      "story_id": "oil-price-shock-september-2026",
-      "title": "Oil price shock (Brent above $100)",
-      "day_n": 14,
-      "category": "energy",
-      "claim_count": 53,
-      "recent_claim_count": 2,
-      "last_episode_id": "morning-2026-09-19"
-    },
-    {
-      "story_id": "unga-high-level-week-new-york",
-      "title": "UNGA High-Level Week: Iran's leaders granted US visas",
-      "day_n": 8,
-      "category": "diplomacy",
-      "claim_count": 13,
-      "recent_claim_count": 2,
-      "last_episode_id": "morning-2026-09-18"
-    },
-    {
-      "story_id": "us-iran-threat-exchange-september-2026",
-      "title": "US-Iran threat exchange over a new American attack",
-      "day_n": 5,
-      "category": "military",
-      "claim_count": 5,
-      "recent_claim_count": 2,
-      "last_episode_id": "evening-2026-09-20"
-    }
-  ],
-  "alerts": [
-    {
-      "watch_id": "4dea7b19-b942-4298-9084-b55024b19944",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "question": "Do UK or US maritime authorities release more detail identifying the vessel struck near Khasab on Sept 23, and whether it matches the IRGC's claimed Trend incident?",
-      "asked_in_episode": "morning-2026-09-24"
-    },
-    {
-      "watch_id": "a6ae2998-133f-4818-8f2e-434afd41a832",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "question": "Does Iran implement a formal 'authorization regime' for vessels transiting the Strait of Hormuz?",
-      "asked_in_episode": "morning-2026-09-24"
-    },
-    {
-      "watch_id": "1be822d0-2a2b-4415-aeb3-cf923fef2501",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "Does Washington's reply to Iran's peace proposals contain a counter-offer on lifting the naval blockade and reopening Hormuz?",
-      "asked_in_episode": "morning-2026-09-24"
-    },
-    {
-      "watch_id": "f1a2b3c4-2001-4000-8000-000000000001",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "question": "Do authorities or investigators attribute the Cape Dao strike, and does it trigger further incidents or retaliation in the strait?",
-      "asked_in_episode": "evening-2026-09-23"
-    },
-    {
-      "watch_id": "f1a2b3c4-2002-4000-8000-000000000002",
-      "story_id": "us-iran-aviation-sanctions-grounding",
-      "question": "Does Baghdad formalize the Najaf rerouting of Iranian flights, and does Iran act on Rezaei's threat against neighboring airports?",
-      "asked_in_episode": "evening-2026-09-23"
-    },
-    {
-      "watch_id": "f1a2b3c4-2003-4000-8000-000000000003",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "Do the Qatari-mediated messages yield fresh direct talks 'in the coming days,' and does Pezeshkian's UNGA defiance harden the US line?",
-      "asked_in_episode": "evening-2026-09-23"
-    },
-    {
-      "watch_id": "f1a2b3c4-2004-4000-8000-000000000004",
-      "story_id": "oil-price-shock-september-2026",
-      "question": "Does the Brent rebound above $100 hold into Thursday, or do pipeline restarts and talk-hopes reassert the slide?",
-      "asked_in_episode": "evening-2026-09-23"
-    },
-    {
-      "watch_id": "58988799-07cf-4492-866e-fe548ee3c397",
-      "story_id": "us-iran-aviation-sanctions-grounding",
-      "question": "Do other Gulf and regional airports follow Baghdad in suspending Iranian flights today, and does Tehran's remaining international network (Istanbul and others) hold?",
-      "asked_in_episode": "morning-2026-09-23"
-    },
-    {
-      "watch_id": "1b7b6bc3-4092-4931-b95c-205f7ad8bff1",
-      "story_id": "oil-price-shock-september-2026",
-      "question": "Does Brent's losing streak reach a seventh day, or does a headline out of the New York talks snap it?",
-      "asked_in_episode": "morning-2026-09-23"
-    },
-    {
-      "watch_id": "a365b697-df4a-409a-8e1a-25f098d061f4",
-      "story_id": "us-iran-threat-exchange-september-2026",
-      "question": "Does the Armed Forces' 'crushing blows' warning materialize as Iranian action, or stay rhetorical while the mediator channel continues?",
-      "asked_in_episode": "morning-2026-09-23"
-    },
-    {
-      "watch_id": "b19029fb-83eb-4bc1-bed1-2536ccb106dd",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "When does the follow-up U.S.-Iran meeting happen, and does any substance leak to show whether the Tuesday session was stagecraft or a real opening?",
-      "asked_in_episode": "evening-2026-09-22"
-    },
-    {
-      "watch_id": "c93bf1da-b3fa-4bb5-92d1-79c6fcd344a9",
-      "story_id": "trump-iran-war-endgame-remarks",
-      "question": "How does Iran answer Trump's 'annihilate' ultimatum \u2014 what does Pezeshkian say at the General Assembly Wednesday, and what comes from the delegation tonight?",
-      "asked_in_episode": "evening-2026-09-22"
-    },
-    {
-      "watch_id": "04bcb4dd-0679-4fb2-9e5e-a79e804bcadf",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "Does the direct-versus-mediator dispute over the Tuesday meeting's format get settled, and which side's account holds?",
-      "asked_in_episode": "evening-2026-09-22"
-    },
-    {
-      "watch_id": "e566e4dc-9a3e-492f-8424-ce0e85f90624",
-      "story_id": "oil-price-shock-september-2026",
-      "question": "How fast does the diesel-export-ban decision actually come, and do refiners push back?",
-      "asked_in_episode": "evening-2026-09-22"
-    },
-    {
-      "watch_id": "c8c26e2d-e90a-49a8-9d5e-f173db9013de",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "Does Washington respond to Iran's conditional seven-day Hormuz-reopening offer \u2014 and does the offer survive contact with reality?",
-      "asked_in_episode": "morning-2026-09-22"
-    },
-    {
-      "watch_id": "f7d9b136-f0fc-4db9-969d-c23e10b2e6ed",
-      "story_id": "yemen-houthi-west-coast-offensive",
-      "question": "Does the White House confirm or deny the New York Times account of the called-off Sunday Houthi strikes \u2014 and does Trump reverse course and order strikes after all?",
-      "asked_in_episode": "evening-2026-09-21"
-    },
-    {
-      "watch_id": "3800f88d-f5c9-4b28-961c-db86436e6191",
-      "story_id": "yemen-houthi-west-coast-offensive",
-      "question": "Does the Houthi highlands push succeed in cutting off the Red Sea coast from Saudi-backed areas, or does it stall against tribal and government resistance?",
-      "asked_in_episode": "evening-2026-09-21"
-    },
-    {
-      "watch_id": "95cad770-a4b7-4f41-9ce5-dbb2de6de3be",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "question": "Do the Strait of Hormuz tanker attacks continue after Monday's two incidents \u2014 and does any group claim responsibility?",
-      "asked_in_episode": "evening-2026-09-21"
-    }
-  ],
-  "alerts_display_default": 5,
-  "watchlist": {
-    "open": 57,
-    "resolved": 9
-  },
-  "stories_stale_excluded": 20,
-  "alerts_stale_excluded": 39,
-  "aging": {
-    "recent_window_editions": 3,
-    "stale_after_editions": 5,
-    "story_ranking": "recent claims (last 3 editions) desc, then total claims desc"
+  "market.wti_usd": {
+   "value": 93.67,
+   "unit": "USD/bbl",
+   "accuracy": "corroborated",
+   "episode_id": "morning-2026-09-24",
+   "period": "2026-09-24"
   }
+ },
+ "traffic": {
+  "traffic.hormuz_transits_daily": {
+   "value": 10.0,
+   "unit": "vessels",
+   "accuracy": "reported",
+   "episode_id": "morning-2026-09-24",
+   "period": "2026-09-23 20:00 to 2026-09-24 07:00"
+  },
+  "traffic.hormuz_crude_flow_bpd_million": {
+   "value": 7.85,
+   "unit": "M bpd",
+   "accuracy": "reported",
+   "episode_id": "morning-2026-09-16",
+   "period": "2026-09-16"
+  }
+ },
+ "military": {
+  "us_carrier_groups_in_theater": null
+ },
+ "top_stories": [
+  {
+   "story_id": "hormuz-reopening-diplomacy",
+   "title": "Diplomacy over reopening the Strait of Hormuz",
+   "day_n": 13,
+   "category": "diplomacy",
+   "claim_count": 38,
+   "recent_claim_count": 7,
+   "last_episode_id": "morning-2026-09-24"
+  },
+  {
+   "story_id": "strait-hormuz-shipping-attacks",
+   "title": "Attacks on commercial shipping in the Strait of Hormuz",
+   "day_n": 12,
+   "category": "military",
+   "claim_count": 37,
+   "recent_claim_count": 7,
+   "last_episode_id": "morning-2026-09-24"
+  },
+  {
+   "story_id": "us-iran-aviation-sanctions-grounding",
+   "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+   "day_n": 2,
+   "category": "economy",
+   "claim_count": 6,
+   "recent_claim_count": 6,
+   "last_episode_id": "morning-2026-09-23"
+  },
+  {
+   "story_id": "oil-price-shock-september-2026",
+   "title": "Oil price shock (Brent above $100)",
+   "day_n": 14,
+   "category": "energy",
+   "claim_count": 53,
+   "recent_claim_count": 2,
+   "last_episode_id": "morning-2026-09-19"
+  },
+  {
+   "story_id": "unga-high-level-week-new-york",
+   "title": "UNGA High-Level Week: Iran's leaders granted US visas",
+   "day_n": 8,
+   "category": "diplomacy",
+   "claim_count": 13,
+   "recent_claim_count": 2,
+   "last_episode_id": "morning-2026-09-18"
+  },
+  {
+   "story_id": "us-iran-threat-exchange-september-2026",
+   "title": "US-Iran threat exchange over a new American attack",
+   "day_n": 5,
+   "category": "military",
+   "claim_count": 5,
+   "recent_claim_count": 2,
+   "last_episode_id": "evening-2026-09-20"
+  }
+ ],
+ "alerts": [
+  {
+   "watch_id": "4dea7b19-b942-4298-9084-b55024b19944",
+   "story_id": "strait-hormuz-shipping-attacks",
+   "question": "Do UK or US maritime authorities release more detail identifying the vessel struck near Khasab on Sept 23, and whether it matches the IRGC's claimed Trend incident?",
+   "asked_in_episode": "morning-2026-09-24"
+  },
+  {
+   "watch_id": "a6ae2998-133f-4818-8f2e-434afd41a832",
+   "story_id": "strait-hormuz-shipping-attacks",
+   "question": "Does Iran implement a formal 'authorization regime' for vessels transiting the Strait of Hormuz?",
+   "asked_in_episode": "morning-2026-09-24"
+  },
+  {
+   "watch_id": "1be822d0-2a2b-4415-aeb3-cf923fef2501",
+   "story_id": "hormuz-reopening-diplomacy",
+   "question": "Does Washington's reply to Iran's peace proposals contain a counter-offer on lifting the naval blockade and reopening Hormuz?",
+   "asked_in_episode": "morning-2026-09-24"
+  },
+  {
+   "watch_id": "f1a2b3c4-2001-4000-8000-000000000001",
+   "story_id": "strait-hormuz-shipping-attacks",
+   "question": "Do authorities or investigators attribute the Cape Dao strike, and does it trigger further incidents or retaliation in the strait?",
+   "asked_in_episode": "evening-2026-09-23"
+  },
+  {
+   "watch_id": "f1a2b3c4-2002-4000-8000-000000000002",
+   "story_id": "us-iran-aviation-sanctions-grounding",
+   "question": "Does Baghdad formalize the Najaf rerouting of Iranian flights, and does Iran act on Rezaei's threat against neighboring airports?",
+   "asked_in_episode": "evening-2026-09-23"
+  },
+  {
+   "watch_id": "f1a2b3c4-2003-4000-8000-000000000003",
+   "story_id": "hormuz-reopening-diplomacy",
+   "question": "Do the Qatari-mediated messages yield fresh direct talks 'in the coming days,' and does Pezeshkian's UNGA defiance harden the US line?",
+   "asked_in_episode": "evening-2026-09-23"
+  },
+  {
+   "watch_id": "f1a2b3c4-2004-4000-8000-000000000004",
+   "story_id": "oil-price-shock-september-2026",
+   "question": "Does the Brent rebound above $100 hold into Thursday, or do pipeline restarts and talk-hopes reassert the slide?",
+   "asked_in_episode": "evening-2026-09-23"
+  },
+  {
+   "watch_id": "58988799-07cf-4492-866e-fe548ee3c397",
+   "story_id": "us-iran-aviation-sanctions-grounding",
+   "question": "Do other Gulf and regional airports follow Baghdad in suspending Iranian flights today, and does Tehran's remaining international network (Istanbul and others) hold?",
+   "asked_in_episode": "morning-2026-09-23"
+  },
+  {
+   "watch_id": "1b7b6bc3-4092-4931-b95c-205f7ad8bff1",
+   "story_id": "oil-price-shock-september-2026",
+   "question": "Does Brent's losing streak reach a seventh day, or does a headline out of the New York talks snap it?",
+   "asked_in_episode": "morning-2026-09-23"
+  },
+  {
+   "watch_id": "a365b697-df4a-409a-8e1a-25f098d061f4",
+   "story_id": "us-iran-threat-exchange-september-2026",
+   "question": "Does the Armed Forces' 'crushing blows' warning materialize as Iranian action, or stay rhetorical while the mediator channel continues?",
+   "asked_in_episode": "morning-2026-09-23"
+  },
+  {
+   "watch_id": "b19029fb-83eb-4bc1-bed1-2536ccb106dd",
+   "story_id": "hormuz-reopening-diplomacy",
+   "question": "When does the follow-up U.S.-Iran meeting happen, and does any substance leak to show whether the Tuesday session was stagecraft or a real opening?",
+   "asked_in_episode": "evening-2026-09-22"
+  },
+  {
+   "watch_id": "c93bf1da-b3fa-4bb5-92d1-79c6fcd344a9",
+   "story_id": "trump-iran-war-endgame-remarks",
+   "question": "How does Iran answer Trump's 'annihilate' ultimatum \u2014 what does Pezeshkian say at the General Assembly Wednesday, and what comes from the delegation tonight?",
+   "asked_in_episode": "evening-2026-09-22"
+  },
+  {
+   "watch_id": "04bcb4dd-0679-4fb2-9e5e-a79e804bcadf",
+   "story_id": "hormuz-reopening-diplomacy",
+   "question": "Does the direct-versus-mediator dispute over the Tuesday meeting's format get settled, and which side's account holds?",
+   "asked_in_episode": "evening-2026-09-22"
+  },
+  {
+   "watch_id": "e566e4dc-9a3e-492f-8424-ce0e85f90624",
+   "story_id": "oil-price-shock-september-2026",
+   "question": "How fast does the diesel-export-ban decision actually come, and do refiners push back?",
+   "asked_in_episode": "evening-2026-09-22"
+  },
+  {
+   "watch_id": "c8c26e2d-e90a-49a8-9d5e-f173db9013de",
+   "story_id": "hormuz-reopening-diplomacy",
+   "question": "Does Washington respond to Iran's conditional seven-day Hormuz-reopening offer \u2014 and does the offer survive contact with reality?",
+   "asked_in_episode": "morning-2026-09-22"
+  },
+  {
+   "watch_id": "f7d9b136-f0fc-4db9-969d-c23e10b2e6ed",
+   "story_id": "yemen-houthi-west-coast-offensive",
+   "question": "Does the White House confirm or deny the New York Times account of the called-off Sunday Houthi strikes \u2014 and does Trump reverse course and order strikes after all?",
+   "asked_in_episode": "evening-2026-09-21"
+  },
+  {
+   "watch_id": "3800f88d-f5c9-4b28-961c-db86436e6191",
+   "story_id": "yemen-houthi-west-coast-offensive",
+   "question": "Does the Houthi highlands push succeed in cutting off the Red Sea coast from Saudi-backed areas, or does it stall against tribal and government resistance?",
+   "asked_in_episode": "evening-2026-09-21"
+  },
+  {
+   "watch_id": "95cad770-a4b7-4f41-9ce5-dbb2de6de3be",
+   "story_id": "strait-hormuz-shipping-attacks",
+   "question": "Do the Strait of Hormuz tanker attacks continue after Monday's two incidents \u2014 and does any group claim responsibility?",
+   "asked_in_episode": "evening-2026-09-21"
+  }
+ ],
+ "alerts_display_default": 5,
+ "watchlist": {
+  "open": 57,
+  "resolved": 9
+ },
+ "stories_stale_excluded": 20,
+ "alerts_stale_excluded": 39,
+ "aging": {
+  "recent_window_editions": 3,
+  "stale_after_editions": 5,
+  "story_ranking": "recent claims (last 3 editions) desc, then total claims desc"
+ }
 }
