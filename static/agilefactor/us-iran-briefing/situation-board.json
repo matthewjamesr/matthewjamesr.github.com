@@ -1,8 +1,8 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-24T01:39:20.807445+00:00",
-  "episode_id": "evening-2026-09-23",
-  "as_of_date": "2026-09-23",
+  "generated_at": "2026-09-24T11:56:02.065361+00:00",
+  "episode_id": "morning-2026-09-24",
+  "as_of_date": "2026-09-24",
   "hormuz": {
     "status": "restricted",
     "basis": "Diplomacy over reopening the Strait of Hormuz"
@@ -23,10 +23,10 @@
   },
   "traffic": {
     "traffic.hormuz_transits_daily": {
-      "value": 3.0,
-      "unit": "vessels/day",
-      "accuracy": "corroborated",
-      "episode_id": "morning-2026-09-23"
+      "value": 10.0,
+      "unit": "vessels",
+      "accuracy": "reported",
+      "episode_id": "morning-2026-09-24"
     },
     "traffic.hormuz_crude_flow_bpd_million": {
       "value": 7.85,
@@ -42,16 +42,25 @@
     {
       "story_id": "hormuz-reopening-diplomacy",
       "title": "Diplomacy over reopening the Strait of Hormuz",
-      "day_n": 12,
+      "day_n": 13,
       "category": "diplomacy",
-      "claim_count": 36,
-      "recent_claim_count": 12,
-      "last_episode_id": "evening-2026-09-16"
+      "claim_count": 38,
+      "recent_claim_count": 7,
+      "last_episode_id": "morning-2026-09-24"
+    },
+    {
+      "story_id": "strait-hormuz-shipping-attacks",
+      "title": "Attacks on commercial shipping in the Strait of Hormuz",
+      "day_n": 12,
+      "category": "military",
+      "claim_count": 37,
+      "recent_claim_count": 7,
+      "last_episode_id": "morning-2026-09-24"
     },
     {
       "story_id": "us-iran-aviation-sanctions-grounding",
       "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
-      "day_n": 1,
+      "day_n": 2,
       "category": "economy",
       "claim_count": 6,
       "recent_claim_count": 6,
@@ -60,41 +69,50 @@
     {
       "story_id": "oil-price-shock-september-2026",
       "title": "Oil price shock (Brent above $100)",
-      "day_n": 13,
+      "day_n": 14,
       "category": "energy",
       "claim_count": 53,
-      "recent_claim_count": 5,
+      "recent_claim_count": 2,
       "last_episode_id": "morning-2026-09-19"
-    },
-    {
-      "story_id": "strait-hormuz-shipping-attacks",
-      "title": "Ship attacks in the Strait of Hormuz",
-      "day_n": 11,
-      "category": "military",
-      "claim_count": 34,
-      "recent_claim_count": 4,
-      "last_episode_id": "evening-2026-09-19"
-    },
-    {
-      "story_id": "trump-iran-war-endgame-remarks",
-      "title": "Trump's Iran war endgame remarks",
-      "day_n": 11,
-      "category": "diplomacy",
-      "claim_count": 15,
-      "recent_claim_count": 4,
-      "last_episode_id": "morning-2026-09-18"
     },
     {
       "story_id": "unga-high-level-week-new-york",
       "title": "UNGA High-Level Week: Iran's leaders granted US visas",
-      "day_n": 7,
+      "day_n": 8,
       "category": "diplomacy",
       "claim_count": 13,
-      "recent_claim_count": 3,
+      "recent_claim_count": 2,
       "last_episode_id": "morning-2026-09-18"
+    },
+    {
+      "story_id": "us-iran-threat-exchange-september-2026",
+      "title": "US-Iran threat exchange over a new American attack",
+      "day_n": 5,
+      "category": "military",
+      "claim_count": 5,
+      "recent_claim_count": 2,
+      "last_episode_id": "evening-2026-09-20"
     }
   ],
   "alerts": [
+    {
+      "watch_id": "4dea7b19-b942-4298-9084-b55024b19944",
+      "story_id": "strait-hormuz-shipping-attacks",
+      "question": "Do UK or US maritime authorities release more detail identifying the vessel struck near Khasab on Sept 23, and whether it matches the IRGC's claimed Trend incident?",
+      "asked_in_episode": "morning-2026-09-24"
+    },
+    {
+      "watch_id": "a6ae2998-133f-4818-8f2e-434afd41a832",
+      "story_id": "strait-hormuz-shipping-attacks",
+      "question": "Does Iran implement a formal 'authorization regime' for vessels transiting the Strait of Hormuz?",
+      "asked_in_episode": "morning-2026-09-24"
+    },
+    {
+      "watch_id": "1be822d0-2a2b-4415-aeb3-cf923fef2501",
+      "story_id": "hormuz-reopening-diplomacy",
+      "question": "Does Washington's reply to Iran's peace proposals contain a counter-offer on lifting the naval blockade and reopening Hormuz?",
+      "asked_in_episode": "morning-2026-09-24"
+    },
     {
       "watch_id": "f1a2b3c4-2001-4000-8000-000000000001",
       "story_id": "strait-hormuz-shipping-attacks",
@@ -184,27 +202,15 @@
       "story_id": "strait-hormuz-shipping-attacks",
       "question": "Do the Strait of Hormuz tanker attacks continue after Monday's two incidents \u2014 and does any group claim responsibility?",
       "asked_in_episode": "evening-2026-09-21"
-    },
-    {
-      "watch_id": "495301a7-4088-4cb3-8bdb-cac67bb133bb",
-      "story_id": "unga-high-level-week-new-york",
-      "question": "Does Araghchi's Doha stop produce anything concrete, and does Pezeshkian's Wednesday UNGA address signal any movement on Iran's three conditions?",
-      "asked_in_episode": "morning-2026-09-21"
-    },
-    {
-      "watch_id": "e4321226-fd6a-4a40-9c74-4bf6e54974f1",
-      "story_id": "us-embassy-security-alerts",
-      "question": "Does the U.S. embassy alert wave expand to more missions or harden in language \u2014 from vigilance toward evacuation-order territory?",
-      "asked_in_episode": "morning-2026-09-21"
     }
   ],
   "alerts_display_default": 5,
   "watchlist": {
-    "open": 54,
+    "open": 57,
     "resolved": 9
   },
-  "stories_stale_excluded": 18,
-  "alerts_stale_excluded": 37,
+  "stories_stale_excluded": 20,
+  "alerts_stale_excluded": 39,
   "aging": {
     "recent_window_editions": 3,
     "stale_after_editions": 5,
