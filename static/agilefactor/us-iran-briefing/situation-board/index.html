@@ -918,11 +918,11 @@
       <div class="verification-head">
         <div class="verification-title">
           <h2 id="verification-title">Verification</h2>
-          <p>See what changed after publication, then inspect the claim ledger and its confidence state.</p>
+          <p>See what changed after publication, then inspect The Ledger and its confidence state.</p>
         </div>
         <div class="tabs" role="tablist" aria-label="Verification views">
           <button class="tab" id="tab-receipts" type="button" role="tab" aria-selected="true" aria-controls="panel-receipts">Receipts</button>
-          <button class="tab" id="tab-claims" type="button" role="tab" aria-selected="false" aria-controls="panel-claims" tabindex="-1">Claims</button>
+          <button class="tab" id="tab-claims" type="button" role="tab" aria-selected="false" aria-controls="panel-claims" tabindex="-1">The Ledger</button>
         </div>
       </div>
       <div class="verification-body">
@@ -1426,7 +1426,7 @@
               confidenceJourneyMarkup(story.story_id) +
               '<section class="drawer-section"><h3>Transition history</h3>' + transitionMarkup(story.story_id) + '</section>' +
             '</section>' +
-            '<section class="story-detail-column" aria-labelledby="drawer-claims-title"><h3 id="drawer-claims-title">Claims</h3>' + claimsColumnMarkup(story, claims) + '</section>' +
+            '<section class="story-detail-column" aria-labelledby="drawer-claims-title"><h3 id="drawer-claims-title">The Ledger</h3>' + claimsColumnMarkup(story, claims) + '</section>' +
           '</div>';
         showDrawer();
       }
