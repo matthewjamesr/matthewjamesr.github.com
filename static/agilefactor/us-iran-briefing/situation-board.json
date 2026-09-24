@@ -1,6 +1,6 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-24T12:54:02.599098+00:00",
+  "generated_at": "2026-09-24T13:22:16.665135+00:00",
   "episode_id": "morning-2026-09-24",
   "as_of_date": "2026-09-24",
   "hormuz": {
@@ -12,13 +12,15 @@
       "value": 105.44,
       "unit": "USD/bbl",
       "accuracy": "corroborated",
-      "episode_id": "morning-2026-09-24"
+      "episode_id": "morning-2026-09-24",
+      "period": "2026-09-24"
     },
     "market.wti_usd": {
       "value": 93.67,
       "unit": "USD/bbl",
       "accuracy": "corroborated",
-      "episode_id": "morning-2026-09-24"
+      "episode_id": "morning-2026-09-24",
+      "period": "2026-09-24"
     }
   },
   "traffic": {
@@ -26,13 +28,15 @@
       "value": 10.0,
       "unit": "vessels",
       "accuracy": "reported",
-      "episode_id": "morning-2026-09-24"
+      "episode_id": "morning-2026-09-24",
+      "period": "2026-09-23"
     },
     "traffic.hormuz_crude_flow_bpd_million": {
       "value": 7.85,
       "unit": "M bpd",
       "accuracy": "reported",
-      "episode_id": "morning-2026-09-16"
+      "episode_id": "morning-2026-09-16",
+      "period": "2026-09-16"
     }
   },
   "military": {
