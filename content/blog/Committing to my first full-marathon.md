@@ -35,7 +35,7 @@ Said some endurance coach somewhere. I thought it proper to start off this post 
 
 ## Background
 
-It is no secret that I am in the U.S. Air Force (Google me, go ahead). Having joined in 2010, running and fitness in general was not a focus of my childhood household. I never failed a physical fitness test - but there were close calls. For a solid 12 years of service I did what I thought worked with little additional research: consistent long slow runs. Every time. Routine started getting boring with little increase in performance. The second time I was stationed in the Republic of Korea, I decided it was time for change. I registered for multiple races from 5 kms up to half-marathons. The following is what I have used thus far and how it has worked for me.
+Growing up, running and fitness in general was not a focus of my childhood household. I never failed a fitness test - but there were close calls. For a solid 12 years I did what I thought worked with little additional research: consistent long slow runs. Every time. Routine started getting boring with little increase in performance. The second time I was living in the Republic of Korea, I decided it was time for change. I registered for multiple races from 5 kms up to half-marathons. The following is what I have used thus far and how it has worked for me.
 
 ## Purposeful Training
 
