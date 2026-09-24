@@ -379,28 +379,17 @@
     .severity-chip.monitor { color: var(--teal-ink); background: var(--teal-soft); }
     .alert-copy { margin: 0; overflow: hidden; font-size: 12.5px; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
     .alerts-support {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
       padding: 12px 18px 13px;
       border-top: 1px solid var(--line);
       background: var(--surface);
     }
-    .alerts-support[hidden] { display: none; }
-    .alerts-toggle {
-      width: 100%;
-      min-height: 40px;
-      padding: 8px 12px;
-      color: var(--ink);
-      background: transparent;
-      border: 1px solid var(--line-strong);
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 650;
-      text-align: left;
-    }
-    .alerts-toggle:hover { border-color: var(--amber); }
-    .alerts-toggle::after { content: "+"; float: right; color: var(--amber-ink); font-size: 18px; line-height: 1; }
-    .alerts-toggle[aria-expanded="true"]::after { content: "−"; }
-    .alerts-stale-note { margin: 9px 0 0; color: var(--faint); font-size: 11px; line-height: 1.4; }
-    .alerts-toggle[hidden], .alerts-stale-note[hidden] { display: none; }
+    .alerts-support[hidden], .alerts-pagination[hidden], .alerts-stale-note[hidden] { display: none; }
+    .alerts-stale-note { margin: 0; color: var(--faint); font-size: 11px; line-height: 1.4; }
+    .alerts-pagination { display: flex; align-items: center; gap: 14px; margin-left: auto; }
     .confidence-key {
       display: flex;
       flex-wrap: wrap;
@@ -592,17 +581,7 @@
       text-align: center;
     }
     .error { color: var(--red-ink); background: var(--red-soft); }
-    .more-row { padding: 14px; text-align: center; border-top: 1px solid var(--line); }
-    .more-btn {
-      padding: 8px 14px;
-      color: var(--ink);
-      background: transparent;
-      border: 1px solid var(--line-strong);
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 650;
-    }
-    .more-btn:hover { border-color: var(--amber); }
+    .claims-pagination[hidden] { display: none; }
     .drawer-shell[hidden] { display: none; }
     .drawer-shell { position: fixed; inset: 0; z-index: 50; overscroll-behavior: contain; }
     .drawer-backdrop { position: absolute; inset: 0; background: rgba(3, 12, 20, .62); border: 0; cursor: pointer; touch-action: none; }
@@ -795,6 +774,8 @@
       .tab { flex: 1; }
       .receipt-row { grid-template-columns: 1fr; gap: 9px; padding: 16px; }
       .receipts-pagination { align-items: stretch; flex-direction: column; padding: 13px 16px; }
+      .alerts-support { align-items: stretch; flex-direction: column; padding-inline: 16px; }
+      .alerts-pagination { align-items: stretch; flex-direction: column; width: 100%; margin-left: 0; }
       .receipts-page-actions { display: grid; grid-template-columns: 1fr 1fr; }
       .page-btn { width: 100%; }
       .receipt-kind { flex-direction: row; align-items: center; justify-content: space-between; }
@@ -913,8 +894,14 @@
           <li class="loading">Loading open watch questions…</li>
         </ul>
         <div class="alerts-support" id="alerts-support" hidden>
-          <button class="alerts-toggle" id="alerts-toggle" type="button" aria-expanded="false" aria-controls="alerts-list" hidden>Show all active alerts</button>
           <p class="alerts-stale-note" id="alerts-stale-note" hidden></p>
+          <nav class="alerts-pagination" id="alerts-pagination" aria-label="Active alert pages" hidden>
+            <p class="receipts-page-status" id="alerts-page-status" aria-live="polite"></p>
+            <div class="receipts-page-actions">
+              <button class="page-btn" id="alerts-previous" type="button">Previous</button>
+              <button class="page-btn" id="alerts-next" type="button">Next</button>
+            </div>
+          </nav>
         </div>
         <div class="legend" aria-label="Alert severity legend">
           <span class="critical-key"><b></b>Critical — immediate operational risk</span>
@@ -969,7 +956,13 @@
             <p id="claims-summary" aria-live="polite">Loading claims…</p>
           </div>
           <ol class="claim-list" id="claims-list"></ol>
-          <div class="more-row" id="claims-more-row" hidden><button class="more-btn" id="claims-more" type="button">Show more stories</button></div>
+          <nav class="receipts-pagination claims-pagination" id="claims-pagination" aria-label="Claim story pages" hidden>
+            <p class="receipts-page-status" id="claims-page-status" aria-live="polite"></p>
+            <div class="receipts-page-actions">
+              <button class="page-btn" id="claims-previous" type="button">Previous</button>
+              <button class="page-btn" id="claims-next" type="button">Next</button>
+            </div>
+          </nav>
         </div>
       </div>
     </section>
@@ -1001,10 +994,12 @@
       var currentFilter = "all";
       var currentSort = "active";
       var claimQuery = "";
-      var visibleClaims = 12;
+      var claimsPage = 1;
+      var claimsPerPage = 10;
       var receiptsPage = 1;
       var receiptsPerPage = 10;
-      var alertsExpanded = false;
+      var alertsPage = 1;
+      var alertsPerPage = 10;
       var drawerReturnFocus = null;
       var backgroundScrollLock = {
         active: false,
@@ -1505,30 +1500,32 @@
 
       function renderAlerts() {
         var alerts = (boardData && boardData.alerts) || [];
-        var configuredDefault = Number(boardData && boardData.alerts_display_default);
-        var defaultCount = configuredDefault > 0 ? Math.min(alerts.length, Math.floor(configuredDefault)) : Math.min(alerts.length, 5);
-        var visibleAlerts = alertsExpanded ? alerts : alerts.slice(0, defaultCount);
         var staleExcluded = Math.max(0, Math.floor(Number(boardData && boardData.alerts_stale_excluded) || 0));
-        var toggle = document.getElementById("alerts-toggle");
         var staleNote = document.getElementById("alerts-stale-note");
+        var pagination = document.getElementById("alerts-pagination");
         var support = document.getElementById("alerts-support");
+        var pageCount = Math.max(1, Math.ceil(alerts.length / alertsPerPage));
+        alertsPage = Math.min(Math.max(alertsPage, 1), pageCount);
+        var start = (alertsPage - 1) * alertsPerPage;
+        var pageAlerts = alerts.slice(start, start + alertsPerPage);
 
         document.getElementById("alerts-count").textContent = alerts.length + " active";
-        document.getElementById("alerts-list").innerHTML = alerts.length ? visibleAlerts.map(function (alert, index) {
+        document.getElementById("alerts-list").innerHTML = alerts.length ? pageAlerts.map(function (alert, index) {
           var severity = severityForAlert(alert);
-          return '<li class="alert-row ' + severity + '" tabindex="0" role="button" data-alert-index="' + index + '" aria-label="Open alert details: ' + esc(alert.question) + '">' +
+          return '<li class="alert-row ' + severity + '" tabindex="0" role="button" data-alert-index="' + (start + index) + '" aria-label="Open alert details: ' + esc(alert.question) + '">' +
             '<span class="severity-chip ' + severity + '">' + severityLabel(severity) + '</span>' +
             '<p class="alert-copy">' + esc(alert.question) + '</p>' +
             '<span class="row-arrow" aria-hidden="true">›</span>' +
           '</li>';
         }).join("") : '<li class="empty">No active alerts are listed in this snapshot.</li>';
 
-        toggle.hidden = alerts.length <= defaultCount;
-        toggle.setAttribute("aria-expanded", String(alertsExpanded));
-        toggle.textContent = alertsExpanded ? "Show fewer" : "Show all " + alerts.length + " active alerts";
+        pagination.hidden = alerts.length <= alertsPerPage;
+        document.getElementById("alerts-page-status").textContent = "Page " + alertsPage + " of " + pageCount + " · alerts " + (start + 1) + "–" + Math.min(start + alertsPerPage, alerts.length) + " of " + alerts.length;
+        document.getElementById("alerts-previous").disabled = alertsPage === 1;
+        document.getElementById("alerts-next").disabled = alertsPage === pageCount;
         staleNote.hidden = staleExcluded === 0;
         staleNote.textContent = staleExcluded + " older " + (staleExcluded === 1 ? "question" : "questions") + " aged off this view after 5 editions unanswered";
-        support.hidden = toggle.hidden && staleNote.hidden;
+        support.hidden = pagination.hidden && staleNote.hidden;
       }
 
       function renderBoard(board, activity) {
@@ -1580,7 +1577,7 @@
           '</li>';
         }).join("") : '<li class="empty">No active stories are listed in this snapshot.</li>';
 
-        alertsExpanded = false;
+        alertsPage = 1;
         renderAlerts();
       }
 
@@ -1649,7 +1646,10 @@
           if (currentSort === "az") return a.story.title.localeCompare(b.story.title);
           return activityScore(b.story) - activityScore(a.story);
         });
-        var shown = filtered.slice(0, visibleClaims);
+        var pageCount = Math.max(1, Math.ceil(filtered.length / claimsPerPage));
+        claimsPage = Math.min(Math.max(claimsPage, 1), pageCount);
+        var start = (claimsPage - 1) * claimsPerPage;
+        var shown = filtered.slice(start, start + claimsPerPage);
         var matchingClaimCount = filtered.reduce(function (sum, item) { return sum + item.matchingClaims.length; }, 0);
         document.getElementById("claims-summary").textContent = "Showing " + Math.min(shown.length, filtered.length) + " of " + filtered.length + " stories · " + matchingClaimCount + (query ? " matching" : " indexed") + " claims";
         document.getElementById("claims-list").innerHTML = shown.length ? shown.map(function (item) {
@@ -1661,7 +1661,11 @@
             '<div class="claim-card-stats"><span class="state-pill ' + (story.status === "resolved" ? "confirmed" : "reported") + '">' + esc(story.status || "active") + '</span><span class="stat-chip">' + esc(story.claim_count || (story.claims || []).length) + ' claims</span><span class="stat-chip">' + changeCount(story) + ' changes</span><span class="row-arrow" aria-hidden="true">›</span></div>' +
           '</li>';
         }).join("") : '<li class="empty">No stories or claims match these controls.</li>';
-        document.getElementById("claims-more-row").hidden = shown.length >= filtered.length;
+        var pagination = document.getElementById("claims-pagination");
+        pagination.hidden = filtered.length <= claimsPerPage;
+        document.getElementById("claims-page-status").textContent = "Page " + claimsPage + " of " + pageCount + " · stories " + (start + 1) + "–" + Math.min(start + claimsPerPage, filtered.length) + " of " + filtered.length;
+        document.getElementById("claims-previous").disabled = claimsPage === 1;
+        document.getElementById("claims-next").disabled = claimsPage === pageCount;
       }
 
       function showLoadError(message) {
@@ -1705,23 +1709,36 @@
         var button = event.target.closest("button[data-filter]");
         if (!button) return;
         currentFilter = button.getAttribute("data-filter");
-        visibleClaims = 12;
+        claimsPage = 1;
         document.querySelectorAll(".filter-btn").forEach(function (item) { item.setAttribute("aria-pressed", String(item === button)); });
         renderClaims();
       });
       document.getElementById("claim-search").addEventListener("input", function (event) {
         claimQuery = event.target.value;
-        visibleClaims = 12;
+        claimsPage = 1;
         renderClaims();
       });
       document.getElementById("claim-sort").addEventListener("change", function (event) {
         currentSort = event.target.value;
-        visibleClaims = 12;
+        claimsPage = 1;
         renderClaims();
       });
-      document.getElementById("claims-more").addEventListener("click", function () { visibleClaims += 12; renderClaims(); });
-      document.getElementById("alerts-toggle").addEventListener("click", function () {
-        alertsExpanded = !alertsExpanded;
+      document.getElementById("claims-previous").addEventListener("click", function () {
+        if (claimsPage <= 1) return;
+        claimsPage -= 1;
+        renderClaims();
+      });
+      document.getElementById("claims-next").addEventListener("click", function () {
+        claimsPage += 1;
+        renderClaims();
+      });
+      document.getElementById("alerts-previous").addEventListener("click", function () {
+        if (alertsPage <= 1) return;
+        alertsPage -= 1;
+        renderAlerts();
+      });
+      document.getElementById("alerts-next").addEventListener("click", function () {
+        alertsPage += 1;
         renderAlerts();
       });
 
