@@ -455,6 +455,35 @@
       border-bottom: 1px solid var(--line);
     }
     .receipt-row:last-child { border-bottom: 0; }
+    .receipts-pagination[hidden] { display: none; }
+    .receipts-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 13px 18px;
+      background: var(--surface-2);
+      border-top: 1px solid var(--line);
+    }
+    .receipts-page-status {
+      margin: 0;
+      color: var(--muted);
+      font: 500 11px/1.35 "IBM Plex Mono", monospace;
+    }
+    .receipts-page-actions { display: flex; gap: 7px; }
+    .page-btn {
+      min-width: 92px;
+      min-height: 38px;
+      padding: 7px 12px;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 650;
+    }
+    .page-btn:hover:not(:disabled) { border-color: var(--amber); }
+    .page-btn:disabled { color: var(--faint); background: var(--surface-3); border-color: var(--line); cursor: not-allowed; }
     .receipt-kind {
       display: flex;
       flex-direction: column;
@@ -742,6 +771,9 @@
       .tabs { width: 100%; }
       .tab { flex: 1; }
       .receipt-row { grid-template-columns: 1fr; gap: 9px; padding: 16px; }
+      .receipts-pagination { align-items: stretch; flex-direction: column; padding: 13px 16px; }
+      .receipts-page-actions { display: grid; grid-template-columns: 1fr 1fr; }
+      .page-btn { width: 100%; }
       .receipt-kind { flex-direction: row; align-items: center; justify-content: space-between; }
       .claims-toolbar { grid-template-columns: 1fr; align-items: stretch; }
       .claims-toolbar p { grid-column: 1; }
@@ -880,6 +912,13 @@
       <div class="verification-body">
         <div class="verification-panel" id="panel-receipts" role="tabpanel" aria-labelledby="tab-receipts">
           <div id="receipts-list"><div class="loading">Loading the verification trail…</div></div>
+          <nav class="receipts-pagination" id="receipts-pagination" aria-label="Receipts pages" hidden>
+            <p class="receipts-page-status" id="receipts-page-status" aria-live="polite"></p>
+            <div class="receipts-page-actions">
+              <button class="page-btn" id="receipts-previous" type="button">Previous</button>
+              <button class="page-btn" id="receipts-next" type="button">Next</button>
+            </div>
+          </nav>
         </div>
         <div class="verification-panel" id="panel-claims" role="tabpanel" aria-labelledby="tab-claims" hidden>
           <div class="claims-toolbar">
@@ -936,6 +975,8 @@
       var currentSort = "active";
       var claimQuery = "";
       var visibleClaims = 12;
+      var receiptsPage = 1;
+      var receiptsPerPage = 10;
       var drawerReturnFocus = null;
       var backgroundScrollLock = {
         active: false,
@@ -1495,12 +1536,20 @@
         }).join("") : '<li class="empty">No active alerts are listed in this snapshot.</li>';
       }
 
-      function renderReceipts(receipts) {
-        receiptsData = receipts || { entries: [] };
+      function renderReceiptsPage() {
         var entries = (receiptsData.entries || []).slice().sort(function (a, b) { return new Date(b.date || 0) - new Date(a.date || 0); });
         var list = document.getElementById("receipts-list");
-        if (!entries.length) { list.innerHTML = '<div class="empty">No verification changes are recorded for this snapshot.</div>'; return; }
-        list.innerHTML = entries.map(function (entry) {
+        var pagination = document.getElementById("receipts-pagination");
+        if (!entries.length) {
+          list.innerHTML = '<div class="empty">No verification changes are recorded for this snapshot.</div>';
+          pagination.hidden = true;
+          return;
+        }
+        var pageCount = Math.ceil(entries.length / receiptsPerPage);
+        receiptsPage = Math.min(Math.max(receiptsPage, 1), pageCount);
+        var start = (receiptsPage - 1) * receiptsPerPage;
+        var pageEntries = entries.slice(start, start + receiptsPerPage);
+        list.innerHTML = pageEntries.map(function (entry) {
           var isChange = entry.type === "confidence_change";
           var label = isChange ? "Confidence" : "Resolved";
           var body = isChange ? entry.claim_text : entry.question;
@@ -1513,6 +1562,16 @@
             '<div class="receipt-copy"><h3>' + esc(entry.story_title || entry.story_id) + '</h3><p>' + esc(body) + '</p><p class="reason">' + badges + ' ' + esc(detail) + '</p></div>' +
           '</article>';
         }).join("");
+        pagination.hidden = pageCount <= 1;
+        document.getElementById("receipts-page-status").textContent = "Page " + receiptsPage + " of " + pageCount + " · receipts " + (start + 1) + "–" + Math.min(start + receiptsPerPage, entries.length) + " of " + entries.length;
+        document.getElementById("receipts-previous").disabled = receiptsPage === 1;
+        document.getElementById("receipts-next").disabled = receiptsPage === pageCount;
+      }
+
+      function renderReceipts(receipts) {
+        receiptsData = receipts || { entries: [] };
+        receiptsPage = 1;
+        renderReceiptsPage();
       }
 
       function prepareClaims(activity) {
@@ -1577,6 +1636,17 @@
 
       document.getElementById("tab-receipts").addEventListener("click", function () { setTab("receipts"); });
       document.getElementById("tab-claims").addEventListener("click", function () { setTab("claims"); });
+      document.getElementById("receipts-previous").addEventListener("click", function () {
+        if (receiptsPage <= 1) return;
+        receiptsPage -= 1;
+        renderReceiptsPage();
+      });
+      document.getElementById("receipts-next").addEventListener("click", function () {
+        var pageCount = Math.ceil((receiptsData.entries || []).length / receiptsPerPage);
+        if (receiptsPage >= pageCount) return;
+        receiptsPage += 1;
+        renderReceiptsPage();
+      });
       document.querySelector(".tabs").addEventListener("keydown", function (event) {
         if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
         event.preventDefault();
