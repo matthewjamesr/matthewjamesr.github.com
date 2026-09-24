@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-24T00:55:37.831259+00:00",
+ "generated_at": "2026-09-24T11:56:02.226289+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -89,6 +89,10 @@
   {
    "episode_id": "evening-2026-09-23",
    "date": "2026-09-23"
+  },
+  {
+   "episode_id": "morning-2026-09-24",
+   "date": "2026-09-24"
   }
  ],
  "stories": [
@@ -97,9 +101,9 @@
    "title": "Diplomacy over reopening the Strait of Hormuz",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 36,
+   "claim_count": 38,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "evening-2026-09-16",
+   "last_episode_id": "morning-2026-09-24",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -157,6 +161,12 @@
     },
     {
      "episode_id": "evening-2026-09-23",
+     "new_claims": 2,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-24",
      "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
@@ -450,6 +460,22 @@
      "confidence": "reported",
      "created_at": "2026-09-24T00:26:21+00:00",
      "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "f180e6a3-4b96-4bf7-aae0-464bc36b654e",
+     "text": "A senior Iranian official told Reuters on Sept 23 that Tehran is reviewing Washington's response to its peace proposals, which prioritize lifting the U.S. naval blockade on Iranian ports and reopening the Strait of Hormuz.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-24T11:21:02+00:00",
+     "episode_id": "morning-2026-09-24"
+    },
+    {
+     "claim_id": "b010906c-2506-4f83-98d9-6248be41fcfb",
+     "text": "Twenty-seven commodity vessels transited the Bab el-Mandeb Strait on Wednesday Sept 23, up from 24 a day earlier and near the 10-day average of 26, per preliminary shipping data cited by Reuters.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-24T11:21:02+00:00",
+     "episode_id": "morning-2026-09-24"
     }
    ]
   },
@@ -1947,12 +1973,12 @@
   },
   {
    "story_id": "strait-hormuz-shipping-attacks",
-   "title": "Ship attacks in the Strait of Hormuz",
+   "title": "Attacks on commercial shipping in the Strait of Hormuz",
    "status": "active",
    "category": "military",
-   "claim_count": 34,
+   "claim_count": 37,
    "first_episode_id": "morning-2026-09-13",
-   "last_episode_id": "evening-2026-09-19",
+   "last_episode_id": "morning-2026-09-24",
    "activity": [
     {
      "episode_id": "morning-2026-09-13",
@@ -2028,6 +2054,12 @@
     },
     {
      "episode_id": "evening-2026-09-23",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-24",
      "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 0
@@ -2305,6 +2337,30 @@
      "confidence": "reported",
      "created_at": "2026-09-24T00:26:21+00:00",
      "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "a9f869eb-032c-449c-937e-a976469e8e8f",
+     "text": "On Sept 23, UKMTO received a report of a tanker struck by a projectile causing a fire about 16 nautical miles northwest of the Omani coast near Khasab; the fire was reported out and no crew were injured.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-24T11:21:02+00:00",
+     "episode_id": "morning-2026-09-24"
+    },
+    {
+     "claim_id": "9696fe02-bab0-412f-8efb-27c1a28fa1bd",
+     "text": "IRGC Navy Rear Adm. Ali Ozmaei claimed on Sept 23 that the IRGC attacked the Togo-flagged product tanker Trend for 'illegal passage' through the Strait of Hormuz, claiming the vessel was set ablaze and stopped.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-24T11:21:02+00:00",
+     "episode_id": "morning-2026-09-24"
+    },
+    {
+     "claim_id": "5c32ebc9-80d7-41c5-8560-5d4c9fa0ae96",
+     "text": "Ten commodity vessels transited the Strait of Hormuz on Wednesday Sept 23, up from seven a day earlier but below the 10-day moving average of about 17; nine entered and one exited, with vessels running AIS-dark excluded.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-24T11:21:02+00:00",
+     "episode_id": "morning-2026-09-24"
     }
    ]
   },
