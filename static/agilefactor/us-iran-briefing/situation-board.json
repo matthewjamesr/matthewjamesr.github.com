@@ -1,7 +1,7 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-23T19:23:06.841156+00:00",
-  "episode_id": "morning-2026-09-23",
+  "generated_at": "2026-09-24T00:55:37.708537+00:00",
+  "episode_id": "evening-2026-09-23",
   "as_of_date": "2026-09-23",
   "hormuz": {
     "status": "restricted",
@@ -11,14 +11,14 @@
     "market.brent_usd": {
       "value": 99.18,
       "unit": "USD/bbl",
-      "accuracy": "reported",
-      "episode_id": "morning-2026-09-23"
+      "accuracy": "corroborated",
+      "episode_id": "evening-2026-09-23"
     },
     "market.wti_usd": {
       "value": 90.17,
       "unit": "USD/bbl",
       "accuracy": "reported",
-      "episode_id": "morning-2026-09-23"
+      "episode_id": "evening-2026-09-23"
     }
   },
   "traffic": {
@@ -44,9 +44,18 @@
       "title": "Diplomacy over reopening the Strait of Hormuz",
       "day_n": 12,
       "category": "diplomacy",
-      "claim_count": 34,
-      "recent_claim_count": 11,
+      "claim_count": 36,
+      "recent_claim_count": 12,
       "last_episode_id": "evening-2026-09-16"
+    },
+    {
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "day_n": 1,
+      "category": "economy",
+      "claim_count": 6,
+      "recent_claim_count": 6,
+      "last_episode_id": "morning-2026-09-23"
     },
     {
       "story_id": "oil-price-shock-september-2026",
@@ -54,8 +63,17 @@
       "day_n": 13,
       "category": "energy",
       "claim_count": 53,
-      "recent_claim_count": 7,
+      "recent_claim_count": 5,
       "last_episode_id": "morning-2026-09-19"
+    },
+    {
+      "story_id": "strait-hormuz-shipping-attacks",
+      "title": "Ship attacks in the Strait of Hormuz",
+      "day_n": 11,
+      "category": "military",
+      "claim_count": 34,
+      "recent_claim_count": 4,
+      "last_episode_id": "evening-2026-09-19"
     },
     {
       "story_id": "trump-iran-war-endgame-remarks",
@@ -71,67 +89,49 @@
       "title": "UNGA High-Level Week: Iran's leaders granted US visas",
       "day_n": 7,
       "category": "diplomacy",
-      "claim_count": 11,
-      "recent_claim_count": 4,
+      "claim_count": 13,
+      "recent_claim_count": 3,
       "last_episode_id": "morning-2026-09-18"
-    },
-    {
-      "story_id": "strait-hormuz-shipping-attacks",
-      "title": "Ship attacks in the Strait of Hormuz",
-      "day_n": 11,
-      "category": "military",
-      "claim_count": 31,
-      "recent_claim_count": 3,
-      "last_episode_id": "evening-2026-09-19"
-    },
-    {
-      "story_id": "us-iran-aviation-sanctions-grounding",
-      "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
-      "day_n": 1,
-      "category": "economy",
-      "claim_count": 3,
-      "recent_claim_count": 3,
-      "last_episode_id": "morning-2026-09-23"
     }
   ],
   "alerts": [
+    {
+      "watch_id": "f1a2b3c4-2001-4000-8000-000000000001",
+      "story_id": "strait-hormuz-shipping-attacks",
+      "question": "Do authorities or investigators attribute the Cape Dao strike, and does it trigger further incidents or retaliation in the strait?",
+      "asked_in_episode": "evening-2026-09-23"
+    },
+    {
+      "watch_id": "f1a2b3c4-2002-4000-8000-000000000002",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "question": "Does Baghdad formalize the Najaf rerouting of Iranian flights, and does Iran act on Rezaei's threat against neighboring airports?",
+      "asked_in_episode": "evening-2026-09-23"
+    },
+    {
+      "watch_id": "f1a2b3c4-2003-4000-8000-000000000003",
+      "story_id": "hormuz-reopening-diplomacy",
+      "question": "Do the Qatari-mediated messages yield fresh direct talks 'in the coming days,' and does Pezeshkian's UNGA defiance harden the US line?",
+      "asked_in_episode": "evening-2026-09-23"
+    },
+    {
+      "watch_id": "f1a2b3c4-2004-4000-8000-000000000004",
+      "story_id": "oil-price-shock-september-2026",
+      "question": "Does the Brent rebound above $100 hold into Thursday, or do pipeline restarts and talk-hopes reassert the slide?",
+      "asked_in_episode": "evening-2026-09-23"
+    },
     {
       "watch_id": "58988799-07cf-4492-866e-fe548ee3c397",
       "story_id": "us-iran-aviation-sanctions-grounding",
       "question": "Do other Gulf and regional airports follow Baghdad in suspending Iranian flights today, and does Tehran's remaining international network (Istanbul and others) hold?",
       "asked_in_episode": "morning-2026-09-23"
-    },
-    {
-      "watch_id": "1b7b6bc3-4092-4931-b95c-205f7ad8bff1",
-      "story_id": "oil-price-shock-september-2026",
-      "question": "Does Brent's losing streak reach a seventh day, or does a headline out of the New York talks snap it?",
-      "asked_in_episode": "morning-2026-09-23"
-    },
-    {
-      "watch_id": "a365b697-df4a-409a-8e1a-25f098d061f4",
-      "story_id": "us-iran-threat-exchange-september-2026",
-      "question": "Does the Armed Forces' 'crushing blows' warning materialize as Iranian action, or stay rhetorical while the mediator channel continues?",
-      "asked_in_episode": "morning-2026-09-23"
-    },
-    {
-      "watch_id": "b19029fb-83eb-4bc1-bed1-2536ccb106dd",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "When does the follow-up U.S.-Iran meeting happen, and does any substance leak to show whether the Tuesday session was stagecraft or a real opening?",
-      "asked_in_episode": "evening-2026-09-22"
-    },
-    {
-      "watch_id": "c93bf1da-b3fa-4bb5-92d1-79c6fcd344a9",
-      "story_id": "trump-iran-war-endgame-remarks",
-      "question": "How does Iran answer Trump's 'annihilate' ultimatum \u2014 what does Pezeshkian say at the General Assembly Wednesday, and what comes from the delegation tonight?",
-      "asked_in_episode": "evening-2026-09-22"
     }
   ],
   "watchlist": {
-    "open": 50,
+    "open": 54,
     "resolved": 9
   },
-  "stories_stale_excluded": 15,
-  "alerts_stale_excluded": 34,
+  "stories_stale_excluded": 18,
+  "alerts_stale_excluded": 37,
   "aging": {
     "recent_window_editions": 3,
     "stale_after_editions": 5,
