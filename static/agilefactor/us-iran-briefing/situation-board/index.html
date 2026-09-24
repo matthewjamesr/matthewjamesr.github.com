@@ -1030,20 +1030,37 @@
       function formatPeriod(value) {
         if (!value) return "";
         var MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+        function chicagoAbbr(y, mo, d) {
+          try {
+            var dtf = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", timeZoneName: "short" });
+            var parts = dtf.formatToParts(new Date(Date.UTC(y, mo - 1, d, 12, 0, 0)));
+            for (var i = 0; i < parts.length; i++) {
+              if (parts[i].type === "timeZoneName") return parts[i].value;
+            }
+          } catch (e) {}
+          return "CT";
+        }
         function fmtDTG(s) {
           s = String(s).trim();
           var m = s.match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):?(\d{2})?)?/);
-          if (!m) return s;
+          if (!m) return { text: s, abbr: "" };
           var mon = MONTHS[parseInt(m[2], 10) - 1] || m[2];
           var out = m[3] + " " + mon + " " + m[1].slice(2);
-          if (m[4] !== undefined) out += " " + m[4] + (m[5] || "00");
-          return out;
+          var abbr = "";
+          if (m[4] !== undefined) {
+            out += " " + m[4] + (m[5] || "00");
+            abbr = chicagoAbbr(parseInt(m[1], 10), parseInt(m[2], 10), parseInt(m[3], 10));
+          }
+          return { text: out, abbr: abbr };
         }
         var parts = String(value).split(/\s+to\s+|\s*\/\s*/).map(function (s) { return s.trim(); }).filter(Boolean);
         if (parts.length > 1) {
-          return fmtDTG(parts[0]) + " to " + fmtDTG(parts[parts.length - 1]);
+          var a = fmtDTG(parts[0]), b = fmtDTG(parts[parts.length - 1]);
+          var suffix = b.abbr || a.abbr;
+          return a.text + " to " + b.text + (suffix ? " " + suffix : "");
         }
-        return fmtDTG(parts[0]);
+        var single = fmtDTG(parts[0]);
+        return single.text + (single.abbr ? " " + single.abbr : "");
       }
 
       function journeyDateMarkup(value) {
