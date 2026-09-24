@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-23T19:11:12.065262+00:00",
+ "generated_at": "2026-09-24T00:55:37.831259+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -85,6 +85,10 @@
   {
    "episode_id": "morning-2026-09-23",
    "date": "2026-09-23"
+  },
+  {
+   "episode_id": "evening-2026-09-23",
+   "date": "2026-09-23"
   }
  ],
  "stories": [
@@ -93,7 +97,7 @@
    "title": "Diplomacy over reopening the Strait of Hormuz",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 34,
+   "claim_count": 36,
    "first_episode_id": "evening-2026-09-12",
    "last_episode_id": "evening-2026-09-16",
    "activity": [
@@ -149,6 +153,12 @@
      "episode_id": "morning-2026-09-23",
      "new_claims": 3,
      "conf_changes": 1,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-23",
+     "new_claims": 2,
+     "conf_changes": 0,
      "watch_events": 0
     }
    ],
@@ -424,6 +434,22 @@
      "confidence": "reported",
      "created_at": "2026-09-23T11:19:09+00:00",
      "episode_id": "morning-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0009-4000-8000-000000000009",
+     "text": "On Sept 23, messages were exchanged between the Witkoff-Kushner team and Foreign Minister Araghchi through Qatari mediators with no change in either side's position; Iran's terms remain ending the blockade, releasing Iranian oil revenues held overseas, and ending US aggression.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0010-4000-8000-000000000010",
+     "text": "Secretary of State Marco Rubio cautioned Wednesday that no major breakthrough should be expected from the US-Iran talks.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
     }
    ]
   },
@@ -1924,7 +1950,7 @@
    "title": "Ship attacks in the Strait of Hormuz",
    "status": "active",
    "category": "military",
-   "claim_count": 31,
+   "claim_count": 34,
    "first_episode_id": "morning-2026-09-13",
    "last_episode_id": "evening-2026-09-19",
    "activity": [
@@ -1999,6 +2025,12 @@
      "new_claims": 1,
      "conf_changes": 0,
      "watch_events": 1
+    },
+    {
+     "episode_id": "evening-2026-09-23",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 0
     }
    ],
    "claims": [
@@ -2249,6 +2281,30 @@
      "confidence": "reported",
      "created_at": "2026-09-23T11:19:09+00:00",
      "episode_id": "morning-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0001-4000-8000-000000000001",
+     "text": "On Sept 23, the Antigua and Barbuda-flagged bulk carrier MV Cape Dao was hit by an unidentified projectile at about 06:30 UTC while transiting the Strait of Hormuz; the vessel caught fire and the crew abandoned ship.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0002-4000-8000-000000000002",
+     "text": "Oman's Maritime Security Center said 27 crew members were evacuated from the Cape Dao, and India's embassy in Oman confirmed that one Indian sailor was killed.",
+     "type": "casualty",
+     "confidence": "corroborated",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0003-4000-8000-000000000003",
+     "text": "Lloyd's List reported the Cape Dao was not on Iran's published list of vessels deemed non-compliant with its Hormuz transit rules, and no group has claimed responsibility for the strike.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
     }
    ]
   },
@@ -3384,7 +3440,7 @@
    "title": "UNGA High-Level Week: Iran's leaders granted US visas",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 11,
+   "claim_count": 13,
    "first_episode_id": "evening-2026-09-17",
    "last_episode_id": "morning-2026-09-18",
    "activity": [
@@ -3415,6 +3471,12 @@
     {
      "episode_id": "evening-2026-09-22",
      "new_claims": 1,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-23",
+     "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -3507,6 +3569,22 @@
      "confidence": "reported",
      "created_at": "2026-09-23T02:03:39+00:00",
      "episode_id": "evening-2026-09-22"
+    },
+    {
+     "claim_id": "f1a2b3c4-0007-4000-8000-000000000007",
+     "text": "Pezeshkian told the UN General Assembly on Sept 23 that Iran 'will not bow down,' refusing to yield on the nuclear program, missile defenses, or the Strait of Hormuz, while saying Iran is ready for dialogue 'without accepting the language of force.'",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0008-4000-8000-000000000008",
+     "text": "The UNGA hall had moderate turnout with no senior US representatives; one US official exited early during Pezeshkian's address, and Trump left New York on Tuesday night without meeting him.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
     }
    ]
   },
@@ -4042,12 +4120,18 @@
    "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
    "status": "active",
    "category": "economy",
-   "claim_count": 3,
+   "claim_count": 6,
    "first_episode_id": "morning-2026-09-23",
    "last_episode_id": "morning-2026-09-23",
    "activity": [
     {
      "episode_id": "morning-2026-09-23",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-23",
      "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 0
@@ -4077,6 +4161,30 @@
      "confidence": "reported",
      "created_at": "2026-09-23T11:19:09+00:00",
      "episode_id": "morning-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0004-4000-8000-000000000004",
+     "text": "Iraq ordered its civil aviation authority to suspend Iranian flights to Baghdad airport starting midnight Wednesday Sept 23 under US sanctions pressure, with Baghdad discussing diverting Iran Air flights to Najaf.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0005-4000-8000-000000000005",
+     "text": "Iran's civil aviation organization said flights to Baghdad and Muscat are canceled from Wednesday Sept 23, while Istanbul routes continue as scheduled.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "f1a2b3c4-0006-4000-8000-000000000006",
+     "text": "SNSC secretary Mohsen Rezaei warned on Iranian state television that if neighboring countries cooperate with the US by stopping Iranian flights, Iran will ensure their own airports cannot function.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-24T00:26:21+00:00",
+     "episode_id": "evening-2026-09-23"
     }
    ]
   }
