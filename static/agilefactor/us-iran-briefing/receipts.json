@@ -1,6 +1,6 @@
 {
   "format_version": "receipts-v1",
-  "generated_at": "2026-09-24T17:27:23.919753+00:00",
+  "generated_at": "2026-09-24T17:35:45.236035+00:00",
   "episode_id": "morning-2026-09-24",
   "policy": "all resolutions publish, including misses and downgrades",
   "entries": [
@@ -181,6 +181,138 @@
       "episode_id": "evening-2026-09-23"
     },
     {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "In a late-Tuesday X post, Steve Witkoff said the U.S. and Iran 'engaged in lengthy talks on Tuesday' via mediators 'who shuttled between the two sides throughout the day,' a round he hopes 'will prove constructive and promising,' and that the mediators will continue their work.",
+      "old_confidence": null,
+      "new_confidence": "corroborated",
+      "reason": "Claim entered as corroborated (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "The White House clarified that Trump did not attend Monday's three-hour UNGA meeting — the U.S. side was Witkoff and Kushner — after Trump's initial comments created confusion about who participated.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "An Iranian security source told Al Jazeera there could be room for further engagement between the U.S. and Iran if Washington meets Tehran's conditions.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "trump-iran-war-endgame-remarks",
+      "story_title": "Trump's Iran war endgame remarks",
+      "claim_text": "Trump told Middle East leaders about restoring Hormuz shipping: 'We think that the situation with Iran could end right after the (November 3) midterm elections, maybe before. I don't know. You never know.'",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "us-iran-threat-exchange-september-2026",
+      "story_title": "US-Iran threat exchange over a new American attack",
+      "claim_text": "Iran's Armed Forces issued a statement dismissing Trump's UNGA address as 'propaganda' and saying Tehran stands in 'full readiness to inflict more severe, crushing, and unpredictable blows on the aggressors.'",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "us-iran-threat-exchange-september-2026",
+      "story_title": "US-Iran threat exchange over a new American attack",
+      "claim_text": "Iran's General Staff, quoted via the Mehr news agency, accused Trump of using the UN platform to justify 'aggression' and called the threats 'not a sign of power but a sign of their strategic desperation.'",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "claim_text": "Treasury Secretary Scott Bessent said on CNBC Monday that 'On September 23, all the Iranian airlines will be shut down around the world,' warning that airports and companies providing fuel, landing services, or ticketing to Iranian carriers risk being cut off from the U.S. dollar",
+      "old_confidence": null,
+      "new_confidence": "corroborated",
+      "reason": "Claim entered as corroborated (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "claim_text": "Iraq ordered its civil aviation authority to suspend Iranian flights to Baghdad airport starting Wednesday, two sources told Reuters, after the U.S. threatened to sanction airports servicing Iranian carriers; Baghdad is discussing diverting Iranian Airways flights to Najaf airpor",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "claim_text": "Tasnim, citing Iran's Civil Aviation Organization, said flights from Tehran to Baghdad and Muscat are canceled starting Wednesday while remaining international flights including Istanbul operate on schedule; the organization told ISNA that Iranian travelers are not currently bein",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "oil-price-shock-september-2026",
+      "story_title": "Oil price shock (Brent above $100)",
+      "claim_text": "Brent fell to $99.18 and WTI to $90.17 on Sept 23, a sixth straight daily decline — Brent's longest losing streak in over a year and its first sub-$100 close since September 8.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "oil-price-shock-september-2026",
+      "story_title": "Oil price shock (Brent above $100)",
+      "claim_text": "Saudi Arabia restarted its East-West pipeline to the Red Sea on Tuesday (rerouting ~4 million bpd to Yanbu), Iraq is exporting over 3 million bpd and expects to boost Turkey-route exports above 600,000 bpd, and U.S. crude inventories unexpectedly rose 1.8 million barrels.",
+      "old_confidence": null,
+      "new_confidence": "corroborated",
+      "reason": "Claim entered as corroborated (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-23T12:00:00+00:00",
+      "story_id": "strait-hormuz-shipping-attacks",
+      "story_title": "Attacks on commercial shipping in the Strait of Hormuz",
+      "claim_text": "Three commodity vessels transited the Strait of Hormuz on Tuesday (all exiting, including one Panamax tanker), down from 4 Monday and below the 10-day average of ~15, per Kpler data; LNG tanker Al Mafyar reappeared inside the strait after being last seen outside since Sept 19.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported (backfilled)",
+      "episode_id": "morning-2026-09-23"
+    },
+    {
       "type": "watch_resolved",
       "date": "2026-09-23T11:19:52.145477+00:00",
       "story_id": "east-west-pipeline-drone-attack",
@@ -227,138 +359,6 @@
       "old_confidence": "unconfirmed",
       "new_confidence": "reported",
       "reason": "Al Jazeera's Tehran correspondent now independently reports Iranian state media confirmed the Monday meeting came at Washington's request and centered on Tehran's Hormuz conditions; the U.S. side still has not verified this account.",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "hormuz-reopening-diplomacy",
-      "story_title": "Diplomacy over reopening the Strait of Hormuz",
-      "claim_text": "In a late-Tuesday X post, Steve Witkoff said the U.S. and Iran 'engaged in lengthy talks on Tuesday' via mediators 'who shuttled between the two sides throughout the day,' a round he hopes 'will prove constructive and promising,' and that the mediators will continue their work.",
-      "old_confidence": null,
-      "new_confidence": "corroborated",
-      "reason": "Claim entered as corroborated (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "hormuz-reopening-diplomacy",
-      "story_title": "Diplomacy over reopening the Strait of Hormuz",
-      "claim_text": "The White House clarified that Trump did not attend Monday's three-hour UNGA meeting — the U.S. side was Witkoff and Kushner — after Trump's initial comments created confusion about who participated.",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "hormuz-reopening-diplomacy",
-      "story_title": "Diplomacy over reopening the Strait of Hormuz",
-      "claim_text": "An Iranian security source told Al Jazeera there could be room for further engagement between the U.S. and Iran if Washington meets Tehran's conditions.",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "trump-iran-war-endgame-remarks",
-      "story_title": "Trump's Iran war endgame remarks",
-      "claim_text": "Trump told Middle East leaders about restoring Hormuz shipping: 'We think that the situation with Iran could end right after the (November 3) midterm elections, maybe before. I don't know. You never know.'",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "us-iran-threat-exchange-september-2026",
-      "story_title": "US-Iran threat exchange over a new American attack",
-      "claim_text": "Iran's Armed Forces issued a statement dismissing Trump's UNGA address as 'propaganda' and saying Tehran stands in 'full readiness to inflict more severe, crushing, and unpredictable blows on the aggressors.'",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "us-iran-threat-exchange-september-2026",
-      "story_title": "US-Iran threat exchange over a new American attack",
-      "claim_text": "Iran's General Staff, quoted via the Mehr news agency, accused Trump of using the UN platform to justify 'aggression' and called the threats 'not a sign of power but a sign of their strategic desperation.'",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "us-iran-aviation-sanctions-grounding",
-      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
-      "claim_text": "Treasury Secretary Scott Bessent said on CNBC Monday that 'On September 23, all the Iranian airlines will be shut down around the world,' warning that airports and companies providing fuel, landing services, or ticketing to Iranian carriers risk being cut off from the U.S. dollar",
-      "old_confidence": null,
-      "new_confidence": "corroborated",
-      "reason": "Claim entered as corroborated (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "us-iran-aviation-sanctions-grounding",
-      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
-      "claim_text": "Iraq ordered its civil aviation authority to suspend Iranian flights to Baghdad airport starting Wednesday, two sources told Reuters, after the U.S. threatened to sanction airports servicing Iranian carriers; Baghdad is discussing diverting Iranian Airways flights to Najaf airpor",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "us-iran-aviation-sanctions-grounding",
-      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
-      "claim_text": "Tasnim, citing Iran's Civil Aviation Organization, said flights from Tehran to Baghdad and Muscat are canceled starting Wednesday while remaining international flights including Istanbul operate on schedule; the organization told ISNA that Iranian travelers are not currently bein",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "oil-price-shock-september-2026",
-      "story_title": "Oil price shock (Brent above $100)",
-      "claim_text": "Brent fell to $99.18 and WTI to $90.17 on Sept 23, a sixth straight daily decline — Brent's longest losing streak in over a year and its first sub-$100 close since September 8.",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "oil-price-shock-september-2026",
-      "story_title": "Oil price shock (Brent above $100)",
-      "claim_text": "Saudi Arabia restarted its East-West pipeline to the Red Sea on Tuesday (rerouting ~4 million bpd to Yanbu), Iraq is exporting over 3 million bpd and expects to boost Turkey-route exports above 600,000 bpd, and U.S. crude inventories unexpectedly rose 1.8 million barrels.",
-      "old_confidence": null,
-      "new_confidence": "corroborated",
-      "reason": "Claim entered as corroborated (backfilled)",
-      "episode_id": "morning-2026-09-23"
-    },
-    {
-      "type": "confidence_change",
-      "date": "2026-09-23T11:19:09+00:00",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "story_title": "Attacks on commercial shipping in the Strait of Hormuz",
-      "claim_text": "Three commodity vessels transited the Strait of Hormuz on Tuesday (all exiting, including one Panamax tanker), down from 4 Monday and below the 10-day average of ~15, per Kpler data; LNG tanker Al Mafyar reappeared inside the strait after being last seen outside since Sept 19.",
-      "old_confidence": null,
-      "new_confidence": "reported",
-      "reason": "Claim entered as reported (backfilled)",
       "episode_id": "morning-2026-09-23"
     },
     {
