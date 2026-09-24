@@ -235,6 +235,7 @@
       line-height: 1.3;
     }
     .status-panel .metric-sub { color: #b8c5ce; }
+    .metric-period { display: block; margin-top: 3px; font-size: 11px; opacity: .8; }
     .status-pill {
       width: fit-content;
       display: inline-flex;
@@ -854,6 +855,7 @@
         <span class="metric-label">Hormuz traffic</span>
         <strong class="metric-value" id="traffic-value">—</strong>
         <span class="metric-sub" id="traffic-sub">Loading latest count…</span>
+        <span class="metric-sub metric-period" id="traffic-period" hidden></span>
       </article>
       <article class="snapshot-item">
         <span class="metric-label">Watchlist</span>
@@ -1023,6 +1025,21 @@
           ? { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Chicago", timeZoneName: "short" }
           : { month: "short", day: "numeric", year: "numeric", timeZone: "America/Chicago" };
         return new Intl.DateTimeFormat("en-US", options).format(date);
+      }
+
+      function formatPeriod(value) {
+        if (!value) return "";
+        function fmt(iso) {
+          var d = new Date(String(iso).trim() + "T12:00:00Z");
+          if (isNaN(d.getTime())) return String(iso).trim();
+          return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(d);
+        }
+        var parts = String(value).split("/").map(function (s) { return s.trim(); }).filter(Boolean);
+        if (parts.length > 1) {
+          var first = fmt(parts[0]).replace(/, (\d{4})$/, "");
+          return first + " to " + fmt(parts[parts.length - 1]);
+        }
+        return fmt(parts[0]);
       }
 
       function journeyDateMarkup(value) {
@@ -1555,6 +1572,10 @@
         if (traffic) {
           document.getElementById("traffic-value").textContent = String(traffic.value).replace(/\.0$/, "");
           document.getElementById("traffic-sub").textContent = traffic.unit + " · " + traffic.accuracy;
+          var periodEl = document.getElementById("traffic-period");
+          var periodLabel = formatPeriod(traffic.period);
+          if (periodLabel) { periodEl.textContent = periodLabel; periodEl.hidden = false; }
+          else { periodEl.hidden = true; }
         }
         document.getElementById("watch-value").textContent = board.watchlist.open + " open";
         document.getElementById("watch-sub").textContent = board.watchlist.resolved + " questions resolved";
