@@ -1,9 +1,119 @@
 {
   "format_version": "receipts-v1",
-  "generated_at": "2026-09-23T18:58:11.002010+00:00",
-  "episode_id": "morning-2026-09-23",
+  "generated_at": "2026-09-24T00:55:37.767119+00:00",
+  "episode_id": "evening-2026-09-23",
   "policy": "all resolutions publish, including misses and downgrades",
   "entries": [
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "strait-hormuz-shipping-attacks",
+      "story_title": "Ship attacks in the Strait of Hormuz",
+      "claim_text": "On Sept 23, the Antigua and Barbuda-flagged bulk carrier MV Cape Dao was hit by an unidentified projectile at about 06:30 UTC while transiting the Strait of Hormuz; the vessel caught fire and the crew abandoned ship.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "strait-hormuz-shipping-attacks",
+      "story_title": "Ship attacks in the Strait of Hormuz",
+      "claim_text": "Oman's Maritime Security Center said 27 crew members were evacuated from the Cape Dao, and India's embassy in Oman confirmed that one Indian sailor was killed.",
+      "old_confidence": null,
+      "new_confidence": "corroborated",
+      "reason": "Claim entered as corroborated",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "strait-hormuz-shipping-attacks",
+      "story_title": "Ship attacks in the Strait of Hormuz",
+      "claim_text": "Lloyd's List reported the Cape Dao was not on Iran's published list of vessels deemed non-compliant with its Hormuz transit rules, and no group has claimed responsibility for the strike.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "claim_text": "Iraq ordered its civil aviation authority to suspend Iranian flights to Baghdad airport starting midnight Wednesday Sept 23 under US sanctions pressure, with Baghdad discussing diverting Iran Air flights to Najaf.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "claim_text": "Iran's civil aviation organization said flights to Baghdad and Muscat are canceled from Wednesday Sept 23, while Istanbul routes continue as scheduled.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "claim_text": "SNSC secretary Mohsen Rezaei warned on Iranian state television that if neighboring countries cooperate with the US by stopping Iranian flights, Iran will ensure their own airports cannot function.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "unga-high-level-week-new-york",
+      "story_title": "UNGA High-Level Week: Iran's leaders granted US visas",
+      "claim_text": "Pezeshkian told the UN General Assembly on Sept 23 that Iran 'will not bow down,' refusing to yield on the nuclear program, missile defenses, or the Strait of Hormuz, while saying Iran is ready for dialogue 'without accepting the language of force.'",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "unga-high-level-week-new-york",
+      "story_title": "UNGA High-Level Week: Iran's leaders granted US visas",
+      "claim_text": "The UNGA hall had moderate turnout with no senior US representatives; one US official exited early during Pezeshkian's address, and Trump left New York on Tuesday night without meeting him.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "On Sept 23, messages were exchanged between the Witkoff-Kushner team and Foreign Minister Araghchi through Qatari mediators with no change in either side's position; Iran's terms remain ending the blockade, releasing Iranian oil revenues held overseas, and ending US aggression.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T00:26:21+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Secretary of State Marco Rubio cautioned Wednesday that no major breakthrough should be expected from the US-Iran talks.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-23"
+    },
     {
       "type": "watch_resolved",
       "date": "2026-09-23T11:19:52.145477+00:00",
