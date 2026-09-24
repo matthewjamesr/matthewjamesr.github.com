@@ -378,6 +378,29 @@
     .severity-chip.elevated { color: var(--amber-ink); background: var(--amber-soft); }
     .severity-chip.monitor { color: var(--teal-ink); background: var(--teal-soft); }
     .alert-copy { margin: 0; overflow: hidden; font-size: 12.5px; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
+    .alerts-support {
+      padding: 12px 18px 13px;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .alerts-support[hidden] { display: none; }
+    .alerts-toggle {
+      width: 100%;
+      min-height: 40px;
+      padding: 8px 12px;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 650;
+      text-align: left;
+    }
+    .alerts-toggle:hover { border-color: var(--amber); }
+    .alerts-toggle::after { content: "+"; float: right; color: var(--amber-ink); font-size: 18px; line-height: 1; }
+    .alerts-toggle[aria-expanded="true"]::after { content: "−"; }
+    .alerts-stale-note { margin: 9px 0 0; color: var(--faint); font-size: 11px; line-height: 1.4; }
+    .alerts-toggle[hidden], .alerts-stale-note[hidden] { display: none; }
     .confidence-key {
       display: flex;
       flex-wrap: wrap;
@@ -884,11 +907,15 @@
             <h2 id="alerts-title">Active alerts</h2>
             <p>What the reporting desk is watching next. Select an alert for detail and its related story.</p>
           </div>
-          <span class="panel-count" id="alerts-count">— open</span>
+          <span class="panel-count" id="alerts-count">— active</span>
         </div>
         <ul class="alerts-list" id="alerts-list">
           <li class="loading">Loading open watch questions…</li>
         </ul>
+        <div class="alerts-support" id="alerts-support" hidden>
+          <button class="alerts-toggle" id="alerts-toggle" type="button" aria-expanded="false" aria-controls="alerts-list" hidden>Show all active alerts</button>
+          <p class="alerts-stale-note" id="alerts-stale-note" hidden></p>
+        </div>
         <div class="legend" aria-label="Alert severity legend">
           <span class="critical-key"><b></b>Critical — immediate operational risk</span>
           <span class="elevated-key"><b></b>Elevated — market or policy impact</span>
@@ -977,6 +1004,7 @@
       var visibleClaims = 12;
       var receiptsPage = 1;
       var receiptsPerPage = 10;
+      var alertsExpanded = false;
       var drawerReturnFocus = null;
       var backgroundScrollLock = {
         active: false,
@@ -1475,6 +1503,34 @@
         unlockBackgroundScroll();
       }
 
+      function renderAlerts() {
+        var alerts = (boardData && boardData.alerts) || [];
+        var configuredDefault = Number(boardData && boardData.alerts_display_default);
+        var defaultCount = configuredDefault > 0 ? Math.min(alerts.length, Math.floor(configuredDefault)) : Math.min(alerts.length, 5);
+        var visibleAlerts = alertsExpanded ? alerts : alerts.slice(0, defaultCount);
+        var staleExcluded = Math.max(0, Math.floor(Number(boardData && boardData.alerts_stale_excluded) || 0));
+        var toggle = document.getElementById("alerts-toggle");
+        var staleNote = document.getElementById("alerts-stale-note");
+        var support = document.getElementById("alerts-support");
+
+        document.getElementById("alerts-count").textContent = alerts.length + " active";
+        document.getElementById("alerts-list").innerHTML = alerts.length ? visibleAlerts.map(function (alert, index) {
+          var severity = severityForAlert(alert);
+          return '<li class="alert-row ' + severity + '" tabindex="0" role="button" data-alert-index="' + index + '" aria-label="Open alert details: ' + esc(alert.question) + '">' +
+            '<span class="severity-chip ' + severity + '">' + severityLabel(severity) + '</span>' +
+            '<p class="alert-copy">' + esc(alert.question) + '</p>' +
+            '<span class="row-arrow" aria-hidden="true">›</span>' +
+          '</li>';
+        }).join("") : '<li class="empty">No active alerts are listed in this snapshot.</li>';
+
+        toggle.hidden = alerts.length <= defaultCount;
+        toggle.setAttribute("aria-expanded", String(alertsExpanded));
+        toggle.textContent = alertsExpanded ? "Show fewer" : "Show all " + alerts.length + " active alerts";
+        staleNote.hidden = staleExcluded === 0;
+        staleNote.textContent = staleExcluded + " older " + (staleExcluded === 1 ? "question" : "questions") + " aged off this view after 5 editions unanswered";
+        support.hidden = toggle.hidden && staleNote.hidden;
+      }
+
       function renderBoard(board, activity) {
         boardData = board;
         activityData = activity;
@@ -1524,16 +1580,8 @@
           '</li>';
         }).join("") : '<li class="empty">No active stories are listed in this snapshot.</li>';
 
-        var alerts = board.alerts || [];
-        document.getElementById("alerts-count").textContent = alerts.length + " open";
-        document.getElementById("alerts-list").innerHTML = alerts.length ? alerts.map(function (alert, index) {
-          var severity = severityForAlert(alert);
-          return '<li class="alert-row ' + severity + '" tabindex="0" role="button" data-alert-index="' + index + '" aria-label="Open alert details: ' + esc(alert.question) + '">' +
-            '<span class="severity-chip ' + severity + '">' + severityLabel(severity) + '</span>' +
-            '<p class="alert-copy">' + esc(alert.question) + '</p>' +
-            '<span class="row-arrow" aria-hidden="true">›</span>' +
-          '</li>';
-        }).join("") : '<li class="empty">No active alerts are listed in this snapshot.</li>';
+        alertsExpanded = false;
+        renderAlerts();
       }
 
       function renderReceiptsPage() {
@@ -1672,6 +1720,10 @@
         renderClaims();
       });
       document.getElementById("claims-more").addEventListener("click", function () { visibleClaims += 12; renderClaims(); });
+      document.getElementById("alerts-toggle").addEventListener("click", function () {
+        alertsExpanded = !alertsExpanded;
+        renderAlerts();
+      });
 
       function activateRows(container, selector, action) {
         container.addEventListener("click", function (event) {
