@@ -1,6 +1,6 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-24T11:56:02.065361+00:00",
+  "generated_at": "2026-09-24T12:54:02.599098+00:00",
   "episode_id": "morning-2026-09-24",
   "as_of_date": "2026-09-24",
   "hormuz": {
@@ -9,16 +9,16 @@
   },
   "markets": {
     "market.brent_usd": {
-      "value": 99.18,
+      "value": 105.44,
       "unit": "USD/bbl",
       "accuracy": "corroborated",
-      "episode_id": "evening-2026-09-23"
+      "episode_id": "morning-2026-09-24"
     },
     "market.wti_usd": {
-      "value": 90.17,
+      "value": 93.67,
       "unit": "USD/bbl",
-      "accuracy": "reported",
-      "episode_id": "evening-2026-09-23"
+      "accuracy": "corroborated",
+      "episode_id": "morning-2026-09-24"
     }
   },
   "traffic": {
