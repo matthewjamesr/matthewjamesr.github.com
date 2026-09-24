@@ -1,9 +1,20 @@
 {
   "format_version": "receipts-v1",
-  "generated_at": "2026-09-24T11:56:02.139767+00:00",
+  "generated_at": "2026-09-24T14:35:25.663697+00:00",
   "episode_id": "morning-2026-09-24",
   "policy": "all resolutions publish, including misses and downgrades",
   "entries": [
+    {
+      "type": "confidence_change",
+      "date": "2026-09-24T14:35:07.233435+00:00",
+      "story_id": "oil-price-shock-september-2026",
+      "story_title": "Oil price shock (Brent above $100)",
+      "claim_text": "Thesis check: Brent crude is trading above $100/bbl (oil price shock condition).",
+      "old_confidence": "unconfirmed",
+      "new_confidence": "confirmed",
+      "reason": "Threshold engine: market.brent_usd = 105.44 USD/bbl >= 100.0 (period 2026-09-24, accuracy corroborated, morning-2026-09-24) — thesis holds.",
+      "episode_id": "morning-2026-09-24"
+    },
     {
       "type": "confidence_change",
       "date": "2026-09-24T11:21:02+00:00",
