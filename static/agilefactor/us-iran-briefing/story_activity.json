@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-24T17:39:34.947181+00:00",
+ "generated_at": "2026-09-25T00:55:45.571253+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -92,6 +92,10 @@
   },
   {
    "episode_id": "morning-2026-09-24",
+   "date": "2026-09-24"
+  },
+  {
+   "episode_id": "evening-2026-09-24",
    "date": "2026-09-24"
   }
  ],
@@ -743,7 +747,7 @@
    "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
    "status": "active",
    "category": "military",
-   "claim_count": 68,
+   "claim_count": 71,
    "first_episode_id": "evening-2026-09-12",
    "last_episode_id": "evening-2026-09-19",
    "activity": [
@@ -835,6 +839,12 @@
      "episode_id": "evening-2026-09-21",
      "new_claims": 6,
      "conf_changes": 2,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-24",
+     "new_claims": 3,
+     "conf_changes": 0,
      "watch_events": 0
     }
    ],
@@ -1382,6 +1392,30 @@
      "confidence": "reported",
      "created_at": "2026-09-22T01:00:00+00:00",
      "episode_id": "evening-2026-09-21"
+    },
+    {
+     "claim_id": "6cfb6ad5-b6d0-4b10-8955-cd2c0189012b",
+     "text": "Yemen's Houthis fired six ballistic missiles at Saudi Arabia on Sept 24, and the Saudi-led coalition said its air defenses intercepted all six.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "58f3f432-df37-42ab-b8d0-f16a2ecc5441",
+     "text": "The Sept 24 Houthi missile salvo targeted Taif province and the Yanbu area on the Red Sea, home to Saudi Arabia's major Red Sea oil export hub.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "70df13de-9409-4a7b-aed7-fdc488cac15b",
+     "text": "No damage was reported from the Sept 24 Houthi missile interceptions over Saudi Arabia.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
     }
    ]
   },
@@ -1425,7 +1459,7 @@
    "title": "Oil price shock (Brent above $100)",
    "status": "active",
    "category": "energy",
-   "claim_count": 54,
+   "claim_count": 57,
    "first_episode_id": "evening-2026-09-12",
    "last_episode_id": "morning-2026-09-19",
    "activity": [
@@ -1548,6 +1582,12 @@
      "new_claims": 1,
      "conf_changes": 1,
      "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-24",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 1
     }
    ],
    "claims": [
@@ -1982,6 +2022,30 @@
      "confidence": "confirmed",
      "created_at": "2026-09-24T14:34:58.800972+00:00",
      "episode_id": "morning-2026-09-24"
+    },
+    {
+     "claim_id": "25b06844-32f8-4a34-b09f-e67a066a2dee",
+     "text": "No U.S. diesel export ban or curbs are in effect: Energy Secretary Chris Wright said a ban 'would not work,' favors voluntary measures, and said 'nobody is considering a flat ban'; no decisions have been made, with announcements expected in the coming days.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "40000393-a5fd-48e6-9ff3-5fa4c4355fae",
+     "text": "The White House denied Politico's report of a 90-day diesel export ban as 'fake news'; Bloomberg had reported Wright told oil-industry leaders late Tuesday to brace for possible curbs.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "a96e2551-18a2-4fcb-b1c2-4d46e48d2285",
+     "text": "Average U.S. diesel is $6.52 a gallon, up 76% from a year ago; diesel futures fell about 5% on Sept 24 after the ban denial.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
     }
    ]
   },
@@ -2383,7 +2447,7 @@
    "title": "Trump's Iran war endgame remarks",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 15,
+   "claim_count": 18,
    "first_episode_id": "evening-2026-09-13",
    "last_episode_id": "morning-2026-09-18",
    "activity": [
@@ -2432,6 +2496,12 @@
     {
      "episode_id": "morning-2026-09-23",
      "new_claims": 1,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-24",
+     "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -2556,6 +2626,30 @@
      "confidence": "reported",
      "created_at": "2026-09-23T12:00:00+00:00",
      "episode_id": "morning-2026-09-23"
+    },
+    {
+     "claim_id": "6ed000a2-0a8b-45d3-8e16-038d9811248f",
+     "text": "President Masoud Pezeshkian told Fox News' Bret Baier in an interview aired Sept 24: 'But we do not wish to continue. It's America that must choose whether it wants to end this or not.'",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "9b23613b-e21b-462f-85b7-d101b0704def",
+     "text": "Pezeshkian's Fox News interview followed Donald Trump's Tuesday threat to 'annihilate' Iran, after which Trump suggested a deal could come soon.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "c0cd80ec-5a20-43ba-a258-e23040e08f34",
+     "text": "Secretary of State Marco Rubio said Sept 24 that an Iran deal would require 'hard work over a period of time' and that U.S. military options remain on the table.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
     }
    ]
   },
@@ -4255,6 +4349,143 @@
      "confidence": "reported",
      "created_at": "2026-09-24T00:26:21+00:00",
      "episode_id": "evening-2026-09-23"
+    }
+   ]
+  },
+  {
+   "story_id": "uae-bank-melli-iran-cutoff",
+   "title": "UAE cuts Bank Melli Iran out of its financial system",
+   "status": "active",
+   "category": "economy",
+   "claim_count": 4,
+   "first_episode_id": "evening-2026-09-24",
+   "last_episode_id": "evening-2026-09-24",
+   "activity": [
+    {
+     "episode_id": "evening-2026-09-24",
+     "new_claims": 4,
+     "conf_changes": 0,
+     "watch_events": 0
+    }
+   ],
+   "claims": [
+    {
+     "claim_id": "126bc8f0-c6cd-427e-9a1b-f5bf42bc9312",
+     "text": "The UAE Central Bank prohibited Bank Melli Iran from conducting any financial transactions to and from Iran, acting after the U.S. Treasury called for all of the bank's foreign branches to be closed.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "ff0f1a24-d96d-4f08-8a75-66617edacafd",
+     "text": "The UAE cited money-laundering, terrorist-financing and proliferation-financing violations; Bank Melli operates seven to eight branches across the emirates, with its main office in Dubai.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "05b05a06-4a76-490c-a9a4-38c0de1377ba",
+     "text": "The UAE had already suspended trade and financial relations with Iran on August 18; the emirates are a major gateway for Iranian goods and finance.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "1104514f-c831-401c-a0e1-ae7d3773fcde",
+     "text": "Washington announced an extension of U.S. financial sanctions targeting third-country companies that do business with Iranian firms.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    }
+   ]
+  },
+  {
+   "story_id": "araghchi-impeachment-motion",
+   "title": "Impeachment motion against Iranian FM Abbas Araghchi",
+   "status": "active",
+   "category": "domestic-ir",
+   "claim_count": 3,
+   "first_episode_id": "evening-2026-09-24",
+   "last_episode_id": "evening-2026-09-24",
+   "activity": [
+    {
+     "episode_id": "evening-2026-09-24",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 0
+    }
+   ],
+   "claims": [
+    {
+     "claim_id": "31df1e1e-dffc-4bd1-8952-870cd047bc3f",
+     "text": "Iranian media report that an impeachment motion against Foreign Minister Abbas Araghchi was formally submitted in Iran's parliament on Sept 24 over his Sept 22 meeting with U.S. envoy Steve Witkoff in New York; no vetted international outlet has confirmed the motion.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "35c931a3-d8bb-4a10-88e2-3cace62511ef",
+     "text": "The reported sponsors of the Araghchi impeachment motion are inconsistent across accounts \u2014 Ali Khezrian and Amirhossein Sabeti in one report, Ebrahim Rezaei in another \u2014 so the motion's details remain unconfirmed.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "063a6e6a-89ea-4902-908d-f170799d0d43",
+     "text": "IRGC-affiliated Tasnim called Araghchi's contact with Witkoff 'a major mistake' contrary to national interests and said he should be held accountable before the relevant institutions.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    }
+   ]
+  },
+  {
+   "story_id": "seized-iranian-tankers-atlantic",
+   "title": "U.S.-seized Iranian oil tankers cross the Atlantic toward the U.S.",
+   "status": "active",
+   "category": "military",
+   "claim_count": 3,
+   "first_episode_id": "evening-2026-09-24",
+   "last_episode_id": "evening-2026-09-24",
+   "activity": [
+    {
+     "episode_id": "evening-2026-09-24",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 0
+    }
+   ],
+   "claims": [
+    {
+     "claim_id": "6866535d-689b-41c3-a66e-c25bacbc764c",
+     "text": "Three U.S.-seized tankers carrying nearly six million barrels of Iranian crude worth roughly $600 million are crossing the Atlantic toward the United States, per ship-tracking data from @TankerTrackers cited in wire reporting.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "e1b9fd47-7499-4ad0-bbf5-5f7c5da9005a",
+     "text": "The Majestic X and Tifani, seized by the U.S. in April after loading oil in Iran, were off Brazil's northern coast on Sept 24; the supertanker Lenore, seized in early June in the Indian Ocean, entered the Atlantic on Sept 23.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "762359e5-0316-458c-ac8a-af2797eced4f",
+     "text": "Neither seized tanker shows a destination on its transponder, and Washington has not announced what will happen to the oil when the vessels arrive.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T00:35:22+00:00",
+     "episode_id": "evening-2026-09-24"
     }
    ]
   }
