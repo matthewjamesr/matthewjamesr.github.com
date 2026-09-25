@@ -1098,8 +1098,11 @@
       function severityLabel(value) { return value === "monitor" ? "Monitor" : value.charAt(0).toUpperCase() + value.slice(1); }
 
       function currentStoryState(storyId, story) {
+        // A claim birth (old_confidence null) is not a confidence change for the
+        // story: a new claim entering as "reported" must not reset the story's
+        // displayed state. Only genuine changes (old -> new) move the needle.
         var latestTransition = receiptsForStory(storyId).filter(function (entry) {
-          return entry.type === "confidence_change";
+          return entry.type === "confidence_change" && entry.old_confidence !== null && String(entry.old_confidence || "").trim() !== "";
         }).slice().sort(function (a, b) {
           return new Date(b.date || 0) - new Date(a.date || 0);
         })[0];
@@ -1638,11 +1641,14 @@
         var pageEntries = entries.slice(start, start + receiptsPerPage);
         list.innerHTML = pageEntries.map(function (entry) {
           var isChange = entry.type === "confidence_change";
-          var label = isChange ? "Confidence" : "Resolved";
+          var isBirth = isChange && (entry.old_confidence === null || String(entry.old_confidence || "").trim() === "");
+          var label = isChange ? (isBirth ? "New claim" : "Confidence") : "Resolved";
           var body = isChange ? entry.claim_text : entry.question;
           var detail = isChange ? entry.reason : entry.resolution_text;
           var badges = isChange
-            ? statePill(entry.old_confidence) + '<span class="change-arrow" aria-hidden="true">→</span>' + statePill(entry.new_confidence)
+            ? (isBirth
+              ? '<span class="state-pill ' + normalizedState(entry.new_confidence) + '">entered as ' + esc(normalizedState(entry.new_confidence)) + '</span>'
+              : statePill(entry.old_confidence) + '<span class="change-arrow" aria-hidden="true">→</span>' + statePill(entry.new_confidence))
             : '<span class="state-pill confirmed">resolved</span>';
           return '<article class="receipt-row">' +
             '<div class="receipt-kind"><span class="metric-label">' + label + '</span><span class="receipt-date">' + esc(displayDate(entry.date, false)) + '</span></div>' +
