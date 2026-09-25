@@ -530,6 +530,19 @@
     .receipt-group-items { border-top: 1px solid var(--line); }
     .receipt-group-head[aria-expanded="false"] + .receipt-group-items { display: none; }
     .receipt-row.nested { grid-template-columns: 168px minmax(0, 1fr); padding: 14px 20px 14px 34px; }
+    .receipts-toolbar { display: flex; justify-content: flex-end; padding: 10px 20px 0; }
+    .receipts-toolbar[hidden] { display: none; }
+    .toggle-all-btn {
+      background: transparent;
+      border: 0;
+      padding: 6px 4px;
+      color: var(--muted);
+      font: 600 12px/1.4 inherit;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .toggle-all-btn:hover { color: var(--amber); }
     .state-pill {
       display: inline-flex;
       align-items: center;
@@ -952,6 +965,9 @@
       </div>
       <div class="verification-body">
         <div class="verification-panel" id="panel-receipts" role="tabpanel" aria-labelledby="tab-receipts">
+          <div class="receipts-toolbar" id="receipts-toolbar">
+            <button class="toggle-all-btn" id="receipts-toggle-all" type="button">Collapse all</button>
+          </div>
           <div id="receipts-list"><div class="loading">Loading the verification trail…</div></div>
           <nav class="receipts-pagination" id="receipts-pagination" aria-label="Receipts pages" hidden>
             <p class="receipts-page-status" id="receipts-page-status" aria-live="polite"></p>
@@ -1026,6 +1042,7 @@
       var receiptsPage = 1;
       var receiptsPerPage = 10;
       var receiptsGroupCount = 0;
+      var receiptsAllExpanded = true;
       var alertsPage = 1;
       var alertsPerPage = 10;
       var drawerReturnFocus = null;
@@ -1656,11 +1673,14 @@
         var entries = (receiptsData.entries || []).slice().sort(function (a, b) { return new Date(b.date || 0) - new Date(a.date || 0); });
         var list = document.getElementById("receipts-list");
         var pagination = document.getElementById("receipts-pagination");
+        var toolbar = document.getElementById("receipts-toolbar");
         if (!entries.length) {
           list.innerHTML = '<div class="empty">No verification changes are recorded for this snapshot.</div>';
           pagination.hidden = true;
+          toolbar.hidden = true;
           return;
         }
+        toolbar.hidden = false;
         var groups = [];
         var groupByKey = {};
         entries.forEach(function (entry) {
@@ -1700,7 +1720,7 @@
           var countLabel = group.items.length === 1 ? "1 receipt" : group.items.length + " receipts";
           var latestDate = esc(displayDate(group.items[0].date, true));
           return '<section class="receipt-group">' +
-            '<button class="receipt-group-head" type="button" data-receipts-group aria-expanded="true">' +
+            '<button class="receipt-group-head" type="button" data-receipts-group aria-expanded="' + receiptsAllExpanded + '">' +
               '<span class="receipt-group-title">' + esc(group.title) + '</span>' +
               '<span class="receipt-group-meta"><span class="stat-chip">' + countLabel + '</span><span class="receipt-date">' + latestDate + '</span></span>' +
               '<span class="row-arrow" aria-hidden="true">›</span>' +
@@ -1712,6 +1732,14 @@
         document.getElementById("receipts-page-status").textContent = "Page " + receiptsPage + " of " + pageCount + " · stories " + (start + 1) + "–" + Math.min(start + receiptsPerPage, groups.length) + " of " + groups.length + " · " + entries.length + " receipts";
         document.getElementById("receipts-previous").disabled = receiptsPage === 1;
         document.getElementById("receipts-next").disabled = receiptsPage === pageCount;
+        updateReceiptsToggleLabel();
+      }
+
+      function updateReceiptsToggleLabel() {
+        var heads = document.querySelectorAll('#receipts-list [data-receipts-group]');
+        var collapsed = 0;
+        for (var i = 0; i < heads.length; i++) if (heads[i].getAttribute("aria-expanded") === "false") collapsed++;
+        document.getElementById("receipts-toggle-all").textContent = (heads.length && collapsed === heads.length) ? "Expand all" : "Collapse all";
       }
 
       function renderReceipts(receipts) {
@@ -1794,6 +1822,14 @@
         if (!head) return;
         var expanded = head.getAttribute("aria-expanded") === "true";
         head.setAttribute("aria-expanded", String(!expanded));
+        updateReceiptsToggleLabel();
+      });
+      document.getElementById("receipts-toggle-all").addEventListener("click", function () {
+        var heads = document.querySelectorAll('#receipts-list [data-receipts-group]');
+        var expand = this.textContent === "Expand all";
+        receiptsAllExpanded = expand;
+        for (var i = 0; i < heads.length; i++) heads[i].setAttribute("aria-expanded", String(expand));
+        updateReceiptsToggleLabel();
       });
       document.getElementById("receipts-previous").addEventListener("click", function () {
         if (receiptsPage <= 1) return;
