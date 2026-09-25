@@ -507,6 +507,29 @@
     .receipt-copy h3 { margin: 0 0 5px; font-size: 16px; line-height: 1.2; }
     .receipt-copy p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.42; }
     .receipt-copy .reason { margin-top: 8px; color: var(--ink); }
+    .receipt-group { border-bottom: 1px solid var(--line); }
+    .receipt-group:last-child { border-bottom: 0; }
+    .receipt-group-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 15px 20px;
+      background: transparent;
+      border: 0;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+    .receipt-group-head:hover .receipt-group-title { color: var(--amber); }
+    .receipt-group-title { flex: 1 1 auto; min-width: 0; font-size: 16px; font-weight: 700; line-height: 1.25; }
+    .receipt-group-meta { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+    .receipt-group-head .row-arrow { font-size: 22px; transition: transform 160ms ease; }
+    .receipt-group-head[aria-expanded="false"] .row-arrow { transform: rotate(-90deg); }
+    .receipt-group-items { border-top: 1px solid var(--line); }
+    .receipt-group-head[aria-expanded="false"] + .receipt-group-items { display: none; }
+    .receipt-row.nested { grid-template-columns: 168px minmax(0, 1fr); padding: 14px 20px 14px 34px; }
     .state-pill {
       display: inline-flex;
       align-items: center;
@@ -774,6 +797,8 @@
       .tabs { width: 100%; }
       .tab { flex: 1; }
       .receipt-row { grid-template-columns: 1fr; gap: 9px; padding: 16px; }
+      .receipt-row.nested { padding: 14px 16px; }
+      .receipt-group-head { flex-wrap: wrap; gap: 8px; padding: 13px 16px; }
       .receipts-pagination { align-items: stretch; flex-direction: column; padding: 13px 16px; }
       .alerts-support { align-items: stretch; flex-direction: column; padding-inline: 16px; }
       .alerts-pagination { align-items: stretch; flex-direction: column; width: 100%; margin-left: 0; }
@@ -1000,6 +1025,7 @@
       var claimsPerPage = 10;
       var receiptsPage = 1;
       var receiptsPerPage = 10;
+      var receiptsGroupCount = 0;
       var alertsPage = 1;
       var alertsPerPage = 10;
       var drawerReturnFocus = null;
@@ -1635,28 +1661,55 @@
           pagination.hidden = true;
           return;
         }
-        var pageCount = Math.ceil(entries.length / receiptsPerPage);
+        var groups = [];
+        var groupByKey = {};
+        entries.forEach(function (entry) {
+          var key = receiptStoryId(entry) || entry.story_title || "untitled";
+          if (!groupByKey[key]) {
+            groupByKey[key] = { title: entry.story_title || entry.story_id || "Untitled story", items: [], latest: 0 };
+            groups.push(groupByKey[key]);
+          }
+          var group = groupByKey[key];
+          group.items.push(entry);
+          var ts = new Date(entry.date || 0).getTime();
+          if (!isNaN(ts) && ts > group.latest) group.latest = ts;
+        });
+        groups.sort(function (a, b) { return b.latest - a.latest; });
+        receiptsGroupCount = groups.length;
+        var pageCount = Math.ceil(groups.length / receiptsPerPage);
         receiptsPage = Math.min(Math.max(receiptsPage, 1), pageCount);
         var start = (receiptsPage - 1) * receiptsPerPage;
-        var pageEntries = entries.slice(start, start + receiptsPerPage);
-        list.innerHTML = pageEntries.map(function (entry) {
-          var isChange = entry.type === "confidence_change";
-          var isBirth = isChange && (entry.old_confidence === null || String(entry.old_confidence || "").trim() === "");
-          var label = isChange ? (isBirth ? "New claim" : "Confidence") : "Resolved";
-          var body = isChange ? entry.claim_text : entry.question;
-          var detail = isChange ? entry.reason : entry.resolution_text;
-          var badges = isChange
-            ? (isBirth
-              ? '<span class="state-pill ' + normalizedState(entry.new_confidence) + '">entered as ' + esc(normalizedState(entry.new_confidence)) + '</span>'
-              : statePill(entry.old_confidence) + '<span class="change-arrow" aria-hidden="true">→</span>' + statePill(entry.new_confidence))
-            : '<span class="state-pill confirmed">resolved</span>';
-          return '<article class="receipt-row">' +
-            '<div class="receipt-kind"><span class="metric-label">' + label + '</span><span class="receipt-date">' + esc(displayDate(entry.date, false)) + '</span></div>' +
-            '<div class="receipt-copy"><h3>' + esc(entry.story_title || entry.story_id) + '</h3><p>' + esc(body) + '</p><p class="reason">' + badges + ' ' + esc(detail) + '</p></div>' +
-          '</article>';
+        var pageGroups = groups.slice(start, start + receiptsPerPage);
+        list.innerHTML = pageGroups.map(function (group) {
+          var rows = group.items.map(function (entry) {
+            var isChange = entry.type === "confidence_change";
+            var isBirth = isChange && (entry.old_confidence === null || String(entry.old_confidence || "").trim() === "");
+            var label = isChange ? (isBirth ? "New claim" : "Confidence") : "Resolved";
+            var body = isChange ? entry.claim_text : entry.question;
+            var badges = isChange
+              ? (isBirth
+                ? '<span class="state-pill ' + normalizedState(entry.new_confidence) + '">entered as ' + esc(normalizedState(entry.new_confidence)) + '</span>'
+                : statePill(entry.old_confidence) + '<span class="change-arrow" aria-hidden="true">→</span>' + statePill(entry.new_confidence))
+              : '<span class="state-pill confirmed">resolved</span>';
+            var detail = isBirth ? "" : esc(isChange ? entry.reason : entry.resolution_text);
+            return '<article class="receipt-row nested">' +
+              '<div class="receipt-kind"><span class="metric-label">' + label + '</span><span class="receipt-date">' + esc(displayDate(entry.date, true)) + '</span></div>' +
+              '<div class="receipt-copy"><p>' + esc(body) + '</p><p class="reason">' + badges + (detail ? ' ' + detail : "") + '</p></div>' +
+            '</article>';
+          }).join("");
+          var countLabel = group.items.length === 1 ? "1 receipt" : group.items.length + " receipts";
+          var latestDate = esc(displayDate(group.items[0].date, true));
+          return '<section class="receipt-group">' +
+            '<button class="receipt-group-head" type="button" data-receipts-group aria-expanded="true">' +
+              '<span class="receipt-group-title">' + esc(group.title) + '</span>' +
+              '<span class="receipt-group-meta"><span class="stat-chip">' + countLabel + '</span><span class="receipt-date">' + latestDate + '</span></span>' +
+              '<span class="row-arrow" aria-hidden="true">›</span>' +
+            '</button>' +
+            '<div class="receipt-group-items">' + rows + '</div>' +
+          '</section>';
         }).join("");
         pagination.hidden = pageCount <= 1;
-        document.getElementById("receipts-page-status").textContent = "Page " + receiptsPage + " of " + pageCount + " · receipts " + (start + 1) + "–" + Math.min(start + receiptsPerPage, entries.length) + " of " + entries.length;
+        document.getElementById("receipts-page-status").textContent = "Page " + receiptsPage + " of " + pageCount + " · stories " + (start + 1) + "–" + Math.min(start + receiptsPerPage, groups.length) + " of " + groups.length + " · " + entries.length + " receipts";
         document.getElementById("receipts-previous").disabled = receiptsPage === 1;
         document.getElementById("receipts-next").disabled = receiptsPage === pageCount;
       }
@@ -1736,13 +1789,19 @@
 
       document.getElementById("tab-receipts").addEventListener("click", function () { setTab("receipts"); });
       document.getElementById("tab-claims").addEventListener("click", function () { setTab("claims"); });
+      document.getElementById("receipts-list").addEventListener("click", function (event) {
+        var head = event.target.closest("[data-receipts-group]");
+        if (!head) return;
+        var expanded = head.getAttribute("aria-expanded") === "true";
+        head.setAttribute("aria-expanded", String(!expanded));
+      });
       document.getElementById("receipts-previous").addEventListener("click", function () {
         if (receiptsPage <= 1) return;
         receiptsPage -= 1;
         renderReceiptsPage();
       });
       document.getElementById("receipts-next").addEventListener("click", function () {
-        var pageCount = Math.ceil((receiptsData.entries || []).length / receiptsPerPage);
+        var pageCount = Math.max(1, Math.ceil(receiptsGroupCount / receiptsPerPage));
         if (receiptsPage >= pageCount) return;
         receiptsPage += 1;
         renderReceiptsPage();
