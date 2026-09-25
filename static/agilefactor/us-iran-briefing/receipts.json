@@ -1,9 +1,148 @@
 {
   "format_version": "receipts-v1",
-  "generated_at": "2026-09-25T00:55:45.499072+00:00",
-  "episode_id": "evening-2026-09-24",
+  "generated_at": "2026-09-25T11:55:41.293453+00:00",
+  "episode_id": "morning-2026-09-25",
   "policy": "all resolutions publish, including misses and downgrades",
   "entries": [
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "turkey-saudi-defence-pact",
+      "story_title": "Turkey-Saudi Arabia-Pakistan defense pact",
+      "claim_text": "Saudi Arabia, Turkey and Pakistan agreed on Sept 25 to hold an urgent meeting of their military chiefs of staff to discuss support for Saudi Arabia, after their foreign ministers met on the UN General Assembly sidelines in New York on Sept 24 under the Mecca Joint Defence Agreeme",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "story_title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
+      "claim_text": "The Houthis fired dozens of missiles and drones at Saudi targets on Sept 24, and Saudi Arabia issued civil-defence emergency alerts for Mecca, Jeddah, Yanbu, Taif and Tabuk.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "story_title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
+      "claim_text": "Houthi military spokesman Yahya Saree claimed on Sept 24 that the group attacked a 'sensitive target' in Riyadh and Aramco facilities in Yanbu and 'achieved their objectives'; Saudi Arabia has confirmed intercepts but has not confirmed any strike on Riyadh, and no civil-defence a",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "story_title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
+      "claim_text": "Saudi Arabia's Grand Mufti called on soldiers on Sept 24 to be ready to 'lay down their lives' to fight the Houthis until the group is ousted, in a statement posted on the official Saudi Press Agency late Thursday.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "story_title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
+      "claim_text": "The Institute for the Study of War reported that a Greek military-operated Patriot battery intercepted a Houthi drone over Yanbu on Sept 24.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "china-imagery-jordan-base-attack",
+      "story_title": "Report: Chinese entities supplied Iran satellite imagery before July Jordan base attack",
+      "claim_text": "U.S. intelligence assessments say Chinese groups are providing satellite imagery and geospatial data that has sharpened Iran's targeting of American sites — support judged decisive in the July strike on the U.S. base in Jordan that killed three American service members — and now ",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "china-imagery-jordan-base-attack",
+      "story_title": "Report: Chinese entities supplied Iran satellite imagery before July Jordan base attack",
+      "claim_text": "President Trump is hosting China's Xi Jinping at the White House Sept 24–25 — a state dinner Thursday plus Friday meetings — with the trade-war truce extended from November 10 to January 10, and Iran and Hormuz on the summit agenda.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Iranian Foreign Minister Abbas Araghchi said on Sept 24 that Tehran conveyed a proposal to the United States via intermediaries: an end to hostilities on all fronts including Lebanon within seven days, with Washington lifting the port blockade, releasing frozen funds and waiving ",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "claim_text": "The UAE's aviation authority suspended all Iranian airline flights until further notice on Sept 24, and Oman joined the ban — the first major fallout of the U.S. post-September 23 policy of sanctioning third-country companies that do business with Iranian airlines.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "story_title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
+      "claim_text": "President Pezeshkian told Fox News on Sept 24 that 'The Houthis are responsible for their own actions,' distancing Iran from the Houthi offensive, even as multiple outlets report the IRGC directly guided the group's Red Sea coast offensive.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "story_title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
+      "claim_text": "The Associated Press and Reuters reported, citing Yemeni government, Iranian and regional sources, that the Houthi capture of Yemen's Red Sea coast in under 48 hours was carried out with 'direct guidance from Iran's Islamic Revolutionary Guard Corps,' which the AP called Iran's m",
+      "old_confidence": null,
+      "new_confidence": "corroborated",
+      "reason": "Claim entered as corroborated",
+      "episode_id": "morning-2026-09-25"
+    },
+    {
+      "type": "watch_resolved",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "story_title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "question": "Do other Gulf and regional airports follow Baghdad in suspending Iranian flights today, and does Tehran's remaining international network (Istanbul and others) hold?",
+      "resolution_text": "Answered Sept 24–25: the UAE's aviation authority suspended all Iranian airline flights until further notice, and Oman joined the ban, per Reuters — the first major fallout of the U.S. post-September 23 policy of sanctioning third-country companies doing business with Iranian airlines. Iraq's earlier Baghdad suspension stands; Istanbul routes reportedly continue.",
+      "resolved_in_episode": "morning-2026-09-25"
+    },
+    {
+      "type": "watch_resolved",
+      "date": "2026-09-25T11:31:00+00:00",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "story_title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
+      "question": "Does the Sept 24 Houthi missile salvo draw a Saudi or American response, or was the interception the end of it?",
+      "resolution_text": "Answered Sept 25: rather than retaliatory strikes, Saudi Arabia, Turkey and Pakistan agreed an urgent meeting of their military chiefs of staff under the Mecca Joint Defence Agreement — the pact's first concrete military move — while Saudi Arabia's Grand Mufti issued a public call to arms via the Saudi Press Agency. No U.S. strikes against the Houthis were reported.",
+      "resolved_in_episode": "morning-2026-09-25"
+    },
     {
       "type": "confidence_change",
       "date": "2026-09-25T00:35:22+00:00",
