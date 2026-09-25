@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-25T00:55:45.571253+00:00",
+ "generated_at": "2026-09-25T11:55:41.364187+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -97,6 +97,10 @@
   {
    "episode_id": "evening-2026-09-24",
    "date": "2026-09-24"
+  },
+  {
+   "episode_id": "morning-2026-09-25",
+   "date": "2026-09-25"
   }
  ],
  "stories": [
@@ -105,9 +109,9 @@
    "title": "Diplomacy over reopening the Strait of Hormuz",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 38,
+   "claim_count": 39,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "morning-2026-09-24",
+   "last_episode_id": "morning-2026-09-25",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -172,6 +176,12 @@
     {
      "episode_id": "morning-2026-09-24",
      "new_claims": 2,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-25",
+     "new_claims": 1,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -480,6 +490,14 @@
      "confidence": "reported",
      "created_at": "2026-09-24T11:21:02+00:00",
      "episode_id": "morning-2026-09-24"
+    },
+    {
+     "claim_id": "0b36bc63-b05b-43ae-87c1-e1c9e2b02073",
+     "text": "Iranian Foreign Minister Abbas Araghchi said on Sept 24 that Tehran conveyed a proposal to the United States via intermediaries: an end to hostilities on all fronts including Lebanon within seven days, with Washington lifting the port blockade, releasing frozen funds and waiving ",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
     }
    ]
   },
@@ -747,9 +765,9 @@
    "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
    "status": "active",
    "category": "military",
-   "claim_count": 71,
+   "claim_count": 77,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "evening-2026-09-19",
+   "last_episode_id": "morning-2026-09-25",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -846,6 +864,12 @@
      "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-25",
+     "new_claims": 6,
+     "conf_changes": 0,
+     "watch_events": 1
     }
    ],
    "claims": [
@@ -1416,6 +1440,54 @@
      "confidence": "reported",
      "created_at": "2026-09-25T00:35:22+00:00",
      "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "d0f2a25b-c659-474c-9f67-8778f7f553c8",
+     "text": "The Houthis fired dozens of missiles and drones at Saudi targets on Sept 24, and Saudi Arabia issued civil-defence emergency alerts for Mecca, Jeddah, Yanbu, Taif and Tabuk.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "e15d7e71-bfd1-41f8-b3e8-8d615d59bbe6",
+     "text": "Houthi military spokesman Yahya Saree claimed on Sept 24 that the group attacked a 'sensitive target' in Riyadh and Aramco facilities in Yanbu and 'achieved their objectives'; Saudi Arabia has confirmed intercepts but has not confirmed any strike on Riyadh, and no civil-defence a",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "2ceebb9c-f818-4a2a-b9c0-b48f63cf08d7",
+     "text": "Saudi Arabia's Grand Mufti called on soldiers on Sept 24 to be ready to 'lay down their lives' to fight the Houthis until the group is ousted, in a statement posted on the official Saudi Press Agency late Thursday.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "e667c287-d1a6-4ee5-bde1-49782e6cfbc1",
+     "text": "The Institute for the Study of War reported that a Greek military-operated Patriot battery intercepted a Houthi drone over Yanbu on Sept 24.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "02e09748-c7e0-490a-becd-967728566697",
+     "text": "President Pezeshkian told Fox News on Sept 24 that 'The Houthis are responsible for their own actions,' distancing Iran from the Houthi offensive, even as multiple outlets report the IRGC directly guided the group's Red Sea coast offensive.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "bd36de45-db31-4f45-a4bd-6b1bb384ac64",
+     "text": "The Associated Press and Reuters reported, citing Yemeni government, Iranian and regional sources, that the Houthi capture of Yemen's Red Sea coast in under 48 hours was carried out with 'direct guidance from Iran's Islamic Revolutionary Guard Corps,' which the AP called Iran's m",
+     "type": "event",
+     "confidence": "corroborated",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
     }
    ]
   },
@@ -2839,9 +2911,9 @@
    "title": "Report: Chinese entities supplied Iran satellite imagery before July Jordan base attack",
    "status": "active",
    "category": "military",
-   "claim_count": 7,
+   "claim_count": 9,
    "first_episode_id": "morning-2026-09-14",
-   "last_episode_id": "evening-2026-09-18",
+   "last_episode_id": "morning-2026-09-25",
    "activity": [
     {
      "episode_id": "morning-2026-09-14",
@@ -2852,6 +2924,12 @@
     {
      "episode_id": "evening-2026-09-18",
      "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-25",
+     "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -2912,6 +2990,22 @@
      "confidence": "reported",
      "created_at": "2026-09-19T01:00:00+00:00",
      "episode_id": "evening-2026-09-18"
+    },
+    {
+     "claim_id": "ba6aa492-499c-4e08-9f98-0aae9ce97878",
+     "text": "U.S. intelligence assessments say Chinese groups are providing satellite imagery and geospatial data that has sharpened Iran's targeting of American sites \u2014 support judged decisive in the July strike on the U.S. base in Jordan that killed three American service members \u2014 and now ",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "2f7d1277-6b83-47b4-9b4e-75bc040e55c1",
+     "text": "President Trump is hosting China's Xi Jinping at the White House Sept 24\u201325 \u2014 a state dinner Thursday plus Friday meetings \u2014 with the trade-war truce extended from November 10 to January 10, and Iran and Hormuz on the summit agenda.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
     }
    ]
   },
@@ -4284,9 +4378,9 @@
    "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
    "status": "active",
    "category": "economy",
-   "claim_count": 6,
+   "claim_count": 7,
    "first_episode_id": "morning-2026-09-23",
-   "last_episode_id": "morning-2026-09-23",
+   "last_episode_id": "morning-2026-09-25",
    "activity": [
     {
      "episode_id": "morning-2026-09-23",
@@ -4299,6 +4393,12 @@
      "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-25",
+     "new_claims": 1,
+     "conf_changes": 0,
+     "watch_events": 1
     }
    ],
    "claims": [
@@ -4349,6 +4449,14 @@
      "confidence": "reported",
      "created_at": "2026-09-24T00:26:21+00:00",
      "episode_id": "evening-2026-09-23"
+    },
+    {
+     "claim_id": "3cfd44e1-6b07-4c7f-80bc-8c24cccf5b59",
+     "text": "The UAE's aviation authority suspended all Iranian airline flights until further notice on Sept 24, and Oman joined the ban \u2014 the first major fallout of the U.S. post-September 23 policy of sanctioning third-country companies that do business with Iranian airlines.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
     }
    ]
   },
@@ -4486,6 +4594,33 @@
      "confidence": "reported",
      "created_at": "2026-09-25T00:35:22+00:00",
      "episode_id": "evening-2026-09-24"
+    }
+   ]
+  },
+  {
+   "story_id": "turkey-saudi-defence-pact",
+   "title": "Turkey-Saudi Arabia-Pakistan defense pact",
+   "status": "active",
+   "category": "military",
+   "claim_count": 1,
+   "first_episode_id": "morning-2026-09-25",
+   "last_episode_id": "morning-2026-09-25",
+   "activity": [
+    {
+     "episode_id": "morning-2026-09-25",
+     "new_claims": 1,
+     "conf_changes": 0,
+     "watch_events": 0
+    }
+   ],
+   "claims": [
+    {
+     "claim_id": "d4b4c521-cd46-44a4-bb91-89fdd8d2bcc0",
+     "text": "Saudi Arabia, Turkey and Pakistan agreed on Sept 25 to hold an urgent meeting of their military chiefs of staff to discuss support for Saudi Arabia, after their foreign ministers met on the UN General Assembly sidelines in New York on Sept 24 under the Mecca Joint Defence Agreeme",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-25T11:31:00+00:00",
+     "episode_id": "morning-2026-09-25"
     }
    ]
   }
