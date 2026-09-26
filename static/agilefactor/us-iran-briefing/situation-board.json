@@ -1,7 +1,7 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-25T11:55:41.231775+00:00",
-  "episode_id": "morning-2026-09-25",
+  "generated_at": "2026-09-26T00:58:17.688791+00:00",
+  "episode_id": "evening-2026-09-25",
   "as_of_date": "2026-09-25",
   "hormuz": {
     "status": "restricted",
@@ -9,18 +9,18 @@
   },
   "markets": {
     "market.brent_usd": {
-      "value": 106.6,
+      "value": 104.32,
       "unit": "USD/bbl",
       "accuracy": "reported",
-      "episode_id": "evening-2026-09-24",
-      "period": "2026-09-24"
+      "episode_id": "evening-2026-09-25",
+      "period": "2026-09-25"
     },
     "market.wti_usd": {
-      "value": 94.61,
+      "value": 92.41,
       "unit": "USD/bbl",
       "accuracy": "reported",
-      "episode_id": "evening-2026-09-24",
-      "period": "2026-09-24"
+      "episode_id": "evening-2026-09-25",
+      "period": "2026-09-25"
     }
   },
   "traffic": {
@@ -48,67 +48,91 @@
       "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
       "day_n": 16,
       "category": "military",
-      "claim_count": 77,
-      "recent_claim_count": 9,
-      "last_episode_id": "morning-2026-09-25"
+      "claim_count": 82,
+      "recent_claim_count": 14,
+      "last_episode_id": "evening-2026-09-25"
     },
     {
       "story_id": "oil-price-shock-september-2026",
       "title": "Oil price shock (Brent above $100)",
       "day_n": 15,
       "category": "energy",
-      "claim_count": 57,
-      "recent_claim_count": 4,
-      "last_episode_id": "morning-2026-09-19"
-    },
-    {
-      "story_id": "uae-bank-melli-iran-cutoff",
-      "title": "UAE cuts Bank Melli Iran out of its financial system",
-      "day_n": 2,
-      "category": "economy",
-      "claim_count": 4,
-      "recent_claim_count": 4,
-      "last_episode_id": "evening-2026-09-24"
+      "claim_count": 59,
+      "recent_claim_count": 5,
+      "last_episode_id": "evening-2026-09-25"
     },
     {
       "story_id": "hormuz-reopening-diplomacy",
       "title": "Diplomacy over reopening the Strait of Hormuz",
       "day_n": 14,
       "category": "diplomacy",
-      "claim_count": 39,
-      "recent_claim_count": 3,
-      "last_episode_id": "morning-2026-09-25"
+      "claim_count": 43,
+      "recent_claim_count": 5,
+      "last_episode_id": "evening-2026-09-25"
+    },
+    {
+      "story_id": "china-imagery-jordan-base-attack",
+      "title": "Chinese assistance to Iran: imagery allegations and Trump-Xi summit warning",
+      "day_n": 12,
+      "category": "military",
+      "claim_count": 12,
+      "recent_claim_count": 5,
+      "last_episode_id": "evening-2026-09-25"
+    },
+    {
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
+      "day_n": 3,
+      "category": "economy",
+      "claim_count": 11,
+      "recent_claim_count": 5,
+      "last_episode_id": "evening-2026-09-25"
     },
     {
       "story_id": "strait-hormuz-shipping-attacks",
       "title": "Attacks on commercial shipping in the Strait of Hormuz",
       "day_n": 13,
       "category": "military",
-      "claim_count": 37,
-      "recent_claim_count": 3,
-      "last_episode_id": "morning-2026-09-24"
-    },
-    {
-      "story_id": "trump-iran-war-endgame-remarks",
-      "title": "Trump's Iran war endgame remarks",
-      "day_n": 13,
-      "category": "diplomacy",
-      "claim_count": 18,
-      "recent_claim_count": 3,
-      "last_episode_id": "morning-2026-09-18"
+      "claim_count": 41,
+      "recent_claim_count": 4,
+      "last_episode_id": "evening-2026-09-25"
     }
   ],
   "alerts": [
     {
+      "watch_id": "ffe74757-1abf-4309-9bd3-cc53614f4802",
+      "story_id": "china-imagery-jordan-base-attack",
+      "question": "The U.S. and Iranian versions of Beijing's assurances cannot both be true \u2014 whose version survives contact with evidence?",
+      "asked_in_episode": "evening-2026-09-25"
+    },
+    {
+      "watch_id": "945ec967-c8ee-46c5-8386-06f70f59c4cf",
+      "story_id": "hormuz-reopening-diplomacy",
+      "question": "Iran keeps repeating a four-to-five-day window \u2014 does Washington accept the seven-day plan, seek an extension, or escalate?",
+      "asked_in_episode": "evening-2026-09-25"
+    },
+    {
+      "watch_id": "7fea610a-41a6-429f-a914-b896680ea760",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "question": "Do the Houthi claims of Sept 25 strikes on Riyadh and Yanbu get confirmed, or quietly die?",
+      "asked_in_episode": "evening-2026-09-25"
+    },
+    {
+      "watch_id": "1dd4a454-35b7-494c-bc73-a51ba281d905",
+      "story_id": "yemen-houthi-west-coast-offensive",
+      "question": "When do French forces and air-defense systems arrive at Yanbu, and what is the deployment's size and duration?",
+      "asked_in_episode": "evening-2026-09-25"
+    },
+    {
+      "watch_id": "960ed9b2-6791-4ef6-868a-d49555ede51c",
+      "story_id": "us-iran-aviation-sanctions-grounding",
+      "question": "Does Tehran follow through on Rezaei's threat against Iraqi and Emirati airports, or does it stay rhetorical?",
+      "asked_in_episode": "evening-2026-09-25"
+    },
+    {
       "watch_id": "5382975b-4867-473c-b8e6-b31233475b7f",
       "story_id": "turkey-saudi-defence-pact",
       "question": "What is the date and venue of the Saudi-Turkey-Pakistan military chiefs-of-staff meeting under the Mecca Joint Defence Agreement, and what support measures for Saudi Arabia does it produce?",
-      "asked_in_episode": "morning-2026-09-25"
-    },
-    {
-      "watch_id": "e31064d0-0eca-4adf-b8d8-206636659a14",
-      "story_id": "china-imagery-jordan-base-attack",
-      "question": "Does the Trump-Xi summit on Sept 25 produce any public mention of the U.S. intelligence allegations about Chinese targeting data for Iran, and does Washington name or sanction additional Chinese firms?",
       "asked_in_episode": "morning-2026-09-25"
     },
     {
@@ -200,39 +224,15 @@
       "story_id": "us-iran-threat-exchange-september-2026",
       "question": "Does the Armed Forces' 'crushing blows' warning materialize as Iranian action, or stay rhetorical while the mediator channel continues?",
       "asked_in_episode": "morning-2026-09-23"
-    },
-    {
-      "watch_id": "b19029fb-83eb-4bc1-bed1-2536ccb106dd",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "When does the follow-up U.S.-Iran meeting happen, and does any substance leak to show whether the Tuesday session was stagecraft or a real opening?",
-      "asked_in_episode": "evening-2026-09-22"
-    },
-    {
-      "watch_id": "c93bf1da-b3fa-4bb5-92d1-79c6fcd344a9",
-      "story_id": "trump-iran-war-endgame-remarks",
-      "question": "How does Iran answer Trump's 'annihilate' ultimatum \u2014 what does Pezeshkian say at the General Assembly Wednesday, and what comes from the delegation tonight?",
-      "asked_in_episode": "evening-2026-09-22"
-    },
-    {
-      "watch_id": "04bcb4dd-0679-4fb2-9e5e-a79e804bcadf",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "Does the direct-versus-mediator dispute over the Tuesday meeting's format get settled, and which side's account holds?",
-      "asked_in_episode": "evening-2026-09-22"
-    },
-    {
-      "watch_id": "e566e4dc-9a3e-492f-8424-ce0e85f90624",
-      "story_id": "oil-price-shock-september-2026",
-      "question": "How fast does the diesel-export-ban decision actually come, and do refiners push back?",
-      "asked_in_episode": "evening-2026-09-22"
     }
   ],
   "alerts_display_default": 5,
   "watchlist": {
-    "open": 64,
-    "resolved": 12
+    "open": 67,
+    "resolved": 14
   },
   "stories_stale_excluded": 22,
-  "alerts_stale_excluded": 43,
+  "alerts_stale_excluded": 46,
   "aging": {
     "recent_window_editions": 3,
     "stale_after_editions": 5,
