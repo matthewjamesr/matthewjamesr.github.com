@@ -6135,9 +6135,21 @@
       const points = visibleLocations().map(item => [item.lat, item.lng]);
       if (!points.length) return;
       const mobileViewport = window.matchMedia("(max-width: 540px)").matches;
-      map.fitBounds(points, {
-        paddingTopLeft: [52, mobileViewport ? 96 : 54],
-        paddingBottomRight: [52, mobileViewport ? 142 : 112],
+      const padTL = [52, mobileViewport ? 96 : 54];
+      const padBR = [52, mobileViewport ? 142 : 112];
+      const bounds = L.latLngBounds(points);
+      // The map's minZoom clamps fitBounds: with far-flung points (e.g.
+      // Washington, D.C. + Strait of Hormuz) the fitted zoom falls below
+      // it, points get cut off, and manual zoom-out is blocked too. Drop
+      // minZoom to whatever the fit needs so every plotted point is always
+      // comfortably visible — and stays reachable by manual zoom.
+      const needZoom = map.getBoundsZoom(bounds, false,
+        L.point(padTL[0] + padBR[0], padTL[1] + padBR[1]));
+      if (isFinite(needZoom) && needZoom < map.getMinZoom())
+        map.setMinZoom(Math.max(1, Math.floor(needZoom)));
+      map.fitBounds(bounds, {
+        paddingTopLeft: padTL,
+        paddingBottomRight: padBR,
         maxZoom: 6
       });
     }
