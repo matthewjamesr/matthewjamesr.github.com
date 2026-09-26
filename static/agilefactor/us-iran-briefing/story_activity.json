@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-26T00:58:17.822030+00:00",
+ "generated_at": "2026-09-26T12:18:58.400037+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -105,6 +105,10 @@
   {
    "episode_id": "evening-2026-09-25",
    "date": "2026-09-25"
+  },
+  {
+   "episode_id": "morning-2026-09-26",
+   "date": "2026-09-26"
   }
  ],
  "stories": [
@@ -113,9 +117,9 @@
    "title": "Diplomacy over reopening the Strait of Hormuz",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 43,
+   "claim_count": 47,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "evening-2026-09-25",
+   "last_episode_id": "morning-2026-09-26",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -191,7 +195,13 @@
     },
     {
      "episode_id": "evening-2026-09-25",
-     "new_claims": 4,
+     "new_claims": 6,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-26",
+     "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -540,6 +550,38 @@
      "confidence": "reported",
      "created_at": "2026-09-26T00:42:50+00:00",
      "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "18643ee9-4339-4c39-b0fb-3fa8d6733bb5",
+     "text": "President Trump rejected Iran's seven-day ceasefire proposal on Sept 25, telling officials the timeline was unacceptable, per the Wall Street Journal.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-26T02:11:05+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "eee016d0-10ea-4482-a812-5aa5cf959ac4",
+     "text": "Trump expects U.S. bombing of Iran could resume after the November midterm elections, while cautioning that his position could change and that munitions constraints apply, per the Wall Street Journal.",
+     "type": "forecast",
+     "confidence": "reported",
+     "created_at": "2026-09-26T02:11:05+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "1c6b6b8d-daaa-4717-a4e4-9a7f582de8f9",
+     "text": "Iran was still awaiting an official U.S. response to its seven-day plan on Saturday morning, Sept 26, with no official American reply issued.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T11:56:54+00:00",
+     "episode_id": "morning-2026-09-26"
+    },
+    {
+     "claim_id": "15ac63cc-dc0b-4dc0-a1ab-2678a5c5d6a6",
+     "text": "Foreign Minister Abbas Araqchi briefed Saudi Foreign Minister Prince Faisal bin Farhan early Saturday on the Iran-Oman understanding on safe shipping routes in the Strait of Hormuz.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T11:56:54+00:00",
+     "episode_id": "morning-2026-09-26"
     }
    ]
   },
@@ -806,10 +848,10 @@
    "story_id": "yemen-houthi-west-coast-offensive",
    "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
    "status": "active",
-   "category": "military",
-   "claim_count": 82,
+   "category": "proxies",
+   "claim_count": 83,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "evening-2026-09-25",
+   "last_episode_id": "morning-2026-09-26",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -915,8 +957,14 @@
     },
     {
      "episode_id": "evening-2026-09-25",
-     "new_claims": 5,
+     "new_claims": 4,
      "conf_changes": 1,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-26",
+     "new_claims": 2,
+     "conf_changes": 0,
      "watch_events": 0
     }
    ],
@@ -1538,33 +1586,9 @@
      "episode_id": "morning-2026-09-25"
     },
     {
-     "claim_id": "05af8fe5-5834-4ca8-b48b-0326e2117863",
-     "text": "Houthi military spokesman Yahya Saree claimed on Sept 25 that the Houthis fired ballistic and cruise missiles plus drones at the Aramco refinery in Yanbu and an unspecified target in Riyadh; no Saudi confirmation exists.",
-     "type": "event",
-     "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
-     "episode_id": "evening-2026-09-25"
-    },
-    {
-     "claim_id": "63fe836e-7e52-487e-ae8e-90b0f875aba4",
-     "text": "Saudi air defenses intercepted six Houthi ballistic missiles aimed at Taif and the Yanbu area on Sept 24.",
-     "type": "event",
-     "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
-     "episode_id": "evening-2026-09-25"
-    },
-    {
      "claim_id": "75fb4ab6-8939-4a2e-87fe-3542a51a408b",
      "text": "France will send soldiers, radar platforms and air-defense systems to protect the Yanbu oil terminal \u2014 a strictly defensive deployment with no disclosed timetable, per President Macron on Sept 24.",
      "type": "policy",
-     "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
-     "episode_id": "evening-2026-09-25"
-    },
-    {
-     "claim_id": "b6118bfc-c242-466d-8c81-e5f3be30722b",
-     "text": "A Houthi attack damaged the Yasref refinery near Yanbu last week.",
-     "type": "event",
      "confidence": "reported",
      "created_at": "2026-09-26T00:42:50+00:00",
      "episode_id": "evening-2026-09-25"
@@ -1576,6 +1600,38 @@
      "confidence": "reported",
      "created_at": "2026-09-26T00:42:50+00:00",
      "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "05f12049-c33e-4bdf-82fb-8ae3338df87b",
+     "text": "Houthi military spokesman Yahya Saree claimed on Sept 24 that the Houthis attacked Riyadh and Aramco facilities at Yanbu with missiles and drones; Saudi Arabia has not confirmed the claim, per Reuters.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T02:11:05+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "54b26f41-24c7-41f6-9a12-13ae64e61245",
+     "text": "Saudi air defenses intercepted six Houthi ballistic missiles aimed at Taif and the Yanbu area on Sept 24, per Reuters; no Riyadh intercept was reported.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T02:11:05+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "f813c2f1-ec7b-4a66-ba21-677503c0700e",
+     "text": "Early Saturday, Sept 26, the Saudi-led coalition said it intercepted two Houthi drones headed toward Riyadh and a ballistic missile toward Khamis Mushait, and Saudi civil defense issued overnight alerts for Khamis Mushait and Abha.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T11:56:54+00:00",
+     "episode_id": "morning-2026-09-26"
+    },
+    {
+     "claim_id": "cf18b0b3-ac18-4efd-a017-a231e63fc71f",
+     "text": "UNICEF warned Friday, Sept 25, of a new humanitarian crisis in Yemen, with rising acute malnutrition among children.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T11:56:54+00:00",
+     "episode_id": "morning-2026-09-26"
     }
    ]
   },
@@ -2236,9 +2292,9 @@
    "title": "Attacks on commercial shipping in the Strait of Hormuz",
    "status": "active",
    "category": "military",
-   "claim_count": 41,
+   "claim_count": 39,
    "first_episode_id": "morning-2026-09-13",
-   "last_episode_id": "evening-2026-09-25",
+   "last_episode_id": "morning-2026-09-26",
    "activity": [
     {
      "episode_id": "morning-2026-09-13",
@@ -2326,7 +2382,7 @@
     },
     {
      "episode_id": "evening-2026-09-25",
-     "new_claims": 4,
+     "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -2629,35 +2685,19 @@
      "episode_id": "morning-2026-09-24"
     },
     {
-     "claim_id": "7fdcfb9e-6257-421b-9d1e-c3c9cbb90720",
-     "text": "India's Forward Seamen's Union says the MV Cape Dao was hit by two torpedoes on its port side on Sept 23 \u2014 one at the C-deck accommodation, one near the engine room; the torpedo claim is unproven and the maritime authority's original report said \"unknown projectile.\"",
-     "type": "event",
-     "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
-     "episode_id": "evening-2026-09-25"
-    },
-    {
-     "claim_id": "ab106a70-cfa2-4fd9-b497-41e7ecff44b3",
-     "text": "The seafarer killed in the Cape Dao attack was wiper Suraj Yadav, 26, of Deoria, Uttar Pradesh, who died of head injuries.",
+     "claim_id": "ecdbed45-7cc6-46be-8d30-5a715754ebfe",
+     "text": "One Indian national was killed in the Sept 23 attack on the MV Cape Dao in the Strait of Hormuz, per the Indian embassy in Oman via Reuters; no victim details or attribution were reported.",
      "type": "casualty",
      "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
+     "created_at": "2026-09-26T02:11:05+00:00",
      "episode_id": "evening-2026-09-25"
     },
     {
-     "claim_id": "895b3eed-40c8-4e45-8156-d563a96df99c",
-     "text": "India's External Affairs Ministry condemned the Cape Dao attack; 19 of the 20 Indian seafarers were rescued and 27 of 28 crew were evacuated by the Royal Navy of Oman.",
+     "claim_id": "60a1d87b-6962-47b9-ba0b-1d2bd30d8c38",
+     "text": "Twenty-seven crew members were evacuated from the MV Cape Dao after the Sept 23 attack in the Strait of Hormuz, per the Indian embassy in Oman via Reuters.",
      "type": "event",
      "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
-     "episode_id": "evening-2026-09-25"
-    },
-    {
-     "claim_id": "d9156e10-1dea-4977-aa78-9fba31e15899",
-     "text": "No party has claimed responsibility for the Cape Dao attack and no outlet attributes it; one British analyst rates Iranian responsibility as \"likely\" at moderate confidence.",
-     "type": "forecast",
-     "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
+     "created_at": "2026-09-26T02:11:05+00:00",
      "episode_id": "evening-2026-09-25"
     }
    ]
@@ -3056,12 +3096,12 @@
   },
   {
    "story_id": "china-imagery-jordan-base-attack",
-   "title": "Chinese assistance to Iran: imagery allegations and Trump-Xi summit warning",
+   "title": "Chinese assistance to Iran: imagery allegations and Trump-Xi summit warnings",
    "status": "active",
-   "category": "military",
+   "category": "diplomacy",
    "claim_count": 12,
    "first_episode_id": "morning-2026-09-14",
-   "last_episode_id": "evening-2026-09-25",
+   "last_episode_id": "morning-2026-09-26",
    "activity": [
     {
      "episode_id": "morning-2026-09-14",
@@ -4261,9 +4301,9 @@
    "title": "Iran's three conditions for ending the war",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 5,
+   "claim_count": 6,
    "first_episode_id": "evening-2026-09-19",
-   "last_episode_id": "evening-2026-09-19",
+   "last_episode_id": "morning-2026-09-26",
    "activity": [
     {
      "episode_id": "evening-2026-09-19",
@@ -4279,6 +4319,12 @@
     },
     {
      "episode_id": "morning-2026-09-21",
+     "new_claims": 1,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-26",
      "new_claims": 1,
      "conf_changes": 0,
      "watch_events": 0
@@ -4324,6 +4370,14 @@
      "confidence": "reported",
      "created_at": "2026-09-21T12:00:00+00:00",
      "episode_id": "morning-2026-09-21"
+    },
+    {
+     "claim_id": "abed2013-1dee-4205-98f3-213a08daec52",
+     "text": "President Pezeshkian said in a Fox News interview aired Thursday that it is up to the United States to choose when the war ends: 'But we do not wish to continue. It's America that must choose whether it wants to end this or not.'",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T11:56:54+00:00",
+     "episode_id": "morning-2026-09-26"
     }
    ]
   },
@@ -4429,7 +4483,7 @@
    "title": "US-Iran threat exchange over a new American attack",
    "status": "active",
    "category": "military",
-   "claim_count": 7,
+   "claim_count": 6,
    "first_episode_id": "evening-2026-09-20",
    "last_episode_id": "evening-2026-09-25",
    "activity": [
@@ -4447,7 +4501,7 @@
     },
     {
      "episode_id": "evening-2026-09-25",
-     "new_claims": 2,
+     "new_claims": 1,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -4492,14 +4546,6 @@
      "confidence": "reported",
      "created_at": "2026-09-23T12:00:00+00:00",
      "episode_id": "morning-2026-09-23"
-    },
-    {
-     "claim_id": "0cf3f580-937f-45a1-816d-aa0f6d5f314c",
-     "text": "Deputy Foreign Minister Gharibabadi posted on X on Sept 24 that governments which \"placed their territory at the disposal of the United States cannot evade their responsibility\" and \"this participation will not go unanswered,\" after NATO's chief acknowledged roughly 5,000 U.S. so",
-     "type": "quote",
-     "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
-     "episode_id": "evening-2026-09-25"
     },
     {
      "claim_id": "d9755880-af09-40ab-95fe-2f30a6445eb3",
@@ -4580,7 +4626,7 @@
    "category": "economy",
    "claim_count": 11,
    "first_episode_id": "morning-2026-09-23",
-   "last_episode_id": "evening-2026-09-25",
+   "last_episode_id": "morning-2026-09-26",
    "activity": [
     {
      "episode_id": "morning-2026-09-23",
@@ -4602,8 +4648,14 @@
     },
     {
      "episode_id": "evening-2026-09-25",
-     "new_claims": 4,
+     "new_claims": 3,
      "conf_changes": 1,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-26",
+     "new_claims": 1,
+     "conf_changes": 0,
      "watch_events": 0
     }
    ],
@@ -4681,20 +4733,20 @@
      "episode_id": "evening-2026-09-25"
     },
     {
-     "claim_id": "c814070e-4877-43db-bb41-215c285b3955",
-     "text": "SNSC secretary Mohsen Rezaei said on Iranian state TV on Sept 24 that the U.S. has \"four or five days\" to meet Tehran's seven conditions, otherwise \"we will neither open the Strait of Hormuz nor is there any negotiation on the table.\"",
+     "claim_id": "2a27aa77-7866-4a9b-b4c5-5daeb3a0f6e8",
+     "text": "SNSC secretary Mohsen Rezaei warned on Sept 23 that if neighboring countries stop Iranian flights in cooperation with the U.S., their own airports 'cannot function'; he gave no mechanism or deadline, per Reuters.",
      "type": "quote",
      "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
+     "created_at": "2026-09-26T02:11:05+00:00",
      "episode_id": "evening-2026-09-25"
     },
     {
-     "claim_id": "7d9cdfba-1973-42c4-8e96-cd81202c50b2",
-     "text": "Rezaei threatened that neighbors cooperating with the aviation sanctions against Iran will find that \"their airports won't be able to have flights either.\"",
+     "claim_id": "dee052f6-8ba2-485f-88c1-e026ecc2434b",
+     "text": "Ali Mokhber, an adviser to Iran's supreme leader, warned through the Nournews outlet that if Iran cannot have flights and airport services, no one in the region can either, and UAE markets dipped Friday on the threat.",
      "type": "quote",
      "confidence": "reported",
-     "created_at": "2026-09-26T00:42:50+00:00",
-     "episode_id": "evening-2026-09-25"
+     "created_at": "2026-09-26T11:56:54+00:00",
+     "episode_id": "morning-2026-09-26"
     }
    ]
   },
@@ -4840,12 +4892,18 @@
    "title": "Turkey-Saudi Arabia-Pakistan defense pact",
    "status": "active",
    "category": "military",
-   "claim_count": 1,
+   "claim_count": 2,
    "first_episode_id": "morning-2026-09-25",
-   "last_episode_id": "morning-2026-09-25",
+   "last_episode_id": "morning-2026-09-26",
    "activity": [
     {
      "episode_id": "morning-2026-09-25",
+     "new_claims": 1,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-26",
      "new_claims": 1,
      "conf_changes": 0,
      "watch_events": 0
@@ -4859,6 +4917,14 @@
      "confidence": "reported",
      "created_at": "2026-09-25T11:31:00+00:00",
      "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "a6727e81-ed19-44b3-a1a1-174e9142075c",
+     "text": "Turkish and Pakistani defense officials met in Riyadh on Friday, Sept 25, under the Mecca Joint Defense Agreement to review security and intelligence cooperation, and Saudi Defense Minister Prince Khalid bin Salman said early Saturday he affirmed with Pakistan's army chief Asim M",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T11:56:54+00:00",
+     "episode_id": "morning-2026-09-26"
     }
    ]
   }
