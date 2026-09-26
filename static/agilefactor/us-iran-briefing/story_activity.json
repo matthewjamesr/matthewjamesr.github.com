@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-25T11:55:41.364187+00:00",
+ "generated_at": "2026-09-26T00:58:17.822030+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -101,6 +101,10 @@
   {
    "episode_id": "morning-2026-09-25",
    "date": "2026-09-25"
+  },
+  {
+   "episode_id": "evening-2026-09-25",
+   "date": "2026-09-25"
   }
  ],
  "stories": [
@@ -109,9 +113,9 @@
    "title": "Diplomacy over reopening the Strait of Hormuz",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 39,
+   "claim_count": 43,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "morning-2026-09-25",
+   "last_episode_id": "evening-2026-09-25",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -182,6 +186,12 @@
     {
      "episode_id": "morning-2026-09-25",
      "new_claims": 1,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-25",
+     "new_claims": 4,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -498,6 +508,38 @@
      "confidence": "reported",
      "created_at": "2026-09-25T11:31:00+00:00",
      "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "9a29c7cf-261a-4804-9c45-b3b1ce7fcb86",
+     "text": "Araghchi publicly detailed Iran's seven-day plan on Sept 25: the timeline starts when the U.S. accepts; initial steps take four to five days; the Strait of Hormuz opens on day six; direct nuclear talks with the U.S. begin on day seven.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "2f9a0b50-c691-4351-a2a8-61b206e0d5f6",
+     "text": "The plan, conveyed via Qatari mediators, requires the U.S. to lift its naval blockade of Iranian ports, waive oil sanctions, release frozen funds, and observe a ceasefire including Lebanon.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "dc471384-889a-4210-a4d6-8d8f3befe925",
+     "text": "The White House said on Sept 25 its officials are having \"positive and constructive discussions through the mediators\" on the plan.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "1ca5fe85-7497-44c8-b0b7-493d1664750f",
+     "text": "A senior Iranian official said that even if Washington accepts the plan, Iran will offer no nuclear concessions \u2014 no giving up enrichment rights, no shipping highly enriched uranium abroad.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
     }
    ]
   },
@@ -765,9 +807,9 @@
    "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
    "status": "active",
    "category": "military",
-   "claim_count": 77,
+   "claim_count": 82,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "morning-2026-09-25",
+   "last_episode_id": "evening-2026-09-25",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -870,6 +912,12 @@
      "new_claims": 6,
      "conf_changes": 0,
      "watch_events": 1
+    },
+    {
+     "episode_id": "evening-2026-09-25",
+     "new_claims": 5,
+     "conf_changes": 1,
+     "watch_events": 0
     }
    ],
    "claims": [
@@ -1429,7 +1477,7 @@
      "claim_id": "58f3f432-df37-42ab-b8d0-f16a2ecc5441",
      "text": "The Sept 24 Houthi missile salvo targeted Taif province and the Yanbu area on the Red Sea, home to Saudi Arabia's major Red Sea oil export hub.",
      "type": "event",
-     "confidence": "reported",
+     "confidence": "corroborated",
      "created_at": "2026-09-25T00:35:22+00:00",
      "episode_id": "evening-2026-09-24"
     },
@@ -1488,6 +1536,46 @@
      "confidence": "corroborated",
      "created_at": "2026-09-25T11:31:00+00:00",
      "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "05af8fe5-5834-4ca8-b48b-0326e2117863",
+     "text": "Houthi military spokesman Yahya Saree claimed on Sept 25 that the Houthis fired ballistic and cruise missiles plus drones at the Aramco refinery in Yanbu and an unspecified target in Riyadh; no Saudi confirmation exists.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "63fe836e-7e52-487e-ae8e-90b0f875aba4",
+     "text": "Saudi air defenses intercepted six Houthi ballistic missiles aimed at Taif and the Yanbu area on Sept 24.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "75fb4ab6-8939-4a2e-87fe-3542a51a408b",
+     "text": "France will send soldiers, radar platforms and air-defense systems to protect the Yanbu oil terminal \u2014 a strictly defensive deployment with no disclosed timetable, per President Macron on Sept 24.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "b6118bfc-c242-466d-8c81-e5f3be30722b",
+     "text": "A Houthi attack damaged the Yasref refinery near Yanbu last week.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "661ca748-5654-444c-8157-647a6169da0a",
+     "text": "Macron called a possible U.S. ban on diesel exports \"catastrophic\" for the global and U.S. economies.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
     }
    ]
   },
@@ -1531,9 +1619,9 @@
    "title": "Oil price shock (Brent above $100)",
    "status": "active",
    "category": "energy",
-   "claim_count": 57,
+   "claim_count": 59,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "morning-2026-09-19",
+   "last_episode_id": "evening-2026-09-25",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -1660,6 +1748,12 @@
      "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 1
+    },
+    {
+     "episode_id": "evening-2026-09-25",
+     "new_claims": 2,
+     "conf_changes": 0,
+     "watch_events": 0
     }
    ],
    "claims": [
@@ -2118,6 +2212,22 @@
      "confidence": "reported",
      "created_at": "2026-09-25T00:35:22+00:00",
      "episode_id": "evening-2026-09-24"
+    },
+    {
+     "claim_id": "b4906b66-a513-4f89-b71c-37ef598fb493",
+     "text": "Brent settled at $104.32/bbl on Sept 25, down 2.1% on the day, as diplomacy hopes offset Thursday's surge.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "8732f8be-e88b-4d5f-acf3-ac17ad633225",
+     "text": "WTI settled at $92.41/bbl on Sept 25, down 2.3% on the day.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
     }
    ]
   },
@@ -2126,9 +2236,9 @@
    "title": "Attacks on commercial shipping in the Strait of Hormuz",
    "status": "active",
    "category": "military",
-   "claim_count": 37,
+   "claim_count": 41,
    "first_episode_id": "morning-2026-09-13",
-   "last_episode_id": "morning-2026-09-24",
+   "last_episode_id": "evening-2026-09-25",
    "activity": [
     {
      "episode_id": "morning-2026-09-13",
@@ -2211,6 +2321,12 @@
     {
      "episode_id": "morning-2026-09-24",
      "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-25",
+     "new_claims": 4,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -2511,6 +2627,38 @@
      "confidence": "reported",
      "created_at": "2026-09-24T11:21:02+00:00",
      "episode_id": "morning-2026-09-24"
+    },
+    {
+     "claim_id": "7fdcfb9e-6257-421b-9d1e-c3c9cbb90720",
+     "text": "India's Forward Seamen's Union says the MV Cape Dao was hit by two torpedoes on its port side on Sept 23 \u2014 one at the C-deck accommodation, one near the engine room; the torpedo claim is unproven and the maritime authority's original report said \"unknown projectile.\"",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "ab106a70-cfa2-4fd9-b497-41e7ecff44b3",
+     "text": "The seafarer killed in the Cape Dao attack was wiper Suraj Yadav, 26, of Deoria, Uttar Pradesh, who died of head injuries.",
+     "type": "casualty",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "895b3eed-40c8-4e45-8156-d563a96df99c",
+     "text": "India's External Affairs Ministry condemned the Cape Dao attack; 19 of the 20 Indian seafarers were rescued and 27 of 28 crew were evacuated by the Royal Navy of Oman.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "d9156e10-1dea-4977-aa78-9fba31e15899",
+     "text": "No party has claimed responsibility for the Cape Dao attack and no outlet attributes it; one British analyst rates Iranian responsibility as \"likely\" at moderate confidence.",
+     "type": "forecast",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
     }
    ]
   },
@@ -2908,12 +3056,12 @@
   },
   {
    "story_id": "china-imagery-jordan-base-attack",
-   "title": "Report: Chinese entities supplied Iran satellite imagery before July Jordan base attack",
+   "title": "Chinese assistance to Iran: imagery allegations and Trump-Xi summit warning",
    "status": "active",
    "category": "military",
-   "claim_count": 9,
+   "claim_count": 12,
    "first_episode_id": "morning-2026-09-14",
-   "last_episode_id": "morning-2026-09-25",
+   "last_episode_id": "evening-2026-09-25",
    "activity": [
     {
      "episode_id": "morning-2026-09-14",
@@ -2932,6 +3080,12 @@
      "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-25",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 2
     }
    ],
    "claims": [
@@ -3006,6 +3160,30 @@
      "confidence": "reported",
      "created_at": "2026-09-25T11:31:00+00:00",
      "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "e7776a39-53bf-4ca8-9510-51b62bb981a8",
+     "text": "At the Sept 25 White House summit, President Trump told Xi Jinping that any direct or indirect Chinese help for Iran \u2014 intelligence, parts, military equipment \u2014 was \"totally unacceptable,\" according to U.S. Ambassador to China David Perdue speaking on CNBC.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "b4125901-920b-4e09-af0e-8f830f92b442",
+     "text": "Beijing gave Washington assurances on Sept 24 that China is not aiding Tehran, per Ambassador Perdue.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "0ecb8103-3d8a-4f1a-9e00-689a15317a84",
+     "text": "A senior Iranian official told Reuters on Sept 25 that Chinese officials assured Iran that China will not limit its economic, political or military ties with Tehran \u2014 an account incompatible with the U.S. version of Beijing's assurances.",
+     "type": "quote",
+     "confidence": "disputed",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
     }
    ]
   },
@@ -4251,9 +4429,9 @@
    "title": "US-Iran threat exchange over a new American attack",
    "status": "active",
    "category": "military",
-   "claim_count": 5,
+   "claim_count": 7,
    "first_episode_id": "evening-2026-09-20",
-   "last_episode_id": "evening-2026-09-20",
+   "last_episode_id": "evening-2026-09-25",
    "activity": [
     {
      "episode_id": "evening-2026-09-20",
@@ -4263,6 +4441,12 @@
     },
     {
      "episode_id": "morning-2026-09-23",
+     "new_claims": 2,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-25",
      "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
@@ -4308,6 +4492,22 @@
      "confidence": "reported",
      "created_at": "2026-09-23T12:00:00+00:00",
      "episode_id": "morning-2026-09-23"
+    },
+    {
+     "claim_id": "0cf3f580-937f-45a1-816d-aa0f6d5f314c",
+     "text": "Deputy Foreign Minister Gharibabadi posted on X on Sept 24 that governments which \"placed their territory at the disposal of the United States cannot evade their responsibility\" and \"this participation will not go unanswered,\" after NATO's chief acknowledged roughly 5,000 U.S. so",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "d9755880-af09-40ab-95fe-2f30a6445eb3",
+     "text": "President Pezeshkian told Fox News on Sept 24 that it is up to the United States to choose when the war ends: \"we do not wish to continue.\"",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
     }
    ]
   },
@@ -4378,9 +4578,9 @@
    "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
    "status": "active",
    "category": "economy",
-   "claim_count": 7,
+   "claim_count": 11,
    "first_episode_id": "morning-2026-09-23",
-   "last_episode_id": "morning-2026-09-25",
+   "last_episode_id": "evening-2026-09-25",
    "activity": [
     {
      "episode_id": "morning-2026-09-23",
@@ -4399,6 +4599,12 @@
      "new_claims": 1,
      "conf_changes": 0,
      "watch_events": 1
+    },
+    {
+     "episode_id": "evening-2026-09-25",
+     "new_claims": 4,
+     "conf_changes": 1,
+     "watch_events": 0
     }
    ],
    "claims": [
@@ -4446,7 +4652,7 @@
      "claim_id": "f1a2b3c4-0006-4000-8000-000000000006",
      "text": "SNSC secretary Mohsen Rezaei warned on Iranian state television that if neighboring countries cooperate with the US by stopping Iranian flights, Iran will ensure their own airports cannot function.",
      "type": "quote",
-     "confidence": "reported",
+     "confidence": "corroborated",
      "created_at": "2026-09-24T00:26:21+00:00",
      "episode_id": "evening-2026-09-23"
     },
@@ -4457,6 +4663,38 @@
      "confidence": "reported",
      "created_at": "2026-09-25T11:31:00+00:00",
      "episode_id": "morning-2026-09-25"
+    },
+    {
+     "claim_id": "5a7478c0-3f78-49b9-afb3-34afe7890182",
+     "text": "Erbil and Sulaimaniya airports suspended Iranian flights starting Friday Sept 25, and Najaf International Airport halted all Iran flights effective 02:00 Friday until further notice.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "85fa6eee-6c99-4dd1-813f-85435f5c01eb",
+     "text": "Iranian flights are now suspended at all four Iraqi airports that operated them, following the U.S. Treasury warning that firms servicing Iranian carriers face sanctions and dollar-system exclusion.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "c814070e-4877-43db-bb41-215c285b3955",
+     "text": "SNSC secretary Mohsen Rezaei said on Iranian state TV on Sept 24 that the U.S. has \"four or five days\" to meet Tehran's seven conditions, otherwise \"we will neither open the Strait of Hormuz nor is there any negotiation on the table.\"",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "7d9cdfba-1973-42c4-8e96-cd81202c50b2",
+     "text": "Rezaei threatened that neighbors cooperating with the aviation sanctions against Iran will find that \"their airports won't be able to have flights either.\"",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-26T00:42:50+00:00",
+     "episode_id": "evening-2026-09-25"
     }
    ]
   },
