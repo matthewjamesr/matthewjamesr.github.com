@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-26T12:18:58.400037+00:00",
+ "generated_at": "2026-09-27T00:58:44.305686+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -109,6 +109,10 @@
   {
    "episode_id": "morning-2026-09-26",
    "date": "2026-09-26"
+  },
+  {
+   "episode_id": "evening-2026-09-26",
+   "date": "2026-09-26"
   }
  ],
  "stories": [
@@ -117,9 +121,9 @@
    "title": "Diplomacy over reopening the Strait of Hormuz",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 47,
+   "claim_count": 50,
    "first_episode_id": "evening-2026-09-12",
-   "last_episode_id": "morning-2026-09-26",
+   "last_episode_id": "evening-2026-09-26",
    "activity": [
     {
      "episode_id": "evening-2026-09-12",
@@ -204,6 +208,12 @@
      "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-26",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 3
     }
    ],
    "claims": [
@@ -582,6 +592,30 @@
      "confidence": "reported",
      "created_at": "2026-09-26T11:56:54+00:00",
      "episode_id": "morning-2026-09-26"
+    },
+    {
+     "claim_id": "f2c3bb09-9600-4d97-9c06-aae808f05bc2",
+     "text": "President Trump rejected Iran's seven-day ceasefire proposal on the record Saturday, Sept 26, telling White House reporters: 'I reject their proposal... I like making a deal too, but that deal would not be acceptable.'",
+     "type": "quote",
+     "confidence": "corroborated",
+     "created_at": "2026-09-27T00:09:07+00:00",
+     "episode_id": "evening-2026-09-26"
+    },
+    {
+     "claim_id": "d6be8262-3050-45de-a370-ee30f55e7ba1",
+     "text": "Trump posted 'IRAN CAN NOT HAVE A NUCLEAR WEAPON!!!' on Truth Social on Saturday morning, Sept 26, his first public message on Iran after Tehran tabled its plan.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-27T00:09:08+00:00",
+     "episode_id": "evening-2026-09-26"
+    },
+    {
+     "claim_id": "8534a83b-97a3-4541-87cf-1cd1593b12e5",
+     "text": "Trump has told aides it is 'likely' the U.S. military restarts airstrikes on Iran after the November midterm elections, reflecting his skepticism Tehran will meet his demands.",
+     "type": "forecast",
+     "confidence": "reported",
+     "created_at": "2026-09-27T00:09:08+00:00",
+     "episode_id": "evening-2026-09-26"
     }
    ]
   },
@@ -4301,9 +4335,9 @@
    "title": "Iran's three conditions for ending the war",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 6,
+   "claim_count": 9,
    "first_episode_id": "evening-2026-09-19",
-   "last_episode_id": "morning-2026-09-26",
+   "last_episode_id": "evening-2026-09-26",
    "activity": [
     {
      "episode_id": "evening-2026-09-19",
@@ -4326,6 +4360,12 @@
     {
      "episode_id": "morning-2026-09-26",
      "new_claims": 1,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "evening-2026-09-26",
+     "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 0
     }
@@ -4378,6 +4418,30 @@
      "confidence": "reported",
      "created_at": "2026-09-26T11:56:54+00:00",
      "episode_id": "morning-2026-09-26"
+    },
+    {
+     "claim_id": "655e3bcb-f4f9-451a-921b-a7e8375dd50b",
+     "text": "Foreign Minister Abbas Araghchi said any move toward reopening the Strait of Hormuz is contingent on Iran's conditions being met: 'Only a negotiated solution can get them out of this deadlock.'",
+     "type": "quote",
+     "confidence": "corroborated",
+     "created_at": "2026-09-27T00:09:08+00:00",
+     "episode_id": "evening-2026-09-26"
+    },
+    {
+     "claim_id": "9e532e81-28a9-41a4-a9be-088ae68e74f8",
+     "text": "Tehran says it has seen Trump's public reaction but is still waiting for mediators to 'convey the definitive views' of Washington before deciding its next move.",
+     "type": "event",
+     "confidence": "corroborated",
+     "created_at": "2026-09-27T00:09:08+00:00",
+     "episode_id": "evening-2026-09-26"
+    },
+    {
+     "claim_id": "41213e38-cb11-417b-818b-a3ef5916916f",
+     "text": "Tehran said in a Saturday Telegram statement that it 'will not back down' from its conditions on ending the war.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-27T00:09:08+00:00",
+     "episode_id": "evening-2026-09-26"
     }
    ]
   },
