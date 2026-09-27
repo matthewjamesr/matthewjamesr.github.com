@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-27T00:58:44.305686+00:00",
+ "generated_at": "2026-09-27T01:14:11.569372+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -213,7 +213,7 @@
      "episode_id": "evening-2026-09-26",
      "new_claims": 3,
      "conf_changes": 0,
-     "watch_events": 3
+     "watch_events": 4
     }
    ],
    "claims": [
