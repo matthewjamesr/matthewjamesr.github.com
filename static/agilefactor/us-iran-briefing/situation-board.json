@@ -1,8 +1,8 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-27T01:14:11.440763+00:00",
-  "episode_id": "evening-2026-09-26",
-  "as_of_date": "2026-09-26",
+  "generated_at": "2026-09-27T11:55:32.372960+00:00",
+  "episode_id": "morning-2026-09-27",
+  "as_of_date": "2026-09-27",
   "hormuz": {
     "status": "restricted",
     "basis": "Diplomacy over reopening the Strait of Hormuz"
@@ -46,59 +46,65 @@
     {
       "story_id": "hormuz-reopening-diplomacy",
       "title": "Diplomacy over reopening the Strait of Hormuz",
-      "day_n": 15,
+      "day_n": 16,
       "category": "diplomacy",
-      "claim_count": 50,
-      "recent_claim_count": 11,
+      "claim_count": 52,
+      "recent_claim_count": 7,
+      "last_episode_id": "evening-2026-09-26"
+    },
+    {
+      "story_id": "iran-negotiating-position",
+      "title": "Iran's three conditions for ending the war",
+      "day_n": 9,
+      "category": "diplomacy",
+      "claim_count": 12,
+      "recent_claim_count": 7,
       "last_episode_id": "evening-2026-09-26"
     },
     {
       "story_id": "yemen-houthi-west-coast-offensive",
       "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
-      "day_n": 17,
+      "day_n": 18,
       "category": "proxies",
       "claim_count": 83,
-      "recent_claim_count": 6,
+      "recent_claim_count": 2,
       "last_episode_id": "morning-2026-09-26"
     },
     {
       "story_id": "us-iran-aviation-sanctions-grounding",
       "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
-      "day_n": 4,
+      "day_n": 5,
       "category": "economy",
       "claim_count": 11,
-      "recent_claim_count": 4,
+      "recent_claim_count": 1,
       "last_episode_id": "morning-2026-09-26"
     },
     {
-      "story_id": "iran-negotiating-position",
-      "title": "Iran's three conditions for ending the war",
-      "day_n": 8,
-      "category": "diplomacy",
-      "claim_count": 9,
-      "recent_claim_count": 4,
-      "last_episode_id": "evening-2026-09-26"
-    },
-    {
-      "story_id": "china-imagery-jordan-base-attack",
-      "title": "Chinese assistance to Iran: imagery allegations and Trump-Xi summit warnings",
-      "day_n": 13,
-      "category": "diplomacy",
-      "claim_count": 12,
-      "recent_claim_count": 3,
+      "story_id": "turkey-saudi-defence-pact",
+      "title": "Turkey-Saudi Arabia-Pakistan defense pact",
+      "day_n": 14,
+      "category": "military",
+      "claim_count": 2,
+      "recent_claim_count": 1,
       "last_episode_id": "morning-2026-09-26"
     },
     {
       "story_id": "oil-price-shock-september-2026",
       "title": "Oil price shock (Brent above $100)",
-      "day_n": 16,
+      "day_n": 17,
       "category": "energy",
       "claim_count": 59,
-      "recent_claim_count": 2,
+      "recent_claim_count": 0,
       "last_episode_id": "evening-2026-09-25"
     }
   ],
   "alerts": [
+    {
+      "watch_id": "50c2b058-b4e8-44cd-bdf1-ab6e3dbe421b",
+      "story_id": "hormuz-reopening-diplomacy",
+      "question": "Do the Qatari mediators deliver a formal US response to Iran's seven-day plan, and what are Washington's definitive views?",
+      "asked_in_episode": "morning-2026-09-27"
+    },
     {
       "watch_id": "6d539f22-4c73-4873-86c7-b210e383b257",
       "story_id": "hormuz-reopening-diplomacy",
@@ -206,27 +212,15 @@
       "story_id": "oil-price-shock-september-2026",
       "question": "Does the oil rally hold, or does Hormuz-reopening talk pull prices back down?",
       "asked_in_episode": "evening-2026-09-24"
-    },
-    {
-      "watch_id": "4dea7b19-b942-4298-9084-b55024b19944",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "question": "Do UK or US maritime authorities release more detail identifying the vessel struck near Khasab on Sept 23, and whether it matches the IRGC's claimed Trend incident?",
-      "asked_in_episode": "morning-2026-09-24"
-    },
-    {
-      "watch_id": "a6ae2998-133f-4818-8f2e-434afd41a832",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "question": "Does Iran implement a formal 'authorization regime' for vessels transiting the Strait of Hormuz?",
-      "asked_in_episode": "morning-2026-09-24"
     }
   ],
   "alerts_display_default": 5,
   "watchlist": {
-    "open": 70,
+    "open": 71,
     "resolved": 18
   },
   "stories_stale_excluded": 22,
-  "alerts_stale_excluded": 50,
+  "alerts_stale_excluded": 52,
   "aging": {
     "recent_window_editions": 3,
     "stale_after_editions": 5,
