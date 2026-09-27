@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-27T01:14:11.569372+00:00",
+ "generated_at": "2026-09-27T11:55:32.507941+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -113,6 +113,10 @@
   {
    "episode_id": "evening-2026-09-26",
    "date": "2026-09-26"
+  },
+  {
+   "episode_id": "morning-2026-09-27",
+   "date": "2026-09-27"
   }
  ],
  "stories": [
@@ -121,7 +125,7 @@
    "title": "Diplomacy over reopening the Strait of Hormuz",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 50,
+   "claim_count": 52,
    "first_episode_id": "evening-2026-09-12",
    "last_episode_id": "evening-2026-09-26",
    "activity": [
@@ -214,6 +218,12 @@
      "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 4
+    },
+    {
+     "episode_id": "morning-2026-09-27",
+     "new_claims": 2,
+     "conf_changes": 0,
+     "watch_events": 0
     }
    ],
    "claims": [
@@ -616,6 +626,22 @@
      "confidence": "reported",
      "created_at": "2026-09-27T00:09:08+00:00",
      "episode_id": "evening-2026-09-26"
+    },
+    {
+     "claim_id": "5030d9bd-cc46-41ff-b743-39debfcb7da6",
+     "text": "Foreign Minister Abbas Araghchi said on Sept 27 that mediators have still not officially relayed a US rejection of the seven-day plan, and Tehran is waiting for the mediators to convey Washington's definitive views before deciding its next move.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-27T11:04:02+00:00",
+     "episode_id": "morning-2026-09-27"
+    },
+    {
+     "claim_id": "a416e104-f115-4400-b8d7-fe66411d199b",
+     "text": "Iran engaged its Saudi rivals regarding the Strait of Hormuz on or about Sept 26-27, Reuters reported \u2014 a new side channel as the seven-day reopening plan stalls.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-27T11:04:02+00:00",
+     "episode_id": "morning-2026-09-27"
     }
    ]
   },
@@ -4335,7 +4361,7 @@
    "title": "Iran's three conditions for ending the war",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 9,
+   "claim_count": 12,
    "first_episode_id": "evening-2026-09-19",
    "last_episode_id": "evening-2026-09-26",
    "activity": [
@@ -4365,6 +4391,12 @@
     },
     {
      "episode_id": "evening-2026-09-26",
+     "new_claims": 3,
+     "conf_changes": 0,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-27",
      "new_claims": 3,
      "conf_changes": 0,
      "watch_events": 0
@@ -4442,6 +4474,30 @@
      "confidence": "reported",
      "created_at": "2026-09-27T00:09:08+00:00",
      "episode_id": "evening-2026-09-26"
+    },
+    {
+     "claim_id": "9682d3e2-564d-48b3-a8a9-65079ed74402",
+     "text": "President Masoud Pezeshkian told CBS's Face the Nation on Sept 27 that Iran is ready for talks on its nuclear program and other issues, but will not accept \"bullying or coercion.\"",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-27T11:04:02+00:00",
+     "episode_id": "morning-2026-09-27"
+    },
+    {
+     "claim_id": "4c15759a-a0c5-4c83-b9a4-1470da824a40",
+     "text": "President Pezeshkian said on Sept 27 that Iran is not seeking war but will defend itself, and that Tehran has already agreed it is \"not supposed to develop nuclear weapons.\"",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-27T11:04:02+00:00",
+     "episode_id": "morning-2026-09-27"
+    },
+    {
+     "claim_id": "1f2fbcf2-1d72-413a-a949-eae0a1a8e938",
+     "text": "A senior Iranian official told Reuters on Sept 27 that Iran would show no flexibility over its nuclear program even if the US accepted the peace plan \u2014 no concessions on uranium enrichment or on shipping highly enriched uranium out of the country.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-27T11:04:02+00:00",
+     "episode_id": "morning-2026-09-27"
     }
    ]
   },
