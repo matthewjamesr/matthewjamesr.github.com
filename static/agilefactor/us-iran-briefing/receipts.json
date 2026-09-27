@@ -1,9 +1,102 @@
 {
   "format_version": "receipts-v1",
-  "generated_at": "2026-09-26T12:18:58.328259+00:00",
-  "episode_id": "morning-2026-09-26",
+  "generated_at": "2026-09-27T00:58:44.128614+00:00",
+  "episode_id": "evening-2026-09-26",
   "policy": "all resolutions publish, including misses and downgrades",
   "entries": [
+    {
+      "type": "confidence_change",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "President Trump rejected Iran's seven-day ceasefire proposal on the record Saturday, Sept 26, telling White House reporters: 'I reject their proposal... I like making a deal too, but that deal would not be acceptable.'",
+      "old_confidence": null,
+      "new_confidence": "corroborated",
+      "reason": "Claim entered as corroborated",
+      "episode_id": "evening-2026-09-26"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Trump posted 'IRAN CAN NOT HAVE A NUCLEAR WEAPON!!!' on Truth Social on Saturday morning, Sept 26, his first public message on Iran after Tehran tabled its plan.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-26"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Trump has told aides it is 'likely' the U.S. military restarts airstrikes on Iran after the November midterm elections, reflecting his skepticism Tehran will meet his demands.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-26"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "iran-negotiating-position",
+      "story_title": "Iran's three conditions for ending the war",
+      "claim_text": "Foreign Minister Abbas Araghchi said any move toward reopening the Strait of Hormuz is contingent on Iran's conditions being met: 'Only a negotiated solution can get them out of this deadlock.'",
+      "old_confidence": null,
+      "new_confidence": "corroborated",
+      "reason": "Claim entered as corroborated",
+      "episode_id": "evening-2026-09-26"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "iran-negotiating-position",
+      "story_title": "Iran's three conditions for ending the war",
+      "claim_text": "Tehran says it has seen Trump's public reaction but is still waiting for mediators to 'convey the definitive views' of Washington before deciding its next move.",
+      "old_confidence": null,
+      "new_confidence": "corroborated",
+      "reason": "Claim entered as corroborated",
+      "episode_id": "evening-2026-09-26"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "iran-negotiating-position",
+      "story_title": "Iran's three conditions for ending the war",
+      "claim_text": "Tehran said in a Saturday Telegram statement that it 'will not back down' from its conditions on ending the war.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-26"
+    },
+    {
+      "type": "watch_resolved",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "question": "Does Washington's reply to Iran's peace proposals contain a counter-offer on lifting the naval blockade and reopening Hormuz?",
+      "resolution_text": "Resolved: Trump's public reply contained no counter-offer on lifting the naval blockade or reopening Hormuz — only the rejection.",
+      "resolved_in_episode": "evening-2026-09-26"
+    },
+    {
+      "type": "watch_resolved",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "question": "How does Washington respond to Araghchi's seven-day phased Hormuz proposal — acceptance, counter-offer, or silence — and do the UAE/Oman airline bans stick or get quietly walked back?",
+      "resolution_text": "Resolved: Washington's response was a public rejection of Araghchi's seven-day phased Hormuz proposal — acceptance or counter-offer, neither offered.",
+      "resolved_in_episode": "evening-2026-09-26"
+    },
+    {
+      "type": "watch_resolved",
+      "date": "2026-09-27T00:09:08+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "question": "Will the White House issue any official response to Iran's seven-day plan — continued silence or a formal no?",
+      "resolution_text": "Resolved: Trump publicly rejected the seven-day plan on the record Saturday Sept 26 — a formal on-camera no, reported by Reuters, CNN, and WSJ.",
+      "resolved_in_episode": "evening-2026-09-26"
+    },
     {
       "type": "confidence_change",
       "date": "2026-09-26T11:56:54+00:00",
