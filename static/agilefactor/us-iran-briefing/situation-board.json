@@ -1,6 +1,6 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-27T00:58:44.004141+00:00",
+  "generated_at": "2026-09-27T01:14:11.440763+00:00",
   "episode_id": "evening-2026-09-26",
   "as_of_date": "2026-09-26",
   "hormuz": {
@@ -222,11 +222,11 @@
   ],
   "alerts_display_default": 5,
   "watchlist": {
-    "open": 71,
-    "resolved": 17
+    "open": 70,
+    "resolved": 18
   },
   "stories_stale_excluded": 22,
-  "alerts_stale_excluded": 51,
+  "alerts_stale_excluded": 50,
   "aging": {
     "recent_window_editions": 3,
     "stale_after_editions": 5,
