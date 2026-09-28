@@ -1,6 +1,6 @@
 {
  "format_version": "story-activity-v1",
- "generated_at": "2026-09-28T00:55:52.416494+00:00",
+ "generated_at": "2026-09-28T11:13:38.833296+00:00",
  "episode_order": [
   {
    "episode_id": "evening-2026-09-12",
@@ -121,6 +121,10 @@
   {
    "episode_id": "evening-2026-09-27",
    "date": "2026-09-27"
+  },
+  {
+   "episode_id": "morning-2026-09-28",
+   "date": "2026-09-28"
   }
  ],
  "stories": [
@@ -129,7 +133,7 @@
    "title": "Diplomacy over reopening the Strait of Hormuz",
    "status": "active",
    "category": "diplomacy",
-   "claim_count": 58,
+   "claim_count": 62,
    "first_episode_id": "evening-2026-09-12",
    "last_episode_id": "evening-2026-09-27",
    "activity": [
@@ -233,6 +237,12 @@
      "episode_id": "evening-2026-09-27",
      "new_claims": 6,
      "conf_changes": 1,
+     "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-28",
+     "new_claims": 4,
+     "conf_changes": 0,
      "watch_events": 0
     }
    ],
@@ -700,6 +710,38 @@
      "confidence": "reported",
      "created_at": "2026-09-28T00:12:16+00:00",
      "episode_id": "evening-2026-09-27"
+    },
+    {
+     "claim_id": "c5d90f99-cdd0-4e8c-a916-71aeb739e38d",
+     "text": "Peace negotiators are pressing Iran to concede on its nuclear program in a long-shot bid to revive ceasefire talks after Trump rejected Tehran's truce proposal; mediators say Iran has given little indication it is ready to talk about the issue.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
+    },
+    {
+     "claim_id": "0e04762e-6a34-4dad-b011-745d3533dabe",
+     "text": "Middle East officials who speak with Tehran told the Journal that power in Iran is now concentrated in the IRGC's hands, and Gulf officials said Iran wants Washington to offer concessions first.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
+    },
+    {
+     "claim_id": "4833a00b-a88b-4f0a-a823-6de6d0882845",
+     "text": "Araghchi said on NBC's Meet the Press: \"We are fully prepared for the war to resume... We stand firm in the face of any new aggression, even if it comes to a doomsday war. But at the same time we stand ready for diplomacy. It is up to President Trump to choose.\"",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
+    },
+    {
+     "claim_id": "a84d87db-9c87-4b0b-be60-57d9e2e85a33",
+     "text": "Qatari Prime Minister Sheikh Mohammed told Bloomberg the conflict is becoming harder to resolve, citing Houthi attacks on Saudi Arabia; US and Gulf officials told the Journal that Iran is losing control of the Strait of Hormuz as millions of barrels of oil pass through, weakening",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
     }
    ]
   },
@@ -2410,7 +2452,7 @@
    "title": "Attacks on commercial shipping in the Strait of Hormuz",
    "status": "active",
    "category": "military",
-   "claim_count": 39,
+   "claim_count": 41,
    "first_episode_id": "morning-2026-09-13",
    "last_episode_id": "morning-2026-09-26",
    "activity": [
@@ -2503,6 +2545,12 @@
      "new_claims": 2,
      "conf_changes": 0,
      "watch_events": 0
+    },
+    {
+     "episode_id": "morning-2026-09-28",
+     "new_claims": 2,
+     "conf_changes": 0,
+     "watch_events": 1
     }
    ],
    "claims": [
@@ -2817,6 +2865,22 @@
      "confidence": "reported",
      "created_at": "2026-09-26T02:11:05+00:00",
      "episode_id": "evening-2026-09-25"
+    },
+    {
+     "claim_id": "621c839b-b4a6-448a-8c9c-3ae44b312bfa",
+     "text": "More QatarEnergy-linked LNG vessels, laden and in ballast, transited the Strait of Hormuz in the last week; in August, Kpler data showed no visible transits by Qatar-linked LNG vessels.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
+    },
+    {
+     "claim_id": "14c6b570-43b5-4c55-bd41-cfd730fb15d5",
+     "text": "The GasLog Skagen reappeared off Sri Lanka on Sept 27 with a Ras Laffan cargo; Al Shamal reappeared outside the strait around Sept 24-25; Mesaimeer, Al Ghashamiya, Al Samriya and Al Daayen also exited with cargoes; Al Mafyar re-entered in ballast Sept 22.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
     }
    ]
   },
@@ -5155,6 +5219,65 @@
      "confidence": "reported",
      "created_at": "2026-09-26T11:56:54+00:00",
      "episode_id": "morning-2026-09-26"
+    }
+   ]
+  },
+  {
+   "story_id": "fairford-airbase-arrests",
+   "title": "Five arrested near RAF Fairford in suspected terror plot against US airbase",
+   "status": "active",
+   "category": "military",
+   "claim_count": 5,
+   "first_episode_id": "morning-2026-09-28",
+   "last_episode_id": "morning-2026-09-28",
+   "activity": [
+    {
+     "episode_id": "morning-2026-09-28",
+     "new_claims": 5,
+     "conf_changes": 0,
+     "watch_events": 0
+    }
+   ],
+   "claims": [
+    {
+     "claim_id": "1acaff1a-c5e7-4cea-8907-519e79c401c5",
+     "text": "Five men were arrested around 12:45 a.m. Sunday, Sept 27, near RAF Fairford, initially under the explosives act and later re-arrested on suspicion of preparation of a terrorist act; counter-terrorism police lead the investigation.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
+    },
+    {
+     "claim_id": "697320d2-f94c-40d0-adef-b66d7c5cdf92",
+     "text": "A local councillor said there had been a specific Iranian threat against RAF Fairford about six weeks ago, leading to increased surveillance around the base.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
+    },
+    {
+     "claim_id": "915a9893-cca4-422b-9748-98a395c4a840",
+     "text": "About 85 households were evacuated and a 400-metre cordon remains around three vehicles, which the army's explosive ordnance disposal unit examined.",
+     "type": "event",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
+    },
+    {
+     "claim_id": "7a933d91-1191-4dc0-94a2-b21cb647cc7d",
+     "text": "Trump said Sunday the group arrested near RAF Fairford had been under investigation \"for a long time\" and intended \"big damage\" to the base.",
+     "type": "quote",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
+    },
+    {
+     "claim_id": "36967038-eb36-44b1-98d3-c17d1a33dce5",
+     "text": "Britain has authorised the US to use bombers based at Fairford to strike Iranian missile sites attacking ships in the Strait of Hormuz.",
+     "type": "policy",
+     "confidence": "reported",
+     "created_at": "2026-09-28T11:13:36+00:00",
+     "episode_id": "morning-2026-09-28"
     }
    ]
   }
