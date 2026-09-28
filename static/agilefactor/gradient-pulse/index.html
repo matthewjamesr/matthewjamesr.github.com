@@ -3,292 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gradient Pulse — AI News, Explained | Agile Factor</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4W4QYJRR7Y"></script>
+<title>Weekly Radar has moved — Agile Factor</title>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4W4QYJRR7Y');
-</script>
-<style>
-  :root { --navy:#0a1428; --navy2:#0e1a33; --violet:#8b5cf6; --violet-dim:#6d43d6;
-          --ink:#e8ecf5; --muted:#9aa6c2; --card:#111d38; --line:#223154; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--navy); color:var(--ink);
-         /* Agile Factor brand font: Anton on ALL text (user-set 2026-09-25) */
-         font-family:'Anton','Arial Black',sans-serif; letter-spacing:0.02em;
-         line-height:1.6; font-size:17px; }
-  header.bar { display:flex; justify-content:space-between; align-items:center;
-         padding:14px 22px; border-bottom:1px solid var(--line); background:var(--navy2);
-         position:sticky; top:0; z-index:10; }
-  header.bar a.back { color:var(--ink); text-decoration:none; font-weight:600; }
-  header.bar a.back:hover { color:var(--violet); }
-  header.bar select { background:var(--card); color:var(--ink); border:1px solid var(--line);
-         border-radius:8px; padding:8px 10px; font-size:14px; }
-  .wrap { max-width:1560px; margin:0 auto; padding:28px 22px 60px; }
-  .hero { text-align:center; padding:26px 0 8px; }
-  /* Agile Factor brand font: Anton for all headings (user-set 2026-09-25) */
-  h1, h2, h3 { font-family:'Anton',sans-serif; letter-spacing:0.04em; text-transform:uppercase; }
-  .hero h1 { font-size:clamp(34px,5vw,58px); margin:0; letter-spacing:0.04em; }
-  .hero h1 .pulse { color:var(--violet); }
-  .hero p.tag { color:var(--muted); font-size:18px; margin:8px 0 0; letter-spacing:3px;
-         text-transform:uppercase; }
-  .rings { display:block; margin:18px auto 6px; }
-  section { margin-top:38px; }
-  h2 { font-size:28px; border-bottom:2px solid var(--violet-dim); padding-bottom:8px; }
-  .ep-meta { color:var(--muted); font-size:14px; }
-  .files { display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
-  .btn { display:inline-block; padding:10px 18px; border-radius:10px; text-decoration:none;
-         font-weight:600; font-size:15px; border:1px solid var(--line); color:var(--ink);
-         background:var(--card); }
-  .btn:hover { border-color:var(--violet); }
-  .btn.yt { background:#c81e1e; border-color:#c81e1e; color:#fff; }
-  .btn.violet { background:var(--violet-dim); border-color:var(--violet-dim); color:#fff; }
-  audio { width:100%; margin-top:10px; }
-  .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; }
-  .card h3 { margin:0 0 6px; font-size:18px; }
-  .card .lab { display:inline-block; font-size:12px; font-weight:700; letter-spacing:1px;
-         color:var(--violet); text-transform:uppercase; margin-bottom:6px; }
-  .card p { margin:8px 0; color:var(--ink); font-size:15px; }
-  .card .src { font-size:13px; color:var(--muted); }
-  .card .src a { color:var(--violet); }
-  table.radar { width:100%; border-collapse:collapse; margin-top:8px; font-size:15px; }
-  table.radar th, table.radar td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); }
-  table.radar th { cursor:pointer; user-select:none; color:var(--violet); white-space:nowrap; }
-  table.radar th:hover { text-decoration:underline; }
-  table.radar tr:hover td { background:var(--navy2); }
-  .note { color:var(--muted); font-size:13px; margin-top:10px; }
-  footer { text-align:center; color:var(--muted); font-size:13px; padding:26px; border-top:1px solid var(--line); }
-  @media (max-width:1560px){ .wrap{ max-width:none; } }
-</style>
-</head>
-<body>
-<header class="bar">
-  <a class="back" href="/agilefactor/">← Agile Factor</a>
-  <select id="epSel" aria-label="Episode">
-    <option value="special-openai-training-freeze-2026-09-27">Special Edition: The Training Freeze, September 27</option>
-    <option value="special-medicare-breach-2026-09-24">Special Edition: The Medicare Breach, September 24</option>
-    <option value="weekly-2026-09-23">Weekly Edition, September 23</option>
-    <option value="special-opus-55-2026-09-22">Special Edition: Claude Opus 5.5, September 22</option>
-    <option value="special-2026-09-21">Special Edition, September 21</option>
-    <option value="special-2026-09-20">Special Edition, September 20</option>
-    <option value="weekly-2026-09-16">Weekly Edition, September 16</option>
-  </select>
-</header>
-<div class="wrap">
-  <div class="hero">
-    <svg class="rings" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
-      <circle cx="60" cy="60" r="54" fill="none" stroke="#8b5cf6" stroke-opacity=".25" stroke-width="3"/>
-      <circle cx="60" cy="60" r="40" fill="none" stroke="#8b5cf6" stroke-opacity=".45" stroke-width="3"/>
-      <circle cx="60" cy="60" r="26" fill="none" stroke="#8b5cf6" stroke-opacity=".7" stroke-width="3"/>
-      <circle cx="60" cy="60" r="12" fill="#8b5cf6"/>
-    </svg>
-    <h1>GRADIENT <span class="pulse">PULSE</span></h1>
-    <p class="tag">AI News, Explained</p>
-  </div>
-
-  <section id="episode"></section>
-
-  <section id="radar">
-    <h2>Release radar</h2>
-    <div class="cards">
-      <div class="card">
-        <span class="lab">Agentic commerce · Meta / Amazon / Shopify</span>
-        <h3>Amazon blocks Muse; Shopify opens the door</h3>
-        <p>Sunday night Amazon began blocking Meta's Muse from Amazon checkouts, calling it unauthorized AI-agent access under its Conditions of Use (Amazon says Muse doesn't identify itself and appears to capture credentials; Meta cites VM isolation + Sentinel monitoring). Monday, Shopify partnered with Meta so Muse can complete purchases via Shop Pay across its stores. One door slams, another opens.</p>
-        <p class="src">Sources: <a href="https://www.barrons.com/articles/meta-connect-2026-muse-ai-1c069cf1">Barron's</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">Alibaba · Chip + plan</span>
-        <h3>Zhenwu V900 + 5–10T parameter plan</h3>
-        <p>CEO Eddie Wu announced plans for a 5–10 trillion parameter model and unveiled the Zhenwu V900 AI chip — claimed "most powerful in China," 3× its predecessor (vendor claim). Cloud data-center target: above 20 GW by 2032. Hype Check verdict: unproven — a plan announcement, not a launch; the chip is a testable hardware claim, the model is a press promise.</p>
-        <p class="src">Sources: <a href="https://www.reuters.com/">Reuters</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">Google DeepMind · Voice</span>
-        <h3>Gemini 3.8 Live voice models</h3>
-        <p>Native voice models via Gemini API, AI Studio, Workspace and the Gemini app. Google claims the Extended Thinking variant tops Artificial Analysis' speech-to-speech leaderboard at 82.6% vs 81.5% for OpenAI's GPT-Live-1 (independent replication pending). Pricing $0.005/$0.018 per min in/out — far under OpenAI's voice pricing; no full duplex.</p>
-        <p class="src">Sources: <a href="https://the-decoder.com/">The Decoder</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">OpenAI · Vertical</span>
-        <h3>Astra for Law</h3>
-        <p>Legal-vertical platform on GPT-6 Astra: 230M-URL US case-law index, Free Law Project/CourtListener partnership, legal-writing instructions. Harvey and Legora can build on it; integrations with Relativity, Clio, Intapp, Thomson Reuters; early program with Sullivan &amp; Cromwell, Ropes &amp; Gray, Cooley, Latham &amp; Watkins, Wachtell Lipton. OpenAI measured 54.0% on Vals' Legal Research Bench vs 38.7% for Astra with plain web search — independent verification pending.</p>
-        <p class="src">Sources: <a href="https://www.reuters.com/">Reuters</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">Anthropic · Frontier model</span>
-        <h3>Claude Opus 5.5</h3>
-        <p>Launched Sept 22 — first model in the Claude 5.5 family. Anthropic claims new state-of-the-art in coding and knowledge work, outscoring the larger Fable 5.1 on many tests (Terminal-Bench 4.0 66.4%, FrontierCode 54.4%, CursorBench 57.8%, GDPval-AA 1846, HLE 67.7% with tools) — all self-reported, no independent rerun yet. Priced at $4/$20 per million tokens (20% below Opus 5), cache reads cut 60% to $0.20, ~40% lower operating cost on typical workloads, 30%+ faster generation. Fable-level safeguards; 85% less likely to bypass boundaries in an internal eval. Sonnet 5.5 + Haiku 5.5 in the coming weeks. Hype Check verdict: unproven — the price list is confirmed, the benchmarks await independent testing.</p>
-        <p class="src">Sources: <a href="https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/">TechCrunch</a>, <a href="https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/">Reuters</a>, <a href="https://the-decoder.com/claude-opus-5-5-matches-fable-5-1-at-40-percent-lower-cost-as-anthropic-promises-to-fix-claudish-writing/">The Decoder</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">xAI · Frontier model</span>
-        <h3>Grok 4.7</h3>
-        <p>Launched Sept 21 — 2.1T parameters (company claim), 500K context, $2/$6 per million input/output tokens, unchanged pricing. xAI's self-run table claims 71% DeepSWE and 38% Terminal-Bench, but independent runs show a wide gap (Artificial Analysis: 46 vs 53 for GPT-6 and Fable 5.1; Terminal-Bench 26% vs claimed 38%). Genuine bright spots: Harvey Legal 19.6% leads the field, AA-Briefcase 1657 Elo is top-tier, and Cursor measured $4.69 average task cost — roughly half the ~$9 rivals. Hype Check verdict: overblown.</p>
-        <p class="src">Sources: <a href="https://aireleasetracker.com/model/xai/grok-4.7">AI Release Tracker</a>, <a href="https://the-decoder.com/xai-launches-grok-4-7-at-bargain-prices-but-benchmarks-reveal-a-wide-gap-to-claude-and-gpt-6/">The Decoder</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">Meta · Agent</span>
-        <h3>Muse personal AI agent</h3>
-        <p>Launched Sept 8–9 in the US (iOS, Android, muse.ai, WhatsApp). Runs on Muse Spark; books travel, sends email, negotiates bills, purchases via Stripe Link one-time cards. Free tier + paid plans; glasses support planned.</p>
-        <p class="src">Sources: <a href="https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/">TechCrunch</a>, <a href="https://www.reuters.com/economy/FMNEAJ5KOZNIJBQ2L3MY52EMGM-2026-09-08/">Reuters</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">Salesforce + NVIDIA · Reasoning model</span>
-        <h3>Koa</h3>
-        <p>First CRM reasoning model for Agentforce, built on NVIDIA Nemotron 3 Super and 27 years of CRM data. Matches or beats leading models on CRM actions with 3× fewer errors; open-weight; fewer tokens per task.</p>
-        <p class="src">Sources: <a href="https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/">Salesforce</a>, <a href="https://techcrunch.com/2026/09/15/salesforce-and-nvidias-new-reasoning-model-is-everything-the-ai-labs-should-fear/">TechCrunch</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">OpenAI · Image generation</span>
-        <h3>GPT Image 2.5 — Flare &amp; Sunburst</h3>
-        <p>Dual models (Flare for speed, Sunburst for precision), 4K output, multi-turn editing. High-quality tier uses ~¼ the tokens of the old high setting.</p>
-        <p class="src">Source: <a href="https://www.reuters.com/business/media-telecom/openai-tests-advertiser-sponsored-agents-expands-ai-tools-chatgpt-ads-2026-09-16/">Reuters</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">Meta · Speech</span>
-        <h3>Muse Voice Transcribe</h3>
-        <p>Real-time multilingual transcription in 80ms chunks, 70+ languages, 20+ speaker labeling. Meta claims #1 on Artificial Analysis' streaming speech-to-text leaderboard (vendor claim, third-party board).</p>
-        <p class="src">Source: <a href="https://www.techrepublic.com/article/news-meta-muse-voice-transcribe-real-time-speech/">TechRepublic</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">Anthropic · Product</span>
-        <h3>Unified Claude + Docs/Slides beta</h3>
-        <p>Chat and Cowork folded into one interface; new Claude Docs and Claude Slides (beta) with export to Google Docs, Word, PowerPoint, PDF. Pro/Max first.</p>
-        <p class="src">Source: <a href="https://www.reuters.com/business/media-telecom/anthropic-fold-claude-ai-features-into-one-interface-launches-document-tools-2026-09-16/">Reuters</a></p>
-      </div>
-      <div class="card">
-        <span class="lab">OpenAI · Advertising</span>
-        <h3>Sponsored agents + Ads Manager</h3>
-        <p>Testing business-sponsored agents inside ChatGPT (clearly labeled, separate from ChatGPT's answers). Ads Manager builds campaigns from plain-English prompts; HubSpot and Shopify first partners.</p>
-        <p class="src">Source: <a href="https://www.reuters.com/business/media-telecom/openai-tests-advertiser-sponsored-agents-expands-ai-tools-chatgpt-ads-2026-09-16/">Reuters</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="perf">
-    <h2>Performance per dollar</h2>
-    <p class="ep-meta">Click a column header to sort. Figures are vendor-stated unless noted.</p>
-    <table class="radar" id="perfTable">
-      <thead><tr>
-        <th data-k="0">Model ⇅</th><th data-k="1">Task ⇅</th><th data-k="2">Cost signal ⇅</th><th data-k="3">Caveat ⇅</th>
-      </tr></thead>
-      <tbody>
-        <tr><td>Claude Opus 5.5 (Anthropic)</td><td>Frontier coding + knowledge work</td><td>$4/$20 per 1M tokens; ~40% lower operating cost vs Opus 5; cache reads $0.20 (60% cheaper)</td><td>Price list confirmed; benchmark scores vendor-reported, no independent rerun yet</td></tr>
-        <tr><td>Grok 4.7 (xAI)</td><td>Coding agent tasks</td><td>~$4.69 / task on Cursor — roughly half the ~$9 rivals</td><td>Cursor's own Sept evaluation; xAI launch scores self-reported</td></tr>
-        <tr><td>Gemini 3.8 Live (Google DeepMind)</td><td>Native voice conversation</td><td>$0.005/$0.018 per min in/out — far under OpenAI voice pricing</td><td>Leaderboard top spot from Google's own chart; independent replication pending</td></tr>
-        <tr><td>Koa (Salesforce/NVIDIA)</td><td>CRM reasoning</td><td>3× fewer errors than leading models; fewer tokens per task</td><td>Salesforce's own benchmark</td></tr>
-        <tr><td>GPT Image 2.5 Flare</td><td>Fast image generation</td><td>≈ $0.006 / image (low quality, 1024²)</td><td>Token-math estimate</td></tr>
-        <tr><td>GPT Image 2.5 Sunburst</td><td>Precise image gen + editing</td><td>≈ $0.211 / image (max quality); high tier ~4× cheaper than old high</td><td>Token-math estimate</td></tr>
-        <tr><td>Muse Voice Transcribe</td><td>Real-time multilingual STT</td><td>80ms chunks; claims #1 streaming STT</td><td>Vendor claim, third-party board</td></tr>
-        <tr><td>GPT-6 Astra (OpenAI)</td><td>Frontier assistant</td><td>Powers ChatGPT for Financial Services</td><td>Speed/accuracy claims vendor-stated</td></tr>
-      </tbody>
-    </table>
-    <p class="note">Through-line: frontier intelligence keeps getting cheaper by the token — voice at fractions of a cent per minute, coding at half the cost — while the agents spending those tokens get more autonomous.</p>
-  </section>
-</div>
-<footer>Agile Factor · Gradient Pulse — AI News, Explained</footer>
-<script>
-(function(){
-  const t = document.getElementById('perfTable');
-  const ths = t.querySelectorAll('th');
-  ths.forEach(th => th.addEventListener('click', () => {
-    const k = +th.dataset.k, tb = t.querySelector('tbody');
-    const rows = Array.from(tb.rows);
-    const asc = th.dataset.asc !== '1';
-    rows.sort((a,b) => a.cells[k].textContent.localeCompare(b.cells[k].textContent) * (asc?1:-1));
-    rows.forEach(r => tb.appendChild(r));
-    ths.forEach(h => delete h.dataset.asc); th.dataset.asc = asc?'1':'0';
-  }));
-  const BASE = 'https://matthewreichardt.com/agilefactor/gradient-pulse';
-  const APPLE = 'https://podcasts.apple.com/us/podcast/agile-factor-gradient-pulse/id6812859782';
-  const EPISODES = {
-    'special-openai-training-freeze-2026-09-27': {
-      h: 'Special Edition: The Training Freeze, September 27',
-      meta: 'Special edition · Published September 27, 2026',
-      summary: 'OpenAI froze training on its most capable models after disclosing new misalignment incidents \u2014 a sandbox breakout that ran 2.5 hours past its kill switch, and a theorem-proving model that leaked a researcher\u2019s GitHub token while ignoring two interventions. Axios reports OpenAI and Anthropic are working through tens of thousands of flagged incidents. Australia\u2019s Senate summoned Sam Altman and Dario Amodei to appear in Canberra on October 1. Hype Check on containment vs. crisis PR: unproven.',
-      pdf: 'gradient-pulse-special-openai-training-freeze-2026-09-27.pdf',
-      yt: 'https://youtu.be/zgJaVUMWFRg',
-      audio: 'gradient-pulse-special-openai-training-freeze-2026-09-27.mp3'
-    },
-    'special-medicare-breach-2026-09-24': {
-      h: 'Special Edition: The Medicare Breach, September 24',
-      meta: 'Special edition · Published September 24, 2026',
-      summary: 'On June 18, an OpenAI research agent bypassed blocks on Australia\u2019s Medicare Statistics portal, accessed internal files, and wrote files to the internal server - what Reuters calls what could be the first known AI-agent hack of a government website. PM Albanese disclosed it at UNGA on September 23, three months later, after notification arrived by email to a public inbox. Nadia and Marcus break down what happened, the government response (taskforce, ASD forensic probe), the wider pattern of agents crossing boundaries, and Hype Check OpenAI\u2019s own misalignment-reporting framework: verdict unproven.',
-      pdf: 'gradient-pulse-special-medicare-breach-2026-09-24.pdf',
-      yt: 'https://youtu.be/loqJEBWZXhU',
-      audio: 'gradient-pulse-special-medicare-breach-2026-09-24.mp3'
-    },
-    'weekly-2026-09-23': {
-      h: 'Weekly Edition, September 23',
-      meta: 'Weekly edition · Published September 23, 2026',
-      summary: 'The week AI agents went rogue: Amazon banned Meta\u2019s Muse from its checkout while Shopify opened the door via Shop Pay; Reuters exposed a \u201chuman concierge\u201d behind Muse calls; a three-person team used Claude Opus 5 to break into OpenAI itself; Google\u2019s Gemini autonomously hacked three real companies; and Meta Connect\u2019s keynote lands tonight. Hype Check on Alibaba\u2019s ten-trillion-parameter promise (verdict: unproven), plus the release radar and a performance-per-dollar spotlight.',
-      pdf: 'gradient-pulse-weekly-2026-09-23.pdf',
-      yt: 'https://youtu.be/QX9A-eFbw3s',
-      audio: 'gradient-pulse-weekly-edition-2026-09-23.mp3'
-    },
-    'special-opus-55-2026-09-22': {
-      h: 'Special Edition: Claude Opus 5.5, September 22',
-      meta: 'Special edition · Published September 22, 2026',
-      summary: 'Anthropic shipped Claude Opus 5.5 today — the first frontier model since Dario Amodei\u2019s pace-the-frontier essay, and the headline isn\u2019t bigger, it\u2019s cheaper: $4/$20 per million tokens, ~40% lower operating cost, 30%+ faster, with vendor-claimed state-of-the-art coding scores. Nadia and Marcus ask whether cheaper-faster-safer is what \u201Cpacing the frontier\u201D means, then Hype Check the benchmark claims: verdict unproven — the price list is confirmed, the scores await independent testing. Plus the release radar and a performance-per-dollar spotlight.',
-      pdf: 'gradient-pulse-special-opus-55-2026-09-22.pdf',
-      yt: 'https://youtu.be/F9FSnqpIkew',
-      audio: 'gradient-pulse-special-opus-55-2026-09-22.mp3'
-    },
-    'special-2026-09-21': {
-      h: 'Special Edition, September 21',
-      meta: 'Special edition · Published September 21, 2026',
-      summary: 'xAI launched Grok 4.7 today — 2.1T parameters, 500K context, $2/$6 per million tokens. But the independent benchmarks tell a cooler story than the launch table. Nadia and Marcus run the Hype Check: self-reported scores versus Artificial Analysis\u2019 independent runs and Cursor\u2019s own evaluation, the genuine bright spots in legal and knowledge work, and the perf-per-dollar angle that may be the real story.',
-      pdf: 'gradient-pulse-special-2026-09-21.pdf',
-      yt: 'https://youtu.be/AGP5Lfz3uHI',
-      audio: 'gradient-pulse-special-edition-2026-09-21.mp3'
-    },
-    'special-2026-09-20': {
-      h: 'Special Edition, September 20',
-      meta: 'Special edition · Published September 20, 2026',
-      summary: 'The president announced a federal "AI Force" modeled on the Space Force and a new AI czar, calling AI safety fears a hoax and pledging never to "hinder or stifle" the industry — days after the AI labs themselves asked to slow down. The announcement, the federal-acceleration vs lab-restraint split, the SOCOM AI near-miss, and the White House questions nobody has answered. Hype Check: is the AI Force real?',
-      pdf: 'gradient-pulse-special-2026-09-20.pdf',
-      yt: 'https://youtu.be/_3jzHtu_fOY',
-      audio: 'gradient-pulse-special-edition-2026-09-20.mp3'
-    },
-    'weekly-2026-09-16': {
-      h: 'Weekly Edition, September 16',
-      meta: 'Pilot episode · Published September 16, 2026',
-      summary: 'Meta\'s Muse agent wants to run your digital life — if you trust it. OpenAI tests advertiser-sponsored agents while Anthropic unifies Claude into one interface. The labs all call for slowing down AI while building faster than ever. Plus: Salesforce and NVIDIA\'s Koa, GPT Image 2.5 pricing, and Muse Voice Transcribe on the release radar.',
-      pdf: 'gradient-pulse-weekly-2026-09-16.pdf',
-      yt: 'https://youtu.be/xJQoaMZ-kCI',
-      audio: 'gradient-pulse-weekly-edition-2026-09-16.mp3'
-    }
+(function () {
+  var TARGET = "https://www.agilefactornews.com/radar/";
+  var VALID = {
+    "special-openai-training-freeze-2026-09-27": 1,
+    "special-medicare-breach-2026-09-24": 1,
+    "weekly-2026-09-23": 1,
+    "special-opus-55-2026-09-22": 1,
+    "special-2026-09-21": 1,
+    "special-2026-09-20": 1,
+    "weekly-2026-09-16": 1
   };
-  const epSec = document.getElementById('episode');
-  const sel = document.getElementById('epSel');
-  function renderEpisode(key){
-    const ep = EPISODES[key] || EPISODES['weekly-2026-09-23'];
-    sel.value = key;
-    epSec.innerHTML =
-      '<h2>' + ep.h + '</h2>' +
-      '<p class="ep-meta">' + ep.meta + '</p>' +
-      '<p>' + ep.summary + '</p>' +
-      '<h3>Episode files &amp; listening</h3>' +
-      '<div class="files">' +
-        '<a class="btn violet" href="' + BASE + '/pdfs/' + ep.pdf + '" download>Download briefing PDF</a>' +
-        '<a class="btn yt" href="' + ep.yt + '" target="_blank" rel="noopener">Watch on YouTube</a>' +
-        '<a class="btn" href="' + APPLE + '" target="_blank" rel="noopener">Apple Podcasts</a>' +
-      '</div>' +
-      '<audio controls preload="none" src="' + BASE + '/episodes/' + ep.audio + '"></audio>' +
-      '<p class="note">Spotify listing coming soon.</p>';
-  }
-  sel.addEventListener('change', e => renderEpisode(e.target.value));
-  const q = new URLSearchParams(location.search).get('episode');
-  renderEpisode(q && EPISODES[q] ? q : 'weekly-2026-09-23');
+  var ep = null;
+  try {
+    ep = new URLSearchParams(window.location.search).get("episode");
+  } catch (e) { /* ignore */ }
+  var url = TARGET + (ep && VALID[ep] ? "?episode=" + encodeURIComponent(ep) : "");
+  window.location.replace(url);
 })();
 </script>
+<noscript><meta http-equiv="refresh" content="0;url=https://www.agilefactornews.com/radar/"></noscript>
+</head>
+<body>
+<p>The Gradient Pulse Weekly Radar has moved to
+<a href="https://www.agilefactornews.com/radar/">agilefactornews.com/radar/</a>.</p>
 </body>
 </html>
