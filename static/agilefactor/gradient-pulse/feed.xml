@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, September 28</title>
+<description>Florida AG James Uthmeier filed a preliminary-injunction motion seeking to bar OpenAI from developing new models without independent third-party safety approval — the first state-level attempt to halt frontier model development. Hype Check: unproven. Weekly Radar: https://www.agilefactornews.com/radar/</description>
+<pubDate>Mon, 28 Sep 2026 13:30:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-florida-ag-openai-training-injunction-2026-09-28.mp3" length="5034845" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-florida-ag-openai-training-injunction-2026-09-28</guid>
+<itunes:duration>9:26</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition: The Medicare Breach, September 24</title>
 <description>Special Edition, September 24. Release radar, full briefing, and PDF: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=special-medicare-breach-2026-09-24</description>
 <pubDate>Thu, 24 Sep 2026 16:30:00 -0500</pubDate>
