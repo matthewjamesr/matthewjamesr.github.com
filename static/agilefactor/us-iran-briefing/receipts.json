@@ -1,9 +1,141 @@
 {
   "format_version": "receipts-v1",
-  "generated_at": "2026-09-27T11:55:32.430535+00:00",
-  "episode_id": "morning-2026-09-27",
+  "generated_at": "2026-09-28T00:55:52.293529+00:00",
+  "episode_id": "evening-2026-09-27",
   "policy": "all resolutions publish, including misses and downgrades",
   "entries": [
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "President Trump rejected Iran's seven-day ceasefire proposal on the record Saturday, Sept 26, telling White House reporters: 'I reject their proposal... I like making a deal too, but that deal would not be acceptable.'",
+      "old_confidence": "corroborated",
+      "new_confidence": "confirmed",
+      "reason": "Trump himself reiterated the rejection in his Sunday Axios interview, saying Iran's offer was not the deal he wants, and UN Ambassador Mike Waltz confirmed the rejection and its rationale on CNN and NBC Sunday shows — three independent confirmations of the same on-the-record rejection.",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "President Trump told Axios in a phone interview published Sunday, Sept 27, that he expects U.S. negotiators to hold more talks with Iran this week, one day after rejecting Tehran's seven-day proposal.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Trump told Axios the Iranian offer was \"not the deal that I want to make\" but \"what we would have maybe agreed to a year ago,\" adding that Tehran had \"overplayed their hand.\"",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Asked in the Axios interview whether he has considered resuming strikes against Iran, Trump said, \"I am always thinking about it,\" committing to no specific attack.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Axios, citing sources familiar with the matter, reported that indirect U.S.-Iran talks could begin as early as Monday, with Qatari mediators continuing shuttle diplomacy.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "iran-negotiating-position",
+      "story_title": "Iran's three conditions for ending the war",
+      "claim_text": "UN Ambassador Mike Waltz said on CNN's State of the Union on Sunday that Trump rejected the seven-day proposal because Iran was \"asking for everything up front with a promise that they would then talk.\"",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "iran-negotiating-position",
+      "story_title": "Iran's three conditions for ending the war",
+      "claim_text": "Waltz told NBC's Meet the Press that Iran's proposal was \"a pretty cynical attempt to put something on the table that they knew was unacceptable.\"",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "iran-negotiating-position",
+      "story_title": "Iran's three conditions for ending the war",
+      "claim_text": "Waltz raised a standing U.S. concern about whether Iran's negotiators speak for the Supreme Leader, asking who is calling the shots in Iran — the IRGC, the president, or the foreign minister.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Foreign Minister Abbas Araghchi said Sunday that the seven-day terms were \"nothing more\" than what was in the June U.S.-Iran Memorandum of Understanding, and that \"the choice now rests with the United States.\"",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "hormuz-reopening-diplomacy",
+      "story_title": "Diplomacy over reopening the Strait of Hormuz",
+      "claim_text": "Araghchi dismissed the president's mixed signals, saying \"the US president has also said many good things and also many contradictory things, which unfortunately we hear a lot from him.\"",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "us-iran-threat-exchange-september-2026",
+      "story_title": "US-Iran threat exchange over a new American attack",
+      "claim_text": "An Iranian army spokesperson said Sunday the armed forces are fully prepared for any renewed U.S. attack and warned Washington would suffer greater damage if it launched another strike.",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
+    {
+      "type": "confidence_change",
+      "date": "2026-09-28T00:12:16+00:00",
+      "story_id": "us-iran-threat-exchange-september-2026",
+      "story_title": "US-Iran threat exchange over a new American attack",
+      "claim_text": "Army commander-in-chief Amir Hatami called the war a \"critical and decisive stage\" and declared: \"If Iran cannot trade, if Iran cannot live, no one will be able to trade or live. The Strait of Hormuz is the strait of our dignity and honour.\"",
+      "old_confidence": null,
+      "new_confidence": "reported",
+      "reason": "Claim entered as reported",
+      "episode_id": "evening-2026-09-27"
+    },
     {
       "type": "confidence_change",
       "date": "2026-09-27T11:04:02+00:00",
