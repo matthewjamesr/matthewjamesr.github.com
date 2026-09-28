@@ -1,7 +1,7 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-27T11:55:32.372960+00:00",
-  "episode_id": "morning-2026-09-27",
+  "generated_at": "2026-09-28T00:55:52.211079+00:00",
+  "episode_id": "evening-2026-09-27",
   "as_of_date": "2026-09-27",
   "hormuz": {
     "status": "restricted",
@@ -48,18 +48,27 @@
       "title": "Diplomacy over reopening the Strait of Hormuz",
       "day_n": 16,
       "category": "diplomacy",
-      "claim_count": 52,
-      "recent_claim_count": 7,
-      "last_episode_id": "evening-2026-09-26"
+      "claim_count": 58,
+      "recent_claim_count": 11,
+      "last_episode_id": "evening-2026-09-27"
     },
     {
       "story_id": "iran-negotiating-position",
       "title": "Iran's three conditions for ending the war",
       "day_n": 9,
       "category": "diplomacy",
-      "claim_count": 12,
-      "recent_claim_count": 7,
-      "last_episode_id": "evening-2026-09-26"
+      "claim_count": 15,
+      "recent_claim_count": 9,
+      "last_episode_id": "evening-2026-09-27"
+    },
+    {
+      "story_id": "us-iran-threat-exchange-september-2026",
+      "title": "US-Iran threat exchange over a new American attack",
+      "day_n": 8,
+      "category": "military",
+      "claim_count": 8,
+      "recent_claim_count": 2,
+      "last_episode_id": "evening-2026-09-27"
     },
     {
       "story_id": "yemen-houthi-west-coast-offensive",
@@ -67,25 +76,7 @@
       "day_n": 18,
       "category": "proxies",
       "claim_count": 83,
-      "recent_claim_count": 2,
-      "last_episode_id": "morning-2026-09-26"
-    },
-    {
-      "story_id": "us-iran-aviation-sanctions-grounding",
-      "title": "U.S. moves to ground Iranian airlines worldwide via secondary sanctions",
-      "day_n": 5,
-      "category": "economy",
-      "claim_count": 11,
-      "recent_claim_count": 1,
-      "last_episode_id": "morning-2026-09-26"
-    },
-    {
-      "story_id": "turkey-saudi-defence-pact",
-      "title": "Turkey-Saudi Arabia-Pakistan defense pact",
-      "day_n": 14,
-      "category": "military",
-      "claim_count": 2,
-      "recent_claim_count": 1,
+      "recent_claim_count": 0,
       "last_episode_id": "morning-2026-09-26"
     },
     {
@@ -96,9 +87,30 @@
       "claim_count": 59,
       "recent_claim_count": 0,
       "last_episode_id": "evening-2026-09-25"
+    },
+    {
+      "story_id": "strait-hormuz-shipping-attacks",
+      "title": "Attacks on commercial shipping in the Strait of Hormuz",
+      "day_n": 15,
+      "category": "military",
+      "claim_count": 39,
+      "recent_claim_count": 0,
+      "last_episode_id": "morning-2026-09-26"
     }
   ],
   "alerts": [
+    {
+      "watch_id": "a3b7c9d1-5e2f-4a8b-9c0d-1e2f3a4b5c01",
+      "story_id": "hormuz-reopening-diplomacy",
+      "question": "Do indirect U.S.-Iran talks actually resume this week, and does Washington bring a counter-proposal to Tehran's seven-day offer?",
+      "asked_in_episode": "evening-2026-09-27"
+    },
+    {
+      "watch_id": "a3b7c9d1-5e2f-4a8b-9c0d-1e2f3a4b5c02",
+      "story_id": "hormuz-reopening-diplomacy",
+      "question": "What decision does Tehran make once the mediators convey Washington's definitive views on the seven-day proposal?",
+      "asked_in_episode": "evening-2026-09-27"
+    },
     {
       "watch_id": "50c2b058-b4e8-44cd-bdf1-ab6e3dbe421b",
       "story_id": "hormuz-reopening-diplomacy",
@@ -188,39 +200,15 @@
       "story_id": "strait-hormuz-shipping-attacks",
       "question": "Do Hormuz commodity-vessel transits stay in the single digits through the weekend, and do insurance markets and oil prices react?",
       "asked_in_episode": "morning-2026-09-25"
-    },
-    {
-      "watch_id": "08104323-d40c-4b75-a32d-77264956d1c0",
-      "story_id": "araghchi-impeachment-motion",
-      "question": "Does the impeachment motion against Araghchi advance in Iran's parliament, or get buried quietly?",
-      "asked_in_episode": "evening-2026-09-24"
-    },
-    {
-      "watch_id": "fe1c8d05-d93f-4828-9252-b1c7e831e7e6",
-      "story_id": "hormuz-reopening-diplomacy",
-      "question": "What does Washington's reply to Tehran's proposals actually contain \u2014 Tehran says it is reviewing it?",
-      "asked_in_episode": "evening-2026-09-24"
-    },
-    {
-      "watch_id": "e8da062e-5ff2-42e0-bcc0-25953c816c7b",
-      "story_id": "seized-iranian-tankers-atlantic",
-      "question": "Where do the three seized tankers go, and what does the U.S. do with roughly $600 million of Iranian oil?",
-      "asked_in_episode": "evening-2026-09-24"
-    },
-    {
-      "watch_id": "0564c0d5-6524-4838-8fe9-0c04645ba0e9",
-      "story_id": "oil-price-shock-september-2026",
-      "question": "Does the oil rally hold, or does Hormuz-reopening talk pull prices back down?",
-      "asked_in_episode": "evening-2026-09-24"
     }
   ],
   "alerts_display_default": 5,
   "watchlist": {
-    "open": 71,
+    "open": 73,
     "resolved": 18
   },
-  "stories_stale_excluded": 22,
-  "alerts_stale_excluded": 52,
+  "stories_stale_excluded": 26,
+  "alerts_stale_excluded": 56,
   "aging": {
     "recent_window_editions": 3,
     "stale_after_editions": 5,
