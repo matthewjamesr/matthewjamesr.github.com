@@ -1,8 +1,8 @@
 {
   "format_version": "situation-board-v1",
-  "generated_at": "2026-09-28T00:55:52.211079+00:00",
-  "episode_id": "evening-2026-09-27",
-  "as_of_date": "2026-09-27",
+  "generated_at": "2026-09-28T11:56:13.878110+00:00",
+  "episode_id": "morning-2026-09-28",
+  "as_of_date": "2026-09-28",
   "hormuz": {
     "status": "restricted",
     "basis": "Diplomacy over reopening the Strait of Hormuz"
@@ -46,25 +46,43 @@
     {
       "story_id": "hormuz-reopening-diplomacy",
       "title": "Diplomacy over reopening the Strait of Hormuz",
-      "day_n": 16,
+      "day_n": 17,
       "category": "diplomacy",
-      "claim_count": 58,
-      "recent_claim_count": 11,
+      "claim_count": 62,
+      "recent_claim_count": 12,
       "last_episode_id": "evening-2026-09-27"
     },
     {
       "story_id": "iran-negotiating-position",
       "title": "Iran's three conditions for ending the war",
-      "day_n": 9,
+      "day_n": 10,
       "category": "diplomacy",
       "claim_count": 15,
-      "recent_claim_count": 9,
+      "recent_claim_count": 6,
       "last_episode_id": "evening-2026-09-27"
+    },
+    {
+      "story_id": "fairford-airbase-arrests",
+      "title": "Five arrested near RAF Fairford in suspected terror plot against US airbase",
+      "day_n": 1,
+      "category": "military",
+      "claim_count": 5,
+      "recent_claim_count": 5,
+      "last_episode_id": "morning-2026-09-28"
+    },
+    {
+      "story_id": "strait-hormuz-shipping-attacks",
+      "title": "Attacks on commercial shipping in the Strait of Hormuz",
+      "day_n": 16,
+      "category": "military",
+      "claim_count": 41,
+      "recent_claim_count": 2,
+      "last_episode_id": "morning-2026-09-26"
     },
     {
       "story_id": "us-iran-threat-exchange-september-2026",
       "title": "US-Iran threat exchange over a new American attack",
-      "day_n": 8,
+      "day_n": 9,
       "category": "military",
       "claim_count": 8,
       "recent_claim_count": 2,
@@ -73,32 +91,26 @@
     {
       "story_id": "yemen-houthi-west-coast-offensive",
       "title": "Houthi west-coast offensive / govt counter-offensive around Mokha",
-      "day_n": 18,
+      "day_n": 19,
       "category": "proxies",
       "claim_count": 83,
-      "recent_claim_count": 0,
-      "last_episode_id": "morning-2026-09-26"
-    },
-    {
-      "story_id": "oil-price-shock-september-2026",
-      "title": "Oil price shock (Brent above $100)",
-      "day_n": 17,
-      "category": "energy",
-      "claim_count": 59,
-      "recent_claim_count": 0,
-      "last_episode_id": "evening-2026-09-25"
-    },
-    {
-      "story_id": "strait-hormuz-shipping-attacks",
-      "title": "Attacks on commercial shipping in the Strait of Hormuz",
-      "day_n": 15,
-      "category": "military",
-      "claim_count": 39,
       "recent_claim_count": 0,
       "last_episode_id": "morning-2026-09-26"
     }
   ],
   "alerts": [
+    {
+      "watch_id": "55fee58a-902b-4d92-b62e-6ebd54965f4f",
+      "story_id": "fairford-airbase-arrests",
+      "question": "Do British authorities charge or identify the five men arrested near RAF Fairford, and does the investigation confirm an Iranian link?",
+      "asked_in_episode": "morning-2026-09-28"
+    },
+    {
+      "watch_id": "aff919a3-551a-4efc-b126-3f7125a76746",
+      "story_id": "hormuz-reopening-diplomacy",
+      "question": "Does Tehran make any nuclear concession in response to the mediators' overnight push, or does Trump move toward a renewed bombing campaign?",
+      "asked_in_episode": "morning-2026-09-28"
+    },
     {
       "watch_id": "a3b7c9d1-5e2f-4a8b-9c0d-1e2f3a4b5c01",
       "story_id": "hormuz-reopening-diplomacy",
@@ -148,12 +160,6 @@
       "asked_in_episode": "morning-2026-09-26"
     },
     {
-      "watch_id": "a561e027-d087-47ab-b1dd-9b60084206f8",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "question": "Do Hormuz transit numbers hold through the weekend?",
-      "asked_in_episode": "morning-2026-09-26"
-    },
-    {
       "watch_id": "ffe74757-1abf-4309-9bd3-cc53614f4802",
       "story_id": "china-imagery-jordan-base-attack",
       "question": "The U.S. and Iranian versions of Beijing's assurances cannot both be true \u2014 whose version survives contact with evidence?",
@@ -182,33 +188,15 @@
       "story_id": "hormuz-reopening-diplomacy",
       "question": "Trump told the WSJ he expects U.S. bombing of Iran could resume after the November midterms, with caveats \u2014 does the bombing resume, or does his position change?",
       "asked_in_episode": "evening-2026-09-25"
-    },
-    {
-      "watch_id": "5382975b-4867-473c-b8e6-b31233475b7f",
-      "story_id": "turkey-saudi-defence-pact",
-      "question": "What is the date and venue of the Saudi-Turkey-Pakistan military chiefs-of-staff meeting under the Mecca Joint Defence Agreement, and what support measures for Saudi Arabia does it produce?",
-      "asked_in_episode": "morning-2026-09-25"
-    },
-    {
-      "watch_id": "b4e9bf3c-9e13-4e38-80d7-20ea64641569",
-      "story_id": "yemen-houthi-west-coast-offensive",
-      "question": "Does the Houthi missile tempo from Sept 24 hold through the weekend, or do the chiefs-of-staff meeting and the Grand Mufti's call to arms deter further salvos?",
-      "asked_in_episode": "morning-2026-09-25"
-    },
-    {
-      "watch_id": "627438f6-2004-4470-b35a-9ceb9fe0ef65",
-      "story_id": "strait-hormuz-shipping-attacks",
-      "question": "Do Hormuz commodity-vessel transits stay in the single digits through the weekend, and do insurance markets and oil prices react?",
-      "asked_in_episode": "morning-2026-09-25"
     }
   ],
   "alerts_display_default": 5,
   "watchlist": {
-    "open": 73,
-    "resolved": 18
+    "open": 74,
+    "resolved": 19
   },
   "stories_stale_excluded": 26,
-  "alerts_stale_excluded": 56,
+  "alerts_stale_excluded": 59,
   "aging": {
     "recent_window_editions": 3,
     "stale_after_editions": 5,
