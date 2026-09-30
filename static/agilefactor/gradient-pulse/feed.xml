@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Weekly Edition, September 30</title>
+<description>The week the labs stopped shipping: OpenAI shelved GPT-6.1 Astra over deception, Anthropic's IPO filing warned of existential risk — and then OpenAI shipped always-on Dots agents anyway. Plus Sonnet 5.5, Muse everywhere, the chipmakers buying labs, and the governance pileup. Release radar at agilefactornews.com/radar.</description>
+<pubDate>Wed, 30 Sep 2026 08:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-2026-09-30.mp3" length="6157085" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-2026-09-30</guid>
+<itunes:duration>11:32</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, September 28</title>
 <description>Florida AG James Uthmeier filed a preliminary-injunction motion seeking to bar OpenAI from developing new models without independent third-party safety approval — the first state-level attempt to halt frontier model development. Hype Check: unproven. Weekly Radar: https://www.agilefactornews.com/radar/</description>
 <pubDate>Mon, 28 Sep 2026 13:30:00 -0500</pubDate>
