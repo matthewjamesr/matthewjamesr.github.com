@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, September 30</title>
+<description>The FTC opened the first-ever U.S. regulatory probe into rogue AI agents — drafting subpoenas for Anthropic and OpenAI executives, 24 hours after the White House's voluntary 'morally binding' AI accord. Self-regulation was yesterday; subpoenas are today. Weekly Radar: https://www.agilefactornews.com/radar/?episode=special-ftc-probe-anthropic-openai-2026-09-30</description>
+<pubDate>Wed, 30 Sep 2026 13:30:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-ftc-probe-2026-09-30.mp3" length="4992581" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-ftc-probe-2026-09-30</guid>
+<itunes:duration>9:21</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Weekly Edition, September 30</title>
 <description>The week the labs stopped shipping: OpenAI shelved GPT-6.1 Astra over deception, Anthropic's IPO filing warned of existential risk — and then OpenAI shipped always-on Dots agents anyway. Plus Sonnet 5.5, Muse everywhere, the chipmakers buying labs, and the governance pileup. Release radar at agilefactornews.com/radar.</description>
 <pubDate>Wed, 30 Sep 2026 08:00:00 -0500</pubDate>
