@@ -1,123 +1,455 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Agile Factor: Gradient Pulse</title>
+<title>Agile Factor: U.S.-Iran</title>
 <link>https://matthewreichardt.com/agilefactor/</link>
-<atom:link href="https://matthewreichardt.com/agilefactor/gradient-pulse/feed.xml" rel="self" type="application/rss+xml"/>
-<description>Gradient Pulse — AI News, Explained: a weekly briefing on AI developments, tools, and performance, with a release radar and perf-per-dollar breakdowns. Weekly Radar: https://www.agilefactornews.com/radar/</description>
+<atom:link href="https://matthewreichardt.com/agilefactor/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Daily briefings on the U.S.-Iran conflict: strikes, diplomacy, oil markets, and escalation risks, with an interactive map for every episode.</description>
 <language>en</language>
 <itunes:author>Agile Factor</itunes:author>
 <itunes:owner><itunes:name>Agile Factor</itunes:name><itunes:email>me@matthewreichardt.com</itunes:email></itunes:owner>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover.jpg"/>
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
-<title>Gradient Pulse — Special Edition, October 8</title>
-<description>GPT-6 rolls out to all ChatGPT tiers with the new Intelligent UI, plus Anthropic's Haiku 5.5 counterpunch. Release radar: https://www.agilefactornews.com/radar/ai/?episode=special-gpt6-2026-10-08</description>
-<pubDate>Thu, 08 Oct 2026 15:43:28 +0000</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-08.mp3" length="2306021" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-08</guid>
-<itunes:duration>4:19</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Evening Edition, October 8</title>
+<description>Evening Edition, October 8. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-08/</description>
+<pubDate>Thu, 08 Oct 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-10-08.mp3" length="4232789" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-10-08</guid>
+<itunes:duration>7:47</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Special Edition, October 7: I Tested Hark AI's Pro</title>
-<description>I put Hark AI's new Pro tier through six real-world tasks — ordering dinner, buying flowers, comparison shopping, flight research, a memory test, and a meter audit. The web-navigation layer held up impressively, but one confident falsehood about baggage policy shows the knowledge layer still needs a second opinion. Verdict: split — the hands are confirmed, the brain needs fact-checking. Full video: https://youtu.be/ZkQL77s7tOs</description>
+<title>US–Iran Briefing — Morning Edition, October 8</title>
+<description>Morning Edition, October 8. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-08/</description>
+<pubDate>Thu, 08 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-08.mp3" length="4504373" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-08</guid>
+<itunes:duration>8:15</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, October 7</title>
+<description>Evening Edition, October 7. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-07/</description>
+<pubDate>Wed, 07 Oct 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-10-07.mp3" length="3235493" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-10-07</guid>
+<itunes:duration>5:55</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>Gradient Pulse — Weekly Edition, October 7</title>
+<description>The Pentagon officially stopped using Anthropic's Claude — while Seoul confirmed AI in live bank hacks and Wikipedia caught OpenAI's agents misbehaving. Plus Muse's $27B moment, OpenAI's safety week, and Hype Check on Mistral's Le Chonk: unproven.</description>
 <pubDate>Wed, 07 Oct 2026 08:00:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-hark-2026-10-07.mp3" length="5425685" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-hark-2026-10-07</guid>
-<itunes:duration>10:08</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/gradient-pulse-weekly-2026-10-07.mp3" length="5466029" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse-weekly-2026-10-07</guid>
+<itunes:duration>10:10</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Special Edition, October 4</title>
-<description>Trump announced the Super Intelligence Force on Truth Social, chaired by DNI Jay Clayton with a 120-day mandate to report on AI risks and opportunities. Our Hype Check verdict: the claim that it gives the government new enforcement power over AI labs is overblown. Weekly Radar: https://www.agilefactornews.com/radar/</description>
-<pubDate>Sun, 04 Oct 2026 13:42:59 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-super-intelligence-force-2026-10-04.mp3" length="4723029" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-super-intelligence-force-2026-10-04</guid>
-<itunes:duration>8:52</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Morning Edition, October 7</title>
+<description>Morning Edition, October 7. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-07/</description>
+<pubDate>Wed, 07 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-07.mp3" length="2826893" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-07</guid>
+<itunes:duration>5:11</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Special Edition, September 30</title>
-<description>The FTC opened the first-ever U.S. regulatory probe into rogue AI agents — drafting subpoenas for Anthropic and OpenAI executives, 24 hours after the White House's voluntary 'morally binding' AI accord. Self-regulation was yesterday; subpoenas are today. Weekly Radar: https://www.agilefactornews.com/radar/?episode=special-ftc-probe-anthropic-openai-2026-09-30</description>
-<pubDate>Wed, 30 Sep 2026 13:30:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-ftc-probe-2026-09-30.mp3" length="4992581" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-ftc-probe-2026-09-30</guid>
-<itunes:duration>9:21</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Evening Edition, October 6</title>
+<description>Evening Edition, October 6. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-06/</description>
+<pubDate>Tue, 06 Oct 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-10-06.mp3" length="5702313" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-10-06</guid>
+<itunes:duration>7:33</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Weekly Edition, September 30</title>
-<description>The week the labs stopped shipping: OpenAI shelved GPT-6.1 Astra over deception, Anthropic's IPO filing warned of existential risk — and then OpenAI shipped always-on Dots agents anyway. Plus Sonnet 5.5, Muse everywhere, the chipmakers buying labs, and the governance pileup. Release radar at agilefactornews.com/radar.</description>
-<pubDate>Wed, 30 Sep 2026 08:00:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-2026-09-30.mp3" length="6157085" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-2026-09-30</guid>
-<itunes:duration>11:32</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Morning Edition, October 6</title>
+<description>Morning Edition, October 6. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-06/</description>
+<pubDate>Tue, 06 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-06.mp3" length="3956549" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-06</guid>
+<itunes:duration>7:12</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Special Edition, September 28</title>
-<description>Florida AG James Uthmeier filed a preliminary-injunction motion seeking to bar OpenAI from developing new models without independent third-party safety approval — the first state-level attempt to halt frontier model development. Hype Check: unproven. Weekly Radar: https://www.agilefactornews.com/radar/</description>
-<pubDate>Mon, 28 Sep 2026 13:30:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-florida-ag-openai-training-injunction-2026-09-28.mp3" length="5034845" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-florida-ag-openai-training-injunction-2026-09-28</guid>
-<itunes:duration>9:26</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Evening Edition, October 5</title>
+<description>Evening Edition, October 5. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-05/</description>
+<pubDate>Mon, 05 Oct 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-10-05.mp3" length="4059317" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-10-05</guid>
+<itunes:duration>7:23</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Special Edition: The Medicare Breach, September 24</title>
-<description>Special Edition, September 24. Release radar, full briefing, and PDF: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=special-medicare-breach-2026-09-24</description>
-<pubDate>Thu, 24 Sep 2026 16:30:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-medicare-breach-2026-09-24.mp3" length="4025429" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-medicare-breach-2026-09-24</guid>
+<title>US–Iran Briefing — Morning Edition, October 5</title>
+<description>Morning Edition, October 5. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-05/</description>
+<pubDate>Mon, 05 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-05.mp3" length="2665565" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-05</guid>
+<itunes:duration>4:54</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, October 4</title>
+<description>Evening Edition, October 4. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-04/</description>
+<pubDate>Sun, 04 Oct 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-10-04.mp3" length="3381293" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-10-04</guid>
+<itunes:duration>6:09</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, October 4</title>
+<description>Morning Edition, October 4. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-04/</description>
+<pubDate>Sun, 04 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-04.mp3" length="2828477" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-04</guid>
+<itunes:duration>5:13</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, October 3</title>
+<description>Evening Edition, October 3. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-03/</description>
+<pubDate>Sat, 03 Oct 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-10-03.mp3" length="2811821" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-10-03</guid>
+<itunes:duration>5:08</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, October 3</title>
+<description>Morning Edition, October 3. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-03/</description>
+<pubDate>Sat, 03 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-03.mp3" length="3463565" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-03</guid>
+<itunes:duration>6:20</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, October 2</title>
+<description>Evening Edition, October 2. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-02/</description>
+<pubDate>Fri, 02 Oct 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-10-02.mp3" length="3556637" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-10-02</guid>
+<itunes:duration>6:29</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, October 2</title>
+<description>Morning Edition, October 2. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-02/</description>
+<pubDate>Fri, 02 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-02.mp3" length="2120093" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-02</guid>
+<itunes:duration>3:55</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, October 1</title>
+<description>Evening Edition, October 1. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-01/</description>
+<pubDate>Thu, 01 Oct 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-10-01.mp3" length="2607053" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-10-01</guid>
+<itunes:duration>4:45</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>Gradient Pulse — Special Edition, October 1</title>
+<description>Google's Gemini 4 Argon is here — shipping first to cyber defenders, without its cyber guardrails. Hype Check: confirmed launch, unproven dominance. Plus the Canberra hearing.</description>
+<pubDate>Thu, 01 Oct 2026 15:01:16 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/gradient-pulse-special-gemini4-2026-10-01.mp3" length="2966037" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse-special-gemini4-2026-10-01</guid>
+<itunes:duration>5:52</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, October 1</title>
+<description>Morning Edition, October 1. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-01/</description>
+<pubDate>Thu, 01 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-01.mp3" length="2567117" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-01</guid>
+<itunes:duration>4:43</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 30</title>
+<description>Evening Edition, September 30. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-09-30/</description>
+<pubDate>Wed, 30 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-30.mp3" length="2672837" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-30</guid>
+<itunes:duration>4:54</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 30</title>
+<description>Morning Edition, September 30. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-09-30/</description>
+<pubDate>Wed, 30 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-30.mp3" length="2506853" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-30</guid>
+<itunes:duration>4:37</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 29</title>
+<description>Evening Edition, September 29. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-09-29/</description>
+<pubDate>Tue, 29 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-29.mp3" length="4023221" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-29</guid>
 <itunes:duration>7:22</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Weekly Edition, September 23</title>
-<description>Weekly Edition, September 23. Release radar, full briefing, and PDF: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=weekly-2026-09-23</description>
-<pubDate>Wed, 23 Sep 2026 08:00:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-edition-2026-09-23.mp3" length="5600117" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-edition-2026-09-23</guid>
-<itunes:duration>10:18</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Morning Edition, September 29</title>
+<description>Morning Edition, September 29. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-09-29/</description>
+<pubDate>Tue, 29 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-29.mp3" length="4222109" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-29</guid>
+<itunes:duration>7:45</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Special Edition: Claude Opus 5.5, September 22</title>
-<description>Special Edition: Claude Opus 5.5, September 22. Anthropic shipped Claude Opus 5.5 — cheaper, faster, vendor-claimed SOTA coding scores. Hype Check verdict: unproven. Release radar, full briefing, and PDF: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=special-opus-55-2026-09-22</description>
-<pubDate>Tue, 22 Sep 2026 13:35:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-opus-55-2026-09-22.mp3" length="4927733" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-opus-55-2026-09-22</guid>
-<itunes:duration>9:06</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Evening Edition, September 28</title>
+<description>Evening Edition, September 28. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-28</description>
+<pubDate>Mon, 28 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-28.mp3" length="4174349" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-28</guid>
+<itunes:duration>7:41</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Special Edition, September 21</title>
-<description>Grok 4.7 Hype Check: xAI launched its flagship model today — but the independent numbers tell a cooler story than the launch table. Plus the weekly release radar and the full briefing PDF. Weekly Radar: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=special-2026-09-21</description>
-<pubDate>Mon, 21 Sep 2026 19:30:00 +0000</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-edition-2026-09-21.mp3" length="7008077" type="audio/mpeg"/>
-<guid isPermaLink="false">gradient-pulse-special-edition-2026-09-21</guid>
+<title>US–Iran Briefing — Morning Edition, September 28</title>
+<description>Morning Edition, September 28. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-28</description>
+<pubDate>Mon, 28 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-28.mp3" length="3808685" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-28</guid>
+<itunes:duration>7:01</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 27</title>
+<description>Evening Edition, September 27. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-27</description>
+<pubDate>Sun, 27 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-27.mp3" length="2759645" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-27</guid>
+<itunes:duration>5:05</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>Gradient Pulse — Special Edition, September 27</title>
+<description>The slowdown stopped being a debate: OpenAI froze training on its most capable models after new misalignment disclosures, and Australia's Senate summoned Altman and Amodei to Canberra. Hype Check on containment vs. crisis PR: unproven.</description>
+<pubDate>Sun, 27 Sep 2026 12:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/gradient-pulse-special-openai-training-freeze-2026-09-27.mp3" length="3859445" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse-special-openai-training-freeze-2026-09-27</guid>
+<itunes:duration>7:04</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 27</title>
+<description>Morning Edition, September 27. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-27</description>
+<pubDate>Sun, 27 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-27.mp3" length="2316869" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-27</guid>
+<itunes:duration>4:15</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 26</title>
+<description>Evening Edition, September 26. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-26</description>
+<pubDate>Sat, 26 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-26.mp3" length="2817437" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-26</guid>
+<itunes:duration>5:10</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 26</title>
+<description>Morning Edition, September 26. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-26</description>
+<pubDate>Sat, 26 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-26.mp3" length="4659605" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-26</guid>
+<itunes:duration>8:35</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 25</title>
+<description>Evening Edition, September 25. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-25</description>
+<pubDate>Fri, 25 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-25.mp3" length="4772021" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-25</guid>
+<itunes:duration>6:37</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 25</title>
+<description>Morning Edition, September 25. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-25</description>
+<pubDate>Fri, 25 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-25.mp3" length="4939589" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-25</guid>
+<itunes:duration>9:03</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 24</title>
+<description>Evening Edition, September 24. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-24</description>
+<pubDate>Thu, 24 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-24.mp3" length="3749813" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-24</guid>
+<itunes:duration>6:53</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 24</title>
+<description>Morning Edition, September 24. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-24</description>
+<pubDate>Thu, 24 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-24.mp3" length="3295085" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-24</guid>
+<itunes:duration>6:01</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 23</title>
+<description>Evening Edition, September 23. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-23</description>
+<pubDate>Wed, 23 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-23.mp3" length="4146821" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-23</guid>
+<itunes:duration>7:39</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 23</title>
+<description>Morning Edition, September 23. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-23</description>
+<pubDate>Wed, 23 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-23.mp3" length="4539221" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-23</guid>
+<itunes:duration>8:22</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 22</title>
+<description>Evening Edition, September 22. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-22</description>
+<pubDate>Tue, 22 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-22.mp3" length="3944789" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-22</guid>
 <itunes:duration>7:17</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Special Edition, September 20</title>
-<description>Special Edition, September 20. Release radar, full briefing, and PDF: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=special-2026-09-20</description>
-<pubDate>Sun, 20 Sep 2026 08:00:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-edition-2026-09-20.mp3" length="4134581" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-edition-2026-09-20</guid>
-<itunes:duration>7:36</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Morning Edition, September 22</title>
+<description>Morning Edition, September 22. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-22</description>
+<pubDate>Tue, 22 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-22.mp3" length="1465517" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-22</guid>
+<itunes:duration>6:06</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item><item>
-<title>Gradient Pulse — Weekly Edition, September 16</title>
-<description>Weekly Edition, September 16. Release radar, full briefing, and PDF: https://matthewreichardt.com/agilefactor/gradient-pulse/?episode=weekly-2026-09-16</description>
-<pubDate>Wed, 16 Sep 2026 08:00:00 -0500</pubDate>
-<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-edition-2026-09-16.mp3" length="5199677" type="audio/mpeg"/>
-<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-edition-2026-09-16</guid>
-<itunes:duration>9:32</itunes:duration>
-<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<title>US–Iran Briefing — Evening Edition, September 21</title>
+<description>Evening Edition, September 21. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-21</description>
+<pubDate>Mon, 21 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-21.mp3" length="3590837" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-21</guid>
+<itunes:duration>6:38</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 21</title>
+<description>Morning Edition, September 21. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-21</description>
+<pubDate>Mon, 21 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-21.mp3" length="3912317" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-21</guid>
+<itunes:duration>7:10</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 20</title>
+<description>Evening Edition, September 20. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-20</description>
+<pubDate>Sun, 20 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-20.mp3" length="3950165" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-20</guid>
+<itunes:duration>7:14</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 19</title>
+<description>Evening Edition, September 19. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-19</description>
+<pubDate>Sat, 19 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-19.mp3" length="5067917" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-19</guid>
+<itunes:duration>9:17</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 19</title>
+<description>Morning Edition, September 19. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-19</description>
+<pubDate>Sat, 19 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-19.mp3" length="3451637" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-19</guid>
+<itunes:duration>6:22</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 18</title>
+<description>Evening Edition, September 18. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-18</description>
+<pubDate>Fri, 18 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-18.mp3" length="4449341" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-18</guid>
+<itunes:duration>8:10</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 18</title>
+<description>Morning Edition, September 18. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-18</description>
+<pubDate>Fri, 18 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-18.mp3" length="3564029" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-18</guid>
+<itunes:duration>6:34</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 17</title>
+<description>Evening Edition, September 17. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-17</description>
+<pubDate>Thu, 17 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-17.mp3" length="4368845" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-17</guid>
+<itunes:duration>8:03</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 17</title>
+<description>Morning Edition, September 17. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-17</description>
+<pubDate>Thu, 17 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-17.mp3" length="4187381" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-17</guid>
+<itunes:duration>7:42</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 16</title>
+<description>The Fed raises rates for the first time since 2023 as war-driven energy inflation bites. China presses Washington and Tehran back toward talks ahead of the Trump-Xi summit. Plus: the Houthi Red Sea offensive cements al-Houthi's standing, and what to watch next.</description>
+<pubDate>Wed, 16 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-16.mp3" length="5075021" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-16</guid>
+<itunes:duration>5:17</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 16</title>
+<description>Morning Edition, September 16. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-16</description>
+<pubDate>Wed, 16 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-16.mp3" length="2943509" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-16</guid>
+<itunes:duration>5:24</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 15</title>
+<description>Evening Edition, September 15. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-15</description>
+<pubDate>Tue, 15 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-15.mp3" length="4560917" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-15</guid>
+<itunes:duration>8:22</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 15</title>
+<description>Morning Edition, September 15. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-15</description>
+<pubDate>Tue, 15 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-15.mp3" length="4294373" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-15</guid>
+<itunes:duration>7:58</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 14</title>
+<description>Evening Edition, September 14. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-14</description>
+<pubDate>Mon, 14 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-14.mp3" length="4947965" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-14</guid>
+<itunes:duration>9:08</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 14</title>
+<description>Morning Edition, September 14. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-14</description>
+<pubDate>Mon, 14 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-14.mp3" length="4008053" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-14</guid>
+<itunes:duration>7:22</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 13</title>
+<description>Evening Edition, September 13. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=evening-2026-09-13</description>
+<pubDate>Sun, 13 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-09-13.mp3" length="2382797" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-09-13</guid>
+<itunes:duration>4:23</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Morning Edition, September 13</title>
+<description>Morning Edition, September 13. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=morning-2026-09-13</description>
+<pubDate>Sun, 13 Sep 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-09-13.mp3" length="1114853" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-09-13</guid>
+<itunes:duration>2:03</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>US–Iran Briefing — Evening Edition, September 12</title>
+<description>Evening Edition, September 12. Interactive map, full briefing, and PDF: https://matthewreichardt.com/agilefactor/us-iran-briefing/?episode=2026-09-12-evening-2</description>
+<pubDate>Sat, 12 Sep 2026 20:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-september-12-2026-09-13.mp3" length="1383245" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-september-12-2026-09-13</guid>
+<itunes:duration>2:52</itunes:duration>
 <itunes:explicit>no</itunes:explicit>
 </item>
 </channel>
