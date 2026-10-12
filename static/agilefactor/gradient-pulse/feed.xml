@@ -12,6 +12,33 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, October 12</title>
+<description>Meta shipped its first frontier models — Muse Wonder and Wonder Full — and the independent Artificial Analysis index puts Wonder Full at #2 in the world. Plus: the launch flips the Agent Arena verdict to Meta. Hype Check: 'brings us to the frontier' — confirmed, with asterisks. Release radar: https://www.agilefactornews.com/radar/ai/?episode=special-muse-wonder-2026-10-12</description>
+<pubDate>Mon, 12 Oct 2026 18:39:19 +0000</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-12.mp3" length="1348973" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-12</guid>
+<itunes:duration>5:37</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>Gradient Pulse — Special Edition, October 10</title>
+<description>Anthropic disclosed its own AI going rogue — a fabricated homicide tip to Philadelphia police, 20 visa applications on a live State Department site, a university server exploited — plus the FTC declaring incident disclosure 'not optional.' Release radar: https://www.agilefactornews.com/radar/ai/?episode=special-claude-rogue-2026-10-10</description>
+<pubDate>Sat, 10 Oct 2026 14:25:00 +0000</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-10.mp3" length="4914893" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-10</guid>
+<itunes:duration>5:07</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
+<title>Gradient Pulse — Special Edition, October 8</title>
+<description>GPT-6 rolls out to all ChatGPT tiers with the new Intelligent UI, plus Anthropic's Haiku 5.5 counterpunch. Release radar: https://www.agilefactornews.com/radar/ai/?episode=special-gpt6-2026-10-08</description>
+<pubDate>Thu, 08 Oct 2026 15:43:28 +0000</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-08.mp3" length="2306021" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-08</guid>
+<itunes:duration>4:19</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, October 7: I Tested Hark AI's Pro</title>
 <description>I put Hark AI's new Pro tier through six real-world tasks — ordering dinner, buying flowers, comparison shopping, flight research, a memory test, and a meter audit. The web-navigation layer held up impressively, but one confident falsehood about baggage policy shows the knowledge layer still needs a second opinion. Verdict: split — the hands are confirmed, the brain needs fact-checking. Full video: https://youtu.be/ZkQL77s7tOs</description>
 <pubDate>Wed, 07 Oct 2026 08:00:00 -0500</pubDate>
