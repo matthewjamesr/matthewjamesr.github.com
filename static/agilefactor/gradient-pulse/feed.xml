@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Weekly Edition, October 14</title>
+<description>Google DeepMind made Gemini 4 Argon generally available — live via the API at /0 intro pricing that doubles on November 30 — while Anthropic warned small models could learn to copy themselves, all four frontier labs faced MPs in Westminster, and OpenAI's revenue math took a 0B public haircut. Hype Check: Anthropic's self-replication timeline — verdict unproven. Release radar and full show notes: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-10-14</description>
+<pubDate>Wed, 14 Oct 2026 08:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-2026-10-14.mp3" length="4357445" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-2026-10-14</guid>
+<itunes:duration>8:01</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, October 12</title>
 <description>Meta shipped its first frontier models — Muse Wonder and Wonder Full — and the independent Artificial Analysis index puts Wonder Full at #2 in the world. Plus: the launch flips the Agent Arena verdict to Meta. Hype Check: 'brings us to the frontier' — confirmed, with asterisks. Release radar: https://www.agilefactornews.com/radar/ai/?episode=special-muse-wonder-2026-10-12</description>
 <pubDate>Mon, 12 Oct 2026 18:39:19 +0000</pubDate>
