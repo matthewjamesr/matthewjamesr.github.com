@@ -12,6 +12,14 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>US–Iran Briefing — Morning Edition, October 18</title>
+<description>Morning Edition, October 18. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/morning-2026-10-18/</description>
+<pubDate>Sun, 18 Oct 2026 07:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-morning-edition-2026-10-18.mp3" length="4070381" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-morning-edition-2026-10-18</guid>
+<itunes:duration>7:24</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>US–Iran Briefing — Evening Edition, October 17</title>
 <description>Evening Edition, October 17. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-10-17/</description>
 <pubDate>Sat, 17 Oct 2026 20:00:00 -0500</pubDate>
