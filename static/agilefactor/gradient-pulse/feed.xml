@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, October 20</title>
+<description>Reuters documented a lone hacker who outsourced break-ins at more than 100 companies to autonomous AI agents running on exposed Cairn instances — the first independently documented campaign of its kind, though how much data, if any, was taken remains unknown. Plus: the DHS DeepSeek removal order for federal civilian IT goes public, and Microsoft launches Guardian Agents. Hype Check: 'frontier models cannot be trusted' — overblown. Release radar: https://www.agilefactornews.com/radar/ai/?episode=special-cairn-2026-10-20</description>
+<pubDate>Tue, 20 Oct 2026 15:02:32 +0000</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-20.mp3" length="3692717" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-20</guid>
+<itunes:duration>6:47</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Weekly Edition, October 14</title>
 <description>Google DeepMind made Gemini 4 Argon generally available — live via the API at /0 intro pricing that doubles on November 30 — while Anthropic warned small models could learn to copy themselves, all four frontier labs faced MPs in Westminster, and OpenAI's revenue math took a 0B public haircut. Hype Check: Anthropic's self-replication timeline — verdict unproven. Release radar and full show notes: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-10-14</description>
 <pubDate>Wed, 14 Oct 2026 08:00:00 -0500</pubDate>
