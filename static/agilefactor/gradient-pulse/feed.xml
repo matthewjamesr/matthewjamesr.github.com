@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Weekly Edition, October 21</title>
+<description>Eight states sued OpenAI and the FTC served civil investigative demands on OpenAI and Anthropic in a single day — the enforcement wave — while Anthropic reported $16.8B in Q3 revenue, pledged 5% of its shares to a public benefit fund, and published data showing agents now outwork its own staff six to one. Plus: websites lock their doors to agents, Muse pauses a leaky sharing feature, DeepSeek and MiniMax hold the $0.15 line, and GPT-4 gets a retirement date. Hype Check: Anthropic's 5% pledge — unproven. Release radar: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-10-21</description>
+<pubDate>Wed, 21 Oct 2026 08:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-2026-10-21.mp3" length="5606309" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-2026-10-21</guid>
+<itunes:duration>10:16</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, October 20</title>
 <description>Reuters documented a lone hacker who outsourced break-ins at more than 100 companies to autonomous AI agents running on exposed Cairn instances — the first independently documented campaign of its kind, though how much data, if any, was taken remains unknown. Plus: the DHS DeepSeek removal order for federal civilian IT goes public, and Microsoft launches Guardian Agents. Hype Check: 'frontier models cannot be trusted' — overblown. Release radar: https://www.agilefactornews.com/radar/ai/?episode=special-cairn-2026-10-20</description>
 <pubDate>Tue, 20 Oct 2026 15:02:32 +0000</pubDate>
