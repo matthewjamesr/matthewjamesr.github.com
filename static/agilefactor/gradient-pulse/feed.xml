@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, October 21</title>
+<description>Two critical vulnerabilities in PHP — the language behind about three quarters of websites whose language can be identified — were disclosed ahead of schedule today after details leaked, and governments in the Netherlands, Finland, France and Denmark took websites offline as a precaution. The researchers who found the flaws credit frontier AI models with the discovery: Calif working with OpenAI's GPT-5.6 Sol, Wiz with Google's Gemini 4 Argon and its own Atlas tool. Early attacks are already emerging, per Cloudflare, and the patch is out now. Hype Check: Wiz's Heartbleed-scale, 'AI found it' framing — verdict unproven.</description>
+<pubDate>Wed, 21 Oct 2026 19:45:22 +0000</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-21.mp3" length="3544445" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-21</guid>
+<itunes:duration>6:33</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Weekly Edition, October 21</title>
 <description>Eight states sued OpenAI and the FTC served civil investigative demands on OpenAI and Anthropic in a single day — the enforcement wave — while Anthropic reported $16.8B in Q3 revenue, pledged 5% of its shares to a public benefit fund, and published data showing agents now outwork its own staff six to one. Plus: websites lock their doors to agents, Muse pauses a leaky sharing feature, DeepSeek and MiniMax hold the $0.15 line, and GPT-4 gets a retirement date. Hype Check: Anthropic's 5% pledge — unproven. Release radar: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-10-21</description>
 <pubDate>Wed, 21 Oct 2026 08:00:00 -0500</pubDate>
