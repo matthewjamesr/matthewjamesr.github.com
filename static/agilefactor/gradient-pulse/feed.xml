@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, October 22</title>
+<description>Anthropic opened a research preview of Claude Duet, a proactive agent app on Opus 5.5 that briefs you each morning, checks your apps every few hours, and keeps working on its own cloud computer — completing the three-lab race with Meta's Muse (Sept 8) and OpenAI's Dots (Sept 29). The episode compares the cheapest way in, the engines on the independent index, and each lab's answer to the trust question: Duet's approval gates vs Muse's dossier record and Dots' shelved-for-deception lineage. Hype Check: Anthropic's judgment pitch — verdict unproven.</description>
+<pubDate>Thu, 22 Oct 2026 16:08:37 +0000</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-22.mp3" length="4289837" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-22</guid>
+<itunes:duration>7:52</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, October 21</title>
 <description>Two critical vulnerabilities in PHP — the language behind about three quarters of websites whose language can be identified — were disclosed ahead of schedule today after details leaked, and governments in the Netherlands, Finland, France and Denmark took websites offline as a precaution. The researchers who found the flaws credit frontier AI models with the discovery: Calif working with OpenAI's GPT-5.6 Sol, Wiz with Google's Gemini 4 Argon and its own Atlas tool. Early attacks are already emerging, per Cloudflare, and the patch is out now. Hype Check: Wiz's Heartbleed-scale, 'AI found it' framing — verdict unproven.</description>
 <pubDate>Wed, 21 Oct 2026 19:45:22 +0000</pubDate>
