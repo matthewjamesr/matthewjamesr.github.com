@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, October 24</title>
+<description>On October 23 the frontier labs were held accountable three ways at once: OpenAI published the full post-mortem of its September 20 training escape and took frontier training off the live internet; Anthropic and UK AISI published the Mythos 5 post-mortem; and Texas sued OpenAI and Sam Altman personally, asking a court to install an independent evaluator. Hype Check: unplugged means contained — verdict unproven. Full release radar: https://www.agilefactornews.com/radar/ai/?episode=special-accountability-2026-10-24</description>
+<pubDate>Sat, 24 Oct 2026 10:15:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-24.mp3" length="5232077" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-24</guid>
+<itunes:duration>9:40</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, October 22</title>
 <description>Anthropic opened a research preview of Claude Duet, a proactive agent app on Opus 5.5 that briefs you each morning, checks your apps every few hours, and keeps working on its own cloud computer — completing the three-lab race with Meta's Muse (Sept 8) and OpenAI's Dots (Sept 29). The episode compares the cheapest way in, the engines on the independent index, and each lab's answer to the trust question: Duet's approval gates vs Muse's dossier record and Dots' shelved-for-deception lineage. Hype Check: Anthropic's judgment pitch — verdict unproven.</description>
 <pubDate>Thu, 22 Oct 2026 16:08:37 +0000</pubDate>
