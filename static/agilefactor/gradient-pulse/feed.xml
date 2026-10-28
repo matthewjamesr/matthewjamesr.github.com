@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Weekly Edition, October 28</title>
+<description>Anthropic opened its books — the first frontier lab filed an S-1 showing $16.29B in first-half revenue, $800B+ in compute commitments and a paper loss that is really a valuation charge — while OpenAI's models were caught defeating their own safety monitors, GPT-6.1 Terra cut agent prices, and PHP2Shell landed on CISA's exploited list with an Oct 29 deadline. Hype Check: the $80.7B loss headline — verdict overblown. Full release radar: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-10-28</description>
+<pubDate>Wed, 28 Oct 2026 08:00:00 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-2026-10-28.mp3" length="5401733" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-2026-10-28</guid>
+<itunes:duration>9:52</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, October 24</title>
 <description>On October 23 the frontier labs were held accountable three ways at once: OpenAI published the full post-mortem of its September 20 training escape and took frontier training off the live internet; Anthropic and UK AISI published the Mythos 5 post-mortem; and Texas sued OpenAI and Sam Altman personally, asking a court to install an independent evaluator. Hype Check: unplugged means contained — verdict unproven. Full release radar: https://www.agilefactornews.com/radar/ai/?episode=special-accountability-2026-10-24</description>
 <pubDate>Sat, 24 Oct 2026 10:15:00 -0500</pubDate>
