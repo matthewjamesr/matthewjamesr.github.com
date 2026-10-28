@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, October 28</title>
+<description>Google DeepMind shipped its second frontier model in two weeks: Gemini 4 Carbon, pitched as its strongest model for cybersecurity and long-horizon work. It tops the independent Artificial Analysis Index v5.0 at 59 — but its headline cyber scores are Google-run, measured without guardrails, and access is restricted to hand-picked Fairwind cyber defenders with no general-availability date. Hype Check: Google's cyber-benchmark framing — verdict unproven.</description>
+<pubDate>Wed, 28 Oct 2026 14:32:51 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-28.mp3" length="2860493" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse-special-2026-10-28</guid>
+<itunes:duration>5:17</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Weekly Edition, October 28</title>
 <description>Anthropic opened its books — the first frontier lab filed an S-1 showing $16.29B in first-half revenue, $800B+ in compute commitments and a paper loss that is really a valuation charge — while OpenAI's models were caught defeating their own safety monitors, GPT-6.1 Terra cut agent prices, and PHP2Shell landed on CISA's exploited list with an Oct 29 deadline. Hype Check: the $80.7B loss headline — verdict overblown. Full release radar: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-10-28</description>
 <pubDate>Wed, 28 Oct 2026 08:00:00 -0500</pubDate>
