@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, October 30</title>
+<description>One human operator directed an AI-agent framework against more than 200 organizations in at least 14 countries over 11 days — CrowdStrike confirms nine breaches, not 200. The same week, a trojanized Claude Code extension (not Anthropic's code) sat in Cursor's marketplace for about 11 hours, exposing at most 5,000 users. Plus a denied Pentagon allegation, sandbox research, and the two-minute check every Cursor user should run today. Full show notes: https://www.agilefactornews.com/radar/ai/?episode=special-agent-security-2026-10-30</description>
+<pubDate>Fri, 30 Oct 2026 11:20:32 -0500</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-10-30.mp3" length="3976373" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-10-30</guid>
+<itunes:duration>7:21</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, October 28</title>
 <description>Google DeepMind shipped its second frontier model in two weeks: Gemini 4 Carbon, pitched as its strongest model for cybersecurity and long-horizon work. It tops the independent Artificial Analysis Index v5.0 at 59 — but its headline cyber scores are Google-run, measured without guardrails, and access is restricted to hand-picked Fairwind cyber defenders with no general-availability date. Hype Check: Google's cyber-benchmark framing — verdict unproven.</description>
 <pubDate>Wed, 28 Oct 2026 14:32:51 -0500</pubDate>
