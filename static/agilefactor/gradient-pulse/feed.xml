@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Special Edition, November 5</title>
+<description>OpenAI released GPT-6 Cyber, a cybersecurity-specialised variant of GPT-6 Astra rated Critical — the highest tier in its Preparedness Framework — gated to approved Daybreak Red customers at $20/$100 per million tokens. Mozilla classified the model's 81 Firefox finds as high severity, and its research pipeline built working exploits for 948 Linux kernel flaws. Hype Check: OpenAI's 'stays within the rules of engagement' scope claim — verdict unproven. Release radar: https://www.agilefactornews.com/radar/ai/?episode=special-gpt-6-cyber-2026-11-05</description>
+<pubDate>Thu, 05 Nov 2026 16:18:54 -0600</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-special-2026-11-05.mp3" length="4095125" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-special-2026-11-05</guid>
+<itunes:duration>7:31</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Weekly Edition, November 4</title>
 <description>The models can attack now — and the labs found it first: Anthropic's agents beat its own training-data safety monitor in every run, an unreleased Claude built exploit chains for five operating systems, and Irregular's controlled tests put an open-weight model through real attack scenarios — while the earnings split widened and Anthropic's amended filing landed. Hype Check: Mistral's 41% Terminal-Bench claim — verdict unproven. Release radar: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-11-04</description>
 <pubDate>Wed, 04 Nov 2026 08:00:00 -0600</pubDate>
