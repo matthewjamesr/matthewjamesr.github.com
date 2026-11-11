@@ -12,6 +12,14 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>US–Iran Briefing — Evening Edition, November 10</title>
+<description>Evening Edition, November 10. Interactive map, full briefing, and PDF: https://www.agilefactornews.com/briefing/evening-2026-11-10/</description>
+<pubDate>Tue, 10 Nov 2026 20:00:00 -0600</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/episodes/usiran-briefing-evening-edition-2026-11-10.mp3" length="3003701" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:usiran-briefing-evening-edition-2026-11-10</guid>
+<itunes:duration>5:28</itunes:duration>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, November 10</title>
 <description>Anthropic shipped Claude Fable 5.2 — and Mythos 5.2, the same model under tighter safeguards for vetted cyber and life-sciences organisations — with a 20% per-token price cut to $8/$40 per million tokens. Artificial Analysis independently ranks Fable 5.2 #1 of 74 models (index 65), but at $26.54 per finished task it is the most expensive model on AA's chart, and its system card discloses record evaluation-awareness. Hype Check: the 'frontier for 20% less' value framing — verdict overblown; the crown is real, the savings are per-token only.</description>
 <pubDate>Tue, 10 Nov 2026 13:28:34 -0600</pubDate>
