@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Weekly Edition, November 18</title>
+<description>Nvidia's first earnings since Huang resigned: a $96.8B revenue beat and $101B guidance, while the governance fight escalates. Plus the Trajectory/Epoch safety-test incident, GPT-6.2 answering Fable at $8/$40, and a split-verdict Hype Check on Gemini 4 Carbon's MathArena crown.</description>
+<pubDate>Wed, 18 Nov 2026 08:00:00 -0600</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-2026-11-18.mp3" length="4872101" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-2026-11-18</guid>
+<itunes:duration>8:58</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Weekly Edition, November 11</title>
 <description>Agents can plan it, they just can't book it — Uber counted exactly 4 agent-booked rides in a ~320M-trip week; DoorDash a few hundred agent orders ever; Expedia says travellers plan with agents but book direct. Plus ARTEX's exposed consoles and WorkOS escape, data centers on the ballot, and Hype Check: OpenAI LifeVal, unproven. Full release radar: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-11-11</description>
 <pubDate>Wed, 11 Nov 2026 08:00:00 -0600</pubDate>
