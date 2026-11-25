@@ -12,6 +12,15 @@
 <itunes:category text="News"/>
 <itunes:explicit>no</itunes:explicit>
 <item>
+<title>Gradient Pulse — Weekly Edition, November 25</title>
+<description>Jensen Huang is back at Nvidia — reinstated unanimously on November 23, eleven days after his resignation, with the foreign-intelligence investigation still open and the stock up 31.5% in a day. Plus Anthropic's first week as a public company, corrected, and Gemini 4 Neon's thinking dial. Hype Check: the Riemann proof claim — compilation confirmed, proof unproven. Full show notes and release radar: https://www.agilefactornews.com/radar/ai/?episode=weekly-2026-11-25</description>
+<pubDate>Wed, 25 Nov 2026 08:00:00 -0600</pubDate>
+<enclosure url="https://matthewreichardt.com/agilefactor/gradient-pulse/episodes/gradient-pulse-weekly-2026-11-25.mp3" length="3653885" type="audio/mpeg"/>
+<guid isPermaLink="false">urn:agilefactor:gradient-pulse:gradient-pulse-weekly-2026-11-25</guid>
+<itunes:duration>6:43</itunes:duration>
+<itunes:image href="https://matthewreichardt.com/agilefactor/cover-gradient-pulse.png"/>
+<itunes:explicit>no</itunes:explicit>
+</item><item>
 <title>Gradient Pulse — Special Edition, November 24</title>
 <description>Virginia and Oregon filed the first state lawsuits over Grok on November 23 — consumer-protection cases arguing the companies behind Grok promised safeguards they did not deliver. Hype Check: 'the safeguards made Grok safe' — verdict overblown.</description>
 <pubDate>Tue, 24 Nov 2026 12:06:00 -0600</pubDate>
